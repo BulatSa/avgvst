@@ -150,6 +150,32 @@ $(function () {
  ***********************/
 $(function () {
   const headerMenuCatalogLink = document.querySelector("[data-menu-open]");
+  const body = document.body;
+  const scrollUp = "scroll-up";
+  const scrollDown = "scroll-down";
+  let lastScroll = 0;
+
+  const toggleBodyScroll = () => {
+    const currentScroll = window.pageYOffset;
+    if (currentScroll <= 0) {
+      body.classList.remove(scrollUp);
+      return;
+    }
+
+    if (currentScroll > lastScroll && !body.classList.contains(scrollDown)) {
+      // down
+      body.classList.remove(scrollUp);
+      body.classList.add(scrollDown);
+    } else if (currentScroll < lastScroll && body.classList.contains(scrollDown)) {
+      // up
+      body.classList.remove(scrollDown);
+      body.classList.add(scrollUp);
+    }
+    lastScroll = currentScroll;
+  }
+
+  window.addEventListener("scroll", toggleBodyScroll);
+
   if (headerMenuCatalogLink) {
     const headerMenuCatalog = document.querySelector(
       `.${headerMenuCatalogLink.dataset.menuOpen}`
@@ -168,15 +194,22 @@ $(function () {
       document.removeEventListener("click", outsideClickListener);
     };
 
+    const removeBodyScrollListener = () => {
+      window.removeEventListener("scroll", toggleBodyScroll);
+    }
+
     const toggleHeaderMenu = (e) => {
+      e.preventDefault();
       if (headerMenuCatalog.classList.contains("open")) {
         headerMenuCatalogLink.classList.remove("open");
         headerMenuCatalog.classList.remove("open");
         removeClickListener();
+        window.addEventListener("scroll", toggleBodyScroll);
       } else {
         headerMenuCatalogLink.classList.add("open");
         headerMenuCatalog.classList.add("open");
         document.addEventListener("click", outsideClickListener);
+        removeBodyScrollListener();
       }
     };
 
@@ -185,6 +218,7 @@ $(function () {
         headerMenuCatalogLink.classList.remove("open");
         headerMenuCatalog.classList.remove("open");
         removeClickListener();
+        window.addEventListener("scroll", toggleBodyScroll);
       }
     };
 

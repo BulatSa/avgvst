@@ -3093,7 +3093,17 @@ button::-moz-focus-inner {
   overflow: visible !important;
 }
 
-/* line 1, src/sass/components/_header.scss */
+/* line 3, src/sass/components/_header.scss */
+body.scroll-down .header-page-wrap {
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0);
+}
+
+/* line 11, src/sass/components/_header.scss */
 .header-page-wrap {
   position: fixed;
   top: 0;
@@ -3101,10 +3111,14 @@ button::-moz-focus-inner {
   right: 0;
   border-bottom: 1px solid #000;
   background: #fff;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
   z-index: 10;
 }
 
-/* line 11, src/sass/components/_header.scss */
+/* line 22, src/sass/components/_header.scss */
 .header-page {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3117,24 +3131,24 @@ button::-moz-focus-inner {
           justify-content: space-between;
 }
 
-/* line 17, src/sass/components/_header.scss */
+/* line 28, src/sass/components/_header.scss */
 .header-page__logo {
   padding: 24px 24px 12px 24px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-/* line 20, src/sass/components/_header.scss */
+/* line 31, src/sass/components/_header.scss */
 .header-page__logo:hover {
   background: #F2F2F2;
 }
 
-/* line 23, src/sass/components/_header.scss */
+/* line 34, src/sass/components/_header.scss */
 .header-page__logo img {
   display: block;
 }
 
-/* line 28, src/sass/components/_header.scss */
+/* line 39, src/sass/components/_header.scss */
 .header-page__nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3145,7 +3159,7 @@ button::-moz-focus-inner {
   line-height: 16px;
 }
 
-/* line 36, src/sass/components/_header.scss */
+/* line 47, src/sass/components/_header.scss */
 .header-page__nav-item {
   position: relative;
   display: block;
@@ -3154,17 +3168,17 @@ button::-moz-focus-inner {
   transition: all 0.3s ease;
 }
 
-/* line 41, src/sass/components/_header.scss */
+/* line 52, src/sass/components/_header.scss */
 .header-page__nav-item:hover {
   background: #F2F2F2;
 }
 
-/* line 45, src/sass/components/_header.scss */
+/* line 56, src/sass/components/_header.scss */
 .header-page__nav-item--catalog {
   padding-left: 36px;
 }
 
-/* line 47, src/sass/components/_header.scss */
+/* line 58, src/sass/components/_header.scss */
 .header-page__nav-item--catalog i {
   position: absolute;
   left: 12px;
@@ -3180,7 +3194,7 @@ button::-moz-focus-inner {
           transform: rotate(0deg) translate3d(0, 0, 0);
 }
 
-/* line 56, src/sass/components/_header.scss */
+/* line 67, src/sass/components/_header.scss */
 .header-page__nav-item--catalog i:before, .header-page__nav-item--catalog i:after {
   content: "";
   position: absolute;
@@ -3193,42 +3207,42 @@ button::-moz-focus-inner {
   transition: all 0.3s ease;
 }
 
-/* line 67, src/sass/components/_header.scss */
+/* line 78, src/sass/components/_header.scss */
 .header-page__nav-item--catalog i:before {
   -webkit-transform: translate3d(-50%, -2px, 0);
           transform: translate3d(-50%, -2px, 0);
 }
 
-/* line 70, src/sass/components/_header.scss */
+/* line 81, src/sass/components/_header.scss */
 .header-page__nav-item--catalog i:after {
   -webkit-transform: translate3d(-50%, 3px, 0);
           transform: translate3d(-50%, 3px, 0);
 }
 
-/* line 74, src/sass/components/_header.scss */
+/* line 85, src/sass/components/_header.scss */
 .header-page__nav-item--catalog.open {
   background: #F2F2F2;
 }
 
-/* line 76, src/sass/components/_header.scss */
+/* line 87, src/sass/components/_header.scss */
 .header-page__nav-item--catalog.open i {
   -webkit-transform: rotate(-90deg) translate3d(0, 0, 0);
           transform: rotate(-90deg) translate3d(0, 0, 0);
 }
 
-/* line 78, src/sass/components/_header.scss */
+/* line 89, src/sass/components/_header.scss */
 .header-page__nav-item--catalog.open i:before {
   -webkit-transform: translate3d(-50%, -50%, 0) rotate(45deg);
           transform: translate3d(-50%, -50%, 0) rotate(45deg);
 }
 
-/* line 81, src/sass/components/_header.scss */
+/* line 92, src/sass/components/_header.scss */
 .header-page__nav-item--catalog.open i:after {
   -webkit-transform: translate3d(-50%, -50%, 0) rotate(-45deg);
           transform: translate3d(-50%, -50%, 0) rotate(-45deg);
 }
 
-/* line 89, src/sass/components/_header.scss */
+/* line 100, src/sass/components/_header.scss */
 .header-page__helpers {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3238,12 +3252,12 @@ button::-moz-focus-inner {
           align-items: center;
 }
 
-/* line 92, src/sass/components/_header.scss */
+/* line 103, src/sass/components/_header.scss */
 .header-page__helpers img {
   display: block;
 }
 
-/* line 97, src/sass/components/_header.scss */
+/* line 108, src/sass/components/_header.scss */
 .header-page__cabinet {
   padding: 12px 12px;
   font-size: 12px;
@@ -3251,19 +3265,19 @@ button::-moz-focus-inner {
   letter-spacing: 0.1em;
 }
 
-/* line 103, src/sass/components/_header.scss */
+/* line 114, src/sass/components/_header.scss */
 .header-page__cabinet:hover span {
   border-bottom: 1px solid black;
 }
 
-/* line 107, src/sass/components/_header.scss */
+/* line 118, src/sass/components/_header.scss */
 .header-page__cabinet span {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   border-bottom: 1px solid rgba(0, 0, 0, 0);
 }
 
-/* line 113, src/sass/components/_header.scss */
+/* line 124, src/sass/components/_header.scss */
 .header-page__helpers-icons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3274,7 +3288,7 @@ button::-moz-focus-inner {
   padding-left: 12px;
 }
 
-/* line 118, src/sass/components/_header.scss */
+/* line 129, src/sass/components/_header.scss */
 .header-page__helpers-icons a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3293,19 +3307,19 @@ button::-moz-focus-inner {
   transition: all 0.3s ease;
 }
 
-/* line 127, src/sass/components/_header.scss */
+/* line 138, src/sass/components/_header.scss */
 .header-page__helpers-icons a:hover {
   border-color: black;
 }
 
-/* line 130, src/sass/components/_header.scss */
+/* line 141, src/sass/components/_header.scss */
 .header-page__helpers-icons a img {
   display: block;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 
-/* line 146, src/sass/components/_header.scss */
+/* line 157, src/sass/components/_header.scss */
 .header-page-menu-wrap {
   position: absolute;
   top: 65px;
@@ -3321,25 +3335,25 @@ button::-moz-focus-inner {
   transition: all 0.3s ease;
 }
 
-/* line 158, src/sass/components/_header.scss */
+/* line 169, src/sass/components/_header.scss */
 .header-page-menu-wrap.open {
   opacity: 1;
   pointer-events: all;
 }
 
-/* line 161, src/sass/components/_header.scss */
+/* line 172, src/sass/components/_header.scss */
 .header-page-menu-wrap.open .header-page-menu {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }
 
-/* line 164, src/sass/components/_header.scss */
+/* line 175, src/sass/components/_header.scss */
 .header-page-menu-wrap.open .header-page-menu-close {
   -webkit-transform: translate3d(-50%, 0, 0);
           transform: translate3d(-50%, 0, 0);
 }
 
-/* line 170, src/sass/components/_header.scss */
+/* line 181, src/sass/components/_header.scss */
 .header-page-menu {
   position: relative;
   display: -webkit-box;
@@ -3360,7 +3374,7 @@ button::-moz-focus-inner {
   z-index: 0;
 }
 
-/* line 180, src/sass/components/_header.scss */
+/* line 191, src/sass/components/_header.scss */
 .header-page-menu:before, .header-page-menu:after {
   content: "";
   position: absolute;
@@ -3372,17 +3386,17 @@ button::-moz-focus-inner {
   z-index: 0;
 }
 
-/* line 191, src/sass/components/_header.scss */
+/* line 202, src/sass/components/_header.scss */
 .header-page-menu:before {
   left: -50%;
 }
 
-/* line 194, src/sass/components/_header.scss */
+/* line 205, src/sass/components/_header.scss */
 .header-page-menu:after {
   right: -50%;
 }
 
-/* line 199, src/sass/components/_header.scss */
+/* line 210, src/sass/components/_header.scss */
 .header-page-catalog {
   position: relative;
   display: -webkit-box;
@@ -3396,12 +3410,12 @@ button::-moz-focus-inner {
   z-index: 1;
 }
 
-/* line 208, src/sass/components/_header.scss */
+/* line 219, src/sass/components/_header.scss */
 .header-page-catalog__col {
   margin: -8px 24px 0px;
 }
 
-/* line 212, src/sass/components/_header.scss */
+/* line 223, src/sass/components/_header.scss */
 .header-page-catalog__block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3415,30 +3429,30 @@ button::-moz-focus-inner {
   line-height: 1.25;
 }
 
-/* line 218, src/sass/components/_header.scss */
+/* line 229, src/sass/components/_header.scss */
 .header-page-catalog__block:last-child {
   padding-bottom: 0;
 }
 
-/* line 221, src/sass/components/_header.scss */
+/* line 232, src/sass/components/_header.scss */
 .header-page-catalog__block a {
   position: relative;
   padding: 8px 0px;
 }
 
-/* line 225, src/sass/components/_header.scss */
+/* line 236, src/sass/components/_header.scss */
 .header-page-catalog__block a:hover span {
   border-bottom: 1px solid black;
 }
 
-/* line 229, src/sass/components/_header.scss */
+/* line 240, src/sass/components/_header.scss */
 .header-page-catalog__block a span {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   border-bottom: 1px solid rgba(0, 0, 0, 0);
 }
 
-/* line 234, src/sass/components/_header.scss */
+/* line 245, src/sass/components/_header.scss */
 .header-page-catalog__block .big {
   font-size: 18px;
   text-transform: uppercase;
@@ -3446,12 +3460,12 @@ button::-moz-focus-inner {
   letter-spacing: 0.08em;
 }
 
-/* line 241, src/sass/components/_header.scss */
+/* line 252, src/sass/components/_header.scss */
 .header-page-catalog__block .deep span {
   position: relative;
 }
 
-/* line 243, src/sass/components/_header.scss */
+/* line 254, src/sass/components/_header.scss */
 .header-page-catalog__block .deep span:after {
   content: "";
   position: absolute;
@@ -3466,7 +3480,7 @@ button::-moz-focus-inner {
           transform: translate3d(0, -45%, 0) rotate(-45deg);
 }
 
-/* line 259, src/sass/components/_header.scss */
+/* line 270, src/sass/components/_header.scss */
 .header-page-collection {
   position: relative;
   width: calc(23% - 24px);
@@ -3475,7 +3489,7 @@ button::-moz-focus-inner {
   z-index: 1;
 }
 
-/* line 267, src/sass/components/_header.scss */
+/* line 278, src/sass/components/_header.scss */
 .header-page-collection a:hover img {
   -webkit-transition: all 3s ease;
   transition: all 3s ease;
@@ -3483,7 +3497,7 @@ button::-moz-focus-inner {
           transform: scale(1.05) translate3d(0, 0, 0);
 }
 
-/* line 273, src/sass/components/_header.scss */
+/* line 284, src/sass/components/_header.scss */
 .header-page-collection span {
   position: absolute;
   left: 0;
@@ -3496,7 +3510,7 @@ button::-moz-focus-inner {
   z-index: 1;
 }
 
-/* line 284, src/sass/components/_header.scss */
+/* line 295, src/sass/components/_header.scss */
 .header-page-collection .title {
   top: 20px;
   font-size: 19px;
@@ -3505,7 +3519,7 @@ button::-moz-focus-inner {
   letter-spacing: 0.07em;
 }
 
-/* line 291, src/sass/components/_header.scss */
+/* line 302, src/sass/components/_header.scss */
 .header-page-collection .descr {
   bottom: 20px;
   font-size: 14px;
@@ -3513,7 +3527,7 @@ button::-moz-focus-inner {
   letter-spacing: 0.05em;
 }
 
-/* line 297, src/sass/components/_header.scss */
+/* line 308, src/sass/components/_header.scss */
 .header-page-collection img {
   position: relative;
   display: block;
@@ -3529,7 +3543,7 @@ button::-moz-focus-inner {
   z-index: 0;
 }
 
-/* line 310, src/sass/components/_header.scss */
+/* line 321, src/sass/components/_header.scss */
 .header-page-menu-close {
   position: absolute;
   bottom: 40px;
@@ -3548,7 +3562,7 @@ button::-moz-focus-inner {
   transition: all 0.3s ease;
 }
 
-/* line 324, src/sass/components/_header.scss */
+/* line 335, src/sass/components/_header.scss */
 .header-page-menu-close i {
   position: absolute;
   left: 0px;
@@ -3558,7 +3572,7 @@ button::-moz-focus-inner {
   height: 16px;
 }
 
-/* line 331, src/sass/components/_header.scss */
+/* line 342, src/sass/components/_header.scss */
 .header-page-menu-close i:before, .header-page-menu-close i:after {
   content: "";
   position: absolute;
@@ -3569,19 +3583,19 @@ button::-moz-focus-inner {
   background: #fff;
 }
 
-/* line 341, src/sass/components/_header.scss */
+/* line 352, src/sass/components/_header.scss */
 .header-page-menu-close i:before {
   -webkit-transform: translate3d(0, -50%, 0) rotate(45deg);
           transform: translate3d(0, -50%, 0) rotate(45deg);
 }
 
-/* line 344, src/sass/components/_header.scss */
+/* line 355, src/sass/components/_header.scss */
 .header-page-menu-close i:after {
   -webkit-transform: translate3d(0, -50%, 0) rotate(-45deg);
           transform: translate3d(0, -50%, 0) rotate(-45deg);
 }
 
-/* line 348, src/sass/components/_header.scss */
+/* line 359, src/sass/components/_header.scss */
 .header-page-menu-close:hover {
   opacity: 1;
 }

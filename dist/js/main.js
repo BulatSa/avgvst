@@ -150,6 +150,33 @@ $(function () {
 
 $(function () {
   var headerMenuCatalogLink = document.querySelector("[data-menu-open]");
+  var body = document.body;
+  var scrollUp = "scroll-up";
+  var scrollDown = "scroll-down";
+  var lastScroll = 0;
+
+  var toggleBodyScroll = function toggleBodyScroll() {
+    var currentScroll = window.pageYOffset;
+
+    if (currentScroll <= 0) {
+      body.classList.remove(scrollUp);
+      return;
+    }
+
+    if (currentScroll > lastScroll && !body.classList.contains(scrollDown)) {
+      // down
+      body.classList.remove(scrollUp);
+      body.classList.add(scrollDown);
+    } else if (currentScroll < lastScroll && body.classList.contains(scrollDown)) {
+      // up
+      body.classList.remove(scrollDown);
+      body.classList.add(scrollUp);
+    }
+
+    lastScroll = currentScroll;
+  };
+
+  window.addEventListener("scroll", toggleBodyScroll);
 
   if (headerMenuCatalogLink) {
     var headerMenuCatalog = document.querySelector(".".concat(headerMenuCatalogLink.dataset.menuOpen));
@@ -164,15 +191,23 @@ $(function () {
       document.removeEventListener("click", outsideClickListener);
     };
 
+    var removeBodyScrollListener = function removeBodyScrollListener() {
+      window.removeEventListener("scroll", toggleBodyScroll);
+    };
+
     var toggleHeaderMenu = function toggleHeaderMenu(e) {
+      e.preventDefault();
+
       if (headerMenuCatalog.classList.contains("open")) {
         headerMenuCatalogLink.classList.remove("open");
         headerMenuCatalog.classList.remove("open");
         removeClickListener();
+        window.addEventListener("scroll", toggleBodyScroll);
       } else {
         headerMenuCatalogLink.classList.add("open");
         headerMenuCatalog.classList.add("open");
         document.addEventListener("click", outsideClickListener);
+        removeBodyScrollListener();
       }
     };
 
@@ -181,6 +216,7 @@ $(function () {
         headerMenuCatalogLink.classList.remove("open");
         headerMenuCatalog.classList.remove("open");
         removeClickListener();
+        window.addEventListener("scroll", toggleBodyScroll);
       }
     };
 
