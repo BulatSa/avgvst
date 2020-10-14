@@ -1,11 +1,9 @@
 body {
   &.scroll-down {
     .header-page-wrap {
-      transition: transform 0.5s ease;
       transform: translate3d(0, -100%, 0);
     }
   }
-  
 }
 
 .header-page-wrap {
@@ -15,7 +13,7 @@ body {
   right: 0;
   border-bottom: 1px solid #000;
   background: #fff;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease-out;
   z-index: 10;
 }
 
@@ -23,6 +21,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  white-space: nowrap;
+  @include res(m) {
+    display: none;
+  }
 }
 
 .header-page__logo {
@@ -48,6 +50,7 @@ body {
   position: relative;
   display: block;
   padding: 24px 12px;
+
   transition: all 0.3s ease;
   &:hover {
     background: $gray-light;
@@ -63,7 +66,7 @@ body {
       width: 16px;
       height: 16px;
       transition: transform 0.3s ease;
-      transform: rotate(0deg) translate3d(0,0,0);
+      transform: rotate(0deg) translate3d(0, 0, 0);
       &:before,
       &:after {
         content: "";
@@ -85,12 +88,12 @@ body {
     &.open {
       background: $gray-light;
       i {
-        transform: rotate(-90deg) translate3d(0,0,0);
+        transform: rotate(-90deg) translate3d(0, 0, 0);
         &:before {
-          transform: translate3d(-50%, -50%, 0) rotate(45deg);
+          transform: translate3d(-50%, 0, 0) rotate(225deg);
         }
         &:after {
-          transform: translate3d(-50%, -50%, 0) rotate(-45deg);
+          transform: translate3d(-50%, 0, 0) rotate(-45deg);
         }
       }
     }
@@ -170,10 +173,10 @@ body {
     opacity: 1;
     pointer-events: all;
     .header-page-menu {
-      transform: translate3d(0,0,0);
+      transform: translate3d(0, 0, 0);
     }
     .header-page-menu-close {
-      transform: translate3d(-50%,0,0);
+      transform: translate3d(-50%, 0, 0);
     }
   }
 }
@@ -186,7 +189,7 @@ body {
   padding: 24px 0;
   background: #fff;
   transition: all 0.3s ease;
-  transform: translate3d(0,-90px,0);
+  transform: translate3d(0, -90px, 0);
   z-index: 0;
   &:before,
   &:after {
@@ -359,4 +362,63 @@ body {
   &:hover {
     opacity: 1;
   }
+}
+
+.header-page-mobile-wrap {
+  display: none;
+  @include res(m) {
+    display: block;
+  }
+}
+
+.header-page-mobile-delivery {
+  font-size: 12px;
+  line-height: (16/12);
+  text-align: center;
+  color: #fff;
+  background: #000;
+  a {
+    display: block;
+    padding: 8px 16px;
+  }
+  .more {
+    margin-left: 5px;
+    border-bottom: 1px solid #fff;
+  }
+}
+
+.header-page-mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  margin: 0 -8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.burger-mobile {
+  width: 32px;
+  height: 32px;
+  a,
+  img {
+    display: block;
+  }
+}
+
+.header-page-mobile__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin: 0 8px;
+}
+
+.header-page-mobile__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 15px 4px 5px;
 }
