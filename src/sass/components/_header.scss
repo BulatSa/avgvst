@@ -1,0 +1,351 @@
+.header-page-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid #000;
+  background: #fff;
+  z-index: 10;
+}
+
+.header-page {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-page__logo {
+  padding: 24px 24px 12px 24px;
+  transition: all 0.3s ease;
+  &:hover {
+    background: $gray-light;
+  }
+  img {
+    display: block;
+  }
+}
+
+.header-page__nav {
+  display: flex;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 16px;
+}
+
+.header-page__nav-item {
+  position: relative;
+  display: block;
+  padding: 24px 12px;
+  transition: all 0.3s ease;
+  &:hover {
+    background: $gray-light;
+  }
+
+  &--catalog {
+    padding-left: 36px;
+    i {
+      position: absolute;
+      left: 12px;
+      top: 23px;
+      display: block;
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s ease;
+      transform: rotate(0deg) translate3d(0,0,0);
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 12px;
+        height: 1px;
+        background: #000;
+        transition: all 0.3s ease;
+      }
+      &:before {
+        transform: translate3d(-50%, -2px, 0);
+      }
+      &:after {
+        transform: translate3d(-50%, 3px, 0);
+      }
+    }
+    &.open {
+      background: $gray-light;
+      i {
+        transform: rotate(-90deg) translate3d(0,0,0);
+        &:before {
+          transform: translate3d(-50%, -50%, 0) rotate(45deg);
+        }
+        &:after {
+          transform: translate3d(-50%, -50%, 0) rotate(-45deg);
+        }
+      }
+    }
+  }
+}
+
+.header-page__helpers {
+  display: flex;
+  align-items: center;
+  img {
+    display: block;
+  }
+}
+
+.header-page__cabinet {
+  padding: 12px 12px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  &:hover {
+    span {
+      border-bottom: 1px solid rgba(0, 0, 0, 1);
+    }
+  }
+  span {
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+  }
+}
+
+.header-page__helpers-icons {
+  display: flex;
+  align-items: center;
+  //margin-right: -12px;
+  padding-left: 12px;
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    &:hover {
+      border-color: rgba(0, 0, 0, 1);
+    }
+    img {
+      display: block;
+      flex-shrink: 0;
+    }
+  }
+}
+
+.header-page__search {
+}
+
+.header-page__fav {
+}
+
+.header-page__cart {
+}
+
+.header-page-menu-wrap {
+  position: absolute;
+  top: 65px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: calc(100vh - 65px);
+  background: rgba(0, 0, 0, 0.66);
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  &.open {
+    opacity: 1;
+    pointer-events: all;
+    .header-page-menu {
+      transform: translate3d(0,0,0);
+    }
+    .header-page-menu-close {
+      transform: translate3d(-50%,0,0);
+    }
+  }
+}
+
+.header-page-menu {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 24px 0;
+  background: #fff;
+  transition: all 0.3s ease;
+  transform: translate3d(0,-90px,0);
+  z-index: 0;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    pointer-events: none;
+    z-index: 0;
+  }
+  &:before {
+    left: -50%;
+  }
+  &:after {
+    right: -50%;
+  }
+}
+
+.header-page-catalog {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 77%;
+  max-width: 992px;
+  z-index: 1;
+}
+
+.header-page-catalog__col {
+  margin: -8px 24px 0px;
+}
+
+.header-page-catalog__block {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 24px;
+  font-size: 16px;
+  line-height: (20/16);
+  &:last-child {
+    padding-bottom: 0;
+  }
+  a {
+    position: relative;
+    padding: 8px 0px;
+    &:hover {
+      span {
+        border-bottom: 1px solid rgba(0, 0, 0, 1);
+      }
+    }
+    span {
+      transition: all 0.3s ease;
+      border-bottom: 1px solid rgba(0, 0, 0, 0);
+    }
+  }
+  .big {
+    font-size: 18px;
+    text-transform: uppercase;
+    line-height: (24/18);
+    letter-spacing: 0.08em;
+  }
+  .deep {
+    span {
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -12px;
+        width: 8px;
+        height: 8px;
+        display: block;
+        border-right: 1px solid #000000;
+        border-bottom: 1px solid #000000;
+        transform: translate3d(0, -45%, 0) rotate(-45deg);
+      }
+    }
+  }
+}
+
+.header-page-collection {
+  position: relative;
+  width: calc(23% - 24px);
+  max-width: 320px;
+  margin-left: 24px;
+  z-index: 1;
+  a {
+    &:hover {
+      img {
+        transition: all 3s ease;
+        transform: scale(1.05) translate3d(0, 0, 0);
+      }
+    }
+  }
+  span {
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 100%;
+    padding: 0 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    z-index: 1;
+  }
+  .title {
+    top: 20px;
+    font-size: 19px;
+    font-family: $font-header;
+    line-height: (24/19);
+    letter-spacing: 0.07em;
+  }
+  .descr {
+    bottom: 20px;
+    font-size: 14px;
+    line-height: (24/14);
+    letter-spacing: 0.05em;
+  }
+  img {
+    position: relative;
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transition: all 1.5s ease;
+    transform: scale(1) translate3d(0, 0, 0);
+    transform-origin: 50%;
+    z-index: 0;
+  }
+}
+
+.header-page-menu-close {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  padding: 10px;
+  padding-left: 24px;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: (16/12);
+  letter-spacing: 0.1em;
+  color: #fff;
+  opacity: 0.8;
+  transform: translate3d(-50%, 50%, 0);
+  transition: all 0.3s ease;
+  i {
+    position: absolute;
+    left: 0px;
+    top: 9px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 16px;
+      height: 1px;
+      background: #fff;
+    }
+    &:before {
+      transform: translate3d(0, -50%, 0) rotate(45deg);
+    }
+    &:after {
+      transform: translate3d(0, -50%, 0) rotate(-45deg);
+    }
+  }
+  &:hover {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,23 @@
+$breakpoints: (
+	'xxl': (max-width: 1400px),
+	'xl': (max-width: 1280px),
+	'l': (max-width: 1024px),
+	'm': (max-width: 959px),
+	's': (max-width: 680px),
+	'xs': (max-width: 480px),
+	'xxs': (max-width: 375px),
+);
+
+$font: 'Fugue', sans-serif;
+$font-header: 'Arno Pro', serif;
+
+$yellow: #FFD453;
+$red: #D93246;
+$gray: #E5E5E5;
+$gray-light: #F2F2F2;
+$gray-deep: #818181;
+
+$container_width: 1440px;
+
+$gutter: 20px;
+$gutter-mobile: 10px;
