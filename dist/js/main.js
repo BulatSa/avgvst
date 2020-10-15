@@ -150,6 +150,9 @@ $(function () {
 
 $(function () {
   var headerMenuCatalogLink = document.querySelector("[data-menu-open]");
+  var mobileMenuCatalogLink = document.querySelector("[data-mobile-menu-open]");
+  var headerMenuCatalog = document.querySelector(".".concat(headerMenuCatalogLink.dataset.menuOpen));
+  var mobileMenuCatalog = document.querySelector(".".concat(mobileMenuCatalogLink.dataset.mobileMenuOpen));
   var body = document.body;
   var scrollUp = "scroll-up";
   var scrollDown = "scroll-down";
@@ -178,30 +181,37 @@ $(function () {
 
   window.addEventListener("scroll", toggleBodyScroll);
 
+  var outsideClickListener = function outsideClickListener(event) {
+    if (event.target.closest(".header-page-menu") === null && event.target.closest("[data-menu-open]") === null) {
+      closeHeaderMenu();
+    }
+  };
+
+  var removeOutsideClickListener = function removeOutsideClickListener() {
+    document.removeEventListener("click", outsideClickListener);
+  };
+
+  var removeBodyScrollListener = function removeBodyScrollListener() {
+    window.removeEventListener("scroll", toggleBodyScroll);
+  };
+
+  var closeHeaderMenu = function closeHeaderMenu(e) {
+    if (headerMenuCatalog.classList.contains("open")) {
+      headerMenuCatalogLink.classList.remove("open");
+      headerMenuCatalog.classList.remove("open");
+      removeOutsideClickListener();
+      window.addEventListener("scroll", toggleBodyScroll);
+    }
+  };
+
   if (headerMenuCatalogLink) {
-    var headerMenuCatalog = document.querySelector(".".concat(headerMenuCatalogLink.dataset.menuOpen));
-
-    var outsideClickListener = function outsideClickListener(event) {
-      if (event.target.closest(".header-page-menu") === null && event.target.closest("[data-menu-open]") === null) {
-        closeHeaderMenu();
-      }
-    };
-
-    var removeClickListener = function removeClickListener() {
-      document.removeEventListener("click", outsideClickListener);
-    };
-
-    var removeBodyScrollListener = function removeBodyScrollListener() {
-      window.removeEventListener("scroll", toggleBodyScroll);
-    };
-
     var toggleHeaderMenu = function toggleHeaderMenu(e) {
       e.preventDefault();
 
       if (headerMenuCatalog.classList.contains("open")) {
         headerMenuCatalogLink.classList.remove("open");
         headerMenuCatalog.classList.remove("open");
-        removeClickListener();
+        removeOutsideClickListener();
         window.addEventListener("scroll", toggleBodyScroll);
       } else {
         headerMenuCatalogLink.classList.add("open");
@@ -211,18 +221,51 @@ $(function () {
       }
     };
 
-    var closeHeaderMenu = function closeHeaderMenu(e) {
-      if (headerMenuCatalog.classList.contains("open")) {
-        headerMenuCatalogLink.classList.remove("open");
-        headerMenuCatalog.classList.remove("open");
-        removeClickListener();
+    headerMenuCatalogLink.addEventListener("click", toggleHeaderMenu);
+  }
+
+  if (mobileMenuCatalogLink) {
+    var toggleMobileMenu = function toggleMobileMenu(e) {
+      e.preventDefault();
+
+      if (mobileMenuCatalog.classList.contains("open")) {
+        mobileMenuCatalogLink.classList.remove("open");
+        mobileMenuCatalog.classList.remove("open");
         window.addEventListener("scroll", toggleBodyScroll);
+      } else {
+        mobileMenuCatalogLink.classList.add("open");
+        mobileMenuCatalog.classList.add("open");
+        removeBodyScrollListener();
       }
     };
 
-    headerMenuCatalogLink.addEventListener("click", toggleHeaderMenu);
+    mobileMenuCatalogLink.addEventListener("click", toggleMobileMenu);
   }
 });
 /***********************
  Header Menu END
+ ***********************/
+
+/***********************
+ Open Sublink Mobile BEGIN
+ ***********************/
+
+$(function () {
+  var subLinkList = document.querySelectorAll('.header-mobile-menu .sub-link');
+
+  var toggleMobileSubMenu = function toggleMobileSubMenu(event) {
+    var parent = event.target.parentElement;
+    var target = event.target;
+    var el = parent.querySelector("ul");
+    el.style.height = el.scrollHeight + "px";
+    target.classList.toggle("open");
+    el.style.height = target.classList.contains("open") ? el.scrollHeight + "px" : 0;
+  };
+
+  subLinkList.forEach(function (el) {
+    el.addEventListener('click', toggleMobileSubMenu);
+  });
+});
+/***********************
+ Open Sublink Mobile END
  ***********************/

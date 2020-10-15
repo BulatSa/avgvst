@@ -150,6 +150,15 @@ $(function () {
  ***********************/
 $(function () {
   const headerMenuCatalogLink = document.querySelector("[data-menu-open]");
+  const mobileMenuCatalogLink = document.querySelector(
+    "[data-mobile-menu-open]"
+  );
+  const headerMenuCatalog = document.querySelector(
+    `.${headerMenuCatalogLink.dataset.menuOpen}`
+  );
+  const mobileMenuCatalog = document.querySelector(
+    `.${mobileMenuCatalogLink.dataset.mobileMenuOpen}`
+  );
   const body = document.body;
   const scrollUp = "scroll-up";
   const scrollDown = "scroll-down";
@@ -166,44 +175,52 @@ $(function () {
       // down
       body.classList.remove(scrollUp);
       body.classList.add(scrollDown);
-    } else if (currentScroll < lastScroll && body.classList.contains(scrollDown)) {
+    } else if (
+      currentScroll < lastScroll &&
+      body.classList.contains(scrollDown)
+    ) {
       // up
       body.classList.remove(scrollDown);
       body.classList.add(scrollUp);
     }
     lastScroll = currentScroll;
-  }
+  };
 
   window.addEventListener("scroll", toggleBodyScroll);
 
-  if (headerMenuCatalogLink) {
-    const headerMenuCatalog = document.querySelector(
-      `.${headerMenuCatalogLink.dataset.menuOpen}`
-    );
-
-    const outsideClickListener = (event) => {
-      if (
-        event.target.closest(`.header-page-menu`) === null &&
-        event.target.closest(`[data-menu-open]`) === null
-      ) {
-        closeHeaderMenu();
-      }
-    };
-
-    const removeClickListener = () => {
-      document.removeEventListener("click", outsideClickListener);
-    };
-
-    const removeBodyScrollListener = () => {
-      window.removeEventListener("scroll", toggleBodyScroll);
+  const outsideClickListener = (event) => {
+    if (
+      event.target.closest(`.header-page-menu`) === null &&
+      event.target.closest(`[data-menu-open]`) === null
+    ) {
+      closeHeaderMenu();
     }
+  };
 
+  const removeOutsideClickListener = () => {
+    document.removeEventListener("click", outsideClickListener);
+  };
+
+  const removeBodyScrollListener = () => {
+    window.removeEventListener("scroll", toggleBodyScroll);
+  };
+
+  const closeHeaderMenu = (e) => {
+    if (headerMenuCatalog.classList.contains("open")) {
+      headerMenuCatalogLink.classList.remove("open");
+      headerMenuCatalog.classList.remove("open");
+      removeOutsideClickListener();
+      window.addEventListener("scroll", toggleBodyScroll);
+    }
+  };
+
+  if (headerMenuCatalogLink) {
     const toggleHeaderMenu = (e) => {
       e.preventDefault();
       if (headerMenuCatalog.classList.contains("open")) {
         headerMenuCatalogLink.classList.remove("open");
         headerMenuCatalog.classList.remove("open");
-        removeClickListener();
+        removeOutsideClickListener();
         window.addEventListener("scroll", toggleBodyScroll);
       } else {
         headerMenuCatalogLink.classList.add("open");
@@ -213,18 +230,54 @@ $(function () {
       }
     };
 
-    const closeHeaderMenu = (e) => {
-      if (headerMenuCatalog.classList.contains("open")) {
-        headerMenuCatalogLink.classList.remove("open");
-        headerMenuCatalog.classList.remove("open");
-        removeClickListener();
+    headerMenuCatalogLink.addEventListener("click", toggleHeaderMenu);
+  }
+
+  if (mobileMenuCatalogLink) {
+    const toggleMobileMenu = (e) => {
+      e.preventDefault();
+      if (mobileMenuCatalog.classList.contains("open")) {
+        mobileMenuCatalogLink.classList.remove("open");
+        mobileMenuCatalog.classList.remove("open");
         window.addEventListener("scroll", toggleBodyScroll);
+      } else {
+        mobileMenuCatalogLink.classList.add("open");
+        mobileMenuCatalog.classList.add("open");
+        removeBodyScrollListener();
       }
     };
 
-    headerMenuCatalogLink.addEventListener("click", toggleHeaderMenu);
+    mobileMenuCatalogLink.addEventListener("click", toggleMobileMenu);
   }
 });
 /***********************
  Header Menu END
+ ***********************/
+
+
+/***********************
+ Open Sublink Mobile BEGIN
+ ***********************/
+$(function(){
+  const subLinkList = document.querySelectorAll('.header-mobile-menu .sub-link');
+
+  const toggleMobileSubMenu = (event) => {
+    const parent = event.target.parentElement;
+    const target = event.target;
+    const el = parent.querySelector("ul");
+
+    el.style.height = el.scrollHeight + "px";
+
+    target.classList.toggle("open");
+    el.style.height = target.classList.contains("open")
+      ? el.scrollHeight + "px"
+      : 0;
+  };
+
+  subLinkList.forEach((el) => {
+    el.addEventListener('click', toggleMobileSubMenu);
+  });
+});
+/***********************
+ Open Sublink Mobile END
  ***********************/
