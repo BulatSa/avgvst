@@ -99,6 +99,7 @@ var browserSync = require('browser-sync');
 
 var htmlBuild = function htmlBuild() {
 	return src('src/*.html')
+				.pipe(plumber())
 				.pipe(rigger())
 				.pipe(dest('dist/'));
 };
@@ -138,6 +139,7 @@ var buildScripts = function (done) {
 
 	// Run tasks on script files
 	return src(paths.scripts.input)
+		.pipe(plumber())
 		.pipe(flatmap(function(stream, file) {
 
 			// If the file is a directory
@@ -255,6 +257,7 @@ var copyFiles = function (done) {
 
 	// Copy static files
 	return src(paths.copy.input)
+		.pipe(plumber())
 		.pipe(dest(paths.copy.output));
 
 };
