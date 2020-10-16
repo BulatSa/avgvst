@@ -631,6 +631,7 @@ body {
     padding: 8px;
   }
   img {
+    display: block;
     filter: brightness(0.1);
   }
 }
@@ -652,4 +653,8 @@ body {
     display: block;
     margin: 0 auto 24px;
   }
+}
+
+.header-mobile__currency {
+  margin: 0 -8px;
 }

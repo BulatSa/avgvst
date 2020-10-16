@@ -1,0 +1,128 @@
+.footer-page-wrap {
+  padding-top: 95px;
+  padding-bottom: 24px;
+  border-top: 1px solid #000;
+  background: #fff;
+}
+.footer-page {
+}
+
+.footer-page__middle {
+  display: flex;
+  padding-bottom: 72px;
+}
+
+.footer-page__nav {
+  display: flex;
+  width: 35%;
+  font-size: 12px;
+  line-height: (16/12);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  a {
+    display: block;
+    padding: 8px 0;
+    &:hover {
+      span {
+        border-color: rgba(0, 0, 0, 1);
+      }
+    }
+  }
+  span {
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    transition: all 0.3s ease;
+  }
+}
+
+.footer-page__nav-col {
+  width: 50%;
+}
+
+.footer-page__contacts {
+  width: 25%;
+}
+
+.footer-page__soc {
+  display: flex;
+  padding: 8px 8px 22px;
+  a {
+    display: block;
+    padding: 8px;
+    &:hover {
+      img {
+        filter: brightness(1);
+      }
+    }
+  }
+  img {
+    display: block;
+    max-width: 16px;
+    width: 100%;
+    filter: brightness(0.1);
+    transition: all 0.3s ease;
+  }
+}
+
+.footer-page__cities {
+  display: flex;
+  padding-left: 8px;
+  font-size: 12px;
+  line-height: (16/12);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  &:hover {
+    span {
+      border-color: rgba(0, 0, 0, 1);
+    }
+  }
+  img {
+    display: block;
+    flex-shrink: 0;
+    margin-right: 8px;
+  }
+  span {
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    transition: all 0.3s ease;
+  }
+}
+
+.footer-page__subsr {
+  width: 40%;
+  p {
+    padding-bottom: 8px;
+    font-size: 16px;
+    line-height: (20/16);
+  }
+  span {
+    display: block;
+    padding-bottom: 8px;
+    font-size: 14px;
+    line-height: (18/14);
+  }
+  form {
+    padding-top: 8px;
+  }
+}
+
+.footer-page__bottom {
+  font-size: 14px;
+  line-height: (18/14);
+  a {
+    &:hover {
+      span {
+        border-color: rgba(0, 0, 0, 0);
+      }
+    }
+    span {
+      border-bottom: 1px solid #000;
+      transition: all 0.3s ease;
+    }
+  }
+  .separator {
+    padding: 0 12px;
+  }
+  .name {
+    padding-right: 8px;
+  }
+}

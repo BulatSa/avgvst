@@ -254,12 +254,13 @@ $(function () {
  Header Menu END
  ***********************/
 
-
 /***********************
  Open Sublink Mobile BEGIN
  ***********************/
-$(function(){
-  const subLinkList = document.querySelectorAll('.header-mobile-menu .sub-link');
+$(function () {
+  const subLinkList = document.querySelectorAll(
+    ".header-mobile-menu .sub-link"
+  );
 
   const toggleMobileSubMenu = (event) => {
     const parent = event.target.parentElement;
@@ -275,9 +276,44 @@ $(function(){
   };
 
   subLinkList.forEach((el) => {
-    el.addEventListener('click', toggleMobileSubMenu);
+    el.addEventListener("click", toggleMobileSubMenu);
   });
 });
 /***********************
  Open Sublink Mobile END
+ ***********************/
+
+/***********************
+ Select2 BEGIN
+ ***********************/
+$(document).ready(function () {
+  const formatSelectCurrency = (currency) => {
+    if (!currency.id) {
+      return currency.text;
+    }
+    const element = currency.element;
+    //console.log(currency);
+
+    const imgSrc = element.dataset.flagsrc;
+    const title = element.dataset.title;
+    const descr = element.dataset.descr;
+    const $currency = $(`
+      <img src="${imgSrc}"/>
+      <span class="title">${title}</span>
+      <span class="descr">${descr}</span>
+    `);
+    return $currency;
+  };
+
+  $(".select2-js--currency").select2({
+    //width: '100%'
+    theme: "avgvst-currency",
+    dropdownAutoWidth: true,
+    minimumResultsForSearch: Infinity,
+    templateResult: formatSelectCurrency,
+    templateSelection: formatSelectCurrency,
+  });
+});
+/***********************
+ Select2 END
  ***********************/
