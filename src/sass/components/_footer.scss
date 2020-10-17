@@ -3,6 +3,9 @@
   padding-bottom: 24px;
   border-top: 1px solid #000;
   background: #fff;
+  @include res(m) {
+    padding-top: 55px;
+  }
 }
 .footer-page {
 }
@@ -10,6 +13,10 @@
 .footer-page__middle {
   display: flex;
   padding-bottom: 72px;
+  @include res(m) {
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+  }
 }
 
 .footer-page__nav {
@@ -19,6 +26,10 @@
   line-height: (16/12);
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  @include res(m) {
+    width: 50%;
+    flex-wrap: wrap;
+  }
   a {
     display: block;
     padding: 8px 0;
@@ -36,18 +47,32 @@
 
 .footer-page__nav-col {
   width: 50%;
+  padding-right: 16px;
+  @include res(m) {
+    width: 100%;
+  }
 }
 
 .footer-page__contacts {
   width: 25%;
+  @include res(m) {
+    width: 50%;
+  }
 }
 
 .footer-page__soc {
   display: flex;
   padding: 8px 8px 22px;
+  @include res(m) {
+    margin: 0 -8px;
+    padding-top: 24px;
+  }
   a {
     display: block;
     padding: 8px;
+    @include res(m) {
+      margin: 0 8px;
+    }
     &:hover {
       img {
         filter: brightness(1);
@@ -70,6 +95,10 @@
   line-height: (16/12);
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  @include res(m) {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
   &:hover {
     span {
       border-color: rgba(0, 0, 0, 1);
@@ -87,28 +116,55 @@
   }
 }
 
+.footer-page__currency {
+  max-width: 200px;
+}
+
 .footer-page__subsr {
   width: 40%;
-  p {
+  max-width: 450px;
+  margin-left: auto;
+  @include res(m) {
+    width: 100%;
+    padding-top: 10px;
+  }
+  &>p {
     padding-bottom: 8px;
     font-size: 16px;
     line-height: (20/16);
+    @include res(m) {
+      padding-bottom: 16px;
+      font-size: 12px;
+      line-height: (16/12);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
   }
-  span {
+  &>span {
     display: block;
-    padding-bottom: 8px;
+    padding-bottom: 16px;
     font-size: 14px;
     line-height: (18/14);
+    @include res(m) {
+      display: none;
+    }
   }
   form {
-    padding-top: 8px;
+
   }
 }
+
+
 
 .footer-page__bottom {
   font-size: 14px;
   line-height: (18/14);
+  @include res(m) {
+    font-size: 12px;
+    line-height: 1.6;
+  }
   a {
+    white-space: nowrap;
     &:hover {
       span {
         border-color: rgba(0, 0, 0, 0);
@@ -121,6 +177,9 @@
   }
   .separator {
     padding: 0 12px;
+    @include res(m) {
+      padding: 0 2px;
+    }
   }
   .name {
     padding-right: 8px;

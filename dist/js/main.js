@@ -42,6 +42,62 @@ $(function () {
  ***********************/
 
 /***********************
+ Input validate BEGIN
+ ***********************/
+$(function () {
+  const formList = document.querySelectorAll(".subscr-mini");
+  const inputEmailList = document.querySelectorAll("input[type=email]");
+  const inputTextList = document.querySelectorAll("input.input-text");
+
+  const stylizePlaceholder = (event) => {
+    const input = event.target;
+    const parentLabel = input.parentElement;
+    
+    if (event.type === "focus" && event.target.value === "") {
+      parentLabel.classList.add("active");
+    }
+
+    if (event.type === "blur" && event.target.value === "") {
+      parentLabel.classList.remove("active");
+      parentLabel.classList.remove("error");
+    }
+  };
+
+  inputTextList.forEach((inputText) => {
+    inputText.addEventListener("focus", stylizePlaceholder);
+    inputText.addEventListener("blur", stylizePlaceholder);
+  });
+
+  const checkingForm = (event) => {
+    const email = event.target.querySelector("input[type=email]");
+    const emailLabel = email.parentElement;
+
+    if (!email.validity.valid) {
+      event.preventDefault();
+      emailLabel.classList.add("error");
+    }
+  };
+
+  const checkingEmail = (event) => {
+    const parentLabel = event.target.parentElement;
+    if (event.target.validity.valid) {
+      parentLabel.classList.remove("error");
+    }
+  };
+
+  inputEmailList.forEach((inputEmail) => {
+    inputEmail.addEventListener("input", checkingEmail);
+  });
+
+  formList.forEach((form) => {
+    form.addEventListener("submit", checkingForm);
+  });
+});
+/***********************
+ Input validate ENF
+ ***********************/
+
+/***********************
 MacOS Detection BEGIN
 ***********************/
 $(function () {

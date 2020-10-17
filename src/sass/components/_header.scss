@@ -600,7 +600,7 @@ body {
 }
 
 .header-mobile__nav {
-  margin-bottom: 30px;
+  margin-bottom: 22px;
   font-size: 12px;
   line-height: (16/12);
   letter-spacing: 0.1em;
@@ -615,7 +615,7 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: -8px;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   font-size: 12px;
   line-height: (16/12);
   letter-spacing: 0.1em;
@@ -626,9 +626,15 @@ body {
 }
 
 .header-mobile__soc {
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: 24px;
   a {
     padding: 8px;
+    margin-right: 16px;
+    &:last-child {
+      margin-right: 0;
+    }
   }
   img {
     display: block;
@@ -637,7 +643,7 @@ body {
 }
 
 .header-mobile__subscr {
-  margin: 0 -16px;
+  margin: 0 -16px 32px;
   padding: 40px 16px;
   text-align: center;
   background: $gray-light;
