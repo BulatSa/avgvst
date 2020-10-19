@@ -10,6 +10,7 @@
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s ease;
+  z-index: 1;
   &.open {
     opacity: 1;
     pointer-events: all;
@@ -29,6 +30,9 @@
   padding: 24px 24px 12px 24px;
   transition: all 0.3s ease;
   z-index: 1;
+  @include res(m) {
+    display: none;
+  }
   &:hover {
     background: $gray-light;
   }
@@ -46,6 +50,9 @@
   border-left: 1px solid #000;
   transition: all 0.3s ease;
   z-index: 1;
+  @include res(m) {
+    right: 0;
+  }
   &:hover {
     background: $gray;
   }
@@ -91,7 +98,9 @@
     transition: all 0.3s ease;
     -webkit-appearance: none;
     @include res(m) {
-      padding: 18px 16px 16px;
+      padding: 20px 16px 21px;
+      padding-right: 64px;
+      padding-left: 0;
     }
     &::placeholder {
       font-size: 18px;
@@ -108,6 +117,9 @@
       }
     }
     &.active {
+      @include res(m) {
+        text-align: left;
+      }
       &+span {
         opacity: 1;
         pointer-events: all;
@@ -131,6 +143,12 @@
     pointer-events: none;
     cursor: pointer;
     transition: all 0.3s ease;
+    @include res(m) {
+      right: 52px;
+      padding: 0;
+      padding-right: 12px;
+      font-size: 10px;
+    }
     &:hover {
       color: #000;
     }
@@ -190,6 +208,9 @@
   text-align: center;
   letter-spacing: 0.07em;
   text-transform: uppercase;
+  @include res(m) {
+    padding: 38px 0 36px;
+  }
   span {
     font-style: italic;
   }
@@ -204,6 +225,9 @@
     border: 1px solid #fff;
     border-top: none;
     border-right: none;
+    @include res(m) {
+      width: 100%;
+    }
     img {
       display: block;
       max-width: 100%;

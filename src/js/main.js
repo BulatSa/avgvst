@@ -216,6 +216,7 @@ $(function () {
     `.${mobileMenuCatalogLink.dataset.mobileMenuOpen}`
   );
 
+  const searchOpenLinkList = document.querySelectorAll("[data-search-open]");
   const searchOpenLink = document.querySelector("[data-search-open]");
   const searchCloseLink = document.querySelector("[data-search-close]");
   const searchWrap = document.querySelector(
@@ -342,7 +343,9 @@ $(function () {
       clearSearchInput();
     };
 
-    searchOpenLink.addEventListener("click", toggleSearchWrap);
+    searchOpenLinkList.forEach((searchOpenLink) => {
+      searchOpenLink.addEventListener("click", toggleSearchWrap);
+    })
     searchCloseLink.addEventListener("click", toggleSearchWrap);
     searchInput.addEventListener("input", showSearchResult);
     searchInputClearLink.addEventListener("click", clearSearchResults);
