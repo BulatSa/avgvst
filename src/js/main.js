@@ -227,12 +227,13 @@ $(function () {
       return;
     }
 
-    if (currentScroll > lastScroll && !body.classList.contains(scrollDown)) {
+    if (currentScroll > 100 && currentScroll > lastScroll && !body.classList.contains(scrollDown)) {
       // down
       body.classList.remove(scrollUp);
       body.classList.add(scrollDown);
     } else if (
-      currentScroll < lastScroll &&
+      currentScroll < 100 ||
+      currentScroll < lastScroll - 10 &&
       body.classList.contains(scrollDown)
     ) {
       // up
@@ -295,10 +296,12 @@ $(function () {
       if (mobileMenuCatalog.classList.contains("open")) {
         mobileMenuCatalogLink.classList.remove("open");
         mobileMenuCatalog.classList.remove("open");
+        body.classList.remove('scroll-lock');
         window.addEventListener("scroll", toggleBodyScroll);
       } else {
         mobileMenuCatalogLink.classList.add("open");
         mobileMenuCatalog.classList.add("open");
+        body.classList.add('scroll-lock');
         removeBodyScrollListener();
       }
     };
