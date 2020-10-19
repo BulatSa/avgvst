@@ -19,6 +19,45 @@
 				</div>
 				<div class="footer-page__contacts">
 					<div class="footer-page__soc">
+						<div class="soc-block">
+							<a href="#">
+								<img src="images/icons/soc-what.svg" alt="Whatsup">
+							</a>
+							<a href="#">
+								<img src="images/icons/soc-tg.svg" alt="Telegram">
+							</a>
+							<a href="#">
+								<img src="images/icons/soc-fb.svg" alt="Facebook">
+							</a>
+							<a href="#">
+								<img src="images/icons/soc-vk.svg" alt="Vkontakte">
+							</a>
+							<a href="#">
+								<img src="images/icons/soc-insta.svg" alt="Instagram">
+							</a>
+						</div>
+					</div>
+					<a href="#" class="footer-page__cities">
+						<img src="images/icons/geo.svg" alt="">
+						<span>магазины</span>
+					</a>
+					<div class="footer-page__currency">
+						<select class="select2-js select2-js--currency" name="currency">
+							<option value="RUR" selected data-flagsrc="images/icons/flag-rus.svg" data-title="Русский"
+								data-descr="RUR">
+								Русский RUR
+							</option>
+							<option value="USD" data-flagsrc="images/icons/flag-eng.svg" data-title="English" data-descr="USD">
+								English USD
+							</option>
+							<option value="EUR" data-flagsrc="images/icons/flag-eng.svg" data-title="Eupore" data-descr="EUR">
+								Eupore EUR
+							</option>
+						</select>
+					</div>
+				</div>
+				<div class="footer-page__soc">
+					<div class="soc-block">
 						<a href="#">
 							<img src="images/icons/soc-what.svg" alt="Whatsup">
 						</a>
@@ -35,61 +74,18 @@
 							<img src="images/icons/soc-insta.svg" alt="Instagram">
 						</a>
 					</div>
-					<a href="#" class="footer-page__cities">
-						<img src="images/icons/geo.svg" alt="">
-						<span>магазины</span>
-					</a>
-					<div class="footer-page__currency">
-						<select class="select2-js select2-js--currency" name="currency">
-							<option value="RUR" 
-								selected
-								data-flagsrc="images/icons/flag-rus.svg" 
-								data-title="Русский" 
-								data-descr="RUR">
-								Русский RUR
-							</option>
-							<option value="RUR" 
-								data-flagsrc="images/icons/flag-eng.svg" 
-								data-title="English" 
-								data-descr="USD">
-								English USD
-							</option>
-							<option value="RUR" 
-								data-flagsrc="images/icons/flag-eng.svg" 
-								data-title="Eupore" 
-								data-descr="EUR">
-								Eupore EUR
-							</option>
-						</select>
-					</div>
-				</div>
-				<div class="footer-page__soc">
-					<a href="#">
-						<img src="images/icons/soc-what.svg" alt="Whatsup">
-					</a>
-					<a href="#">
-						<img src="images/icons/soc-tg.svg" alt="Telegram">
-					</a>
-					<a href="#">
-						<img src="images/icons/soc-fb.svg" alt="Facebook">
-					</a>
-					<a href="#">
-						<img src="images/icons/soc-vk.svg" alt="Vkontakte">
-					</a>
-					<a href="#">
-						<img src="images/icons/soc-insta.svg" alt="Instagram">
-					</a>
 				</div>
 				<div class="footer-page__subsr">
 					<p>Подпишитесь на нашу рассылку</p>
-					<span>Узнавайте о новинках, скидках и мероприятиях, а также дважды в месяц получайте личное вдумчивое письмо от Наташи Брянцевой</span>
+					<span>Узнавайте о новинках, скидках и мероприятиях, а также дважды в месяц получайте личное вдумчивое письмо
+						от Наташи Брянцевой</span>
 					<form class="subscr-mini" novalidate>
 						<label class="input-label">
 							<span class="input-placeholder">Эл. почта</span>
 							<input type="email" class="input-text" required>
 							<span class="input-error-info" aria-live="polite">Введите эл. почту name@email.ru</span>
 						</label>
-						<button class="btn">Подписаться</button>
+						<button class="btn btn--mini">Подписаться</button>
 					</form>
 				</div>
 			</div>
@@ -108,25 +104,134 @@
 <!-- Модальные окна -->
 <div class="modals-sec">
 
-	<div id="modal-order" class="modal">
-		<p>Заказать обратный звонок</p>
-		<p>Оставьте заявку и наш администратор свяжется с&nbsp;Вами в течение 10 минут</p>
-		<form class="ajax-form">
-			<input type="hidden" value="Новая заявка" name="form_subject">
-			<input type="text" name="user_name" placeholder="Введите имя" data-label="Имя пользователя" class="input-text" >
-			<input type="email" name="user_email" placeholder="Введите e-mail*" data-label="Email" class="input-text" data-req="true">
-			<input type="tel" name="user_tel" placeholder="Введите телефон*" data-label="Телефон"  class="input-text" data-req="true">
-			<input type="file" name="user_file" data-label="Файл">
-			<button type="submit" class="btn">Отправить</button>
-			<label class="style-check-ios">
-				<input type="checkbox" name="user_policy" data-label="Согласен с условиями" value="yes" data-req="true" checked="">
-				<span>Нажимая кнопку, я даю согласие на&nbsp;обработку персональных данных и&nbsp;соглашаюсь с&nbsp;<a href="#">условиями политики конфиденциальности</a></span>
-			</label>
-		</form>
+	<div id="modal-subscribe-mailchimp" class="modal">
+		<div class="modal-subscribe-mailchimp">
+			<div class="modal-subscribe-mailchimp__head">
+				<p class="h3">Подписка-любовь от Avgvst</p>
+				<img src="images/subscribe-mobile-menu.svg" alt="">
+				<p class="descr">
+					Подпишитесь, чтобы подружиться с нами и первыми узнавать про новые коллекции, события и закрытые распродажи.
+					<br><br>
+					Подписчики часто хвалят нашу рассылку, и мы действительно много работаем, чтобы сделать её классной, личной и
+					интересной. Часть писем пишет и отправляет лично Наташа Брянцева, основательница и креативный директор Avgvst.
+					<br><br>
+					Добро пожаловать на борт!
+				</p>
+			</div>
+			<div class="modal-subscribe-mailchimp__form">
+				<form>
+					<label class="input-label">
+						<span class="input-placeholder">Эл. почта</span>
+						<input type="email" class="input-text" required>
+						<span class="input-error-info" aria-live="polite">Введите эл. почту name@email.ru</span>
+					</label>
+					<label class="input-label">
+						<span class="input-placeholder">Имя и фамилия</span>
+						<input type="text" class="input-text" required>
+						<span class="input-descr-info">Используем только для обращения к вам</span>
+						<span class="input-error-info" aria-live="polite">Заполните поле</span>
+					</label>
+					<label class="input-label">
+						<select class="select2-js select2-js--horoscope" name="horoscope" data-placeholder="Знак зодиака">
+							<option></option>
+							<option value="Козерог" data-title="Козерог">
+								Козерог
+							</option>
+							<option value="Водолей" data-title="Водолей">
+								Водолей
+							</option>
+							<option value="Рыбы" data-title="Рыбы">
+								Рыбы
+							</option>
+							<option value="Рыбы" data-title="Рыбы">
+								Овен
+							</option>
+							<option value="Рыбы" data-title="Рыбы">
+								Телец
+							</option>
+							<option value="Близнецы" data-title="Близнецы">
+								Близнецы
+							</option>
+							<option value="Рак" data-title="Рак">
+								Рак
+							</option>
+							<option value="Лев" data-title="Лев">
+								Лев
+							</option>
+							<option value="Дева" data-title="Дева">
+								Дева
+							</option>
+							<option value="Весы" data-title="Весы">
+								Весы
+							</option>
+							<option value="Скорпион" data-title="Скорпион">
+								Скорпион
+							</option>
+							<option value="Стрелец" data-title="Стрелец">
+								Стрелец
+							</option>
+						</select>
+						<span class="input-error-info" aria-live="polite">Заполните поле</span>
+					</label>
+					
+					<label class="input-label">
+						<span class="input-placeholder">Дата рождения</span>
+						<input type="text" class="input-text" required>
+						<span class="input-descr-info">Пришлём подарок, если укажете день рождения</span>
+						<span class="input-error-info" aria-live="polite">Заполните поле</span>
+					</label>
+					<label class="input-label">
+						<span class="input-placeholder">Город</span>
+						<input type="text" class="input-text" required>
+						<span class="input-descr-info">Будем присылать новости только для этого города</span>
+						<span class="input-error-info" aria-live="polite">Заполните поле</span>
+					</label>
+					<label class="input-label">
+						<span class="input-placeholder">Телефон</span>
+						<input type="tel" class="input-text" required>
+						<span class="input-error-info" aria-live="polite">Заполните поле</span>
+					</label>
+					<label class="style-checkbox">
+						<p>Информирование в WhatsApp</p>
+						<input type="checkbox" name="whatsup-info" value="yes" checked>
+						<span>Да, я хочу получать сообщения о распродажах, но не чаще раза в месяц.</span>
+					</label>
+					<div class="btn-wrap btn-wrap--center">
+						<button class="btn">Подписаться</button>
+						<p class="input-pers-info">
+							Нажимая на кнопку «Отправить», я соглашаюсь с <a href="#" target="_blank">условиями обработки персональных
+								данных</a>
+						</p>
+					</div>
+				</form>
+			</div>
+			<div class="modal-subscribe-mailchimp__soc">
+				<p>Подписаться в соц. сетях</p>
+				<div class="soc-block soc-block--center">
+					<a href="#">
+						<img src="images/icons/soc-what.svg" alt="Whatsup">
+					</a>
+					<a href="#">
+						<img src="images/icons/soc-tg.svg" alt="Telegram">
+					</a>
+					<a href="#">
+						<img src="images/icons/soc-fb.svg" alt="Facebook">
+					</a>
+					<a href="#">
+						<img src="images/icons/soc-vk.svg" alt="Vkontakte">
+					</a>
+					<a href="#">
+						<img src="images/icons/soc-insta.svg" alt="Instagram">
+					</a>
+				</div>
+			</div>
+		</div>
 	</div>
+
 	<div id="modal-thanks" class="modal">
 		<p>Спасибо за заявку!</p>
 	</div>
+
 	<div id="modal-error" class="modal">
 		<p>Что-то пошло не так.</p>
 		<p>Попробуйте еще раз.</p>
@@ -135,7 +240,8 @@
 </div>
 <!-- Модальные окна -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="js/libs.js" type="text/javascript" ></script>
-<script src="js/main.js" type="text/javascript" ></script>
+<script src="js/libs.js" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
 </body>
+
 </html>

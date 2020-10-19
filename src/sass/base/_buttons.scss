@@ -1,70 +1,114 @@
 button {
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
-	-webkit-tap-highlight-color: transparent;
-	-webkit-appearance: none;
-	&:focus {
-		outline: none;
-	}
-	&::-moz-focus-inner {
-		border: 0;
-		padding: 0;
-	}
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  &:focus {
+    outline: none;
+  }
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
 }
 
 .btn {
-	position: relative;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	padding: 18px 24px;
-	font-size: 18px;
-	font-family: $font;
-	line-height: (20/18);
-	text-decoration: none;
-	text-align: center;
-	white-space: nowrap;
-	border: none;
-	color: #fff;
-	cursor: pointer;
-	vertical-align: top;
-	user-select: none;
-	transition: all 0.3s ease;
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
-	-webkit-tap-highlight-color: transparent;
-	-webkit-appearance: none;
-	background: #000;
-	@include res(m) {
-		padding: 18px 16px 18px;
-		font-size: 16px;
-		line-height: (20/16);
-	}
-	&:hover {
-		background: $yellow;
-		color: #000;
-	}
-	&:focus {
-		outline: none;
-	}
-	&.success {
-		background: $yellow;
-		color: #000;
-	}
-	&.disabled {
-		pointer-events: none;
-		color: $gray-deep;
-		background: $gray;
-	}
-	&--white {
-		color: #000;
-		border: 1px solid #000;
-		background: #fff;
-		&:hover {
-			border-color: $yellow;
-		}
-		&.disabled {
-			pointer-events: none;
-			color: $gray-deep;
-			border-color: $gray;
-		}
-	}
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 24px;
+  font-size: 18px;
+  font-family: $font;
+  line-height: (20/18);
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  vertical-align: top;
+  user-select: none;
+  transition: all 0.3s ease;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  background: #000;
+  @include res(m) {
+    padding: 18px 16px 18px;
+  }
+  &:hover {
+    background: $yellow;
+    color: #000;
+  }
+  &:focus {
+    outline: none;
+  }
+  &.success {
+    background: $yellow;
+    color: #000;
+  }
+  &.disabled {
+    pointer-events: none;
+    color: $gray-deep;
+    background: $gray;
+  }
+  &--white {
+    color: #000;
+    border: 1px solid #000;
+    background: #fff;
+    &:hover {
+      border-color: $yellow;
+    }
+    &.disabled {
+      pointer-events: none;
+      color: $gray-deep;
+      border-color: $gray;
+    }
+  }
+  &--mini {
+    @include res(m) {
+      font-size: 16px;
+      line-height: (20/16);
+    }
+  }
+}
+
+.btn-wrap {
+  .btn {
+    margin-bottom: 8px;
+  }
+  &--center {
+    text-align: center;
+    .btn {
+      width: 100%;
+    }
+  }
+}
+
+.soc-block {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  a {
+    padding: 8px;
+    margin-right: 16px;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      img {
+        filter: brightness(1);
+      }
+    }
+  }
+  img {
+    display: block;
+    max-width: 24px;
+    width: 100%;
+    filter: brightness(0.1);
+    transition: all 0.3s ease;
+  }
+  &--center {
+    justify-content: center;
+  }
 }

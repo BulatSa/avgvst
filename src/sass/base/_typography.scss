@@ -1,90 +1,123 @@
 body {
-	font-family: $font;
-	font-size: 16px;
-	font-weight: normal;
-	line-height: 1.4;
-	color: #000;
+  font-family: $font;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.4;
+  color: #000;
 }
 
 a {
-	color: inherit;
-	text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
-h1, .h1 {}
-h2, .h2 {}
-h3, .h3 {}
-h4, .h4 {}
-h5, .h5 {}
+h1,
+.h1 {
+  font-family: $font-header;
+}
+
+h2,
+.h2 {
+  font-family: $font-header;
+}
+
+h3,
+.h3 {
+	padding-bottom: 8px;
+  font-family: $font-header;
+  font-size: 24px;
+  line-height: 1;
+  text-align: center;
+  letter-spacing: 0.07em;
+	text-transform: uppercase;
+	@include res(m) {
+		font-size: 19px;
+		line-height: (24/19);
+	}
+}
+
+h4,
+.h4 {
+  font-family: $font-header;
+}
+
+h5,
+.h5 {
+  font-family: $font-header;
+}
 
 .user-content {
-	padding-bottom: 1.5em;
-	font-size: 24px;
-	line-height: calc(40 / 24);
-	@include res(xl) {
-		font-size: 20px;
-		line-height: calc(30 / 20);
-	}
-	@include res(m) {
-		padding-bottom: 1em;
-		font-size: 18px;
-		line-height: 1.5;
-	}
-	p {
-		padding-bottom: 1.5em;
-		@include res(m) {
-			padding-bottom: 1em;
-		}
-		&:last-child {
-			padding-bottom: 0;
-		}
-		&+ul {
-			margin-top: -0.7em;
-		}
-	}
-	b {}
-	span {}
-	ul {}
-	ol {}
-	li {
-		position: relative;
-		display: block;
-		padding-left: 40px;
-		padding-top: 0.7em;
-		padding-bottom: 0.7em;
-		@include res(m) {
-			padding-left: 25px;
-			padding-bottom: 0.7em;
-		}
-		&:before {
-			content: '';
-			position: absolute;
-			top: 1.25em;
-			left: 5px;
-			width: 10px;
-			height: 10px;
-			font-size: 24px;
-			border-radius: 50%;
-			background: #000;
-			@include res(m) {
-				top: 0.95em;
-				width: 8px;
-				height: 8px;
-			}
-		}
-		li {
-			&:before {
-				border: 1px solid #000;
-				background: transparentize(#000, 1);
-			}
-		}
-	}
+  padding-bottom: 1.5em;
+  font-size: 24px;
+  line-height: calc(40 / 24);
+  @include res(xl) {
+    font-size: 20px;
+    line-height: calc(30 / 20);
+  }
+  @include res(m) {
+    padding-bottom: 1em;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  p {
+    padding-bottom: 1.5em;
+    @include res(m) {
+      padding-bottom: 1em;
+    }
+    &:last-child {
+      padding-bottom: 0;
+    }
+    & + ul {
+      margin-top: -0.7em;
+    }
+  }
+  b {
+  }
+  span {
+  }
+  ul {
+  }
+  ol {
+  }
+  li {
+    position: relative;
+    display: block;
+    padding-left: 40px;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+    @include res(m) {
+      padding-left: 25px;
+      padding-bottom: 0.7em;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      top: 1.25em;
+      left: 5px;
+      width: 10px;
+      height: 10px;
+      font-size: 24px;
+      border-radius: 50%;
+      background: #000;
+      @include res(m) {
+        top: 0.95em;
+        width: 8px;
+        height: 8px;
+      }
+    }
+    li {
+      &:before {
+        border: 1px solid #000;
+        background: transparentize(#000, 1);
+      }
+    }
+  }
 }
 
 .nowrap {
-	white-space: nowrap;
+  white-space: nowrap;
 }
 
 .bold {
-	font-weight: bold;
+  font-weight: bold;
 }

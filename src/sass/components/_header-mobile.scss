@@ -262,20 +262,7 @@
 }
 
 .header-mobile__soc {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 24px;
-  a {
-    padding: 8px;
-    margin-right: 16px;
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-  img {
-    display: block;
-    filter: brightness(0.1);
-  }
+
 }
 
 .header-mobile__subscr {

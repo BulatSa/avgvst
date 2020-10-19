@@ -25,6 +25,37 @@ textarea {
   resize: vertical;
 }
 
+.input-label {
+  position: relative;
+  margin-bottom: 24px;
+  &.active {
+    .input-text {
+      border-color: #000;
+      background: $gray-light;
+    }
+    .input-placeholder {
+      top: 6px;
+      font-size: 10px;
+      line-height: (12/10);
+    }
+  }
+  &.error {
+    .input-text {
+      color: $red;
+      border-color: $red;
+    }
+    .input-error-info {
+      opacity: 1;
+    }
+    .input-descr-info {
+      opacity: 0;
+    }
+  }
+  & + .style-checkbox {
+    padding-top: 16px;
+  }
+}
+
 .input-text,
 .input-textarea {
   display: inline-block;
@@ -41,7 +72,7 @@ textarea {
   overflow: visible;
   transition: all 0.3s ease;
   @include res(m) {
-    padding: 18px 16px 16px;
+    padding: 20px 16px 14px;
   }
 
   &::placeholder {
@@ -104,31 +135,25 @@ textarea {
   opacity: 0;
   transition: all 0.3s ease;
   @include res(m) {
-    
   }
 }
 
-.input-label {
-  position: relative;
-  margin-bottom: 22px;
-  &.active {
-    .input-text {
-      border-color: #000;
-      background: $gray-light;
-    }
-    .input-placeholder {
-      top: 6px;
-      font-size: 10px;
-      line-height: (12/10);
-    }
-  }
-  &.error {
-    .input-text {
-      color: $red;
-      border-color: $red;
-    }
-    .input-error-info {
-      opacity: 1;
+.input-descr-info {
+  color: $gray-deep;
+  font-size: 14px;
+  line-height: (18/14);
+  transition: all 0.3s ease;
+}
+
+.input-pers-info {
+  text-align: center;
+  font-size: 14px;
+  line-height: (18/14);
+  a {
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+    transition: all 0.3s ease;
+    &:hover {
+      border-color: rgba(0, 0, 0, 0);
     }
   }
 }
@@ -148,6 +173,98 @@ textarea {
     -webkit-tap-highlight-color: transparent;
     -webkit-appearance: none;
   }
+  &--avgvst-default {
+    .select2-dropdown {
+      top: -56px;
+      margin: -1px 0;
+      border: none;
+      border-radius: 0;
+      background: rgba(0, 0, 0, 0);
+      z-index: 99999;
+    }
+    .select2-results__options {
+      overflow: auto;
+      max-height: 341px;
+      border: 1px solid #000;
+      .select2-results__option {
+        transition: all 0.3s ease;
+        &:hover {
+          background: $gray-light;
+        }
+        &[aria-selected="true"] {
+          background: $yellow;
+        }
+      }
+    }
+    .select2-selection--single {
+      height: auto;
+      .select2-selection__rendered {
+        display: flex;
+        align-items: center;
+        padding: 20px 8px;
+        border: 1px solid #000;
+        background: #fff;
+        transition: all 0.3s ease;
+        @include res(m) {
+          padding: 20px 8px;
+        }
+        &:hover {
+          background: $gray-light;
+        }
+        img {
+          display: block;
+          flex-shrink: 0;
+        }
+        span {
+          font-size: 12px;
+          line-height: (16/12);
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+        }
+      }
+    }
+    .select2-results__option,
+    .select2-selection__rendered {
+      display: flex;
+      align-items: center;
+      padding: 20px 8px;
+      border-bottom: 1px solid $gray-light;
+      background: #fff;
+      &:last-child {
+        border-bottom: none;
+      }
+      span {
+        font-size: 12px;
+        line-height: (16/12);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        &.title {
+          color: #000;
+        }
+        &.descr {
+          padding-left: 4px;
+          color: $gray-deep;
+        }
+      }
+    }
+    &.select2-container--open {
+      &.select2-container--below {
+        pointer-events: none;
+      }
+      .select2-selection--single {
+        .select2-selection__rendered {
+          background: $yellow;
+        }
+      }
+    }
+    &.selected {
+      .select2-selection--single {
+        .select2-selection__rendered {
+          background: $gray-light;
+        }
+      }
+    }
+  }
   &--avgvst-currency {
     //left: 16px;
     .select2-dropdown {
@@ -161,7 +278,7 @@ textarea {
       .select2-results__option {
         transition: all 0.3s ease;
         &:hover {
-          background: $yellow;
+          background: $gray-light;
         }
         &[aria-selected="true"] {
           background: $yellow;
@@ -231,7 +348,7 @@ textarea {
   display: block;
   position: relative;
   cursor: pointer;
-  margin-bottom: 15px;
+  margin-bottom: 40px;
   font-size: 12px;
 
   input {
@@ -241,6 +358,10 @@ textarea {
     opacity: 0;
 
     &:checked + span {
+      &:before {
+        border-color: $yellow;
+        background: $yellow;
+      }
       &:after {
         opacity: 1;
       }
@@ -256,8 +377,9 @@ textarea {
   span {
     position: relative;
     display: block;
+    font-size: 14px;
+    line-height: (18/14);
     padding-left: 30px;
-
     &:before {
       content: "";
       position: absolute;
@@ -265,19 +387,20 @@ textarea {
       top: 0;
       width: 20px;
       height: 20px;
-      border: 2px solid #353434;
+      border: 1px solid #000;
       transition: all 0.3s ease;
     }
-
     &:after {
       content: "";
       position: absolute;
-      left: 0;
-      top: 0;
-      width: 20px;
-      height: 20px;
-      background: #353434;
+      left: 7px;
+      top: 3px;
+      width: 6px;
+      height: 12px;
+      border-right: 1px solid #000;
+      border-bottom: 1px solid #000;
       opacity: 0;
+      transform: translate3d(0, 0, 0) rotate(45deg);
       transition: opacity 0.3s ease;
       z-index: 2;
     }
@@ -286,11 +409,19 @@ textarea {
       color: #353434;
     }
   }
+
+  p {
+    margin-bottom: 8px;
+    font-size: 12px;
+    line-height: (16/12);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
 }
 //style-checkbox
 
 .subscr-mini {
-  display: flex; 
+  display: flex;
   align-items: flex-start;
   .input-label {
     width: 100%;
@@ -303,5 +434,4 @@ textarea {
   .btn {
     margin-left: 8px;
   }
-  
 }

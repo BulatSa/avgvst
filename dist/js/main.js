@@ -24,30 +24,31 @@ $(function () {
 
     telInputs.mask("+0 (000) 000-00-00", options);
 
-    telInputs.on("focus", function () {
+    telInputs.on("focus", function (event) {
+      stylizePlaceholder(event);
       if ($(this).get(0).value.length < 2) {
         $(this).get(0).value = "+";
       }
     });
 
-    telInputs.on("blur", function () {
+    telInputs.on("blur", function (event) {
+      stylizePlaceholder(event);
       if ($(this).get(0).value === "+") {
         $(this).get(0).value = "";
       }
     });
   }
-});
-/***********************
+  /***********************
  Input mask END
  ***********************/
 
-/***********************
+  /***********************
  Input validate BEGIN
  ***********************/
-$(function () {
   const formList = document.querySelectorAll(".subscr-mini");
   const inputEmailList = document.querySelectorAll("input[type=email]");
   const inputTextList = document.querySelectorAll("input.input-text");
+  const inputPhoneList = document.querySelectorAll("input.input-text");
 
   const stylizePlaceholder = (event) => {
     const input = event.target;
@@ -346,7 +347,7 @@ $(function () {
 
     searchOpenLinkList.forEach((searchOpenLink) => {
       searchOpenLink.addEventListener("click", toggleSearchWrap);
-    })
+    });
     searchCloseLink.addEventListener("click", toggleSearchWrap);
     searchInput.addEventListener("input", showSearchResult);
     searchInputClearLink.addEventListener("click", clearSearchResults);
@@ -444,6 +445,19 @@ $(document).ready(function () {
     return $currency;
   };
 
+  const formatSelectDefault = (select) => {
+    if (!select.id) {
+      return select.text;
+    }
+    const element = select.element;
+    //console.log(currency);
+    const title = element.dataset.title;
+    const $select = $(`
+      <span class="title">${title}</span>
+    `);
+    return $select;
+  };
+
   $(".select2-js--currency").select2({
     //width: '100%'
     theme: "avgvst-currency",
@@ -451,6 +465,27 @@ $(document).ready(function () {
     minimumResultsForSearch: Infinity,
     templateResult: formatSelectCurrency,
     templateSelection: formatSelectCurrency,
+  });
+
+  $(".select2-js--horoscope").select2({
+    width: "100%",
+    scrollAfterSelect: true,
+    theme: "avgvst-default",
+    minimumResultsForSearch: Infinity,
+    templateResult: formatSelectDefault,
+    templateSelection: formatSelectDefault,
+  });
+
+  $(document).on('onComplete.fb', function( e, instance, current ) {
+
+    current.$slide.find('select').select2({
+      dropdownParent: current.$content
+    });
+  
+  });
+
+  $(".select2-js--horoscope").on("select2:select", function (e) {
+    $(this).next(".select2").addClass("selected");
   });
 });
 /***********************

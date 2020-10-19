@@ -1,51 +1,107 @@
 body {
-	&.lock {
-		@include res(m) {
-			//position: fixed;
-			//left: 0;
-			//right: 0;
-			height: 100%;
-			//overflow: hidden;
-		}
-	}
+  &.lock {
+    @include res(m) {
+      //position: fixed;
+      //left: 0;
+      //right: 0;
+      height: 100%;
+      //overflow: hidden;
+    }
+  }
 }
 
 .modal {
-	display: none;
-	width: 500px;
-	max-width: 100%;
-	will-change: transform, opacity;
-	overflow: visible !important;
+  display: none;
+  width: 500px;
+  max-width: 100%;
+  will-change: transform, opacity;
+  overflow: visible !important;
 }
 
 .fancybox-slide--current {
-	.modal {
-
-	}
+  .modal {
+  }
 }
 
 .fancybox-is-closing {
-	.modal {
-
-	}
+  .modal {
+  }
 }
 
 .fancybox-bg {
-	background: #8c8e9a;
+  background: #8c8e9a;
 }
 
-.fancybox-close-small, .fancybox-slide--image .fancybox-close-small, .fancybox-slide--video .fancybox-close-small, .fancybox-slide--iframe .fancybox-close-small,.fancybox-slide--html .fancybox-close-small {
-	@include cross();
-	opacity: 1;
+.fancybox-close-small,
+.fancybox-slide--image .fancybox-close-small,
+.fancybox-slide--video .fancybox-close-small,
+.fancybox-slide--iframe .fancybox-close-small,
+.fancybox-slide--html .fancybox-close-small {
+  @include cross();
+  opacity: 1;
 }
 
-.fancybox-slide--video,.fancybox-slide--html,.fancybox-slide--iframe {
-	padding: 24px 20px;
-	@include res(s){
-		padding: 20px 12px;
-	}
+.fancybox-slide--video,
+.fancybox-slide--iframe {
+  padding: 24px 20px;
+  @include res(s) {
+    padding: 20px 12px;
+  }
 }
 
-.fancybox-content{
-	overflow: visible !important;
+.fancybox-slide--html {
+  padding: 24px 20px;
+  @include res(m) {
+    padding: 0;
+  }
+  .modal {
+    padding: 64px 48px 16px;
+    @include res(m) {
+      min-height: 100%;
+      padding: 64px 16px 16px;
+    }
+  }
+}
+
+.fancybox-content {
+  overflow: visible !important;
+}
+
+.modal-subscribe-mailchimp {
+}
+
+.modal-subscribe-mailchimp__head {
+  margin-bottom: 40px;
+  img {
+    display: block;
+    margin: 16px auto 24px;
+  }
+  .descr {
+    font-size: 14px;
+    line-height: (18/14);
+  }
+}
+
+.modal-subscribe-mailchimp__form {
+  margin-bottom: 40px;
+}
+
+.modal-subscribe-mailchimp__soc {
+  position: relative;
+  margin: 0 -48px;
+  padding: 24px 48px 0;
+  border-top: 1px solid #000;
+  text-align: center;
+  @include res(m) {
+    margin: 0 -16px;
+    padding: 24px 16px 0;
+  }
+  p {
+    padding-bottom: 16px;
+    font-size: 12px;
+    line-height: (16/12);
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
 }
