@@ -51,7 +51,7 @@ $(function () {
   const stylizePlaceholder = (event) => {
     const input = event.target;
     const parentLabel = input.parentElement;
-    
+
     if (event.type === "focus" && event.target.value === "") {
       parentLabel.classList.add("active");
     }
@@ -215,6 +215,20 @@ $(function () {
   const mobileMenuCatalog = document.querySelector(
     `.${mobileMenuCatalogLink.dataset.mobileMenuOpen}`
   );
+
+  const searchOpenLink = document.querySelector("[data-search-open]");
+  const searchCloseLink = document.querySelector("[data-search-close]");
+  const searchWrap = document.querySelector(
+    `.${searchOpenLink.dataset.searchOpen}`
+  );
+  const searchInput = document.querySelector(".search-form input");
+  const searchInputClearLink = document.querySelector(".search-form span");
+  const searchResultWrap = document.querySelector(
+    ".header-search__result-wrap"
+  );
+  const searchResultList = document.querySelector(
+    ".header-search__result-list"
+  );
   const body = document.body;
   const scrollUp = "scroll-up";
   const scrollDown = "scroll-down";
@@ -227,20 +241,31 @@ $(function () {
       return;
     }
 
-    if (currentScroll > 100 && currentScroll > lastScroll && !body.classList.contains(scrollDown)) {
+    if (
+      currentScroll > 100 &&
+      currentScroll > lastScroll &&
+      !body.classList.contains(scrollDown)
+    ) {
       // down
       body.classList.remove(scrollUp);
       body.classList.add(scrollDown);
     } else if (
       currentScroll < 100 ||
-      currentScroll < lastScroll - 10 &&
-      body.classList.contains(scrollDown)
+      (currentScroll < lastScroll - 10 && body.classList.contains(scrollDown))
     ) {
       // up
       body.classList.remove(scrollDown);
       body.classList.add(scrollUp);
     }
     lastScroll = currentScroll;
+  };
+
+  const toggleBodyScrollLock = () => {
+    if (body.classList.contains("scroll-lock")) {
+      body.classList.remove("scroll-lock");
+    } else {
+      body.classList.add("scroll-lock");
+    }
   };
 
   window.addEventListener("scroll", toggleBodyScroll);
@@ -271,6 +296,58 @@ $(function () {
     }
   };
 
+  if (searchOpenLink) {
+    const toggleSearchWrap = (e) => {
+      e.preventDefault();
+      toggleBodyScrollLock();
+      if (searchWrap.classList.contains("open")) {
+        searchWrap.classList.remove("open");
+        window.addEventListener("scroll", toggleBodyScroll);
+        clearSearchResults();
+      } else {
+        searchWrap.classList.add("open");
+        removeBodyScrollListener();
+      }
+    };
+
+    const showSearchResult = () => {
+      if (searchInput.value !== "") {
+        searchResultWrap.classList.remove("empty");
+        searchResultWrap.classList.add("finded");
+        searchInput.classList.add("active");
+      } else {
+        searchResultWrap.classList.remove("finded");
+        searchResultWrap.classList.add("empty");
+        searchInput.classList.remove("active");
+      }
+    };
+
+    const resetSerchResults = () => {
+      searchResultWrap.classList.remove("empty");
+      searchResultWrap.classList.remove("finded");
+    };
+
+    const clearSearchResultList = () => {
+      searchResultList.innerHTML = "";
+    };
+
+    const clearSearchInput = () => {
+      searchInput.value = "";
+      searchInput.classList.remove("active");
+    };
+
+    const clearSearchResults = () => {
+      resetSerchResults();
+      clearSearchResultList();
+      clearSearchInput();
+    };
+
+    searchOpenLink.addEventListener("click", toggleSearchWrap);
+    searchCloseLink.addEventListener("click", toggleSearchWrap);
+    searchInput.addEventListener("input", showSearchResult);
+    searchInputClearLink.addEventListener("click", clearSearchResults);
+  }
+
   if (headerMenuCatalogLink) {
     const toggleHeaderMenu = (e) => {
       e.preventDefault();
@@ -293,15 +370,14 @@ $(function () {
   if (mobileMenuCatalogLink) {
     const toggleMobileMenu = (e) => {
       e.preventDefault();
+      toggleBodyScrollLock();
       if (mobileMenuCatalog.classList.contains("open")) {
         mobileMenuCatalogLink.classList.remove("open");
         mobileMenuCatalog.classList.remove("open");
-        body.classList.remove('scroll-lock');
         window.addEventListener("scroll", toggleBodyScroll);
       } else {
         mobileMenuCatalogLink.classList.add("open");
         mobileMenuCatalog.classList.add("open");
-        body.classList.add('scroll-lock');
         removeBodyScrollListener();
       }
     };
