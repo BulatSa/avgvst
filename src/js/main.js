@@ -12,7 +12,7 @@ $(function () {
       );
     };
 
-    const options = {
+    const telOptions = {
       onKeyPress: function (cep, event, currentField, options) {
         if (cep.charAt(1) === "8") {
           const currentValue = currentField.get(0).value;
@@ -21,7 +21,7 @@ $(function () {
       },
     };
 
-    telInputs.mask("+0 (000) 000-00-00", options);
+    telInputs.mask("+0 (000) 000-00-00", telOptions);
 
     telInputs.on("focus", function (event) {
       stylizePlaceholder(event);
@@ -44,10 +44,9 @@ $(function () {
   /***********************
  Input validate BEGIN
  ***********************/
-  const formList = document.querySelectorAll(".subscr-mini");
+  const formList = document.querySelectorAll(".ajax-form");
   const inputEmailList = document.querySelectorAll("input[type=email]");
   const inputTextList = document.querySelectorAll("input.input-text");
-  const inputPhoneList = document.querySelectorAll("input.input-text");
 
   const stylizePlaceholder = (event) => {
     const input = event.target;
@@ -63,27 +62,64 @@ $(function () {
     }
   };
 
-  inputTextList.forEach((inputText) => {
-    inputText.addEventListener("focus", stylizePlaceholder);
-    inputText.addEventListener("blur", stylizePlaceholder);
-  });
-
   const checkingForm = (event) => {
+    const reqInputList = event.target.querySelectorAll("input[data-req]");
     const email = event.target.querySelector("input[type=email]");
     const emailLabel = email.parentElement;
+    const selectList = event.target.querySelectorAll(".input-label select");
+
+    selectList.forEach((select) => {
+      const inputLabel = select.parentElement;
+      const select2 = inputLabel.querySelector(".select2");
+      console.log(select2);
+      if (select2.classList.contains("selected")) {
+        inputLabel.classList.remove("error");
+      } else {
+        inputLabel.classList.add("error");
+      }
+      $(select).on("select2:select", function (e) {
+        $(this).parent().removeClass("error");
+      });
+    });
 
     if (!email.validity.valid) {
       event.preventDefault();
       emailLabel.classList.add("error");
     }
+
+    reqInputList.forEach((input) => {
+      if (input.value === "") {
+        event.preventDefault();
+        input.parentElement.classList.add("error");
+      } else {
+        input.parentElement.classList.remove("error");
+      }
+    });
   };
 
   const checkingEmail = (event) => {
     const parentLabel = event.target.parentElement;
     if (event.target.validity.valid) {
       parentLabel.classList.remove("error");
+    } else {
+      parentLabel.classList.add("error");
     }
   };
+
+  const checkingInputText = (event) => {
+    const parentLabel = event.target.parentElement;
+    if (event.target.value === "") {
+      parentLabel.classList.add("error");
+    } else {
+      parentLabel.classList.remove("error");
+    }
+  };
+
+  inputTextList.forEach((inputText) => {
+    inputText.addEventListener("focus", stylizePlaceholder);
+    inputText.addEventListener("blur", stylizePlaceholder);
+    inputText.addEventListener("input", checkingInputText);
+  });
 
   inputEmailList.forEach((inputEmail) => {
     inputEmail.addEventListener("input", checkingEmail);
@@ -431,7 +467,6 @@ $(document).ready(function () {
       return currency.text;
     }
     const element = currency.element;
-    //console.log(currency);
 
     const imgSrc = element.dataset.flagsrc;
     const title = element.dataset.title;
@@ -449,7 +484,7 @@ $(document).ready(function () {
       return select.text;
     }
     const element = select.element;
-    //console.log(currency);
+    
     const title = element.dataset.title;
     const $select = $(`
       <span class="title">${title}</span>
@@ -458,7 +493,6 @@ $(document).ready(function () {
   };
 
   $(".select2-js--currency").select2({
-    //width: '100%'
     theme: "avgvst-currency",
     dropdownAutoWidth: true,
     minimumResultsForSearch: Infinity,
@@ -475,12 +509,11 @@ $(document).ready(function () {
     templateSelection: formatSelectDefault,
   });
 
-  $(document).on('onComplete.fb', function( e, instance, current ) {
-
-    current.$slide.find('select').select2({
-      dropdownParent: current.$content
+  // Fix for FancyBox to open Select2
+  $(document).on("onComplete.fb", function (e, instance, current) {
+    current.$slide.find("select").select2({
+      dropdownParent: current.$content,
     });
-  
   });
 
   $(".select2-js--horoscope").on("select2:select", function (e) {

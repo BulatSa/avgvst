@@ -119,20 +119,20 @@
 				</p>
 			</div>
 			<div class="modal-subscribe-mailchimp__form">
-				<form>
+				<form class="ajax-form">
 					<label class="input-label">
 						<span class="input-placeholder">Эл. почта</span>
-						<input type="email" class="input-text" required>
+						<input type="email" class="input-text" data-req='true'>
 						<span class="input-error-info" aria-live="polite">Введите эл. почту name@email.ru</span>
 					</label>
 					<label class="input-label">
 						<span class="input-placeholder">Имя и фамилия</span>
-						<input type="text" class="input-text" required>
+						<input type="text" class="input-text" data-req='true'>
 						<span class="input-descr-info">Используем только для обращения к вам</span>
 						<span class="input-error-info" aria-live="polite">Заполните поле</span>
 					</label>
 					<label class="input-label">
-						<select class="select2-js select2-js--horoscope" name="horoscope" data-placeholder="Знак зодиака">
+						<select class="select2-js select2-js--horoscope" name="horoscope" data-placeholder="Знак зодиака" data-req='true'>
 							<option></option>
 							<option value="Козерог" data-title="Козерог">
 								Козерог
@@ -176,24 +176,24 @@
 					
 					<label class="input-label">
 						<span class="input-placeholder">Дата рождения</span>
-						<input type="text" class="input-text" required>
+						<input type="text" class="input-text" data-req='true' data-mask="00.00.0000">
 						<span class="input-descr-info">Пришлём подарок, если укажете день рождения</span>
 						<span class="input-error-info" aria-live="polite">Заполните поле</span>
 					</label>
 					<label class="input-label">
 						<span class="input-placeholder">Город</span>
-						<input type="text" class="input-text" required>
+						<input type="text" class="input-text" data-req='true'>
 						<span class="input-descr-info">Будем присылать новости только для этого города</span>
 						<span class="input-error-info" aria-live="polite">Заполните поле</span>
 					</label>
 					<label class="input-label">
 						<span class="input-placeholder">Телефон</span>
-						<input type="tel" class="input-text" required>
+						<input type="tel" class="input-text" data-req='true'>
 						<span class="input-error-info" aria-live="polite">Заполните поле</span>
 					</label>
 					<label class="style-checkbox">
 						<p>Информирование в WhatsApp</p>
-						<input type="checkbox" name="whatsup-info" value="yes" checked>
+						<input type="checkbox" name="whatsup-info" value="yes" checked data-req='true'>
 						<span>Да, я хочу получать сообщения о распродажах, но не чаще раза в месяц.</span>
 					</label>
 					<div class="btn-wrap btn-wrap--center">

@@ -3470,11 +3470,26 @@ textarea {
 }
 
 /* line 54, src/sass/base/_forms.scss */
+.input-label.error .select2-selection--single .select2-selection__rendered {
+  border-color: #D93246;
+}
+
+/* line 62, src/sass/base/_forms.scss */
+.input-label .select2-container--open .select2-selection--single .select2-selection__rendered span {
+  color: #000;
+}
+
+/* line 70, src/sass/base/_forms.scss */
+.input-label .select2-selection--single .select2-selection__rendered span {
+  color: #818181;
+}
+
+/* line 75, src/sass/base/_forms.scss */
 .input-label + .style-checkbox {
   padding-top: 16px;
 }
 
-/* line 59, src/sass/base/_forms.scss */
+/* line 80, src/sass/base/_forms.scss */
 .input-text,
 .input-textarea {
   display: inline-block;
@@ -3494,14 +3509,14 @@ textarea {
 }
 
 @media (max-width: 959px) {
-  /* line 59, src/sass/base/_forms.scss */
+  /* line 80, src/sass/base/_forms.scss */
   .input-text,
   .input-textarea {
     padding: 20px 16px 14px;
   }
 }
 
-/* line 78, src/sass/base/_forms.scss */
+/* line 99, src/sass/base/_forms.scss */
 .input-text::-webkit-input-placeholder, .input-textarea::-webkit-input-placeholder {
   color: #999999;
   opacity: 1;
@@ -3534,7 +3549,7 @@ textarea {
   transition: all 0.3s ease;
 }
 
-/* line 84, src/sass/base/_forms.scss */
+/* line 105, src/sass/base/_forms.scss */
 .input-text:focus,
 .input-textarea:focus {
   border-color: #000;
@@ -3542,28 +3557,28 @@ textarea {
   outline: none;
 }
 
-/* line 89, src/sass/base/_forms.scss */
+/* line 110, src/sass/base/_forms.scss */
 .input-text:hover,
 .input-textarea:hover {
   border-color: #000;
   background: #F2F2F2;
 }
 
-/* line 93, src/sass/base/_forms.scss */
+/* line 114, src/sass/base/_forms.scss */
 .input-text:active,
 .input-textarea:active {
   border-color: #000;
   background: #F2F2F2;
 }
 
-/* line 98, src/sass/base/_forms.scss */
+/* line 119, src/sass/base/_forms.scss */
 .input-text.error,
 .input-textarea.error {
   color: #D93246;
   border-color: #D93246;
 }
 
-/* line 102, src/sass/base/_forms.scss */
+/* line 123, src/sass/base/_forms.scss */
 .input-text[disabled],
 .input-textarea[disabled] {
   pointer-events: none;
@@ -3571,12 +3586,12 @@ textarea {
   background: #F2F2F2;
 }
 
-/* line 109, src/sass/base/_forms.scss */
+/* line 130, src/sass/base/_forms.scss */
 .input-textarea {
   min-height: 150px;
 }
 
-/* line 113, src/sass/base/_forms.scss */
+/* line 134, src/sass/base/_forms.scss */
 .input-placeholder {
   position: absolute;
   top: 21px;
@@ -3594,7 +3609,7 @@ textarea {
   transition: all 0.3s ease;
 }
 
-/* line 128, src/sass/base/_forms.scss */
+/* line 149, src/sass/base/_forms.scss */
 .input-error-info {
   position: absolute;
   left: 16px;
@@ -3607,7 +3622,7 @@ textarea {
   transition: all 0.3s ease;
 }
 
-/* line 141, src/sass/base/_forms.scss */
+/* line 162, src/sass/base/_forms.scss */
 .input-descr-info {
   color: #818181;
   font-size: 14px;
@@ -3616,26 +3631,31 @@ textarea {
   transition: all 0.3s ease;
 }
 
-/* line 148, src/sass/base/_forms.scss */
+/* line 167, src/sass/base/_forms.scss */
+.input-descr-info + .input-error-info {
+  bottom: 0px;
+}
+
+/* line 172, src/sass/base/_forms.scss */
 .input-pers-info {
   text-align: center;
   font-size: 14px;
   line-height: 1.28571;
 }
 
-/* line 152, src/sass/base/_forms.scss */
+/* line 176, src/sass/base/_forms.scss */
 .input-pers-info a {
   border-bottom: 1px solid black;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-/* line 155, src/sass/base/_forms.scss */
+/* line 179, src/sass/base/_forms.scss */
 .input-pers-info a:hover {
   border-color: rgba(0, 0, 0, 0);
 }
 
-/* line 161, src/sass/base/_forms.scss */
+/* line 185, src/sass/base/_forms.scss */
 .select2-js {
   width: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -3643,12 +3663,12 @@ textarea {
   -webkit-appearance: none;
 }
 
-/* line 168, src/sass/base/_forms.scss */
+/* line 192, src/sass/base/_forms.scss */
 .select2-container {
   outline: none;
 }
 
-/* line 170, src/sass/base/_forms.scss */
+/* line 194, src/sass/base/_forms.scss */
 .select2-container * {
   outline: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -3656,45 +3676,64 @@ textarea {
   -webkit-appearance: none;
 }
 
-/* line 177, src/sass/base/_forms.scss */
+/* line 201, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-dropdown {
-  top: -56px;
-  margin: -1px 0;
   border: none;
   border-radius: 0;
   background: rgba(0, 0, 0, 0);
   z-index: 99999;
 }
 
-/* line 185, src/sass/base/_forms.scss */
+/* line 206, src/sass/base/_forms.scss */
+.select2-container--avgvst-default .select2-dropdown.select2-dropdown--below {
+  margin-top: -1px;
+}
+
+/* line 208, src/sass/base/_forms.scss */
+.select2-container--avgvst-default .select2-dropdown.select2-dropdown--below .select2-results__options {
+  border-top: none;
+}
+
+/* line 212, src/sass/base/_forms.scss */
+.select2-container--avgvst-default .select2-dropdown.select2-dropdown--above {
+  position: relative;
+  bottom: -1px;
+}
+
+/* line 215, src/sass/base/_forms.scss */
+.select2-container--avgvst-default .select2-dropdown.select2-dropdown--above .select2-results__options {
+  border-bottom: none;
+}
+
+/* line 220, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-results__options {
   overflow: auto;
   max-height: 341px;
   border: 1px solid #000;
 }
 
-/* line 189, src/sass/base/_forms.scss */
+/* line 224, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-results__options .select2-results__option {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-/* line 191, src/sass/base/_forms.scss */
+/* line 226, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-results__options .select2-results__option:hover {
   background: #F2F2F2;
 }
 
-/* line 194, src/sass/base/_forms.scss */
+/* line 229, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-results__options .select2-results__option[aria-selected="true"] {
   background: #FFD453;
 }
 
-/* line 199, src/sass/base/_forms.scss */
+/* line 234, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-selection--single {
   height: auto;
 }
 
-/* line 201, src/sass/base/_forms.scss */
+/* line 236, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-selection--single .select2-selection__rendered {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3710,25 +3749,25 @@ textarea {
 }
 
 @media (max-width: 959px) {
-  /* line 201, src/sass/base/_forms.scss */
+  /* line 236, src/sass/base/_forms.scss */
   .select2-container--avgvst-default .select2-selection--single .select2-selection__rendered {
     padding: 20px 8px;
   }
 }
 
-/* line 211, src/sass/base/_forms.scss */
+/* line 246, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-selection--single .select2-selection__rendered:hover {
   background: #F2F2F2;
 }
 
-/* line 214, src/sass/base/_forms.scss */
+/* line 249, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-selection--single .select2-selection__rendered img {
   display: block;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 
-/* line 218, src/sass/base/_forms.scss */
+/* line 253, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-selection--single .select2-selection__rendered span {
   font-size: 12px;
   line-height: 1.33333;
@@ -3736,7 +3775,23 @@ textarea {
   text-transform: uppercase;
 }
 
-/* line 226, src/sass/base/_forms.scss */
+/* line 260, src/sass/base/_forms.scss */
+.select2-container--avgvst-default .select2-selection--single .select2-selection__arrow {
+  position: absolute;
+  top: calc(50% - 4px);
+  right: 20px;
+  width: 10px;
+  height: 10px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  -webkit-transform: translate3d(0, -50%, 0) rotate(45deg);
+          transform: translate3d(0, -50%, 0) rotate(45deg);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* line 273, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-results__option,
 .select2-container--avgvst-default .select2-selection__rendered {
   display: -webkit-box;
@@ -3750,13 +3805,13 @@ textarea {
   background: #fff;
 }
 
-/* line 233, src/sass/base/_forms.scss */
+/* line 280, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-results__option:last-child,
 .select2-container--avgvst-default .select2-selection__rendered:last-child {
   border-bottom: none;
 }
 
-/* line 236, src/sass/base/_forms.scss */
+/* line 283, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-results__option span,
 .select2-container--avgvst-default .select2-selection__rendered span {
   font-size: 12px;
@@ -3765,69 +3820,77 @@ textarea {
   text-transform: uppercase;
 }
 
-/* line 241, src/sass/base/_forms.scss */
+/* line 288, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-results__option span.title,
 .select2-container--avgvst-default .select2-selection__rendered span.title {
   color: #000;
 }
 
-/* line 244, src/sass/base/_forms.scss */
+/* line 291, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-results__option span.descr,
 .select2-container--avgvst-default .select2-selection__rendered span.descr {
   padding-left: 4px;
   color: #818181;
 }
 
-/* line 251, src/sass/base/_forms.scss */
+/* line 298, src/sass/base/_forms.scss */
 .select2-container--avgvst-default.select2-container--open.select2-container--below {
   pointer-events: none;
 }
 
-/* line 255, src/sass/base/_forms.scss */
+/* line 302, src/sass/base/_forms.scss */
 .select2-container--avgvst-default.select2-container--open .select2-selection--single .select2-selection__rendered {
   background: #FFD453;
 }
 
-/* line 262, src/sass/base/_forms.scss */
+/* line 305, src/sass/base/_forms.scss */
+.select2-container--avgvst-default.select2-container--open .select2-selection--single .select2-selection__arrow {
+  top: calc(50% + 2px);
+  border: 1px solid black;
+  border-right-color: rgba(0, 0, 0, 0);
+  border-bottom-color: rgba(0, 0, 0, 0);
+}
+
+/* line 315, src/sass/base/_forms.scss */
 .select2-container--avgvst-default.selected .select2-selection--single .select2-selection__rendered {
   background: #F2F2F2;
 }
 
-/* line 270, src/sass/base/_forms.scss */
+/* line 323, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-dropdown {
   border: none;
   background: rgba(0, 0, 0, 0);
 }
 
-/* line 274, src/sass/base/_forms.scss */
+/* line 327, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__options {
   width: calc(100% - 16px);
   margin: 0 8px;
   border: 1px solid #000;
 }
 
-/* line 278, src/sass/base/_forms.scss */
+/* line 331, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__options .select2-results__option {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-/* line 280, src/sass/base/_forms.scss */
+/* line 333, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__options .select2-results__option:hover {
   background: #F2F2F2;
 }
 
-/* line 283, src/sass/base/_forms.scss */
+/* line 336, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__options .select2-results__option[aria-selected="true"] {
   background: #FFD453;
 }
 
-/* line 288, src/sass/base/_forms.scss */
+/* line 341, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-selection--single {
   height: auto;
 }
 
-/* line 290, src/sass/base/_forms.scss */
+/* line 343, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-selection--single .select2-selection__rendered {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3841,20 +3904,20 @@ textarea {
 }
 
 @media (max-width: 959px) {
-  /* line 290, src/sass/base/_forms.scss */
+  /* line 343, src/sass/base/_forms.scss */
   .select2-container--avgvst-currency .select2-selection--single .select2-selection__rendered {
     padding: 8px 8px;
   }
 }
 
-/* line 299, src/sass/base/_forms.scss */
+/* line 352, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-selection--single .select2-selection__rendered img {
   display: block;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 
-/* line 303, src/sass/base/_forms.scss */
+/* line 356, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-selection--single .select2-selection__rendered span {
   font-size: 12px;
   line-height: 1.33333;
@@ -3862,7 +3925,7 @@ textarea {
   text-transform: uppercase;
 }
 
-/* line 311, src/sass/base/_forms.scss */
+/* line 364, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__option,
 .select2-container--avgvst-currency .select2-selection__rendered {
   display: -webkit-box;
@@ -3876,13 +3939,13 @@ textarea {
   background: #fff;
 }
 
-/* line 318, src/sass/base/_forms.scss */
+/* line 371, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__option:last-child,
 .select2-container--avgvst-currency .select2-selection__rendered:last-child {
   border-bottom: none;
 }
 
-/* line 322, src/sass/base/_forms.scss */
+/* line 375, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__option img,
 .select2-container--avgvst-currency .select2-selection__rendered img {
   display: block;
@@ -3891,7 +3954,7 @@ textarea {
   margin-right: 8px;
 }
 
-/* line 327, src/sass/base/_forms.scss */
+/* line 380, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__option span,
 .select2-container--avgvst-currency .select2-selection__rendered span {
   font-size: 12px;
@@ -3900,20 +3963,157 @@ textarea {
   text-transform: uppercase;
 }
 
-/* line 332, src/sass/base/_forms.scss */
+/* line 385, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__option span.title,
 .select2-container--avgvst-currency .select2-selection__rendered span.title {
   color: #000;
 }
 
-/* line 335, src/sass/base/_forms.scss */
+/* line 388, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__option span.descr,
 .select2-container--avgvst-currency .select2-selection__rendered span.descr {
   padding-left: 4px;
   color: #818181;
 }
 
-/* line 347, src/sass/base/_forms.scss */
+/* line 398, src/sass/base/_forms.scss */
+.select2-container--avgvst-item-card .select2-dropdown {
+  top: -56px;
+  margin: -1px 0;
+  border: none;
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0);
+  z-index: 99999;
+}
+
+/* line 406, src/sass/base/_forms.scss */
+.select2-container--avgvst-item-card .select2-results__options {
+  overflow: auto;
+  max-height: 341px;
+  border: 1px solid #000;
+}
+
+/* line 410, src/sass/base/_forms.scss */
+.select2-container--avgvst-item-card .select2-results__options .select2-results__option {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* line 412, src/sass/base/_forms.scss */
+.select2-container--avgvst-item-card .select2-results__options .select2-results__option:hover {
+  background: #F2F2F2;
+}
+
+/* line 415, src/sass/base/_forms.scss */
+.select2-container--avgvst-item-card .select2-results__options .select2-results__option[aria-selected="true"] {
+  background: #FFD453;
+}
+
+/* line 420, src/sass/base/_forms.scss */
+.select2-container--avgvst-item-card .select2-selection--single {
+  height: auto;
+}
+
+/* line 422, src/sass/base/_forms.scss */
+.select2-container--avgvst-item-card .select2-selection--single .select2-selection__rendered {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 8px;
+  border: 1px solid #000;
+  background: #fff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 959px) {
+  /* line 422, src/sass/base/_forms.scss */
+  .select2-container--avgvst-item-card .select2-selection--single .select2-selection__rendered {
+    padding: 20px 8px;
+  }
+}
+
+/* line 432, src/sass/base/_forms.scss */
+.select2-container--avgvst-item-card .select2-selection--single .select2-selection__rendered:hover {
+  background: #F2F2F2;
+}
+
+/* line 435, src/sass/base/_forms.scss */
+.select2-container--avgvst-item-card .select2-selection--single .select2-selection__rendered img {
+  display: block;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+/* line 439, src/sass/base/_forms.scss */
+.select2-container--avgvst-item-card .select2-selection--single .select2-selection__rendered span {
+  font-size: 12px;
+  line-height: 1.33333;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* line 447, src/sass/base/_forms.scss */
+.select2-container--avgvst-item-card .select2-results__option,
+.select2-container--avgvst-item-card .select2-selection__rendered {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 8px;
+  border-bottom: 1px solid #F2F2F2;
+  background: #fff;
+}
+
+/* line 454, src/sass/base/_forms.scss */
+.select2-container--avgvst-item-card .select2-results__option:last-child,
+.select2-container--avgvst-item-card .select2-selection__rendered:last-child {
+  border-bottom: none;
+}
+
+/* line 457, src/sass/base/_forms.scss */
+.select2-container--avgvst-item-card .select2-results__option span,
+.select2-container--avgvst-item-card .select2-selection__rendered span {
+  font-size: 12px;
+  line-height: 1.33333;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* line 462, src/sass/base/_forms.scss */
+.select2-container--avgvst-item-card .select2-results__option span.title,
+.select2-container--avgvst-item-card .select2-selection__rendered span.title {
+  color: #000;
+}
+
+/* line 465, src/sass/base/_forms.scss */
+.select2-container--avgvst-item-card .select2-results__option span.descr,
+.select2-container--avgvst-item-card .select2-selection__rendered span.descr {
+  padding-left: 4px;
+  color: #818181;
+}
+
+/* line 472, src/sass/base/_forms.scss */
+.select2-container--avgvst-item-card.select2-container--open.select2-container--below {
+  pointer-events: none;
+}
+
+/* line 476, src/sass/base/_forms.scss */
+.select2-container--avgvst-item-card.select2-container--open .select2-selection--single .select2-selection__rendered {
+  background: #FFD453;
+}
+
+/* line 483, src/sass/base/_forms.scss */
+.select2-container--avgvst-item-card.selected .select2-selection--single .select2-selection__rendered {
+  background: #F2F2F2;
+}
+
+/* line 492, src/sass/base/_forms.scss */
 .style-checkbox {
   display: block;
   position: relative;
@@ -3922,7 +4122,7 @@ textarea {
   font-size: 12px;
 }
 
-/* line 354, src/sass/base/_forms.scss */
+/* line 499, src/sass/base/_forms.scss */
 .style-checkbox input {
   position: absolute;
   left: 0;
@@ -3930,23 +4130,23 @@ textarea {
   opacity: 0;
 }
 
-/* line 361, src/sass/base/_forms.scss */
+/* line 506, src/sass/base/_forms.scss */
 .style-checkbox input:checked + span:before {
   border-color: #FFD453;
   background: #FFD453;
 }
 
-/* line 365, src/sass/base/_forms.scss */
+/* line 510, src/sass/base/_forms.scss */
 .style-checkbox input:checked + span:after {
   opacity: 1;
 }
 
-/* line 371, src/sass/base/_forms.scss */
+/* line 516, src/sass/base/_forms.scss */
 .style-checkbox input.error + span:before {
   border-color: #cc0000;
 }
 
-/* line 377, src/sass/base/_forms.scss */
+/* line 522, src/sass/base/_forms.scss */
 .style-checkbox span {
   position: relative;
   display: block;
@@ -3955,7 +4155,7 @@ textarea {
   padding-left: 30px;
 }
 
-/* line 383, src/sass/base/_forms.scss */
+/* line 528, src/sass/base/_forms.scss */
 .style-checkbox span:before {
   content: "";
   position: absolute;
@@ -3968,7 +4168,7 @@ textarea {
   transition: all 0.3s ease;
 }
 
-/* line 393, src/sass/base/_forms.scss */
+/* line 538, src/sass/base/_forms.scss */
 .style-checkbox span:after {
   content: "";
   position: absolute;
@@ -3986,12 +4186,12 @@ textarea {
   z-index: 2;
 }
 
-/* line 408, src/sass/base/_forms.scss */
+/* line 553, src/sass/base/_forms.scss */
 .style-checkbox span a {
   color: #353434;
 }
 
-/* line 413, src/sass/base/_forms.scss */
+/* line 558, src/sass/base/_forms.scss */
 .style-checkbox p {
   margin-bottom: 8px;
   font-size: 12px;
@@ -4000,7 +4200,7 @@ textarea {
   text-transform: uppercase;
 }
 
-/* line 423, src/sass/base/_forms.scss */
+/* line 568, src/sass/base/_forms.scss */
 .subscr-mini {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4010,19 +4210,19 @@ textarea {
           align-items: flex-start;
 }
 
-/* line 426, src/sass/base/_forms.scss */
+/* line 571, src/sass/base/_forms.scss */
 .subscr-mini .input-label {
   width: 100%;
 }
 
 @media (max-width: 959px) {
-  /* line 429, src/sass/base/_forms.scss */
+  /* line 574, src/sass/base/_forms.scss */
   .subscr-mini .input-error-info {
     left: 0;
   }
 }
 
-/* line 434, src/sass/base/_forms.scss */
+/* line 579, src/sass/base/_forms.scss */
 .subscr-mini .btn {
   margin-left: 8px;
 }
