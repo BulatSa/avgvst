@@ -439,6 +439,7 @@ $(function () {
   );
 
   const toggleMobileSubMenu = (event) => {
+    event.preventDefault();
     const parent = event.target.parentElement;
     const target = event.target;
     const el = parent.querySelector("ul");
@@ -485,7 +486,7 @@ $(document).ready(function () {
       return select.text;
     }
     const element = select.element;
-    
+
     const title = element.dataset.title;
     const $select = $(`
       <span class="title">${title}</span>
