@@ -1,0 +1,67 @@
+<section class="catalog-header-sec">
+  <div class="container">
+    <div class="catalog-header">
+      @@if (back_link.visible === true) {
+      <div class="catalog-header__back-link">
+        <a href="catalog.html">
+          <i class="i-back-link"></i>
+          <span>@@back_link.text</span>
+        </a>
+      </div>
+    }
+      <div class="catalog-header__title">
+        @@if (title.visible === true) {
+        <p class="h1">@@title.text</p>
+        }
+        @@if (descr.visible === true) {
+        <p class="descr">@@descr.text</p>
+        }
+      </div>
+      @@if (main_categories === true) {
+      <div class="catalog-header__main-categories">
+        <a href="sub-catalog.html">
+          <span class="h3">подвески</span>
+          <img src="images/catalog-header-cat-1.jpg" alt="">
+        </a>
+        <a href="sub-catalog.html">
+          <span class="h3">кольца</span>
+          <img src="images/catalog-header-cat-2.jpg" alt="">
+        </a>
+        <a href="sub-catalog.html">
+          <span class="h3">серьги</span>
+          <img src="images/catalog-header-cat-3.jpg" alt="">
+        </a>
+        <a href="sub-catalog.html">
+          <span class="h3">браслеты</span>
+          <img src="images/catalog-header-cat-4.jpg" alt="">
+        </a>
+        <a href="sub-catalog.html">
+          <span class="h3">пирсинг</span>
+          <img src="images/catalog-header-cat-5.jpg" alt="">
+        </a>
+        <a href="sub-catalog.html">
+          <span class="h3">часы</span>
+          <img src="images/catalog-header-cat-6.jpg" alt="">
+        </a>
+        <a href="sub-catalog.html" class="black">
+          <span class="h3">Объекты</span>
+          <img src="images/catalog-header-cat-7.jpg" alt="">
+        </a>
+        <a href="sub-catalog.html">
+          <span class="h3">Подарочные сертификат</span>
+          <img src="images/catalog-header-cat-8.jpg" alt="">
+        </a>
+      </div>
+      }
+      @@if (sub_categories === true) {
+      <div class="catalog-header__sub-categories">
+        <a href="sub-catalog-2.html" class="h3"><span>обручальные</span></a>
+        <a href="sub-catalog-2.html" class="h3"><span>помолвочные</span></a>
+        <a href="sub-catalog-2.html" class="h3"><span>фаланговые</span></a>
+        <a href="sub-catalog-2.html" class="h3"><span>печатки</span></a>
+        <a href="sub-catalog-2.html" class="h3"><span>унисекс</span></a>
+      </div>
+      }
+    </div>
+  </div>
+</section>

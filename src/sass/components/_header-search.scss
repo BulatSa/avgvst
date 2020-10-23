@@ -25,7 +25,7 @@
 
 .header-search__logo {
   position: absolute;
-  left: 24px;
+  left: 0;
   top: 0;
   padding: 24px 24px 12px 24px;
   transition: all 0.3s ease;
@@ -44,15 +44,12 @@
 .header-search__close {
   position: absolute;
   top: 0;
-  right: 24px;
+  right: 0;
   width: 64px;
   height: 64px;
   border-left: 1px solid #000;
   transition: all 0.3s ease;
   z-index: 1;
-  @include res(m) {
-    right: 0;
-  }
   &:hover {
     background: $gray;
   }

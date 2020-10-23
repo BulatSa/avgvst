@@ -30,6 +30,7 @@ body {
 }
 
 .header-page__logo {
+  margin-left: -$gutter;
   padding: 24px 24px 12px 24px;
   transition: all 0.3s ease;
   &:hover {
@@ -173,8 +174,10 @@ body {
   transition: all 0.3s ease;
   &.open {
     opacity: 1;
+    cursor: pointer;
     pointer-events: all;
     .header-page-menu {
+      cursor: default;
       transform: translate3d(0, 0, 0);
     }
     .header-page-menu-close {
@@ -223,6 +226,9 @@ body {
 
 .header-page-catalog__col {
   margin: -8px 24px 0px;
+  &:first-child {
+    margin-left: 0;
+  }
 }
 
 .header-page-catalog__block {

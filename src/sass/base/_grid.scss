@@ -118,12 +118,23 @@ body {
   width: 100%;
   max-width: $container_width;
   margin: 0 auto;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: $gutter;
+  padding-right: $gutter;
   @include res(m) {
     max-width: 768px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: $gutter-mobile;
+    padding-right: $gutter-mobile;
+  }
+}
+
+.container-ng {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: $container_width;
+  margin: 0 auto;
+  @include res(m) {
+    max-width: 768px;
   }
 }
 

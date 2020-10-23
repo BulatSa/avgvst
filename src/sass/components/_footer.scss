@@ -77,6 +77,7 @@
   padding-bottom: 10px;
   @include res(m) {
     display: block;
+    width: 100%;
     padding-top: 24px;
   }
   .soc-block {
@@ -136,6 +137,7 @@
   @include res(m) {
     width: 100%;
     padding-top: 10px;
+    margin: 0 auto;
   }
   & > p {
     padding-bottom: 8px;
@@ -157,8 +159,6 @@
     @include res(m) {
       display: none;
     }
-  }
-  form {
   }
 }
 

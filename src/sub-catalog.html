@@ -1,0 +1,24 @@
+@@include('includes/header.html')
+
+
+@@include('includes/catalog-header.html', {
+  "back_link": {
+    "visible": true,
+    "text": "все украшения"
+  },
+  "title": {
+    "visible": true,
+    "text": "кольца"
+  },
+  "descr": {
+    "visible": false,
+    "text": "Украшения для тех, кто не носит украшения"
+  },
+  "main_categories": false,
+  "sub_categories": true
+})
+
+@@include('includes/catalog-filter.html')
+
+
+@@include('includes/footer.html')

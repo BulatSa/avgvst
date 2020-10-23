@@ -1,19 +1,14 @@
-//= includes/header.html
-
+@@include('includes/header.html')
+<br><br>
 <section class="container">
-  
-  <div class="row row--ng">
-    <div class="grid-6">
-      <img src="images/main-example-1.jpg" style="display: block; width: 100%; max-width: 100%;" alt="">
-    </div>
-    <div class="grid-6">
-      <img src="images/main-example-2.png" style="display: block; width: 100%; max-width: 100%;" alt="">
-    </div>
-  </div>
-  <br><br>
-  <div class="btn-wrap">
-    <a href="#" data-fancybox data-src="#modal-subscribe-mailchimp" class="btn">Подписаться на рассылку</a>
-  </div>
-  <br><br>
+  <ul>
+    <li><a href="/catalog.html">Каталог</a></li>
+    <li><a href="/sub-catalog.html">Подкатeгория</a></li>
+    <li><a href="/sub-catalog-2.html">Подкатeгория 2-го уровня</a></li>
+    <li><a href="/selection.html">Подборка</a></li>
+    <li><a href="/selection-author.html">Подборка авторская</a></li>
+  </ul>
+<br><br>
 </section>
-//= includes/footer.html
+
+@@include('includes/footer.html')

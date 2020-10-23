@@ -13,27 +13,37 @@ a {
 
 h1,
 .h1 {
+  padding-bottom: 8px;
   font-family: $font-header;
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
 }
 
 h2,
 .h2 {
+  padding-bottom: 8px;
   font-family: $font-header;
+  font-size: 26px;
+  line-height: (28/26);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
 }
 
 h3,
 .h3 {
-	padding-bottom: 8px;
+  padding-bottom: 8px;
   font-family: $font-header;
-  font-size: 24px;
+  font-size: 19px;
   line-height: 1;
   text-align: center;
   letter-spacing: 0.07em;
-	text-transform: uppercase;
-	@include res(m) {
-		font-size: 19px;
-		line-height: (24/19);
-	}
+  text-transform: uppercase;
+  @include res(m) {
+    font-size: 19px;
+    line-height: (24/19);
+  }
 }
 
 h4,

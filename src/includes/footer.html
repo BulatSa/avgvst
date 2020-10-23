@@ -79,10 +79,10 @@
 					<p>Подпишитесь на нашу рассылку</p>
 					<span>Узнавайте о новинках, скидках и мероприятиях, а также дважды в месяц получайте личное вдумчивое письмо
 						от Наташи Брянцевой</span>
-					<form class="subscr-mini" novalidate>
+					<form class="subscr-mini ajax-form" novalidate>
 						<label class="input-label">
 							<span class="input-placeholder">Эл. почта</span>
-							<input type="email" class="input-text" required>
+							<input type="email" class="input-text" data-req="true">
 							<span class="input-error-info" aria-live="polite">Введите эл. почту name@email.ru</span>
 						</label>
 						<button class="btn btn--mini">Подписаться</button>
@@ -132,7 +132,8 @@
 						<span class="input-error-info" aria-live="polite">Заполните поле</span>
 					</label>
 					<label class="input-label">
-						<select class="select2-js select2-js--horoscope" name="horoscope" data-placeholder="Знак зодиака" data-req='true'>
+						<select class="select2-js select2-js--horoscope" name="horoscope" data-placeholder="Знак зодиака"
+							data-req='true'>
 							<option></option>
 							<option value="Козерог" data-title="Козерог">
 								Козерог
@@ -173,7 +174,7 @@
 						</select>
 						<span class="input-error-info" aria-live="polite">Заполните поле</span>
 					</label>
-					
+
 					<label class="input-label">
 						<span class="input-placeholder">Дата рождения</span>
 						<input type="text" class="input-text" data-req='true' data-mask="00.00.0000">

@@ -1,0 +1,19 @@
+.i-back-link {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin: 0 5px;
+  border-right: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  transform: translate3d(0, -1px, 0) rotate(135deg);
+}
+
+.i-forward-link {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin: 0 5px;
+  border-right: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  transform: translate3d(0, -1px, 0) rotate(-45deg);
+}

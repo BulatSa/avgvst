@@ -71,7 +71,7 @@ var lazypipe = require('lazypipe');
 var rename = require('gulp-rename');
 var header = require('gulp-header');
 var package = require('./package.json');
-var rigger = require('gulp-rigger');
+var fileinclude = require('gulp-file-include');
 
 // Scripts
 var jshint = require('gulp-jshint');
@@ -96,7 +96,10 @@ var browserSync = require('browser-sync');
 var htmlBuild = function htmlBuild() {
 	return src('src/*.html')
 				.pipe(plumber())
-				.pipe(rigger())
+				.pipe(fileinclude({
+					prefix: '@@',
+					basepath: '@file'
+				}))
 				.pipe(dest('dist/'));
 };
 
@@ -214,7 +217,8 @@ var buildStyles = function (done) {
 				}
 			})
 		]))
-		.pipe(dest(paths.styles.output));
+		.pipe(dest(paths.styles.output))
+		.pipe(browserSync.stream());
 
 };
 
