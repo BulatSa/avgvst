@@ -501,6 +501,33 @@ $(document).ready(function () {
     templateSelection: formatSelectCurrency,
   });
 
+  $(".select2-js--default").select2({
+    width: "100%",
+    scrollAfterSelect: true,
+    theme: "avgvst-default",
+    minimumResultsForSearch: Infinity,
+    templateResult: formatSelectDefault,
+    templateSelection: formatSelectDefault,
+  });
+
+  $(".select2-js--filter").select2({
+    width: "100%",
+    scrollAfterSelect: true,
+    theme: "avgvst-filter",
+    minimumResultsForSearch: Infinity,
+    templateResult: formatSelectDefault,
+    templateSelection: formatSelectDefault,
+  });
+
+  $(".select2-js--card").select2({
+    width: "100%",
+    scrollAfterSelect: true,
+    theme: "avgvst-card",
+    minimumResultsForSearch: Infinity,
+    templateResult: formatSelectDefault,
+    templateSelection: formatSelectDefault,
+  });
+
   $(".select2-js--horoscope").select2({
     width: "100%",
     scrollAfterSelect: true,

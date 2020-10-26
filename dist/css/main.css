@@ -1952,6 +1952,266 @@ body.compensate-for-scrollbar {
   border-color: #5897fb;
 }
 
+/* line 1, src/sass/vendors/_simplebar.scss */
+[data-simplebar] {
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+/* line 10, src/sass/vendors/_simplebar.scss */
+.simplebar-wrapper {
+  overflow: hidden;
+  width: inherit;
+  height: inherit;
+  max-width: inherit;
+  max-height: inherit;
+}
+
+/* line 18, src/sass/vendors/_simplebar.scss */
+.simplebar-mask {
+  direction: inherit;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: auto !important;
+  height: auto !important;
+  z-index: 0;
+}
+
+/* line 33, src/sass/vendors/_simplebar.scss */
+.simplebar-offset {
+  direction: inherit !important;
+  -webkit-box-sizing: inherit !important;
+          box-sizing: inherit !important;
+  resize: none !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* line 47, src/sass/vendors/_simplebar.scss */
+.simplebar-content-wrapper {
+  direction: inherit;
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important;
+  position: relative;
+  display: block;
+  height: 100%;
+  /* Required for horizontal native scrollbar to not appear if parent is taller than natural height */
+  width: auto;
+  max-width: 100%;
+  /* Not required for horizontal scroll to trigger */
+  max-height: 100%;
+  /* Needed for vertical scroll to trigger */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* line 60, src/sass/vendors/_simplebar.scss */
+.simplebar-content-wrapper::-webkit-scrollbar,
+.simplebar-hide-scrollbar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* line 66, src/sass/vendors/_simplebar.scss */
+.simplebar-content:before,
+.simplebar-content:after {
+  content: ' ';
+  display: table;
+}
+
+/* line 72, src/sass/vendors/_simplebar.scss */
+.simplebar-placeholder {
+  max-height: 100%;
+  max-width: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+
+/* line 79, src/sass/vendors/_simplebar.scss */
+.simplebar-height-auto-observer-wrapper {
+  -webkit-box-sizing: inherit !important;
+          box-sizing: inherit !important;
+  height: 100%;
+  width: 100%;
+  max-width: 1px;
+  position: relative;
+  float: left;
+  max-height: 1px;
+  overflow: hidden;
+  z-index: -1;
+  padding: 0;
+  margin: 0;
+  pointer-events: none;
+  -webkit-box-flex: inherit;
+      -ms-flex-positive: inherit;
+          flex-grow: inherit;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+}
+
+/* line 97, src/sass/vendors/_simplebar.scss */
+.simplebar-height-auto-observer {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  display: block;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1000%;
+  width: 1000%;
+  min-height: 1px;
+  min-width: 1px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* line 113, src/sass/vendors/_simplebar.scss */
+.simplebar-track {
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* line 122, src/sass/vendors/_simplebar.scss */
+[data-simplebar].simplebar-dragging .simplebar-content {
+  pointer-events: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+}
+
+/* line 128, src/sass/vendors/_simplebar.scss */
+[data-simplebar].simplebar-dragging .simplebar-track {
+  pointer-events: all;
+}
+
+/* line 132, src/sass/vendors/_simplebar.scss */
+.simplebar-scrollbar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  min-height: 10px;
+}
+
+/* line 139, src/sass/vendors/_simplebar.scss */
+.simplebar-scrollbar:before {
+  position: absolute;
+  content: '';
+  background: black;
+  border-radius: 7px;
+  left: 2px;
+  right: 2px;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+}
+
+/* line 150, src/sass/vendors/_simplebar.scss */
+.simplebar-scrollbar.simplebar-visible:before {
+  /* When hovered, remove all transitions from drag handle */
+  opacity: 0.5;
+  -webkit-transition: opacity 0s linear;
+  transition: opacity 0s linear;
+}
+
+/* line 156, src/sass/vendors/_simplebar.scss */
+.simplebar-track.simplebar-vertical {
+  top: 0;
+  width: 11px;
+}
+
+/* line 161, src/sass/vendors/_simplebar.scss */
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+  top: 2px;
+  bottom: 2px;
+}
+
+/* line 166, src/sass/vendors/_simplebar.scss */
+.simplebar-track.simplebar-horizontal {
+  left: 0;
+  height: 11px;
+}
+
+/* line 171, src/sass/vendors/_simplebar.scss */
+.simplebar-track.simplebar-horizontal .simplebar-scrollbar:before {
+  height: 100%;
+  left: 2px;
+  right: 2px;
+}
+
+/* line 177, src/sass/vendors/_simplebar.scss */
+.simplebar-track.simplebar-horizontal .simplebar-scrollbar {
+  right: auto;
+  left: 0;
+  top: 2px;
+  height: 7px;
+  min-height: 0;
+  min-width: 10px;
+  width: auto;
+}
+
+/* Rtl support */
+/* line 188, src/sass/vendors/_simplebar.scss */
+[data-simplebar-direction='rtl'] .simplebar-track.simplebar-vertical {
+  right: auto;
+  left: 0;
+}
+
+/* line 193, src/sass/vendors/_simplebar.scss */
+.hs-dummy-scrollbar-size {
+  direction: rtl;
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  height: 500px;
+  width: 500px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+/* line 204, src/sass/vendors/_simplebar.scss */
+.simplebar-hide-scrollbar {
+  position: fixed;
+  left: 0;
+  visibility: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
 /* line 1, src/sass/base/_reset.scss */
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
@@ -3410,13 +3670,19 @@ body.scroll-lock {
 }
 
 /* line 1, src/sass/base/_forms.scss */
+[tabindex], a, area, button, input, label, select, summary, textarea {
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+}
+
+/* line 5, src/sass/base/_forms.scss */
 label {
   position: relative;
   display: block;
   cursor: pointer;
 }
 
-/* line 7, src/sass/base/_forms.scss */
+/* line 11, src/sass/base/_forms.scss */
 input {
   font-family: "Fugue", sans-serif;
   -webkit-appearance: none;
@@ -3425,7 +3691,7 @@ input {
   overflow: visible;
 }
 
-/* line 11, src/sass/base/_forms.scss */
+/* line 15, src/sass/base/_forms.scss */
 input::-webkit-input-placeholder {
   font-family: "Fugue", sans-serif;
   opacity: 1;
@@ -3457,12 +3723,12 @@ input::placeholder {
   transition: opacity 0.3s ease;
 }
 
-/* line 16, src/sass/base/_forms.scss */
+/* line 20, src/sass/base/_forms.scss */
 input:focus {
   outline: none;
 }
 
-/* line 18, src/sass/base/_forms.scss */
+/* line 22, src/sass/base/_forms.scss */
 input:focus::-webkit-input-placeholder {
   opacity: 0.5;
 }
@@ -3479,67 +3745,67 @@ input:focus::placeholder {
   opacity: 0.5;
 }
 
-/* line 24, src/sass/base/_forms.scss */
+/* line 28, src/sass/base/_forms.scss */
 textarea {
   resize: vertical;
 }
 
-/* line 28, src/sass/base/_forms.scss */
+/* line 32, src/sass/base/_forms.scss */
 .input-label {
   position: relative;
   margin-bottom: 24px;
 }
 
-/* line 32, src/sass/base/_forms.scss */
+/* line 36, src/sass/base/_forms.scss */
 .input-label.active .input-text {
   border-color: #000;
   background: #F2F2F2;
 }
 
-/* line 36, src/sass/base/_forms.scss */
+/* line 40, src/sass/base/_forms.scss */
 .input-label.active .input-placeholder {
   top: 6px;
   font-size: 10px;
   line-height: 1.2;
 }
 
-/* line 43, src/sass/base/_forms.scss */
+/* line 47, src/sass/base/_forms.scss */
 .input-label.error .input-text {
   color: #D93246;
   border-color: #D93246;
 }
 
-/* line 47, src/sass/base/_forms.scss */
+/* line 51, src/sass/base/_forms.scss */
 .input-label.error .input-error-info {
   opacity: 1;
 }
 
-/* line 50, src/sass/base/_forms.scss */
+/* line 54, src/sass/base/_forms.scss */
 .input-label.error .input-descr-info {
   opacity: 0;
 }
 
-/* line 54, src/sass/base/_forms.scss */
+/* line 58, src/sass/base/_forms.scss */
 .input-label.error .select2-selection--single .select2-selection__rendered {
   border-color: #D93246;
 }
 
-/* line 62, src/sass/base/_forms.scss */
+/* line 66, src/sass/base/_forms.scss */
 .input-label .select2-container--open .select2-selection--single .select2-selection__rendered span {
   color: #000;
 }
 
-/* line 70, src/sass/base/_forms.scss */
+/* line 74, src/sass/base/_forms.scss */
 .input-label .select2-selection--single .select2-selection__rendered span {
   color: #818181;
 }
 
-/* line 75, src/sass/base/_forms.scss */
+/* line 79, src/sass/base/_forms.scss */
 .input-label + .style-checkbox {
   padding-top: 16px;
 }
 
-/* line 80, src/sass/base/_forms.scss */
+/* line 84, src/sass/base/_forms.scss */
 .input-text,
 .input-textarea {
   display: inline-block;
@@ -3559,14 +3825,14 @@ textarea {
 }
 
 @media (max-width: 959px) {
-  /* line 80, src/sass/base/_forms.scss */
+  /* line 84, src/sass/base/_forms.scss */
   .input-text,
   .input-textarea {
     padding: 20px 16px 14px;
   }
 }
 
-/* line 99, src/sass/base/_forms.scss */
+/* line 103, src/sass/base/_forms.scss */
 .input-text::-webkit-input-placeholder, .input-textarea::-webkit-input-placeholder {
   color: #999999;
   opacity: 1;
@@ -3599,7 +3865,7 @@ textarea {
   transition: all 0.3s ease;
 }
 
-/* line 105, src/sass/base/_forms.scss */
+/* line 109, src/sass/base/_forms.scss */
 .input-text:focus,
 .input-textarea:focus {
   border-color: #000;
@@ -3607,28 +3873,28 @@ textarea {
   outline: none;
 }
 
-/* line 110, src/sass/base/_forms.scss */
+/* line 114, src/sass/base/_forms.scss */
 .input-text:hover,
 .input-textarea:hover {
   border-color: #000;
   background: #F2F2F2;
 }
 
-/* line 114, src/sass/base/_forms.scss */
+/* line 118, src/sass/base/_forms.scss */
 .input-text:active,
 .input-textarea:active {
   border-color: #000;
   background: #F2F2F2;
 }
 
-/* line 119, src/sass/base/_forms.scss */
+/* line 123, src/sass/base/_forms.scss */
 .input-text.error,
 .input-textarea.error {
   color: #D93246;
   border-color: #D93246;
 }
 
-/* line 123, src/sass/base/_forms.scss */
+/* line 127, src/sass/base/_forms.scss */
 .input-text[disabled],
 .input-textarea[disabled] {
   pointer-events: none;
@@ -3636,12 +3902,12 @@ textarea {
   background: #F2F2F2;
 }
 
-/* line 130, src/sass/base/_forms.scss */
+/* line 134, src/sass/base/_forms.scss */
 .input-textarea {
   min-height: 150px;
 }
 
-/* line 134, src/sass/base/_forms.scss */
+/* line 138, src/sass/base/_forms.scss */
 .input-placeholder {
   position: absolute;
   top: 21px;
@@ -3659,7 +3925,7 @@ textarea {
   transition: all 0.3s ease;
 }
 
-/* line 149, src/sass/base/_forms.scss */
+/* line 153, src/sass/base/_forms.scss */
 .input-error-info {
   position: absolute;
   left: 16px;
@@ -3670,42 +3936,44 @@ textarea {
   opacity: 0;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  pointer-events: none;
 }
 
-/* line 162, src/sass/base/_forms.scss */
+/* line 167, src/sass/base/_forms.scss */
 .input-descr-info {
   color: #818181;
   font-size: 14px;
   line-height: 1.28571;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  pointer-events: none;
 }
 
-/* line 167, src/sass/base/_forms.scss */
+/* line 173, src/sass/base/_forms.scss */
 .input-descr-info + .input-error-info {
   bottom: 0px;
 }
 
-/* line 172, src/sass/base/_forms.scss */
+/* line 178, src/sass/base/_forms.scss */
 .input-pers-info {
   text-align: center;
   font-size: 14px;
   line-height: 1.28571;
 }
 
-/* line 176, src/sass/base/_forms.scss */
+/* line 182, src/sass/base/_forms.scss */
 .input-pers-info a {
   border-bottom: 1px solid black;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-/* line 179, src/sass/base/_forms.scss */
+/* line 185, src/sass/base/_forms.scss */
 .input-pers-info a:hover {
   border-color: rgba(0, 0, 0, 0);
 }
 
-/* line 185, src/sass/base/_forms.scss */
+/* line 191, src/sass/base/_forms.scss */
 .select2-js {
   width: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -3713,12 +3981,12 @@ textarea {
   -webkit-appearance: none;
 }
 
-/* line 192, src/sass/base/_forms.scss */
+/* line 198, src/sass/base/_forms.scss */
 .select2-container {
   outline: none;
 }
 
-/* line 194, src/sass/base/_forms.scss */
+/* line 200, src/sass/base/_forms.scss */
 .select2-container * {
   outline: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -3726,7 +3994,7 @@ textarea {
   -webkit-appearance: none;
 }
 
-/* line 201, src/sass/base/_forms.scss */
+/* line 207, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-dropdown {
   border: none;
   border-radius: 0;
@@ -3734,56 +4002,56 @@ textarea {
   z-index: 99999;
 }
 
-/* line 206, src/sass/base/_forms.scss */
+/* line 212, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-dropdown.select2-dropdown--below {
   margin-top: -1px;
 }
 
-/* line 208, src/sass/base/_forms.scss */
+/* line 214, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-dropdown.select2-dropdown--below .select2-results__options {
   border-top: none;
 }
 
-/* line 212, src/sass/base/_forms.scss */
+/* line 218, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-dropdown.select2-dropdown--above {
   position: relative;
   bottom: -1px;
 }
 
-/* line 215, src/sass/base/_forms.scss */
+/* line 221, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-dropdown.select2-dropdown--above .select2-results__options {
   border-bottom: none;
 }
 
-/* line 220, src/sass/base/_forms.scss */
+/* line 226, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-results__options {
   overflow: auto;
   max-height: 341px;
   border: 1px solid #000;
 }
 
-/* line 224, src/sass/base/_forms.scss */
+/* line 230, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-results__options .select2-results__option {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-/* line 226, src/sass/base/_forms.scss */
+/* line 232, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-results__options .select2-results__option:hover {
   background: #F2F2F2;
 }
 
-/* line 229, src/sass/base/_forms.scss */
+/* line 235, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-results__options .select2-results__option[aria-selected="true"] {
   background: #FFD453;
 }
 
-/* line 234, src/sass/base/_forms.scss */
+/* line 240, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-selection--single {
   height: auto;
 }
 
-/* line 236, src/sass/base/_forms.scss */
+/* line 242, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-selection--single .select2-selection__rendered {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3799,25 +4067,25 @@ textarea {
 }
 
 @media (max-width: 959px) {
-  /* line 236, src/sass/base/_forms.scss */
+  /* line 242, src/sass/base/_forms.scss */
   .select2-container--avgvst-default .select2-selection--single .select2-selection__rendered {
     padding: 20px 8px;
   }
 }
 
-/* line 246, src/sass/base/_forms.scss */
+/* line 252, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-selection--single .select2-selection__rendered:hover {
   background: #F2F2F2;
 }
 
-/* line 249, src/sass/base/_forms.scss */
+/* line 255, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-selection--single .select2-selection__rendered img {
   display: block;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 
-/* line 253, src/sass/base/_forms.scss */
+/* line 259, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-selection--single .select2-selection__rendered span {
   font-size: 12px;
   line-height: 1.33333;
@@ -3825,7 +4093,7 @@ textarea {
   text-transform: uppercase;
 }
 
-/* line 260, src/sass/base/_forms.scss */
+/* line 266, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-selection--single .select2-selection__arrow {
   position: absolute;
   top: calc(50% - 4px);
@@ -3841,7 +4109,7 @@ textarea {
   transition: all 0.3s ease;
 }
 
-/* line 273, src/sass/base/_forms.scss */
+/* line 279, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-results__option,
 .select2-container--avgvst-default .select2-selection__rendered {
   display: -webkit-box;
@@ -3855,13 +4123,13 @@ textarea {
   background: #fff;
 }
 
-/* line 280, src/sass/base/_forms.scss */
+/* line 286, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-results__option:last-child,
 .select2-container--avgvst-default .select2-selection__rendered:last-child {
   border-bottom: none;
 }
 
-/* line 283, src/sass/base/_forms.scss */
+/* line 289, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-results__option span,
 .select2-container--avgvst-default .select2-selection__rendered span {
   font-size: 12px;
@@ -3870,30 +4138,30 @@ textarea {
   text-transform: uppercase;
 }
 
-/* line 288, src/sass/base/_forms.scss */
+/* line 294, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-results__option span.title,
 .select2-container--avgvst-default .select2-selection__rendered span.title {
   color: #000;
 }
 
-/* line 291, src/sass/base/_forms.scss */
+/* line 297, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-results__option span.descr,
 .select2-container--avgvst-default .select2-selection__rendered span.descr {
   padding-left: 4px;
   color: #818181;
 }
 
-/* line 298, src/sass/base/_forms.scss */
+/* line 304, src/sass/base/_forms.scss */
 .select2-container--avgvst-default.select2-container--open.select2-container--below {
   pointer-events: none;
 }
 
-/* line 302, src/sass/base/_forms.scss */
+/* line 308, src/sass/base/_forms.scss */
 .select2-container--avgvst-default.select2-container--open .select2-selection--single .select2-selection__rendered {
   background: #FFD453;
 }
 
-/* line 305, src/sass/base/_forms.scss */
+/* line 311, src/sass/base/_forms.scss */
 .select2-container--avgvst-default.select2-container--open .select2-selection--single .select2-selection__arrow {
   top: calc(50% + 2px);
   border: 1px solid black;
@@ -3901,46 +4169,46 @@ textarea {
   border-bottom-color: rgba(0, 0, 0, 0);
 }
 
-/* line 315, src/sass/base/_forms.scss */
+/* line 321, src/sass/base/_forms.scss */
 .select2-container--avgvst-default.selected .select2-selection--single .select2-selection__rendered {
   background: #F2F2F2;
 }
 
-/* line 323, src/sass/base/_forms.scss */
+/* line 329, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-dropdown {
   border: none;
   background: rgba(0, 0, 0, 0);
 }
 
-/* line 327, src/sass/base/_forms.scss */
+/* line 333, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__options {
   width: calc(100% - 16px);
   margin: 0 8px;
   border: 1px solid #000;
 }
 
-/* line 331, src/sass/base/_forms.scss */
+/* line 337, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__options .select2-results__option {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-/* line 333, src/sass/base/_forms.scss */
+/* line 339, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__options .select2-results__option:hover {
   background: #F2F2F2;
 }
 
-/* line 336, src/sass/base/_forms.scss */
+/* line 342, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__options .select2-results__option[aria-selected="true"] {
   background: #FFD453;
 }
 
-/* line 341, src/sass/base/_forms.scss */
+/* line 347, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-selection--single {
   height: auto;
 }
 
-/* line 343, src/sass/base/_forms.scss */
+/* line 349, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-selection--single .select2-selection__rendered {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3954,20 +4222,20 @@ textarea {
 }
 
 @media (max-width: 959px) {
-  /* line 343, src/sass/base/_forms.scss */
+  /* line 349, src/sass/base/_forms.scss */
   .select2-container--avgvst-currency .select2-selection--single .select2-selection__rendered {
     padding: 8px 8px;
   }
 }
 
-/* line 352, src/sass/base/_forms.scss */
+/* line 358, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-selection--single .select2-selection__rendered img {
   display: block;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 
-/* line 356, src/sass/base/_forms.scss */
+/* line 362, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-selection--single .select2-selection__rendered span {
   font-size: 12px;
   line-height: 1.33333;
@@ -3975,7 +4243,7 @@ textarea {
   text-transform: uppercase;
 }
 
-/* line 364, src/sass/base/_forms.scss */
+/* line 370, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__option,
 .select2-container--avgvst-currency .select2-selection__rendered {
   display: -webkit-box;
@@ -3989,13 +4257,13 @@ textarea {
   background: #fff;
 }
 
-/* line 371, src/sass/base/_forms.scss */
+/* line 377, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__option:last-child,
 .select2-container--avgvst-currency .select2-selection__rendered:last-child {
   border-bottom: none;
 }
 
-/* line 375, src/sass/base/_forms.scss */
+/* line 381, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__option img,
 .select2-container--avgvst-currency .select2-selection__rendered img {
   display: block;
@@ -4004,7 +4272,7 @@ textarea {
   margin-right: 8px;
 }
 
-/* line 380, src/sass/base/_forms.scss */
+/* line 386, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__option span,
 .select2-container--avgvst-currency .select2-selection__rendered span {
   font-size: 12px;
@@ -4013,20 +4281,20 @@ textarea {
   text-transform: uppercase;
 }
 
-/* line 385, src/sass/base/_forms.scss */
+/* line 391, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__option span.title,
 .select2-container--avgvst-currency .select2-selection__rendered span.title {
   color: #000;
 }
 
-/* line 388, src/sass/base/_forms.scss */
+/* line 394, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__option span.descr,
 .select2-container--avgvst-currency .select2-selection__rendered span.descr {
   padding-left: 4px;
   color: #818181;
 }
 
-/* line 398, src/sass/base/_forms.scss */
+/* line 404, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-dropdown {
   top: -56px;
   margin: -1px 0;
@@ -4036,35 +4304,35 @@ textarea {
   z-index: 99999;
 }
 
-/* line 406, src/sass/base/_forms.scss */
+/* line 412, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-results__options {
   overflow: auto;
   max-height: 341px;
   border: 1px solid #000;
 }
 
-/* line 410, src/sass/base/_forms.scss */
+/* line 416, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-results__options .select2-results__option {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-/* line 412, src/sass/base/_forms.scss */
+/* line 418, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-results__options .select2-results__option:hover {
   background: #F2F2F2;
 }
 
-/* line 415, src/sass/base/_forms.scss */
+/* line 421, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-results__options .select2-results__option[aria-selected="true"] {
   background: #FFD453;
 }
 
-/* line 420, src/sass/base/_forms.scss */
+/* line 426, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-selection--single {
   height: auto;
 }
 
-/* line 422, src/sass/base/_forms.scss */
+/* line 428, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-selection--single .select2-selection__rendered {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4080,25 +4348,25 @@ textarea {
 }
 
 @media (max-width: 959px) {
-  /* line 422, src/sass/base/_forms.scss */
+  /* line 428, src/sass/base/_forms.scss */
   .select2-container--avgvst-item-card .select2-selection--single .select2-selection__rendered {
     padding: 20px 8px;
   }
 }
 
-/* line 432, src/sass/base/_forms.scss */
+/* line 438, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-selection--single .select2-selection__rendered:hover {
   background: #F2F2F2;
 }
 
-/* line 435, src/sass/base/_forms.scss */
+/* line 441, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-selection--single .select2-selection__rendered img {
   display: block;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 
-/* line 439, src/sass/base/_forms.scss */
+/* line 445, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-selection--single .select2-selection__rendered span {
   font-size: 12px;
   line-height: 1.33333;
@@ -4106,7 +4374,7 @@ textarea {
   text-transform: uppercase;
 }
 
-/* line 447, src/sass/base/_forms.scss */
+/* line 453, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-results__option,
 .select2-container--avgvst-item-card .select2-selection__rendered {
   display: -webkit-box;
@@ -4120,13 +4388,13 @@ textarea {
   background: #fff;
 }
 
-/* line 454, src/sass/base/_forms.scss */
+/* line 460, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-results__option:last-child,
 .select2-container--avgvst-item-card .select2-selection__rendered:last-child {
   border-bottom: none;
 }
 
-/* line 457, src/sass/base/_forms.scss */
+/* line 463, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-results__option span,
 .select2-container--avgvst-item-card .select2-selection__rendered span {
   font-size: 12px;
@@ -4135,35 +4403,220 @@ textarea {
   text-transform: uppercase;
 }
 
-/* line 462, src/sass/base/_forms.scss */
+/* line 468, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-results__option span.title,
 .select2-container--avgvst-item-card .select2-selection__rendered span.title {
   color: #000;
 }
 
-/* line 465, src/sass/base/_forms.scss */
+/* line 471, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-results__option span.descr,
 .select2-container--avgvst-item-card .select2-selection__rendered span.descr {
   padding-left: 4px;
   color: #818181;
 }
 
-/* line 472, src/sass/base/_forms.scss */
+/* line 478, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card.select2-container--open.select2-container--below {
   pointer-events: none;
 }
 
-/* line 476, src/sass/base/_forms.scss */
+/* line 482, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card.select2-container--open .select2-selection--single .select2-selection__rendered {
   background: #FFD453;
 }
 
-/* line 483, src/sass/base/_forms.scss */
+/* line 489, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card.selected .select2-selection--single .select2-selection__rendered {
   background: #F2F2F2;
 }
 
-/* line 492, src/sass/base/_forms.scss */
+/* line 496, src/sass/base/_forms.scss */
+.select2-container--avgvst-filter .select2-dropdown {
+  width: 318px !important;
+  border: none;
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0);
+  z-index: 99999;
+}
+
+/* line 503, src/sass/base/_forms.scss */
+.select2-container--avgvst-filter .select2-results__options {
+  overflow: auto;
+  max-height: 341px;
+  border: 1px solid #000;
+}
+
+/* line 507, src/sass/base/_forms.scss */
+.select2-container--avgvst-filter .select2-results__options .select2-results__option {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* line 509, src/sass/base/_forms.scss */
+.select2-container--avgvst-filter .select2-results__options .select2-results__option:hover {
+  background: #F2F2F2;
+}
+
+/* line 512, src/sass/base/_forms.scss */
+.select2-container--avgvst-filter .select2-results__options .select2-results__option[aria-selected="true"] {
+  background: #FFD453;
+}
+
+/* line 517, src/sass/base/_forms.scss */
+.select2-container--avgvst-filter .select2-selection--single {
+  height: auto;
+}
+
+/* line 519, src/sass/base/_forms.scss */
+.select2-container--avgvst-filter .select2-selection--single .select2-selection__rendered {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 18px 8px 10px;
+  padding-right: 26px;
+  border: none;
+  background: #fff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 959px) {
+  /* line 519, src/sass/base/_forms.scss */
+  .select2-container--avgvst-filter .select2-selection--single .select2-selection__rendered {
+    padding: 20px 8px;
+  }
+}
+
+/* line 531, src/sass/base/_forms.scss */
+.select2-container--avgvst-filter .select2-selection--single .select2-selection__rendered:hover + .select2-selection__arrow {
+  background: #000;
+}
+
+/* line 533, src/sass/base/_forms.scss */
+.select2-container--avgvst-filter .select2-selection--single .select2-selection__rendered:hover + .select2-selection__arrow:before {
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+}
+
+/* line 539, src/sass/base/_forms.scss */
+.select2-container--avgvst-filter .select2-selection--single .select2-selection__rendered img {
+  display: block;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+/* line 543, src/sass/base/_forms.scss */
+.select2-container--avgvst-filter .select2-selection--single .select2-selection__rendered span {
+  font-size: 12px;
+  line-height: 1.33333;
+  color: #000;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* line 551, src/sass/base/_forms.scss */
+.select2-container--avgvst-filter .select2-selection--single .select2-selection__arrow {
+  position: absolute;
+  top: calc(50% + 2px);
+  right: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  -webkit-transform: translate3d(0, -50%, 0);
+          transform: translate3d(0, -50%, 0);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+/* line 562, src/sass/base/_forms.scss */
+.select2-container--avgvst-filter .select2-selection--single .select2-selection__arrow:before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+  -webkit-transform: translate3d(-50%, -50%, 0) rotate(45deg);
+          transform: translate3d(-50%, -50%, 0) rotate(45deg);
+}
+
+/* line 577, src/sass/base/_forms.scss */
+.select2-container--avgvst-filter .select2-results__option,
+.select2-container--avgvst-filter .select2-selection__rendered {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 8px;
+  border-bottom: 1px solid #F2F2F2;
+  background: #fff;
+}
+
+/* line 584, src/sass/base/_forms.scss */
+.select2-container--avgvst-filter .select2-results__option:last-child,
+.select2-container--avgvst-filter .select2-selection__rendered:last-child {
+  border-bottom: none;
+}
+
+/* line 587, src/sass/base/_forms.scss */
+.select2-container--avgvst-filter .select2-results__option span,
+.select2-container--avgvst-filter .select2-selection__rendered span {
+  font-size: 12px;
+  line-height: 1.33333;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* line 592, src/sass/base/_forms.scss */
+.select2-container--avgvst-filter .select2-results__option span.title,
+.select2-container--avgvst-filter .select2-selection__rendered span.title {
+  color: #000;
+}
+
+/* line 595, src/sass/base/_forms.scss */
+.select2-container--avgvst-filter .select2-results__option span.descr,
+.select2-container--avgvst-filter .select2-selection__rendered span.descr {
+  padding-left: 4px;
+  color: #818181;
+}
+
+/* line 602, src/sass/base/_forms.scss */
+.select2-container--avgvst-filter.select2-container--open.select2-container--below {
+  pointer-events: none;
+}
+
+/* line 609, src/sass/base/_forms.scss */
+.select2-container--avgvst-filter.select2-container--open .select2-selection--single .select2-selection__arrow {
+  background: #000;
+}
+
+/* line 611, src/sass/base/_forms.scss */
+.select2-container--avgvst-filter.select2-container--open .select2-selection--single .select2-selection__arrow:before {
+  top: calc(50% + 2px);
+  border: 1px solid #fff;
+  border-right-color: rgba(0, 0, 0, 0);
+  border-bottom-color: rgba(0, 0, 0, 0);
+}
+
+/* line 622, src/sass/base/_forms.scss */
+.select2-container--avgvst-filter.selected .select2-selection--single .select2-selection__rendered {
+  background: #F2F2F2;
+}
+
+/* line 631, src/sass/base/_forms.scss */
 .style-checkbox {
   display: block;
   position: relative;
@@ -4172,7 +4625,12 @@ textarea {
   font-size: 12px;
 }
 
-/* line 499, src/sass/base/_forms.scss */
+/* line 640, src/sass/base/_forms.scss */
+.style-checkbox:hover span:after {
+  opacity: 0.65;
+}
+
+/* line 649, src/sass/base/_forms.scss */
 .style-checkbox input {
   position: absolute;
   left: 0;
@@ -4180,52 +4638,52 @@ textarea {
   opacity: 0;
 }
 
-/* line 506, src/sass/base/_forms.scss */
+/* line 656, src/sass/base/_forms.scss */
 .style-checkbox input:checked + span:before {
   border-color: #FFD453;
   background: #FFD453;
 }
 
-/* line 510, src/sass/base/_forms.scss */
+/* line 660, src/sass/base/_forms.scss */
 .style-checkbox input:checked + span:after {
   opacity: 1;
 }
 
-/* line 516, src/sass/base/_forms.scss */
+/* line 666, src/sass/base/_forms.scss */
 .style-checkbox input.error + span:before {
   border-color: #cc0000;
 }
 
-/* line 522, src/sass/base/_forms.scss */
+/* line 672, src/sass/base/_forms.scss */
 .style-checkbox span {
   position: relative;
   display: block;
   font-size: 14px;
-  line-height: 1.28571;
-  padding-left: 30px;
+  line-height: 16px;
+  padding-left: 24px;
 }
 
-/* line 528, src/sass/base/_forms.scss */
+/* line 678, src/sass/base/_forms.scss */
 .style-checkbox span:before {
   content: "";
   position: absolute;
   left: 0;
   top: 0;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   border: 1px solid #000;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-/* line 538, src/sass/base/_forms.scss */
+/* line 688, src/sass/base/_forms.scss */
 .style-checkbox span:after {
   content: "";
   position: absolute;
-  left: 7px;
-  top: 3px;
-  width: 6px;
-  height: 12px;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
   border-right: 1px solid #000;
   border-bottom: 1px solid #000;
   opacity: 0;
@@ -4236,12 +4694,12 @@ textarea {
   z-index: 2;
 }
 
-/* line 553, src/sass/base/_forms.scss */
+/* line 703, src/sass/base/_forms.scss */
 .style-checkbox span a {
   color: #353434;
 }
 
-/* line 558, src/sass/base/_forms.scss */
+/* line 708, src/sass/base/_forms.scss */
 .style-checkbox p {
   margin-bottom: 8px;
   font-size: 12px;
@@ -4250,7 +4708,7 @@ textarea {
   text-transform: uppercase;
 }
 
-/* line 568, src/sass/base/_forms.scss */
+/* line 718, src/sass/base/_forms.scss */
 .subscr-mini {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4260,20 +4718,20 @@ textarea {
           align-items: flex-start;
 }
 
-/* line 571, src/sass/base/_forms.scss */
+/* line 721, src/sass/base/_forms.scss */
 .subscr-mini .input-label {
   width: 100%;
 }
 
 @media (max-width: 959px) {
-  /* line 574, src/sass/base/_forms.scss */
+  /* line 724, src/sass/base/_forms.scss */
   .subscr-mini .input-error-info {
     left: 0;
     font-size: 12px;
   }
 }
 
-/* line 580, src/sass/base/_forms.scss */
+/* line 730, src/sass/base/_forms.scss */
 .subscr-mini .btn {
   margin-left: 8px;
 }
@@ -6128,6 +6586,9 @@ body.scroll-down .header-page-wrap {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0 -24px;
@@ -6148,9 +6609,10 @@ body.scroll-down .header-page-wrap {
   }
 }
 
-/* line 119, src/sass/components/_catalog-header.scss */
+/* line 120, src/sass/components/_catalog-header.scss */
 .catalog-header__main-categories a {
   position: relative;
+  display: block;
   color: #fff;
   width: calc(100% / 8 - 1px);
   min-width: 144px;
@@ -6158,12 +6620,12 @@ body.scroll-down .header-page-wrap {
   margin-right: 1px;
 }
 
-/* line 126, src/sass/components/_catalog-header.scss */
+/* line 128, src/sass/components/_catalog-header.scss */
 .catalog-header__main-categories a:last-child {
   margin-right: 0;
 }
 
-/* line 129, src/sass/components/_catalog-header.scss */
+/* line 131, src/sass/components/_catalog-header.scss */
 .catalog-header__main-categories a span {
   position: absolute;
   top: 12px;
@@ -6173,19 +6635,19 @@ body.scroll-down .header-page-wrap {
   text-align: center;
 }
 
-/* line 137, src/sass/components/_catalog-header.scss */
+/* line 139, src/sass/components/_catalog-header.scss */
 .catalog-header__main-categories a img {
   display: block;
   max-width: 100%;
   width: 100%;
 }
 
-/* line 142, src/sass/components/_catalog-header.scss */
+/* line 144, src/sass/components/_catalog-header.scss */
 .catalog-header__main-categories a.black {
   color: #000;
 }
 
-/* line 148, src/sass/components/_catalog-header.scss */
+/* line 150, src/sass/components/_catalog-header.scss */
 .catalog-header__sub-categories {
   position: relative;
   display: -webkit-box;
@@ -6205,7 +6667,7 @@ body.scroll-down .header-page-wrap {
 }
 
 @media (max-width: 959px) {
-  /* line 148, src/sass/components/_catalog-header.scss */
+  /* line 150, src/sass/components/_catalog-header.scss */
   .catalog-header__sub-categories {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -6218,25 +6680,25 @@ body.scroll-down .header-page-wrap {
   }
 }
 
-/* line 164, src/sass/components/_catalog-header.scss */
+/* line 166, src/sass/components/_catalog-header.scss */
 .catalog-header__sub-categories a {
   display: block;
   padding: 8px 16px;
 }
 
 @media (max-width: 959px) {
-  /* line 164, src/sass/components/_catalog-header.scss */
+  /* line 166, src/sass/components/_catalog-header.scss */
   .catalog-header__sub-categories a {
     padding: 8px;
   }
 }
 
-/* line 171, src/sass/components/_catalog-header.scss */
+/* line 173, src/sass/components/_catalog-header.scss */
 .catalog-header__sub-categories a:hover span {
   border-color: black;
 }
 
-/* line 176, src/sass/components/_catalog-header.scss */
+/* line 178, src/sass/components/_catalog-header.scss */
 .catalog-header__sub-categories span {
   border-bottom: 1px solid rgba(0, 0, 0, 0);
   -webkit-transition: all 0.3s ease;
@@ -6248,6 +6710,118 @@ body.scroll-down .header-page-wrap {
   padding: 16px 0;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
+}
+
+/* line 10, src/sass/components/_catalog-filter.scss */
+.catalog-filter__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+/* line 15, src/sass/components/_catalog-filter.scss */
+.catalog-filter__item {
+  position: relative;
+  margin-right: 20px;
+  text-transform: uppercase;
+}
+
+/* line 19, src/sass/components/_catalog-filter.scss */
+.catalog-filter__item .input-label {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+/* line 23, src/sass/components/_catalog-filter.scss */
+.catalog-filter__item [data-checkbox-list-link] {
+  padding: 17px 0;
+}
+
+/* line 26, src/sass/components/_catalog-filter.scss */
+.catalog-filter__item > .style-checkbox {
+  margin-left: 20px;
+  margin-bottom: 0;
+  padding: 16px 0;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* line 35, src/sass/components/_catalog-filter.scss */
+.catalog-filter__item--last {
+  margin-left: auto;
+}
+
+/* line 40, src/sass/components/_catalog-filter.scss */
+.catalog-filter__item-title {
+  display: block;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* line 48, src/sass/components/_catalog-filter.scss */
+.catalog-filter__checkbox-list-wrap {
+  position: absolute;
+  top: 43px;
+  left: 0;
+  width: 320px;
+  padding: 24px 16px;
+  border: 1px solid #000;
+  -webkit-box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  z-index: 1;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+/* line 60, src/sass/components/_catalog-filter.scss */
+.catalog-filter__checkbox-list-wrap .btn {
+  margin-bottom: 0;
+}
+
+/* line 65, src/sass/components/_catalog-filter.scss */
+.catalog-filter__checkbox-list {
+  max-height: 202px;
+  margin-bottom: 24px;
+  overflow: auto;
+}
+
+/* line 69, src/sass/components/_catalog-filter.scss */
+.catalog-filter__checkbox-list .style-checkbox {
+  margin-bottom: 20px;
+  font-size: 12px;
+  line-height: 1.33333;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* line 75, src/sass/components/_catalog-filter.scss */
+.catalog-filter__checkbox-list .style-checkbox:last-child {
+  margin-bottom: 0;
+}
+
+/* line 79, src/sass/components/_catalog-filter.scss */
+.catalog-filter__checkbox-list .simplebar-track.simplebar-vertical {
+  width: 2px;
+  background: #E5E5E5;
+}
+
+/* line 83, src/sass/components/_catalog-filter.scss */
+.catalog-filter__checkbox-list .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+  top: 0;
+  left: 0;
+  right: 0;
+  border-radius: 0;
+  opacity: 1;
+  background: #000;
 }
 
 /* line 1, src/sass/components/_footer.scss */

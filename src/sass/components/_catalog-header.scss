@@ -106,6 +106,7 @@
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   margin: 0 -24px;
   padding-top: 24px;
@@ -118,6 +119,7 @@
   }
   a {
     position: relative;
+    display: block;
     color: #fff;
     width: calc(100% / 8 - 1px);
     min-width: 144px;

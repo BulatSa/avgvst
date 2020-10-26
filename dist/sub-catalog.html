@@ -365,7 +365,66 @@
 <section class="catalog-filter-sec">
   <div class="container">
     <div class="catalog-filter">
-      
+      <form class="catalog-filter__form">
+        <div class="catalog-filter__item">
+          <select class="select2-js select2-js--filter" name="sorting" data-placeholder="сортировка">
+            <option></option>
+            <option value="Популярные" data-title="Популярные">
+              Популярные
+            </option>
+            <option value="Новинки" data-title="Новинки">
+              Новинки
+            </option>
+            <option value="По возрастанию цены" data-title="По возрастанию цены">
+              По возрастанию цены
+            </option>
+            <option value="По убыванию цены" data-title="По убыванию цены">
+              По убыванию цены
+            </option>
+          </select>
+        </div>
+        <div class="catalog-filter__item">
+          <label class="input-label" data-checkbox-list-link="catalog-filter__checkbox-list-wrap">
+            <span class="catalog-filter__item-title">материал <i></i></span>
+          </label>
+          <div class="catalog-filter__checkbox-list-wrap">
+            <div class="catalog-filter__checkbox-list" data-simplebar>
+              <label class="style-checkbox">
+                <input type="checkbox" name="материал" value="серебро">
+                <span>серебро</span>
+              </label>
+              <label class="style-checkbox">
+                <input type="checkbox" name="материал" value="серебро с позолотой">
+                <span>серебро с позолотой</span>
+              </label>
+              <label class="style-checkbox">
+                <input type="checkbox" name="материал" value="белое золото">
+                <span>белое золото</span>
+              </label>
+              <label class="style-checkbox">
+                <input type="checkbox" name="материал" value="лимонное золото ">
+                <span>лимонное золото </span>
+              </label>
+            </div>
+            <div class="btn-wrap btn-wrap--center">
+              <button class="btn">Показать 132 из 230</button>
+            </div>
+          </div>
+        </div>
+        <div class="catalog-filter__item">
+          <label class="style-checkbox">
+            <input type="checkbox" name="материал" value="серебро">
+            <span>только в наличии</span>
+          </label>
+        </div>
+
+        <div class="catalog-filter__item catalog-filter__item--last">
+          <a href="#" class="catalog-filter__reset">сбросить фильтры</a>
+          <div class="catalog-filter__positions">
+            <span class="finded">84/</span><span class="all">240</span> товаров
+          </div>
+        </div>
+      </form>
     </div>
   </div>
 </section>
