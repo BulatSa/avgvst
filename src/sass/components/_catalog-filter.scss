@@ -9,13 +9,13 @@
 
 .catalog-filter__form {
   display: flex;
-  align-items: flex-start;
 }
 
 .catalog-filter__item {
   position: relative;
   margin-right: 20px;
   text-transform: uppercase;
+  user-select: none;
   .input-label {
     display: inline-block;
     margin-bottom: 0;
@@ -26,14 +26,19 @@
   & > .style-checkbox {
     margin-left: 20px;
     margin-bottom: 0;
-    padding: 16px 0;
-    font-size: 12px;
-    line-height: 16px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    padding: 17px 0;
+    span {
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
   }
   &--last {
+    display: flex;
+    align-items: center;
     margin-left: auto;
+    margin-right: 0;
   }
 }
 
@@ -56,6 +61,7 @@
   background: #fff;
   z-index: 1;
   opacity: 0;
+  pointer-events: none;
   transition: opacity 0.3s ease;
   .btn {
     margin-bottom: 0;
@@ -90,4 +96,31 @@
       }
     }
   }
+}
+
+.catalog-filter__reset {
+  display: block;
+  padding: 3px 6px;
+  color: #000;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: $yellow;
+  transition: all 0.3s ease;
+  &:hover {
+    color: #fff;
+    background: #000;
+  }
+}
+
+.catalog-filter__positions {
+  display: block;
+  margin-left: 20px;
+  padding: 3px 0;
+  color: $gray-deep;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }

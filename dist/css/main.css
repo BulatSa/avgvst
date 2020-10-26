@@ -4623,6 +4623,10 @@ textarea {
   cursor: pointer;
   margin-bottom: 40px;
   font-size: 12px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 /* line 640, src/sass/base/_forms.scss */
@@ -6717,16 +6721,17 @@ body.scroll-down .header-page-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
 }
 
-/* line 15, src/sass/components/_catalog-filter.scss */
+/* line 14, src/sass/components/_catalog-filter.scss */
 .catalog-filter__item {
   position: relative;
   margin-right: 20px;
   text-transform: uppercase;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 /* line 19, src/sass/components/_catalog-filter.scss */
@@ -6744,19 +6749,30 @@ body.scroll-down .header-page-wrap {
 .catalog-filter__item > .style-checkbox {
   margin-left: 20px;
   margin-bottom: 0;
-  padding: 16px 0;
+  padding: 17px 0;
+}
+
+/* line 30, src/sass/components/_catalog-filter.scss */
+.catalog-filter__item > .style-checkbox span {
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
-/* line 35, src/sass/components/_catalog-filter.scss */
+/* line 37, src/sass/components/_catalog-filter.scss */
 .catalog-filter__item--last {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: auto;
+  margin-right: 0;
 }
 
-/* line 40, src/sass/components/_catalog-filter.scss */
+/* line 45, src/sass/components/_catalog-filter.scss */
 .catalog-filter__item-title {
   display: block;
   font-size: 12px;
@@ -6765,7 +6781,7 @@ body.scroll-down .header-page-wrap {
   text-transform: uppercase;
 }
 
-/* line 48, src/sass/components/_catalog-filter.scss */
+/* line 53, src/sass/components/_catalog-filter.scss */
 .catalog-filter__checkbox-list-wrap {
   position: absolute;
   top: 43px;
@@ -6778,23 +6794,24 @@ body.scroll-down .header-page-wrap {
   background: #fff;
   z-index: 1;
   opacity: 0;
+  pointer-events: none;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
 
-/* line 60, src/sass/components/_catalog-filter.scss */
+/* line 66, src/sass/components/_catalog-filter.scss */
 .catalog-filter__checkbox-list-wrap .btn {
   margin-bottom: 0;
 }
 
-/* line 65, src/sass/components/_catalog-filter.scss */
+/* line 71, src/sass/components/_catalog-filter.scss */
 .catalog-filter__checkbox-list {
   max-height: 202px;
   margin-bottom: 24px;
   overflow: auto;
 }
 
-/* line 69, src/sass/components/_catalog-filter.scss */
+/* line 75, src/sass/components/_catalog-filter.scss */
 .catalog-filter__checkbox-list .style-checkbox {
   margin-bottom: 20px;
   font-size: 12px;
@@ -6803,18 +6820,18 @@ body.scroll-down .header-page-wrap {
   text-transform: uppercase;
 }
 
-/* line 75, src/sass/components/_catalog-filter.scss */
+/* line 81, src/sass/components/_catalog-filter.scss */
 .catalog-filter__checkbox-list .style-checkbox:last-child {
   margin-bottom: 0;
 }
 
-/* line 79, src/sass/components/_catalog-filter.scss */
+/* line 85, src/sass/components/_catalog-filter.scss */
 .catalog-filter__checkbox-list .simplebar-track.simplebar-vertical {
   width: 2px;
   background: #E5E5E5;
 }
 
-/* line 83, src/sass/components/_catalog-filter.scss */
+/* line 89, src/sass/components/_catalog-filter.scss */
 .catalog-filter__checkbox-list .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
   top: 0;
   left: 0;
@@ -6822,6 +6839,38 @@ body.scroll-down .header-page-wrap {
   border-radius: 0;
   opacity: 1;
   background: #000;
+}
+
+/* line 101, src/sass/components/_catalog-filter.scss */
+.catalog-filter__reset {
+  display: block;
+  padding: 3px 6px;
+  color: #000;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: #FFD453;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* line 111, src/sass/components/_catalog-filter.scss */
+.catalog-filter__reset:hover {
+  color: #fff;
+  background: #000;
+}
+
+/* line 117, src/sass/components/_catalog-filter.scss */
+.catalog-filter__positions {
+  display: block;
+  margin-left: 20px;
+  padding: 3px 0;
+  color: #818181;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 /* line 1, src/sass/components/_footer.scss */
