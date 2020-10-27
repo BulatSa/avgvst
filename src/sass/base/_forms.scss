@@ -712,6 +712,46 @@ textarea {
     letter-spacing: 0.1em;
     text-transform: uppercase;
   }
+
+  &--cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -1px;
+    margin-right: -1px;
+    padding: 14px 5px;
+    border: 1px solid $gray;
+    &:hover {
+      span {
+        &:before {
+          background: $gray-light;
+        }
+      }
+    }
+    span {
+      position: static;
+      padding: 0;
+      text-align: center;
+      z-index: 1;
+      &:before {
+        width: 100%;
+        height: 100%;
+        border: none;
+        background: #fff;
+        z-index: -1;
+      }
+      &:after {
+        content: none;
+      }
+    }
+    input {
+      &:checked + span {
+        &:before {
+          background: $yellow;
+        }
+      }
+    }
+  }
 }
 //style-checkbox
 

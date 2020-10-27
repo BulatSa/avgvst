@@ -4712,7 +4712,56 @@ textarea {
   text-transform: uppercase;
 }
 
-/* line 718, src/sass/base/_forms.scss */
+/* line 716, src/sass/base/_forms.scss */
+.style-checkbox--cell {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: -1px;
+  margin-right: -1px;
+  padding: 14px 5px;
+  border: 1px solid #E5E5E5;
+}
+
+/* line 726, src/sass/base/_forms.scss */
+.style-checkbox--cell:hover span:before {
+  background: #F2F2F2;
+}
+
+/* line 731, src/sass/base/_forms.scss */
+.style-checkbox--cell span {
+  position: static;
+  padding: 0;
+  text-align: center;
+  z-index: 1;
+}
+
+/* line 736, src/sass/base/_forms.scss */
+.style-checkbox--cell span:before {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: #fff;
+  z-index: -1;
+}
+
+/* line 743, src/sass/base/_forms.scss */
+.style-checkbox--cell span:after {
+  content: none;
+}
+
+/* line 749, src/sass/base/_forms.scss */
+.style-checkbox--cell input:checked + span:before {
+  background: #FFD453;
+}
+
+/* line 758, src/sass/base/_forms.scss */
 .subscr-mini {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4722,20 +4771,20 @@ textarea {
           align-items: flex-start;
 }
 
-/* line 721, src/sass/base/_forms.scss */
+/* line 761, src/sass/base/_forms.scss */
 .subscr-mini .input-label {
   width: 100%;
 }
 
 @media (max-width: 959px) {
-  /* line 724, src/sass/base/_forms.scss */
+  /* line 764, src/sass/base/_forms.scss */
   .subscr-mini .input-error-info {
     left: 0;
     font-size: 12px;
   }
 }
 
-/* line 730, src/sass/base/_forms.scss */
+/* line 770, src/sass/base/_forms.scss */
 .subscr-mini .btn {
   margin-left: 8px;
 }
@@ -6724,6 +6773,13 @@ body.scroll-down .header-page-wrap {
 }
 
 /* line 14, src/sass/components/_catalog-filter.scss */
+.catalog-filter__popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 18, src/sass/components/_catalog-filter.scss */
 .catalog-filter__item {
   position: relative;
   margin-right: 20px;
@@ -6734,25 +6790,65 @@ body.scroll-down .header-page-wrap {
           user-select: none;
 }
 
-/* line 19, src/sass/components/_catalog-filter.scss */
+/* line 23, src/sass/components/_catalog-filter.scss */
 .catalog-filter__item .input-label {
   display: inline-block;
   margin-bottom: 0;
 }
 
-/* line 23, src/sass/components/_catalog-filter.scss */
+/* line 28, src/sass/components/_catalog-filter.scss */
+.catalog-filter__item .input-label:hover .catalog-filter__item-title i {
+  background: #000;
+}
+
+/* line 30, src/sass/components/_catalog-filter.scss */
+.catalog-filter__item .input-label:hover .catalog-filter__item-title i:before {
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+}
+
+/* line 39, src/sass/components/_catalog-filter.scss */
+.catalog-filter__item .input-label.opened .catalog-filter__item-title i {
+  background: #000;
+}
+
+/* line 41, src/sass/components/_catalog-filter.scss */
+.catalog-filter__item .input-label.opened .catalog-filter__item-title i:before {
+  top: calc(50% + 2px);
+  border: 1px solid #fff;
+  border-right-color: rgba(0, 0, 0, 0);
+  border-bottom-color: rgba(0, 0, 0, 0);
+}
+
+/* line 52, src/sass/components/_catalog-filter.scss */
+.catalog-filter__item .input-label.filtered .catalog-filter__item-title i {
+  border-color: #FFD453;
+  background: #FFD453;
+}
+
+/* line 55, src/sass/components/_catalog-filter.scss */
+.catalog-filter__item .input-label.filtered .catalog-filter__item-title i:before {
+  opacity: 0;
+}
+
+/* line 58, src/sass/components/_catalog-filter.scss */
+.catalog-filter__item .input-label.filtered .catalog-filter__item-title i span {
+  opacity: 1;
+}
+
+/* line 65, src/sass/components/_catalog-filter.scss */
 .catalog-filter__item [data-checkbox-list-link] {
   padding: 17px 0;
 }
 
-/* line 26, src/sass/components/_catalog-filter.scss */
+/* line 68, src/sass/components/_catalog-filter.scss */
 .catalog-filter__item > .style-checkbox {
   margin-left: 20px;
   margin-bottom: 0;
-  padding: 17px 0;
+  padding: 16px 0;
 }
 
-/* line 30, src/sass/components/_catalog-filter.scss */
+/* line 72, src/sass/components/_catalog-filter.scss */
 .catalog-filter__item > .style-checkbox span {
   font-size: 12px;
   line-height: 16px;
@@ -6760,7 +6856,7 @@ body.scroll-down .header-page-wrap {
   text-transform: uppercase;
 }
 
-/* line 37, src/sass/components/_catalog-filter.scss */
+/* line 79, src/sass/components/_catalog-filter.scss */
 .catalog-filter__item--last {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6772,22 +6868,66 @@ body.scroll-down .header-page-wrap {
   margin-right: 0;
 }
 
-/* line 45, src/sass/components/_catalog-filter.scss */
+/* line 87, src/sass/components/_catalog-filter.scss */
 .catalog-filter__item-title {
   display: block;
+  padding-right: 26px;
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
-/* line 53, src/sass/components/_catalog-filter.scss */
+/* line 94, src/sass/components/_catalog-filter.scss */
+.catalog-filter__item-title i {
+  position: absolute;
+  top: 14px;
+  right: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  font-size: 11px;
+  line-height: 20px;
+  font-style: normal;
+  text-align: center;
+  letter-spacing: 0.1em;
+  pointer-events: none;
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+}
+
+/* line 110, src/sass/components/_catalog-filter.scss */
+.catalog-filter__item-title i:before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-right: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+  -webkit-transform: translate3d(-50%, -50%, 0) rotate(45deg);
+          transform: translate3d(-50%, -50%, 0) rotate(45deg);
+}
+
+/* line 123, src/sass/components/_catalog-filter.scss */
+.catalog-filter__item-title i span {
+  margin-right: -2px;
+  opacity: 0;
+}
+
+/* line 130, src/sass/components/_catalog-filter.scss */
 .catalog-filter__checkbox-list-wrap {
   position: absolute;
   top: 43px;
   left: 0;
   width: 320px;
-  padding: 24px 16px;
+  padding: 14px 16px 24px;
   border: 1px solid #000;
   -webkit-box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
@@ -6799,39 +6939,74 @@ body.scroll-down .header-page-wrap {
   transition: opacity 0.3s ease;
 }
 
-/* line 66, src/sass/components/_catalog-filter.scss */
+/* line 143, src/sass/components/_catalog-filter.scss */
+.catalog-filter__checkbox-list-wrap.opened {
+  pointer-events: all;
+  opacity: 1;
+}
+
+/* line 147, src/sass/components/_catalog-filter.scss */
 .catalog-filter__checkbox-list-wrap .btn {
   margin-bottom: 0;
 }
 
-/* line 71, src/sass/components/_catalog-filter.scss */
+/* line 150, src/sass/components/_catalog-filter.scss */
+.catalog-filter__checkbox-list-wrap--grid {
+  width: 370px;
+}
+
+/* line 152, src/sass/components/_catalog-filter.scss */
+.catalog-filter__checkbox-list-wrap--grid .catalog-filter__checkbox-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-height: initial;
+  padding-bottom: 1px;
+}
+
+/* line 157, src/sass/components/_catalog-filter.scss */
+.catalog-filter__checkbox-list-wrap--grid .catalog-filter__checkbox-list .style-checkbox {
+  width: calc(100% / 5);
+  padding: 14px 5px;
+  margin-bottom: -1px;
+}
+
+/* line 161, src/sass/components/_catalog-filter.scss */
+.catalog-filter__checkbox-list-wrap--grid .catalog-filter__checkbox-list .style-checkbox:last-child {
+  margin-bottom: -1px;
+}
+
+/* line 169, src/sass/components/_catalog-filter.scss */
 .catalog-filter__checkbox-list {
   max-height: 202px;
-  margin-bottom: 24px;
+  margin-bottom: 14px;
   overflow: auto;
 }
 
-/* line 75, src/sass/components/_catalog-filter.scss */
+/* line 173, src/sass/components/_catalog-filter.scss */
 .catalog-filter__checkbox-list .style-checkbox {
-  margin-bottom: 20px;
+  margin-bottom: 0;
+  padding: 10px 0;
   font-size: 12px;
   line-height: 1.33333;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
-/* line 81, src/sass/components/_catalog-filter.scss */
+/* line 180, src/sass/components/_catalog-filter.scss */
 .catalog-filter__checkbox-list .style-checkbox:last-child {
   margin-bottom: 0;
 }
 
-/* line 85, src/sass/components/_catalog-filter.scss */
+/* line 184, src/sass/components/_catalog-filter.scss */
 .catalog-filter__checkbox-list .simplebar-track.simplebar-vertical {
   width: 2px;
   background: #E5E5E5;
 }
 
-/* line 89, src/sass/components/_catalog-filter.scss */
+/* line 188, src/sass/components/_catalog-filter.scss */
 .catalog-filter__checkbox-list .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
   top: 0;
   left: 0;
@@ -6841,7 +7016,7 @@ body.scroll-down .header-page-wrap {
   background: #000;
 }
 
-/* line 101, src/sass/components/_catalog-filter.scss */
+/* line 200, src/sass/components/_catalog-filter.scss */
 .catalog-filter__reset {
   display: block;
   padding: 3px 6px;
@@ -6850,19 +7025,22 @@ body.scroll-down .header-page-wrap {
   line-height: 16px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  border: none;
   background: #FFD453;
+  cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-/* line 111, src/sass/components/_catalog-filter.scss */
+/* line 212, src/sass/components/_catalog-filter.scss */
 .catalog-filter__reset:hover {
   color: #fff;
   background: #000;
 }
 
-/* line 117, src/sass/components/_catalog-filter.scss */
+/* line 218, src/sass/components/_catalog-filter.scss */
 .catalog-filter__positions {
+  position: relative;
   display: block;
   margin-left: 20px;
   padding: 3px 0;
@@ -6871,6 +7049,11 @@ body.scroll-down .header-page-wrap {
   line-height: 16px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+/* line 229, src/sass/components/_catalog-filter.scss */
+.catalog-filter__positions .finded:after {
+  content: "/";
 }
 
 /* line 1, src/sass/components/_footer.scss */

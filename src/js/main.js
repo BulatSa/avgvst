@@ -71,7 +71,7 @@ $(function () {
     selectList.forEach((select) => {
       const inputLabel = select.parentElement;
       const select2 = inputLabel.querySelector(".select2");
-      console.log(select2);
+      //console.log(select2);
       if (select2.classList.contains("selected")) {
         inputLabel.classList.remove("error");
       } else {
@@ -550,4 +550,127 @@ $(document).ready(function () {
 });
 /***********************
  Select2 END
+ ***********************/
+
+/***********************
+ Filter BEGIN
+ ***********************/
+$(function () {
+  const checkboxLinkList = document.querySelectorAll(
+    "[data-checkbox-list-link]"
+  );
+  const outsideClickListener = (event) => {
+    if (event.target.closest(`.catalog-filter__item.opened`) === null) {
+      closeAllCheckboxListWrap();
+    }
+  };
+
+  const removeOutsideClickListener = () => {
+    document.removeEventListener("click", outsideClickListener);
+  };
+
+  const closeAllCheckboxListWrap = () => {
+    const checkboxLinkList = document.querySelectorAll(
+      "[data-checkbox-list-link]"
+    );
+    checkboxLinkList.forEach((checkboxLink) => {
+      const wrapClass = checkboxLink.dataset.checkboxListLink;
+      const catalogItem = checkboxLink.parentElement;
+      const linkedCheckboxWrap = checkboxLink.parentElement.querySelector(
+        `.${wrapClass}`
+      );
+      catalogItem.classList.remove("opened");
+      checkboxLink.classList.remove("opened");
+      linkedCheckboxWrap.classList.remove("opened");
+    });
+    removeOutsideClickListener();
+  };
+
+  const toggleCheckboxListWrap = (e) => {
+    const checkboxLink = e.currentTarget;
+    const wrapClass = checkboxLink.dataset.checkboxListLink;
+    const catalogItem = checkboxLink.parentElement;
+    const linkedCheckboxWrap = checkboxLink.parentElement.querySelector(
+      `.${wrapClass}`
+    );
+    if (checkboxLink.classList.contains("opened")) {
+      checkboxLink.classList.remove("opened");
+      catalogItem.classList.remove("opened");
+      linkedCheckboxWrap.classList.remove("opened");
+      removeOutsideClickListener();
+    } else {
+      closeAllCheckboxListWrap();
+      checkboxLink.classList.add("opened");
+      catalogItem.classList.add("opened");
+      linkedCheckboxWrap.classList.add("opened");
+      document.addEventListener("click", outsideClickListener);
+    }
+  };
+
+  checkboxLinkList.forEach((checkboxLink) => {
+    checkboxLink.addEventListener("click", toggleCheckboxListWrap);
+  });
+
+  const filterCheckboxList = document.querySelectorAll(
+    ".catalog-filter__checkbox-list .style-checkbox"
+  );
+  const recountFilterLabel = (e) => {
+    const itemTitleCounter = e.currentTarget
+      .closest(".catalog-filter__item")
+      .querySelector(".catalog-filter__item-title span");
+    const itemTitleWrap = e.currentTarget
+      .closest(".catalog-filter__item")
+      .querySelector(".input-label");
+    const checkboxList = e.currentTarget.parentElement.querySelectorAll(
+      "input[type=checkbox]"
+    );
+    let count = 0;
+
+    checkboxList.forEach((checkbox) => {
+      if (checkbox.checked) {
+        count++;
+      }
+    }, 0);
+
+    itemTitleCounter.textContent = count;
+
+    if (count > 0) {
+      itemTitleWrap.classList.add("filtered");
+    } else {
+      itemTitleWrap.classList.remove("filtered");
+    }
+  };
+
+  filterCheckboxList.forEach((filterCheckbox) => {
+    filterCheckbox.addEventListener("change", recountFilterLabel);
+  });
+
+  const recountAllFilterLabels = () => {
+    const catalogFilterItemList = document.querySelectorAll(
+      ".catalog-filter__item"
+    );
+    catalogFilterItemList.forEach((catalogFilterItem) => {
+      const catalogFilterCheckboxList = catalogFilterItem.querySelector(
+        ".catalog-filter__checkbox-list"
+      );
+      if (catalogFilterCheckboxList) {
+        const itemTitleCounter = catalogFilterItem.querySelector(
+          ".catalog-filter__item-title span"
+        );
+        const itemTitleWrap = catalogFilterItem.querySelector(".input-label");
+        itemTitleCounter.textContent = 0;
+        itemTitleWrap.classList.remove("filtered");
+      }
+    });
+  };
+
+  const catalogFilterForm = document.querySelector(".catalog-filter__form");
+  const resetFilterForm = () => {
+    $(".catalog-filter__form .select2-js").val("").trigger("change");
+    recountAllFilterLabels();
+  };
+  catalogFilterForm.addEventListener("reset", resetFilterForm);
+});
+/***********************
+ Filter END
  ***********************/

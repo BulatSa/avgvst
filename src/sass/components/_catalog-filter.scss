@@ -11,6 +11,10 @@
   display: flex;
 }
 
+.catalog-filter__popup {
+  display: flex;
+}
+
 .catalog-filter__item {
   position: relative;
   margin-right: 20px;
@@ -19,6 +23,44 @@
   .input-label {
     display: inline-block;
     margin-bottom: 0;
+    &:hover {
+      .catalog-filter__item-title {
+        i {
+          background: #000;
+          &:before {
+            border-right-color: #fff;
+            border-bottom-color: #fff;
+          }
+        }
+      }
+    }
+    &.opened {
+      .catalog-filter__item-title {
+        i {
+          background: #000;
+          &:before {
+            top: calc(50% + 2px);
+            border: 1px solid #fff;
+            border-right-color: rgba(0, 0, 0, 0);
+            border-bottom-color: rgba(0, 0, 0, 0);
+          }
+        }
+      }
+    }
+    &.filtered {
+      .catalog-filter__item-title {
+        i {
+          border-color: $yellow;
+          background: $yellow;
+          &:before {
+            opacity: 0;
+          }
+          span {
+            opacity: 1;
+          }
+        }
+      }
+    }
   }
   [data-checkbox-list-link] {
     padding: 17px 0;
@@ -26,7 +68,7 @@
   & > .style-checkbox {
     margin-left: 20px;
     margin-bottom: 0;
-    padding: 17px 0;
+    padding: 16px 0;
     span {
       font-size: 12px;
       line-height: 16px;
@@ -44,10 +86,45 @@
 
 .catalog-filter__item-title {
   display: block;
+  padding-right: 26px;
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  i {
+    position: absolute;
+    top: 14px;
+    right: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    font-size: 11px;
+    line-height: 20px;
+    font-style: normal;
+    text-align: center;
+    letter-spacing: 0.1em;
+    pointer-events: none;
+    transition: background 0.3s ease;
+    &:before {
+      content: "";
+      position: absolute;
+      top: calc(50% - 1px);
+      left: 50%;
+      width: 7px;
+      height: 7px;
+      border: 1px solid rgba(0, 0, 0, 0);
+      border-right: 1px solid #000000;
+      border-bottom: 1px solid #000000;
+      transition: all 0.15s ease;
+      transform: translate3d(-50%, -50%, 0) rotate(45deg);
+    }
+    span {
+      margin-right: -2px;
+      opacity: 0;
+    }
+  }
 }
 
 .catalog-filter__checkbox-list-wrap {
@@ -55,7 +132,7 @@
   top: 43px;
   left: 0;
   width: 320px;
-  padding: 24px 16px;
+  padding: 14px 16px 24px;
   border: 1px solid #000;
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
   background: #fff;
@@ -63,17 +140,39 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
+  &.opened {
+    pointer-events: all;
+    opacity: 1;
+  }
   .btn {
     margin-bottom: 0;
+  }
+  &--grid {
+    width: 370px;
+    .catalog-filter__checkbox-list {
+      display: flex;
+      flex-wrap: wrap;
+      max-height: initial;
+      padding-bottom: 1px;
+      .style-checkbox {
+        width: calc(100% / 5);
+        padding: 14px 5px;
+        margin-bottom: -1px;
+        &:last-child {
+          margin-bottom: -1px;
+        }
+      }
+    }
   }
 }
 
 .catalog-filter__checkbox-list {
   max-height: 202px;
-  margin-bottom: 24px;
+  margin-bottom: 14px;
   overflow: auto;
   .style-checkbox {
-    margin-bottom: 20px;
+    margin-bottom: 0;
+    padding: 10px 0;
     font-size: 12px;
     line-height: (16/12);
     letter-spacing: 0.1em;
@@ -106,7 +205,9 @@
   line-height: 16px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  border: none;
   background: $yellow;
+  cursor: pointer;
   transition: all 0.3s ease;
   &:hover {
     color: #fff;
@@ -115,6 +216,7 @@
 }
 
 .catalog-filter__positions {
+  position: relative;
   display: block;
   margin-left: 20px;
   padding: 3px 0;
@@ -123,4 +225,9 @@
   line-height: 16px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  .finded {
+    &:after {
+      content: "/";
+    }
+  }
 }
