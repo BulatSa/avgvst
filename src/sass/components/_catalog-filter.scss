@@ -5,6 +5,17 @@
 }
 
 .catalog-filter {
+  &.filtered {
+    .catalog-filter__reset {
+      opacity: 1;
+      pointer-events: all;
+    }
+    .catalog-filter__positions {
+      .finded {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 .catalog-filter__form {
@@ -13,6 +24,23 @@
 
 .catalog-filter__popup {
   display: flex;
+  @include res(m) {
+    display: none;
+  }
+}
+
+.catalog-filter__popup-title {
+  display: none;
+  @include res(m) {
+    display: block;
+  }
+}
+
+.catalog-filter__popup-btn {
+  display: none;
+  @include res(m) {
+    display: block;
+  }
 }
 
 .catalog-filter__item {
@@ -166,6 +194,38 @@
   }
 }
 
+.catalog-filter__checkbox-info {
+  display: inline-flex;
+  align-items: center;
+  margin-top: -8px;
+  margin-bottom: 8px;
+  padding: 8px 0;
+  font-size: 14px;
+  line-height: 12px;
+  text-transform: none;
+  span {
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+    transition: all 0.3s ease;
+  }
+  .icon-info {
+    pointer-events: none;
+    margin-bottom: -1px;
+  }
+  &:hover {
+    span {
+      border-color: rgba(0, 0, 0, 0);
+    }
+    .icon-info {
+      background: #000;
+      svg {
+        path {
+          fill: #fff;
+        }
+      }
+    }
+  }
+}
+
 .catalog-filter__checkbox-list {
   max-height: 202px;
   margin-bottom: 14px;
@@ -207,11 +267,18 @@
   text-transform: uppercase;
   border: none;
   background: $yellow;
+  opacity: 0;
+  pointer-events: none;
   cursor: pointer;
   transition: all 0.3s ease;
   &:hover {
     color: #fff;
     background: #000;
+  }
+  span {
+    @include res(m) {
+      display: none;
+    }
   }
 }
 
@@ -226,6 +293,8 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   .finded {
+    opacity: 0;
+    transition: all 0.3s ease;
     &:after {
       content: "/";
     }

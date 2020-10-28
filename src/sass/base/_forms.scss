@@ -1,4 +1,12 @@
-[tabindex], a, area, button, input, label, select, summary, textarea {
+[tabindex],
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea {
   touch-action: manipulation;
 }
 
@@ -494,7 +502,7 @@ textarea {
   }
   &--avgvst-filter {
     .select2-dropdown {
-      width: 318px!important;
+      width: 318px !important;
       border: none;
       border-radius: 0;
       background: rgba(0, 0, 0, 0);
@@ -525,14 +533,19 @@ textarea {
         background: #fff;
         transition: all 0.3s ease;
         @include res(m) {
-          padding: 20px 8px;
+          padding: 18px 8px 10px;
+          padding-right: 26px;
         }
         &:hover {
-          &+.select2-selection__arrow {
+          & + .select2-selection__arrow {
             background: #000;
             &:before {
               border-right-color: #fff;
               border-bottom-color: #fff;
+              @include res(m) {
+                border-right-color: #000;
+                border-bottom-color: #000;
+              }
             }
           }
         }
@@ -643,7 +656,6 @@ textarea {
         opacity: 0.65;
       }
     }
-    
   }
 
   input {

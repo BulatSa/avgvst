@@ -378,7 +378,8 @@
           </select>
         </div>
 
-        <div class="catalog-filter__popup">
+        <div class="catalog-filter__popup" id="modal-catalog-filter">
+          <p class="catalog-filter__popup-title h2">фильтры</p>
           <div class="catalog-filter__item">
             <label class="input-label" data-checkbox-list-link="catalog-filter__checkbox-list-wrap">
               <span class="catalog-filter__item-title">материал<i><span>2</span></i></span>
@@ -412,6 +413,15 @@
               <span class="catalog-filter__item-title">размер<i><span>2</span></i></span>
             </label>
             <div class="catalog-filter__checkbox-list-wrap catalog-filter__checkbox-list-wrap--grid">
+              <a href="#" class="catalog-filter__checkbox-info" data-fancybox data-src="#modal-subscribe-mailchimp">
+                <span>Как подобрать размер</span>
+                <i class="icon-16 icon-info">
+                  <svg width="6" height="8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M.825 6.652l.106-.106h1.59V3.472H1.355l-.106-.106v-.742l.106-.106h2.12l.106.106v3.922h1.484l.106.106v.742l-.106.106H.931l-.106-.106v-.742zm1.59-5.088l.106.106h1.166l.106-.106V.292L3.687.186H2.521l-.106.106v1.272z" />
+                  </svg>
+                </i>
+              </a>
               <div class="catalog-filter__checkbox-list">
                 <label class="style-checkbox style-checkbox--cell">
                   <input type="checkbox" name="размер" value="13,5">
@@ -433,7 +443,7 @@
                   <input type="checkbox" name="размер" value="15,5">
                   <span>15,5</span>
                 </label>
-                
+
                 <label class="style-checkbox style-checkbox--cell">
                   <input type="checkbox" name="размер" value="16">
                   <span>16</span>
@@ -496,14 +506,17 @@
           </div>
           <div class="catalog-filter__item">
             <label class="style-checkbox">
-              <input type="checkbox" name="материал" value="серебро">
+              <input type="checkbox" name="instock" value="true">
               <span>только в наличии</span>
             </label>
+          </div>
+          <div class="btn-wrap btn-wrap--center catalog-filter__popup-btn">
+            <button class="btn">Показать 132 из 230</button>
           </div>
         </div>
 
         <div class="catalog-filter__item catalog-filter__item--last">
-          <button class="catalog-filter__reset" type="reset">сбросить фильтры</button>
+          <button class="catalog-filter__reset" type="reset">сбросить<span> фильтры</span></button>
           <div class="catalog-filter__positions">
             <span class="finded">84</span><span class="all">240</span> товаров
           </div>

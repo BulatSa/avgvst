@@ -607,7 +607,6 @@ $(function () {
       document.addEventListener("click", outsideClickListener);
     }
   };
-
   checkboxLinkList.forEach((checkboxLink) => {
     checkboxLink.addEventListener("click", toggleCheckboxListWrap);
   });
@@ -616,6 +615,7 @@ $(function () {
     ".catalog-filter__checkbox-list .style-checkbox"
   );
   const recountFilterLabel = (e) => {
+    const catalogFilter = document.querySelector(".catalog-filter");
     const itemTitleCounter = e.currentTarget
       .closest(".catalog-filter__item")
       .querySelector(".catalog-filter__item-title span");
@@ -637,16 +637,39 @@ $(function () {
 
     if (count > 0) {
       itemTitleWrap.classList.add("filtered");
+      catalogFilter.classList.add("filtered");
     } else {
       itemTitleWrap.classList.remove("filtered");
+      catalogFilter.classList.remove("filtered");
     }
   };
-
   filterCheckboxList.forEach((filterCheckbox) => {
     filterCheckbox.addEventListener("change", recountFilterLabel);
   });
 
-  const recountAllFilterLabels = () => {
+  const checkAnyEnabledFilter = () => {
+    if (document.querySelectorAll(".input-label.filtered").length) {
+      return true;
+    }
+  };
+  const onChangeFilterSingleCheckbox = (e) => {
+    const catalogFilter = document.querySelector(".catalog-filter");
+    const checkbox = e.currentTarget.querySelector("input[type=checkbox]");
+    if (checkbox.checked) {
+      catalogFilter.classList.add("filtered");
+    } else if (!checkAnyEnabledFilter()) {
+      catalogFilter.classList.remove("filtered");
+    }
+  };
+  const singleCheckBoxList = document.querySelectorAll(
+    ".catalog-filter__item > .style-checkbox"
+  );
+  singleCheckBoxList.forEach((singleCheckBox) => {
+    singleCheckBox.addEventListener("change", onChangeFilterSingleCheckbox);
+  });
+
+  const resetAllFilterLabels = () => {
+    const catalogFilter = document.querySelector(".catalog-filter");
     const catalogFilterItemList = document.querySelectorAll(
       ".catalog-filter__item"
     );
@@ -661,6 +684,7 @@ $(function () {
         const itemTitleWrap = catalogFilterItem.querySelector(".input-label");
         itemTitleCounter.textContent = 0;
         itemTitleWrap.classList.remove("filtered");
+        catalogFilter.classList.remove("filtered");
       }
     });
   };
@@ -668,7 +692,7 @@ $(function () {
   const catalogFilterForm = document.querySelector(".catalog-filter__form");
   const resetFilterForm = () => {
     $(".catalog-filter__form .select2-js").val("").trigger("change");
-    recountAllFilterLabels();
+    resetAllFilterLabels();
   };
   catalogFilterForm.addEventListener("reset", resetFilterForm);
 });

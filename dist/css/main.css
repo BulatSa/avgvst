@@ -2328,6 +2328,45 @@ select:-webkit-autofill:focus {
           transform: translate3d(0, -1px, 0) rotate(-45deg);
 }
 
+/* line 21, src/sass/base/_icons.scss */
+.icon-16 {
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin: 0 5px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* line 30, src/sass/base/_icons.scss */
+.icon-16:hover {
+  background: #000;
+}
+
+/* line 38, src/sass/base/_icons.scss */
+.icon-info:hover svg path {
+  fill: #fff;
+}
+
+/* line 43, src/sass/base/_icons.scss */
+.icon-info svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+}
+
+/* line 48, src/sass/base/_icons.scss */
+.icon-info svg path {
+  fill: #000;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 /* line 1, src/sass/base/_typography.scss */
 body {
   font-family: "Fugue", sans-serif;
@@ -3670,19 +3709,27 @@ body.scroll-lock {
 }
 
 /* line 1, src/sass/base/_forms.scss */
-[tabindex], a, area, button, input, label, select, summary, textarea {
+[tabindex],
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea {
   -ms-touch-action: manipulation;
       touch-action: manipulation;
 }
 
-/* line 5, src/sass/base/_forms.scss */
+/* line 13, src/sass/base/_forms.scss */
 label {
   position: relative;
   display: block;
   cursor: pointer;
 }
 
-/* line 11, src/sass/base/_forms.scss */
+/* line 19, src/sass/base/_forms.scss */
 input {
   font-family: "Fugue", sans-serif;
   -webkit-appearance: none;
@@ -3691,7 +3738,7 @@ input {
   overflow: visible;
 }
 
-/* line 15, src/sass/base/_forms.scss */
+/* line 23, src/sass/base/_forms.scss */
 input::-webkit-input-placeholder {
   font-family: "Fugue", sans-serif;
   opacity: 1;
@@ -3723,12 +3770,12 @@ input::placeholder {
   transition: opacity 0.3s ease;
 }
 
-/* line 20, src/sass/base/_forms.scss */
+/* line 28, src/sass/base/_forms.scss */
 input:focus {
   outline: none;
 }
 
-/* line 22, src/sass/base/_forms.scss */
+/* line 30, src/sass/base/_forms.scss */
 input:focus::-webkit-input-placeholder {
   opacity: 0.5;
 }
@@ -3745,67 +3792,67 @@ input:focus::placeholder {
   opacity: 0.5;
 }
 
-/* line 28, src/sass/base/_forms.scss */
+/* line 36, src/sass/base/_forms.scss */
 textarea {
   resize: vertical;
 }
 
-/* line 32, src/sass/base/_forms.scss */
+/* line 40, src/sass/base/_forms.scss */
 .input-label {
   position: relative;
   margin-bottom: 24px;
 }
 
-/* line 36, src/sass/base/_forms.scss */
+/* line 44, src/sass/base/_forms.scss */
 .input-label.active .input-text {
   border-color: #000;
   background: #F2F2F2;
 }
 
-/* line 40, src/sass/base/_forms.scss */
+/* line 48, src/sass/base/_forms.scss */
 .input-label.active .input-placeholder {
   top: 6px;
   font-size: 10px;
   line-height: 1.2;
 }
 
-/* line 47, src/sass/base/_forms.scss */
+/* line 55, src/sass/base/_forms.scss */
 .input-label.error .input-text {
   color: #D93246;
   border-color: #D93246;
 }
 
-/* line 51, src/sass/base/_forms.scss */
+/* line 59, src/sass/base/_forms.scss */
 .input-label.error .input-error-info {
   opacity: 1;
 }
 
-/* line 54, src/sass/base/_forms.scss */
+/* line 62, src/sass/base/_forms.scss */
 .input-label.error .input-descr-info {
   opacity: 0;
 }
 
-/* line 58, src/sass/base/_forms.scss */
+/* line 66, src/sass/base/_forms.scss */
 .input-label.error .select2-selection--single .select2-selection__rendered {
   border-color: #D93246;
 }
 
-/* line 66, src/sass/base/_forms.scss */
+/* line 74, src/sass/base/_forms.scss */
 .input-label .select2-container--open .select2-selection--single .select2-selection__rendered span {
   color: #000;
 }
 
-/* line 74, src/sass/base/_forms.scss */
+/* line 82, src/sass/base/_forms.scss */
 .input-label .select2-selection--single .select2-selection__rendered span {
   color: #818181;
 }
 
-/* line 79, src/sass/base/_forms.scss */
+/* line 87, src/sass/base/_forms.scss */
 .input-label + .style-checkbox {
   padding-top: 16px;
 }
 
-/* line 84, src/sass/base/_forms.scss */
+/* line 92, src/sass/base/_forms.scss */
 .input-text,
 .input-textarea {
   display: inline-block;
@@ -3825,14 +3872,14 @@ textarea {
 }
 
 @media (max-width: 959px) {
-  /* line 84, src/sass/base/_forms.scss */
+  /* line 92, src/sass/base/_forms.scss */
   .input-text,
   .input-textarea {
     padding: 20px 16px 14px;
   }
 }
 
-/* line 103, src/sass/base/_forms.scss */
+/* line 111, src/sass/base/_forms.scss */
 .input-text::-webkit-input-placeholder, .input-textarea::-webkit-input-placeholder {
   color: #999999;
   opacity: 1;
@@ -3865,7 +3912,7 @@ textarea {
   transition: all 0.3s ease;
 }
 
-/* line 109, src/sass/base/_forms.scss */
+/* line 117, src/sass/base/_forms.scss */
 .input-text:focus,
 .input-textarea:focus {
   border-color: #000;
@@ -3873,28 +3920,28 @@ textarea {
   outline: none;
 }
 
-/* line 114, src/sass/base/_forms.scss */
+/* line 122, src/sass/base/_forms.scss */
 .input-text:hover,
 .input-textarea:hover {
   border-color: #000;
   background: #F2F2F2;
 }
 
-/* line 118, src/sass/base/_forms.scss */
+/* line 126, src/sass/base/_forms.scss */
 .input-text:active,
 .input-textarea:active {
   border-color: #000;
   background: #F2F2F2;
 }
 
-/* line 123, src/sass/base/_forms.scss */
+/* line 131, src/sass/base/_forms.scss */
 .input-text.error,
 .input-textarea.error {
   color: #D93246;
   border-color: #D93246;
 }
 
-/* line 127, src/sass/base/_forms.scss */
+/* line 135, src/sass/base/_forms.scss */
 .input-text[disabled],
 .input-textarea[disabled] {
   pointer-events: none;
@@ -3902,12 +3949,12 @@ textarea {
   background: #F2F2F2;
 }
 
-/* line 134, src/sass/base/_forms.scss */
+/* line 142, src/sass/base/_forms.scss */
 .input-textarea {
   min-height: 150px;
 }
 
-/* line 138, src/sass/base/_forms.scss */
+/* line 146, src/sass/base/_forms.scss */
 .input-placeholder {
   position: absolute;
   top: 21px;
@@ -3925,7 +3972,7 @@ textarea {
   transition: all 0.3s ease;
 }
 
-/* line 153, src/sass/base/_forms.scss */
+/* line 161, src/sass/base/_forms.scss */
 .input-error-info {
   position: absolute;
   left: 16px;
@@ -3939,7 +3986,7 @@ textarea {
   pointer-events: none;
 }
 
-/* line 167, src/sass/base/_forms.scss */
+/* line 175, src/sass/base/_forms.scss */
 .input-descr-info {
   color: #818181;
   font-size: 14px;
@@ -3949,31 +3996,31 @@ textarea {
   pointer-events: none;
 }
 
-/* line 173, src/sass/base/_forms.scss */
+/* line 181, src/sass/base/_forms.scss */
 .input-descr-info + .input-error-info {
   bottom: 0px;
 }
 
-/* line 178, src/sass/base/_forms.scss */
+/* line 186, src/sass/base/_forms.scss */
 .input-pers-info {
   text-align: center;
   font-size: 14px;
   line-height: 1.28571;
 }
 
-/* line 182, src/sass/base/_forms.scss */
+/* line 190, src/sass/base/_forms.scss */
 .input-pers-info a {
   border-bottom: 1px solid black;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-/* line 185, src/sass/base/_forms.scss */
+/* line 193, src/sass/base/_forms.scss */
 .input-pers-info a:hover {
   border-color: rgba(0, 0, 0, 0);
 }
 
-/* line 191, src/sass/base/_forms.scss */
+/* line 199, src/sass/base/_forms.scss */
 .select2-js {
   width: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -3981,12 +4028,12 @@ textarea {
   -webkit-appearance: none;
 }
 
-/* line 198, src/sass/base/_forms.scss */
+/* line 206, src/sass/base/_forms.scss */
 .select2-container {
   outline: none;
 }
 
-/* line 200, src/sass/base/_forms.scss */
+/* line 208, src/sass/base/_forms.scss */
 .select2-container * {
   outline: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -3994,7 +4041,7 @@ textarea {
   -webkit-appearance: none;
 }
 
-/* line 207, src/sass/base/_forms.scss */
+/* line 215, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-dropdown {
   border: none;
   border-radius: 0;
@@ -4002,56 +4049,56 @@ textarea {
   z-index: 99999;
 }
 
-/* line 212, src/sass/base/_forms.scss */
+/* line 220, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-dropdown.select2-dropdown--below {
   margin-top: -1px;
 }
 
-/* line 214, src/sass/base/_forms.scss */
+/* line 222, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-dropdown.select2-dropdown--below .select2-results__options {
   border-top: none;
 }
 
-/* line 218, src/sass/base/_forms.scss */
+/* line 226, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-dropdown.select2-dropdown--above {
   position: relative;
   bottom: -1px;
 }
 
-/* line 221, src/sass/base/_forms.scss */
+/* line 229, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-dropdown.select2-dropdown--above .select2-results__options {
   border-bottom: none;
 }
 
-/* line 226, src/sass/base/_forms.scss */
+/* line 234, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-results__options {
   overflow: auto;
   max-height: 341px;
   border: 1px solid #000;
 }
 
-/* line 230, src/sass/base/_forms.scss */
+/* line 238, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-results__options .select2-results__option {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-/* line 232, src/sass/base/_forms.scss */
+/* line 240, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-results__options .select2-results__option:hover {
   background: #F2F2F2;
 }
 
-/* line 235, src/sass/base/_forms.scss */
+/* line 243, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-results__options .select2-results__option[aria-selected="true"] {
   background: #FFD453;
 }
 
-/* line 240, src/sass/base/_forms.scss */
+/* line 248, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-selection--single {
   height: auto;
 }
 
-/* line 242, src/sass/base/_forms.scss */
+/* line 250, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-selection--single .select2-selection__rendered {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4067,25 +4114,25 @@ textarea {
 }
 
 @media (max-width: 959px) {
-  /* line 242, src/sass/base/_forms.scss */
+  /* line 250, src/sass/base/_forms.scss */
   .select2-container--avgvst-default .select2-selection--single .select2-selection__rendered {
     padding: 20px 8px;
   }
 }
 
-/* line 252, src/sass/base/_forms.scss */
+/* line 260, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-selection--single .select2-selection__rendered:hover {
   background: #F2F2F2;
 }
 
-/* line 255, src/sass/base/_forms.scss */
+/* line 263, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-selection--single .select2-selection__rendered img {
   display: block;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 
-/* line 259, src/sass/base/_forms.scss */
+/* line 267, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-selection--single .select2-selection__rendered span {
   font-size: 12px;
   line-height: 1.33333;
@@ -4093,7 +4140,7 @@ textarea {
   text-transform: uppercase;
 }
 
-/* line 266, src/sass/base/_forms.scss */
+/* line 274, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-selection--single .select2-selection__arrow {
   position: absolute;
   top: calc(50% - 4px);
@@ -4109,7 +4156,7 @@ textarea {
   transition: all 0.3s ease;
 }
 
-/* line 279, src/sass/base/_forms.scss */
+/* line 287, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-results__option,
 .select2-container--avgvst-default .select2-selection__rendered {
   display: -webkit-box;
@@ -4123,13 +4170,13 @@ textarea {
   background: #fff;
 }
 
-/* line 286, src/sass/base/_forms.scss */
+/* line 294, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-results__option:last-child,
 .select2-container--avgvst-default .select2-selection__rendered:last-child {
   border-bottom: none;
 }
 
-/* line 289, src/sass/base/_forms.scss */
+/* line 297, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-results__option span,
 .select2-container--avgvst-default .select2-selection__rendered span {
   font-size: 12px;
@@ -4138,30 +4185,30 @@ textarea {
   text-transform: uppercase;
 }
 
-/* line 294, src/sass/base/_forms.scss */
+/* line 302, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-results__option span.title,
 .select2-container--avgvst-default .select2-selection__rendered span.title {
   color: #000;
 }
 
-/* line 297, src/sass/base/_forms.scss */
+/* line 305, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-results__option span.descr,
 .select2-container--avgvst-default .select2-selection__rendered span.descr {
   padding-left: 4px;
   color: #818181;
 }
 
-/* line 304, src/sass/base/_forms.scss */
+/* line 312, src/sass/base/_forms.scss */
 .select2-container--avgvst-default.select2-container--open.select2-container--below {
   pointer-events: none;
 }
 
-/* line 308, src/sass/base/_forms.scss */
+/* line 316, src/sass/base/_forms.scss */
 .select2-container--avgvst-default.select2-container--open .select2-selection--single .select2-selection__rendered {
   background: #FFD453;
 }
 
-/* line 311, src/sass/base/_forms.scss */
+/* line 319, src/sass/base/_forms.scss */
 .select2-container--avgvst-default.select2-container--open .select2-selection--single .select2-selection__arrow {
   top: calc(50% + 2px);
   border: 1px solid black;
@@ -4169,46 +4216,46 @@ textarea {
   border-bottom-color: rgba(0, 0, 0, 0);
 }
 
-/* line 321, src/sass/base/_forms.scss */
+/* line 329, src/sass/base/_forms.scss */
 .select2-container--avgvst-default.selected .select2-selection--single .select2-selection__rendered {
   background: #F2F2F2;
 }
 
-/* line 329, src/sass/base/_forms.scss */
+/* line 337, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-dropdown {
   border: none;
   background: rgba(0, 0, 0, 0);
 }
 
-/* line 333, src/sass/base/_forms.scss */
+/* line 341, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__options {
   width: calc(100% - 16px);
   margin: 0 8px;
   border: 1px solid #000;
 }
 
-/* line 337, src/sass/base/_forms.scss */
+/* line 345, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__options .select2-results__option {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-/* line 339, src/sass/base/_forms.scss */
+/* line 347, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__options .select2-results__option:hover {
   background: #F2F2F2;
 }
 
-/* line 342, src/sass/base/_forms.scss */
+/* line 350, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__options .select2-results__option[aria-selected="true"] {
   background: #FFD453;
 }
 
-/* line 347, src/sass/base/_forms.scss */
+/* line 355, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-selection--single {
   height: auto;
 }
 
-/* line 349, src/sass/base/_forms.scss */
+/* line 357, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-selection--single .select2-selection__rendered {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4222,20 +4269,20 @@ textarea {
 }
 
 @media (max-width: 959px) {
-  /* line 349, src/sass/base/_forms.scss */
+  /* line 357, src/sass/base/_forms.scss */
   .select2-container--avgvst-currency .select2-selection--single .select2-selection__rendered {
     padding: 8px 8px;
   }
 }
 
-/* line 358, src/sass/base/_forms.scss */
+/* line 366, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-selection--single .select2-selection__rendered img {
   display: block;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 
-/* line 362, src/sass/base/_forms.scss */
+/* line 370, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-selection--single .select2-selection__rendered span {
   font-size: 12px;
   line-height: 1.33333;
@@ -4243,7 +4290,7 @@ textarea {
   text-transform: uppercase;
 }
 
-/* line 370, src/sass/base/_forms.scss */
+/* line 378, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__option,
 .select2-container--avgvst-currency .select2-selection__rendered {
   display: -webkit-box;
@@ -4257,13 +4304,13 @@ textarea {
   background: #fff;
 }
 
-/* line 377, src/sass/base/_forms.scss */
+/* line 385, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__option:last-child,
 .select2-container--avgvst-currency .select2-selection__rendered:last-child {
   border-bottom: none;
 }
 
-/* line 381, src/sass/base/_forms.scss */
+/* line 389, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__option img,
 .select2-container--avgvst-currency .select2-selection__rendered img {
   display: block;
@@ -4272,7 +4319,7 @@ textarea {
   margin-right: 8px;
 }
 
-/* line 386, src/sass/base/_forms.scss */
+/* line 394, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__option span,
 .select2-container--avgvst-currency .select2-selection__rendered span {
   font-size: 12px;
@@ -4281,20 +4328,20 @@ textarea {
   text-transform: uppercase;
 }
 
-/* line 391, src/sass/base/_forms.scss */
+/* line 399, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__option span.title,
 .select2-container--avgvst-currency .select2-selection__rendered span.title {
   color: #000;
 }
 
-/* line 394, src/sass/base/_forms.scss */
+/* line 402, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__option span.descr,
 .select2-container--avgvst-currency .select2-selection__rendered span.descr {
   padding-left: 4px;
   color: #818181;
 }
 
-/* line 404, src/sass/base/_forms.scss */
+/* line 412, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-dropdown {
   top: -56px;
   margin: -1px 0;
@@ -4304,35 +4351,35 @@ textarea {
   z-index: 99999;
 }
 
-/* line 412, src/sass/base/_forms.scss */
+/* line 420, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-results__options {
   overflow: auto;
   max-height: 341px;
   border: 1px solid #000;
 }
 
-/* line 416, src/sass/base/_forms.scss */
+/* line 424, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-results__options .select2-results__option {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-/* line 418, src/sass/base/_forms.scss */
+/* line 426, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-results__options .select2-results__option:hover {
   background: #F2F2F2;
 }
 
-/* line 421, src/sass/base/_forms.scss */
+/* line 429, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-results__options .select2-results__option[aria-selected="true"] {
   background: #FFD453;
 }
 
-/* line 426, src/sass/base/_forms.scss */
+/* line 434, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-selection--single {
   height: auto;
 }
 
-/* line 428, src/sass/base/_forms.scss */
+/* line 436, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-selection--single .select2-selection__rendered {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4348,25 +4395,25 @@ textarea {
 }
 
 @media (max-width: 959px) {
-  /* line 428, src/sass/base/_forms.scss */
+  /* line 436, src/sass/base/_forms.scss */
   .select2-container--avgvst-item-card .select2-selection--single .select2-selection__rendered {
     padding: 20px 8px;
   }
 }
 
-/* line 438, src/sass/base/_forms.scss */
+/* line 446, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-selection--single .select2-selection__rendered:hover {
   background: #F2F2F2;
 }
 
-/* line 441, src/sass/base/_forms.scss */
+/* line 449, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-selection--single .select2-selection__rendered img {
   display: block;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 
-/* line 445, src/sass/base/_forms.scss */
+/* line 453, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-selection--single .select2-selection__rendered span {
   font-size: 12px;
   line-height: 1.33333;
@@ -4374,7 +4421,7 @@ textarea {
   text-transform: uppercase;
 }
 
-/* line 453, src/sass/base/_forms.scss */
+/* line 461, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-results__option,
 .select2-container--avgvst-item-card .select2-selection__rendered {
   display: -webkit-box;
@@ -4388,13 +4435,13 @@ textarea {
   background: #fff;
 }
 
-/* line 460, src/sass/base/_forms.scss */
+/* line 468, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-results__option:last-child,
 .select2-container--avgvst-item-card .select2-selection__rendered:last-child {
   border-bottom: none;
 }
 
-/* line 463, src/sass/base/_forms.scss */
+/* line 471, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-results__option span,
 .select2-container--avgvst-item-card .select2-selection__rendered span {
   font-size: 12px;
@@ -4403,35 +4450,35 @@ textarea {
   text-transform: uppercase;
 }
 
-/* line 468, src/sass/base/_forms.scss */
+/* line 476, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-results__option span.title,
 .select2-container--avgvst-item-card .select2-selection__rendered span.title {
   color: #000;
 }
 
-/* line 471, src/sass/base/_forms.scss */
+/* line 479, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-results__option span.descr,
 .select2-container--avgvst-item-card .select2-selection__rendered span.descr {
   padding-left: 4px;
   color: #818181;
 }
 
-/* line 478, src/sass/base/_forms.scss */
+/* line 486, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card.select2-container--open.select2-container--below {
   pointer-events: none;
 }
 
-/* line 482, src/sass/base/_forms.scss */
+/* line 490, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card.select2-container--open .select2-selection--single .select2-selection__rendered {
   background: #FFD453;
 }
 
-/* line 489, src/sass/base/_forms.scss */
+/* line 497, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card.selected .select2-selection--single .select2-selection__rendered {
   background: #F2F2F2;
 }
 
-/* line 496, src/sass/base/_forms.scss */
+/* line 504, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter .select2-dropdown {
   width: 318px !important;
   border: none;
@@ -4440,35 +4487,35 @@ textarea {
   z-index: 99999;
 }
 
-/* line 503, src/sass/base/_forms.scss */
+/* line 511, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter .select2-results__options {
   overflow: auto;
   max-height: 341px;
   border: 1px solid #000;
 }
 
-/* line 507, src/sass/base/_forms.scss */
+/* line 515, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter .select2-results__options .select2-results__option {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-/* line 509, src/sass/base/_forms.scss */
+/* line 517, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter .select2-results__options .select2-results__option:hover {
   background: #F2F2F2;
 }
 
-/* line 512, src/sass/base/_forms.scss */
+/* line 520, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter .select2-results__options .select2-results__option[aria-selected="true"] {
   background: #FFD453;
 }
 
-/* line 517, src/sass/base/_forms.scss */
+/* line 525, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter .select2-selection--single {
   height: auto;
 }
 
-/* line 519, src/sass/base/_forms.scss */
+/* line 527, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter .select2-selection--single .select2-selection__rendered {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4485,31 +4532,40 @@ textarea {
 }
 
 @media (max-width: 959px) {
-  /* line 519, src/sass/base/_forms.scss */
+  /* line 527, src/sass/base/_forms.scss */
   .select2-container--avgvst-filter .select2-selection--single .select2-selection__rendered {
-    padding: 20px 8px;
+    padding: 18px 8px 10px;
+    padding-right: 26px;
   }
 }
 
-/* line 531, src/sass/base/_forms.scss */
+/* line 540, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter .select2-selection--single .select2-selection__rendered:hover + .select2-selection__arrow {
   background: #000;
 }
 
-/* line 533, src/sass/base/_forms.scss */
+/* line 542, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter .select2-selection--single .select2-selection__rendered:hover + .select2-selection__arrow:before {
   border-right-color: #fff;
   border-bottom-color: #fff;
 }
 
-/* line 539, src/sass/base/_forms.scss */
+@media (max-width: 959px) {
+  /* line 542, src/sass/base/_forms.scss */
+  .select2-container--avgvst-filter .select2-selection--single .select2-selection__rendered:hover + .select2-selection__arrow:before {
+    border-right-color: #000;
+    border-bottom-color: #000;
+  }
+}
+
+/* line 552, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter .select2-selection--single .select2-selection__rendered img {
   display: block;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 
-/* line 543, src/sass/base/_forms.scss */
+/* line 556, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter .select2-selection--single .select2-selection__rendered span {
   font-size: 12px;
   line-height: 1.33333;
@@ -4518,7 +4574,7 @@ textarea {
   text-transform: uppercase;
 }
 
-/* line 551, src/sass/base/_forms.scss */
+/* line 564, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter .select2-selection--single .select2-selection__arrow {
   position: absolute;
   top: calc(50% + 2px);
@@ -4534,7 +4590,7 @@ textarea {
   pointer-events: none;
 }
 
-/* line 562, src/sass/base/_forms.scss */
+/* line 575, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter .select2-selection--single .select2-selection__arrow:before {
   content: "";
   position: absolute;
@@ -4551,7 +4607,7 @@ textarea {
           transform: translate3d(-50%, -50%, 0) rotate(45deg);
 }
 
-/* line 577, src/sass/base/_forms.scss */
+/* line 590, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter .select2-results__option,
 .select2-container--avgvst-filter .select2-selection__rendered {
   display: -webkit-box;
@@ -4565,13 +4621,13 @@ textarea {
   background: #fff;
 }
 
-/* line 584, src/sass/base/_forms.scss */
+/* line 597, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter .select2-results__option:last-child,
 .select2-container--avgvst-filter .select2-selection__rendered:last-child {
   border-bottom: none;
 }
 
-/* line 587, src/sass/base/_forms.scss */
+/* line 600, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter .select2-results__option span,
 .select2-container--avgvst-filter .select2-selection__rendered span {
   font-size: 12px;
@@ -4580,30 +4636,30 @@ textarea {
   text-transform: uppercase;
 }
 
-/* line 592, src/sass/base/_forms.scss */
+/* line 605, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter .select2-results__option span.title,
 .select2-container--avgvst-filter .select2-selection__rendered span.title {
   color: #000;
 }
 
-/* line 595, src/sass/base/_forms.scss */
+/* line 608, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter .select2-results__option span.descr,
 .select2-container--avgvst-filter .select2-selection__rendered span.descr {
   padding-left: 4px;
   color: #818181;
 }
 
-/* line 602, src/sass/base/_forms.scss */
+/* line 615, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter.select2-container--open.select2-container--below {
   pointer-events: none;
 }
 
-/* line 609, src/sass/base/_forms.scss */
+/* line 622, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter.select2-container--open .select2-selection--single .select2-selection__arrow {
   background: #000;
 }
 
-/* line 611, src/sass/base/_forms.scss */
+/* line 624, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter.select2-container--open .select2-selection--single .select2-selection__arrow:before {
   top: calc(50% + 2px);
   border: 1px solid #fff;
@@ -4611,12 +4667,12 @@ textarea {
   border-bottom-color: rgba(0, 0, 0, 0);
 }
 
-/* line 622, src/sass/base/_forms.scss */
+/* line 635, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter.selected .select2-selection--single .select2-selection__rendered {
   background: #F2F2F2;
 }
 
-/* line 631, src/sass/base/_forms.scss */
+/* line 644, src/sass/base/_forms.scss */
 .style-checkbox {
   display: block;
   position: relative;
@@ -4629,12 +4685,12 @@ textarea {
           user-select: none;
 }
 
-/* line 640, src/sass/base/_forms.scss */
+/* line 653, src/sass/base/_forms.scss */
 .style-checkbox:hover span:after {
   opacity: 0.65;
 }
 
-/* line 649, src/sass/base/_forms.scss */
+/* line 661, src/sass/base/_forms.scss */
 .style-checkbox input {
   position: absolute;
   left: 0;
@@ -4642,23 +4698,23 @@ textarea {
   opacity: 0;
 }
 
-/* line 656, src/sass/base/_forms.scss */
+/* line 668, src/sass/base/_forms.scss */
 .style-checkbox input:checked + span:before {
   border-color: #FFD453;
   background: #FFD453;
 }
 
-/* line 660, src/sass/base/_forms.scss */
+/* line 672, src/sass/base/_forms.scss */
 .style-checkbox input:checked + span:after {
   opacity: 1;
 }
 
-/* line 666, src/sass/base/_forms.scss */
+/* line 678, src/sass/base/_forms.scss */
 .style-checkbox input.error + span:before {
   border-color: #cc0000;
 }
 
-/* line 672, src/sass/base/_forms.scss */
+/* line 684, src/sass/base/_forms.scss */
 .style-checkbox span {
   position: relative;
   display: block;
@@ -4667,7 +4723,7 @@ textarea {
   padding-left: 24px;
 }
 
-/* line 678, src/sass/base/_forms.scss */
+/* line 690, src/sass/base/_forms.scss */
 .style-checkbox span:before {
   content: "";
   position: absolute;
@@ -4680,7 +4736,7 @@ textarea {
   transition: all 0.3s ease;
 }
 
-/* line 688, src/sass/base/_forms.scss */
+/* line 700, src/sass/base/_forms.scss */
 .style-checkbox span:after {
   content: "";
   position: absolute;
@@ -4698,12 +4754,12 @@ textarea {
   z-index: 2;
 }
 
-/* line 703, src/sass/base/_forms.scss */
+/* line 715, src/sass/base/_forms.scss */
 .style-checkbox span a {
   color: #353434;
 }
 
-/* line 708, src/sass/base/_forms.scss */
+/* line 720, src/sass/base/_forms.scss */
 .style-checkbox p {
   margin-bottom: 8px;
   font-size: 12px;
@@ -4712,7 +4768,7 @@ textarea {
   text-transform: uppercase;
 }
 
-/* line 716, src/sass/base/_forms.scss */
+/* line 728, src/sass/base/_forms.scss */
 .style-checkbox--cell {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4729,12 +4785,12 @@ textarea {
   border: 1px solid #E5E5E5;
 }
 
-/* line 726, src/sass/base/_forms.scss */
+/* line 738, src/sass/base/_forms.scss */
 .style-checkbox--cell:hover span:before {
   background: #F2F2F2;
 }
 
-/* line 731, src/sass/base/_forms.scss */
+/* line 743, src/sass/base/_forms.scss */
 .style-checkbox--cell span {
   position: static;
   padding: 0;
@@ -4742,7 +4798,7 @@ textarea {
   z-index: 1;
 }
 
-/* line 736, src/sass/base/_forms.scss */
+/* line 748, src/sass/base/_forms.scss */
 .style-checkbox--cell span:before {
   width: 100%;
   height: 100%;
@@ -4751,17 +4807,17 @@ textarea {
   z-index: -1;
 }
 
-/* line 743, src/sass/base/_forms.scss */
+/* line 755, src/sass/base/_forms.scss */
 .style-checkbox--cell span:after {
   content: none;
 }
 
-/* line 749, src/sass/base/_forms.scss */
+/* line 761, src/sass/base/_forms.scss */
 .style-checkbox--cell input:checked + span:before {
   background: #FFD453;
 }
 
-/* line 758, src/sass/base/_forms.scss */
+/* line 770, src/sass/base/_forms.scss */
 .subscr-mini {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4771,20 +4827,20 @@ textarea {
           align-items: flex-start;
 }
 
-/* line 761, src/sass/base/_forms.scss */
+/* line 773, src/sass/base/_forms.scss */
 .subscr-mini .input-label {
   width: 100%;
 }
 
 @media (max-width: 959px) {
-  /* line 764, src/sass/base/_forms.scss */
+  /* line 776, src/sass/base/_forms.scss */
   .subscr-mini .input-error-info {
     left: 0;
     font-size: 12px;
   }
 }
 
-/* line 770, src/sass/base/_forms.scss */
+/* line 782, src/sass/base/_forms.scss */
 .subscr-mini .btn {
   margin-left: 8px;
 }
@@ -4976,12 +5032,23 @@ button::-moz-focus-inner {
   overflow: visible !important;
 }
 
-/* line 31, src/sass/base/_modals.scss */
+@media (max-width: 959px) {
+  /* line 21, src/sass/base/_modals.scss */
+  .modal-mobile {
+    display: none;
+    width: 500px;
+    max-width: 100%;
+    will-change: transform, opacity;
+    overflow: visible !important;
+  }
+}
+
+/* line 41, src/sass/base/_modals.scss */
 .fancybox-bg {
   background: #8c8e9a;
 }
 
-/* line 35, src/sass/base/_modals.scss */
+/* line 45, src/sass/base/_modals.scss */
 .fancybox-close-small,
 .fancybox-slide--image .fancybox-close-small,
 .fancybox-slide--video .fancybox-close-small,
@@ -5001,7 +5068,7 @@ button::-moz-focus-inner {
 }
 
 @media (max-width: 680px) {
-  /* line 35, src/sass/base/_modals.scss */
+  /* line 45, src/sass/base/_modals.scss */
   .fancybox-close-small,
   .fancybox-slide--image .fancybox-close-small,
   .fancybox-slide--video .fancybox-close-small,
@@ -5109,73 +5176,81 @@ button::-moz-focus-inner {
   display: none;
 }
 
-/* line 44, src/sass/base/_modals.scss */
+/* line 54, src/sass/base/_modals.scss */
 .fancybox-slide--video,
 .fancybox-slide--iframe {
   padding: 24px 20px;
 }
 
 @media (max-width: 680px) {
-  /* line 44, src/sass/base/_modals.scss */
+  /* line 54, src/sass/base/_modals.scss */
   .fancybox-slide--video,
   .fancybox-slide--iframe {
     padding: 20px 12px;
   }
 }
 
-/* line 52, src/sass/base/_modals.scss */
+/* line 62, src/sass/base/_modals.scss */
 .fancybox-slide--html {
   padding: 24px 20px;
 }
 
 @media (max-width: 959px) {
-  /* line 52, src/sass/base/_modals.scss */
+  /* line 62, src/sass/base/_modals.scss */
   .fancybox-slide--html {
     padding: 0;
   }
 }
 
-/* line 57, src/sass/base/_modals.scss */
+/* line 67, src/sass/base/_modals.scss */
 .fancybox-slide--html .modal {
   padding: 64px 48px 16px;
 }
 
 @media (max-width: 959px) {
-  /* line 57, src/sass/base/_modals.scss */
+  /* line 67, src/sass/base/_modals.scss */
   .fancybox-slide--html .modal {
     min-height: 100%;
     padding: 64px 16px 16px;
   }
 }
 
-/* line 66, src/sass/base/_modals.scss */
+@media (max-width: 959px) {
+  /* line 74, src/sass/base/_modals.scss */
+  .fancybox-slide--html .modal-mobile {
+    min-height: 100%;
+    padding: 64px 16px 16px;
+  }
+}
+
+/* line 82, src/sass/base/_modals.scss */
 .fancybox-content {
   overflow: visible !important;
 }
 
-/* line 73, src/sass/base/_modals.scss */
+/* line 89, src/sass/base/_modals.scss */
 .modal-subscribe-mailchimp__head {
   margin-bottom: 40px;
 }
 
-/* line 75, src/sass/base/_modals.scss */
+/* line 91, src/sass/base/_modals.scss */
 .modal-subscribe-mailchimp__head img {
   display: block;
   margin: 16px auto 24px;
 }
 
-/* line 79, src/sass/base/_modals.scss */
+/* line 95, src/sass/base/_modals.scss */
 .modal-subscribe-mailchimp__head .descr {
   font-size: 14px;
   line-height: 1.28571;
 }
 
-/* line 85, src/sass/base/_modals.scss */
+/* line 101, src/sass/base/_modals.scss */
 .modal-subscribe-mailchimp__form {
   margin-bottom: 40px;
 }
 
-/* line 89, src/sass/base/_modals.scss */
+/* line 105, src/sass/base/_modals.scss */
 .modal-subscribe-mailchimp__soc {
   position: relative;
   margin: 0 -48px;
@@ -5185,14 +5260,14 @@ button::-moz-focus-inner {
 }
 
 @media (max-width: 959px) {
-  /* line 89, src/sass/base/_modals.scss */
+  /* line 105, src/sass/base/_modals.scss */
   .modal-subscribe-mailchimp__soc {
     margin: 0 -16px;
     padding: 24px 16px 0;
   }
 }
 
-/* line 99, src/sass/base/_modals.scss */
+/* line 115, src/sass/base/_modals.scss */
 .modal-subscribe-mailchimp__soc p {
   padding-bottom: 16px;
   font-size: 12px;
@@ -6765,21 +6840,63 @@ body.scroll-down .header-page-wrap {
   border-bottom: 1px solid #000;
 }
 
-/* line 10, src/sass/components/_catalog-filter.scss */
+/* line 9, src/sass/components/_catalog-filter.scss */
+.catalog-filter.filtered .catalog-filter__reset {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* line 14, src/sass/components/_catalog-filter.scss */
+.catalog-filter.filtered .catalog-filter__positions .finded {
+  opacity: 1;
+}
+
+/* line 21, src/sass/components/_catalog-filter.scss */
 .catalog-filter__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-/* line 14, src/sass/components/_catalog-filter.scss */
+/* line 25, src/sass/components/_catalog-filter.scss */
 .catalog-filter__popup {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-/* line 18, src/sass/components/_catalog-filter.scss */
+@media (max-width: 959px) {
+  /* line 25, src/sass/components/_catalog-filter.scss */
+  .catalog-filter__popup {
+    display: none;
+  }
+}
+
+/* line 32, src/sass/components/_catalog-filter.scss */
+.catalog-filter__popup-title {
+  display: none;
+}
+
+@media (max-width: 959px) {
+  /* line 32, src/sass/components/_catalog-filter.scss */
+  .catalog-filter__popup-title {
+    display: block;
+  }
+}
+
+/* line 39, src/sass/components/_catalog-filter.scss */
+.catalog-filter__popup-btn {
+  display: none;
+}
+
+@media (max-width: 959px) {
+  /* line 39, src/sass/components/_catalog-filter.scss */
+  .catalog-filter__popup-btn {
+    display: block;
+  }
+}
+
+/* line 46, src/sass/components/_catalog-filter.scss */
 .catalog-filter__item {
   position: relative;
   margin-right: 20px;
@@ -6790,29 +6907,29 @@ body.scroll-down .header-page-wrap {
           user-select: none;
 }
 
-/* line 23, src/sass/components/_catalog-filter.scss */
+/* line 51, src/sass/components/_catalog-filter.scss */
 .catalog-filter__item .input-label {
   display: inline-block;
   margin-bottom: 0;
 }
 
-/* line 28, src/sass/components/_catalog-filter.scss */
+/* line 56, src/sass/components/_catalog-filter.scss */
 .catalog-filter__item .input-label:hover .catalog-filter__item-title i {
   background: #000;
 }
 
-/* line 30, src/sass/components/_catalog-filter.scss */
+/* line 58, src/sass/components/_catalog-filter.scss */
 .catalog-filter__item .input-label:hover .catalog-filter__item-title i:before {
   border-right-color: #fff;
   border-bottom-color: #fff;
 }
 
-/* line 39, src/sass/components/_catalog-filter.scss */
+/* line 67, src/sass/components/_catalog-filter.scss */
 .catalog-filter__item .input-label.opened .catalog-filter__item-title i {
   background: #000;
 }
 
-/* line 41, src/sass/components/_catalog-filter.scss */
+/* line 69, src/sass/components/_catalog-filter.scss */
 .catalog-filter__item .input-label.opened .catalog-filter__item-title i:before {
   top: calc(50% + 2px);
   border: 1px solid #fff;
@@ -6820,35 +6937,35 @@ body.scroll-down .header-page-wrap {
   border-bottom-color: rgba(0, 0, 0, 0);
 }
 
-/* line 52, src/sass/components/_catalog-filter.scss */
+/* line 80, src/sass/components/_catalog-filter.scss */
 .catalog-filter__item .input-label.filtered .catalog-filter__item-title i {
   border-color: #FFD453;
   background: #FFD453;
 }
 
-/* line 55, src/sass/components/_catalog-filter.scss */
+/* line 83, src/sass/components/_catalog-filter.scss */
 .catalog-filter__item .input-label.filtered .catalog-filter__item-title i:before {
   opacity: 0;
 }
 
-/* line 58, src/sass/components/_catalog-filter.scss */
+/* line 86, src/sass/components/_catalog-filter.scss */
 .catalog-filter__item .input-label.filtered .catalog-filter__item-title i span {
   opacity: 1;
 }
 
-/* line 65, src/sass/components/_catalog-filter.scss */
+/* line 93, src/sass/components/_catalog-filter.scss */
 .catalog-filter__item [data-checkbox-list-link] {
   padding: 17px 0;
 }
 
-/* line 68, src/sass/components/_catalog-filter.scss */
+/* line 96, src/sass/components/_catalog-filter.scss */
 .catalog-filter__item > .style-checkbox {
   margin-left: 20px;
   margin-bottom: 0;
   padding: 16px 0;
 }
 
-/* line 72, src/sass/components/_catalog-filter.scss */
+/* line 100, src/sass/components/_catalog-filter.scss */
 .catalog-filter__item > .style-checkbox span {
   font-size: 12px;
   line-height: 16px;
@@ -6856,7 +6973,7 @@ body.scroll-down .header-page-wrap {
   text-transform: uppercase;
 }
 
-/* line 79, src/sass/components/_catalog-filter.scss */
+/* line 107, src/sass/components/_catalog-filter.scss */
 .catalog-filter__item--last {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6868,7 +6985,7 @@ body.scroll-down .header-page-wrap {
   margin-right: 0;
 }
 
-/* line 87, src/sass/components/_catalog-filter.scss */
+/* line 115, src/sass/components/_catalog-filter.scss */
 .catalog-filter__item-title {
   display: block;
   padding-right: 26px;
@@ -6878,7 +6995,7 @@ body.scroll-down .header-page-wrap {
   text-transform: uppercase;
 }
 
-/* line 94, src/sass/components/_catalog-filter.scss */
+/* line 122, src/sass/components/_catalog-filter.scss */
 .catalog-filter__item-title i {
   position: absolute;
   top: 14px;
@@ -6898,7 +7015,7 @@ body.scroll-down .header-page-wrap {
   transition: background 0.3s ease;
 }
 
-/* line 110, src/sass/components/_catalog-filter.scss */
+/* line 138, src/sass/components/_catalog-filter.scss */
 .catalog-filter__item-title i:before {
   content: "";
   position: absolute;
@@ -6915,13 +7032,13 @@ body.scroll-down .header-page-wrap {
           transform: translate3d(-50%, -50%, 0) rotate(45deg);
 }
 
-/* line 123, src/sass/components/_catalog-filter.scss */
+/* line 151, src/sass/components/_catalog-filter.scss */
 .catalog-filter__item-title i span {
   margin-right: -2px;
   opacity: 0;
 }
 
-/* line 130, src/sass/components/_catalog-filter.scss */
+/* line 158, src/sass/components/_catalog-filter.scss */
 .catalog-filter__checkbox-list-wrap {
   position: absolute;
   top: 43px;
@@ -6939,23 +7056,23 @@ body.scroll-down .header-page-wrap {
   transition: opacity 0.3s ease;
 }
 
-/* line 143, src/sass/components/_catalog-filter.scss */
+/* line 171, src/sass/components/_catalog-filter.scss */
 .catalog-filter__checkbox-list-wrap.opened {
   pointer-events: all;
   opacity: 1;
 }
 
-/* line 147, src/sass/components/_catalog-filter.scss */
+/* line 175, src/sass/components/_catalog-filter.scss */
 .catalog-filter__checkbox-list-wrap .btn {
   margin-bottom: 0;
 }
 
-/* line 150, src/sass/components/_catalog-filter.scss */
+/* line 178, src/sass/components/_catalog-filter.scss */
 .catalog-filter__checkbox-list-wrap--grid {
   width: 370px;
 }
 
-/* line 152, src/sass/components/_catalog-filter.scss */
+/* line 180, src/sass/components/_catalog-filter.scss */
 .catalog-filter__checkbox-list-wrap--grid .catalog-filter__checkbox-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6966,26 +7083,70 @@ body.scroll-down .header-page-wrap {
   padding-bottom: 1px;
 }
 
-/* line 157, src/sass/components/_catalog-filter.scss */
+/* line 185, src/sass/components/_catalog-filter.scss */
 .catalog-filter__checkbox-list-wrap--grid .catalog-filter__checkbox-list .style-checkbox {
   width: calc(100% / 5);
   padding: 14px 5px;
   margin-bottom: -1px;
 }
 
-/* line 161, src/sass/components/_catalog-filter.scss */
+/* line 189, src/sass/components/_catalog-filter.scss */
 .catalog-filter__checkbox-list-wrap--grid .catalog-filter__checkbox-list .style-checkbox:last-child {
   margin-bottom: -1px;
 }
 
-/* line 169, src/sass/components/_catalog-filter.scss */
+/* line 197, src/sass/components/_catalog-filter.scss */
+.catalog-filter__checkbox-info {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: -8px;
+  margin-bottom: 8px;
+  padding: 8px 0;
+  font-size: 14px;
+  line-height: 12px;
+  text-transform: none;
+}
+
+/* line 206, src/sass/components/_catalog-filter.scss */
+.catalog-filter__checkbox-info span {
+  border-bottom: 1px solid black;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* line 210, src/sass/components/_catalog-filter.scss */
+.catalog-filter__checkbox-info .icon-info {
+  pointer-events: none;
+  margin-bottom: -1px;
+}
+
+/* line 215, src/sass/components/_catalog-filter.scss */
+.catalog-filter__checkbox-info:hover span {
+  border-color: rgba(0, 0, 0, 0);
+}
+
+/* line 218, src/sass/components/_catalog-filter.scss */
+.catalog-filter__checkbox-info:hover .icon-info {
+  background: #000;
+}
+
+/* line 221, src/sass/components/_catalog-filter.scss */
+.catalog-filter__checkbox-info:hover .icon-info svg path {
+  fill: #fff;
+}
+
+/* line 229, src/sass/components/_catalog-filter.scss */
 .catalog-filter__checkbox-list {
   max-height: 202px;
   margin-bottom: 14px;
   overflow: auto;
 }
 
-/* line 173, src/sass/components/_catalog-filter.scss */
+/* line 233, src/sass/components/_catalog-filter.scss */
 .catalog-filter__checkbox-list .style-checkbox {
   margin-bottom: 0;
   padding: 10px 0;
@@ -6995,18 +7156,18 @@ body.scroll-down .header-page-wrap {
   text-transform: uppercase;
 }
 
-/* line 180, src/sass/components/_catalog-filter.scss */
+/* line 240, src/sass/components/_catalog-filter.scss */
 .catalog-filter__checkbox-list .style-checkbox:last-child {
   margin-bottom: 0;
 }
 
-/* line 184, src/sass/components/_catalog-filter.scss */
+/* line 244, src/sass/components/_catalog-filter.scss */
 .catalog-filter__checkbox-list .simplebar-track.simplebar-vertical {
   width: 2px;
   background: #E5E5E5;
 }
 
-/* line 188, src/sass/components/_catalog-filter.scss */
+/* line 248, src/sass/components/_catalog-filter.scss */
 .catalog-filter__checkbox-list .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
   top: 0;
   left: 0;
@@ -7016,7 +7177,7 @@ body.scroll-down .header-page-wrap {
   background: #000;
 }
 
-/* line 200, src/sass/components/_catalog-filter.scss */
+/* line 260, src/sass/components/_catalog-filter.scss */
 .catalog-filter__reset {
   display: block;
   padding: 3px 6px;
@@ -7027,18 +7188,27 @@ body.scroll-down .header-page-wrap {
   text-transform: uppercase;
   border: none;
   background: #FFD453;
+  opacity: 0;
+  pointer-events: none;
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-/* line 212, src/sass/components/_catalog-filter.scss */
+/* line 274, src/sass/components/_catalog-filter.scss */
 .catalog-filter__reset:hover {
   color: #fff;
   background: #000;
 }
 
-/* line 218, src/sass/components/_catalog-filter.scss */
+@media (max-width: 959px) {
+  /* line 278, src/sass/components/_catalog-filter.scss */
+  .catalog-filter__reset span {
+    display: none;
+  }
+}
+
+/* line 285, src/sass/components/_catalog-filter.scss */
 .catalog-filter__positions {
   position: relative;
   display: block;
@@ -7051,7 +7221,14 @@ body.scroll-down .header-page-wrap {
   text-transform: uppercase;
 }
 
-/* line 229, src/sass/components/_catalog-filter.scss */
+/* line 295, src/sass/components/_catalog-filter.scss */
+.catalog-filter__positions .finded {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* line 298, src/sass/components/_catalog-filter.scss */
 .catalog-filter__positions .finded:after {
   content: "/";
 }

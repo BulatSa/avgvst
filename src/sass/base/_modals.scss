@@ -18,6 +18,16 @@ body {
   overflow: visible !important;
 }
 
+.modal-mobile {
+  @include res(m) {
+    display: none;
+    width: 500px;
+    max-width: 100%;
+    will-change: transform, opacity;
+    overflow: visible !important;
+  }
+}
+
 .fancybox-slide--current {
   .modal {
   }
@@ -56,6 +66,12 @@ body {
   }
   .modal {
     padding: 64px 48px 16px;
+    @include res(m) {
+      min-height: 100%;
+      padding: 64px 16px 16px;
+    }
+  }
+  .modal-mobile {
     @include res(m) {
       min-height: 100%;
       padding: 64px 16px 16px;

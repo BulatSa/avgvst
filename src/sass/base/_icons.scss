@@ -17,3 +17,37 @@
   border-bottom: 1px solid #000000;
   transform: translate3d(0, -1px, 0) rotate(-45deg);
 }
+
+.icon-16 {
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin: 0 5px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  &:hover {
+    background: #000;
+  }
+}
+
+.icon-info {
+  &:hover {
+    svg {
+      path {
+        fill: #fff;
+      }
+    }
+  }
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    path {
+      fill: #000;
+      transition: all 0.3s ease;
+    }
+  }
+}
