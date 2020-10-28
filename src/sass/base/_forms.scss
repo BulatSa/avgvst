@@ -149,7 +149,7 @@ textarea {
   left: 16px;
   display: block;
   font-size: 12px;
-  line-height: (16/12);
+  line-height: 16px;
   letter-spacing: 0.1em;
   color: $gray-deep;
   pointer-events: none;
@@ -266,7 +266,7 @@ textarea {
         }
         span {
           font-size: 12px;
-          line-height: (16/12);
+          line-height: 16px;
           letter-spacing: 0.1em;
           text-transform: uppercase;
         }
@@ -296,7 +296,7 @@ textarea {
       }
       span {
         font-size: 12px;
-        line-height: (16/12);
+        line-height: 16px;
         letter-spacing: 0.1em;
         text-transform: uppercase;
         &.title {
@@ -317,7 +317,7 @@ textarea {
           background: $yellow;
         }
         .select2-selection__arrow {
-          top: calc(50% + 2px);
+          top: calc(50% + 4px);
           border: 1px solid rgba(0, 0, 0, 1);
           border-right-color: rgba(0, 0, 0, 0);
           border-bottom-color: rgba(0, 0, 0, 0);
@@ -369,7 +369,7 @@ textarea {
         }
         span {
           font-size: 12px;
-          line-height: (16/12);
+          line-height: 16px;
           letter-spacing: 0.1em;
           text-transform: uppercase;
         }
@@ -393,7 +393,7 @@ textarea {
       }
       span {
         font-size: 12px;
-        line-height: (16/12);
+        line-height: 16px;
         letter-spacing: 0.1em;
         text-transform: uppercase;
         &.title {
@@ -452,7 +452,7 @@ textarea {
         }
         span {
           font-size: 12px;
-          line-height: (16/12);
+          line-height: 16px;
           letter-spacing: 0.1em;
           text-transform: uppercase;
         }
@@ -470,7 +470,7 @@ textarea {
       }
       span {
         font-size: 12px;
-        line-height: (16/12);
+        line-height: 16px;
         letter-spacing: 0.1em;
         text-transform: uppercase;
         &.title {
@@ -527,13 +527,13 @@ textarea {
       .select2-selection__rendered {
         display: flex;
         align-items: center;
-        padding: 18px 8px 10px;
+        padding: 17px 8px 10px;
         padding-right: 26px;
         border: none;
         background: #fff;
         transition: all 0.3s ease;
         @include res(m) {
-          padding: 18px 8px 10px;
+          padding: 18px 0px 10px;
           padding-right: 26px;
         }
         &:hover {
@@ -555,7 +555,7 @@ textarea {
         }
         span {
           font-size: 12px;
-          line-height: (16/12);
+          line-height: 16px;
           color: #000;
           letter-spacing: 0.1em;
           text-transform: uppercase;
@@ -563,7 +563,7 @@ textarea {
       }
       .select2-selection__arrow {
         position: absolute;
-        top: calc(50% + 2px);
+        top: calc(50% + 3px);
         right: 0;
         width: 20px;
         height: 20px;
@@ -599,7 +599,7 @@ textarea {
       }
       span {
         font-size: 12px;
-        line-height: (16/12);
+        line-height: 16px;
         letter-spacing: 0.1em;
         text-transform: uppercase;
         &.title {
@@ -720,7 +720,7 @@ textarea {
   p {
     margin-bottom: 8px;
     font-size: 12px;
-    line-height: (16/12);
+    line-height: 16px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
   }

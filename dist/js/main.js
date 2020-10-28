@@ -494,6 +494,16 @@ $(document).ready(function () {
     return $select;
   };
 
+  const formatSelectFilterSort = (select) => {
+    if (!select.id) {
+      return select.text;
+    }
+    const $select = $(`
+      <span class="title">сортировка</span>
+    `);
+    return $select;
+  };
+
   $(".select2-js--currency").select2({
     theme: "avgvst-currency",
     dropdownAutoWidth: true,
@@ -517,7 +527,7 @@ $(document).ready(function () {
     theme: "avgvst-filter",
     minimumResultsForSearch: Infinity,
     templateResult: formatSelectDefault,
-    templateSelection: formatSelectDefault,
+    templateSelection: formatSelectFilterSort,
   });
 
   $(".select2-js--card").select2({
@@ -557,6 +567,20 @@ $(document).ready(function () {
  Filter BEGIN
  ***********************/
 $(function () {
+  const isMobile = () => {
+    if (document.documentElement.clientWidth < 960) {
+      return true;
+    }
+    return false;
+  }
+
+  const isDesktop = () => {
+    if (document.documentElement.clientWidth > 960) {
+      return true;
+    }
+    return false;
+  }
+
   const checkboxLinkList = document.querySelectorAll(
     "[data-checkbox-list-link]"
   );
@@ -618,7 +642,7 @@ $(function () {
     const catalogFilter = document.querySelector(".catalog-filter");
     const itemTitleCounter = e.currentTarget
       .closest(".catalog-filter__item")
-      .querySelector(".catalog-filter__item-title span");
+      .querySelector(".catalog-filter__item-title .counter");
     const itemTitleWrap = e.currentTarget
       .closest(".catalog-filter__item")
       .querySelector(".input-label");
@@ -643,9 +667,44 @@ $(function () {
       catalogFilter.classList.remove("filtered");
     }
   };
-  filterCheckboxList.forEach((filterCheckbox) => {
-    filterCheckbox.addEventListener("change", recountFilterLabel);
-  });
+
+  const recountMobileFilterLabel = (e) => {
+    const catalogFilter = document.querySelector(".catalog-filter");
+    const itemTitleWrap = e.currentTarget
+      .closest(".catalog-filter__item")
+      .querySelector(".input-label");
+    const checkboxList = e.currentTarget.parentElement.querySelectorAll(
+      "input[type=checkbox]"
+    );
+    let count = 0;
+
+    checkboxList.forEach((checkbox) => {
+      if (checkbox.checked) {
+        count++;
+      }
+    }, 0);
+
+    if (count > 0) {
+      itemTitleWrap.classList.add("filtered");
+      catalogFilter.classList.add("filtered");
+    } else {
+      itemTitleWrap.classList.remove("filtered");
+      catalogFilter.classList.remove("filtered");
+    }
+  };
+
+  if (isDesktop()) {
+    filterCheckboxList.forEach((filterCheckbox) => {
+      filterCheckbox.addEventListener("change", recountFilterLabel);
+    });
+  }
+
+  if (isMobile()) {
+    filterCheckboxList.forEach((filterCheckbox) => {
+      filterCheckbox.addEventListener("change", recountMobileFilterLabel);
+    });
+  }
+  
 
   const checkAnyEnabledFilter = () => {
     if (document.querySelectorAll(".input-label.filtered").length) {
@@ -679,7 +738,7 @@ $(function () {
       );
       if (catalogFilterCheckboxList) {
         const itemTitleCounter = catalogFilterItem.querySelector(
-          ".catalog-filter__item-title span"
+          ".catalog-filter__item-title .counter"
         );
         const itemTitleWrap = catalogFilterItem.querySelector(".input-label");
         itemTitleCounter.textContent = 0;
@@ -698,4 +757,41 @@ $(function () {
 });
 /***********************
  Filter END
+ ***********************/
+
+/***********************
+ Fixed Modal BEGIN
+ ***********************/
+$(function () {
+  const fixedModalLinkList = document.querySelectorAll("[data-fixed-modal]");
+  const openFixedModal = (e) => {
+    e.preventDefault();
+    const body = document.querySelector('body');
+    const modalSelector = e.currentTarget.dataset.src;
+    const modal = document.querySelector(`${modalSelector}`);
+    body.classList.add("scroll-lock");
+    modal.classList.add("opened");
+  };
+
+  const closeAllFixedModal = (e) => {
+    e.preventDefault();
+    const body = document.querySelector('body');
+    const modalList = document.querySelectorAll(".modal-mobile");
+    modalList.forEach((modal) => {
+      modal.classList.remove("opened");
+    });
+    body.classList.remove("scroll-lock");
+  };
+
+  const modalCloseList = document.querySelectorAll(".modal-close");
+  modalCloseList.forEach((modalClose) => {
+    modalClose.addEventListener('click', closeAllFixedModal);
+  })
+
+  fixedModalLinkList.forEach((fixedModalLink) => {
+    fixedModalLink.addEventListener("click", openFixedModal);
+  });
+});
+/***********************
+ Fixed Modal END
  ***********************/

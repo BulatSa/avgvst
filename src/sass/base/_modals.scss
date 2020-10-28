@@ -21,10 +21,20 @@ body {
 .modal-mobile {
   @include res(m) {
     display: none;
-    width: 500px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 480px;
+    min-height: 100%;
+    padding: 64px 16px 16px;
     will-change: transform, opacity;
-    overflow: visible !important;
+    overflow-y: auto;
+  }
+  .modal-close {
+    display: none;
+  }
+  &.opened {
+    .modal-close {
+      display: block;
+    }
   }
 }
 
@@ -46,7 +56,8 @@ body {
 .fancybox-slide--image .fancybox-close-small,
 .fancybox-slide--video .fancybox-close-small,
 .fancybox-slide--iframe .fancybox-close-small,
-.fancybox-slide--html .fancybox-close-small {
+.fancybox-slide--html .fancybox-close-small,
+.modal-close {
   @include cross();
   opacity: 1;
 }

@@ -383,12 +383,25 @@
             </option>
           </select>
         </div>
+        <div class="catalog-filter__item catalog-filter__item--mobile">
+          <label class="input-label" data-fixed-modal data-src="#modal-catalog-filter">
+            <span class="catalog-filter__item-title">фильтр<i><span>2</span></i></span>
+          </label>
+        </div>
 
-        <div class="catalog-filter__popup" id="modal-catalog-filter">
-          <p class="catalog-filter__popup-title h2">фильтры</p>
+        <div class="catalog-filter__popup modal-mobile" id="modal-catalog-filter">
+          <a href="#" class="modal-close"></a>
+          <div class="catalog-filter__popup-title">
+            <p class="h2">фильтры</p>
+            <button class="catalog-filter__popup-reset" type="reset">сбросить все фильтры</button>
+          </div>
           <div class="catalog-filter__item">
             <label class="input-label" data-checkbox-list-link="catalog-filter__checkbox-list-wrap">
-              <span class="catalog-filter__item-title">материал<i><span>2</span></i></span>
+              <span class="catalog-filter__item-title">
+                <span class="title">материал</span>
+                <span class="choice">серебро с позолотой, лимонное золото</span>
+                <i><span class="counter">0</span></i>
+              </span>
             </label>
             <div class="catalog-filter__checkbox-list-wrap">
               <div class="catalog-filter__checkbox-list" data-simplebar>
@@ -416,7 +429,10 @@
           </div>
           <div class="catalog-filter__item">
             <label class="input-label" data-checkbox-list-link="catalog-filter__checkbox-list-wrap">
-              <span class="catalog-filter__item-title">размер<i><span>2</span></i></span>
+              <span class="catalog-filter__item-title">
+                <span class="title">размер</span>
+                <span class="choice">15, 16</span>
+                <i><span class="counter">0</span></i></span>
             </label>
             <div class="catalog-filter__checkbox-list-wrap catalog-filter__checkbox-list-wrap--grid">
               <a href="#" class="catalog-filter__checkbox-info" data-fancybox data-src="#modal-subscribe-mailchimp">
@@ -510,7 +526,7 @@
               </div>
             </div>
           </div>
-          <div class="catalog-filter__item">
+          <div class="catalog-filter__item catalog-filter__item--single">
             <label class="style-checkbox">
               <input type="checkbox" name="instock" value="true">
               <span>только в наличии</span>
@@ -524,7 +540,7 @@
         <div class="catalog-filter__item catalog-filter__item--last">
           <button class="catalog-filter__reset" type="reset">сбросить<span> фильтры</span></button>
           <div class="catalog-filter__positions">
-            <span class="finded">84</span><span class="all">240</span> товаров
+            <span class="finded">84</span><span class="all">240</span><span class="products"> товаров</span>
           </div>
         </div>
       </form>
