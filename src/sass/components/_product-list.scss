@@ -1,0 +1,11 @@
+.catalog-product-list {
+  &+.catalog-pagination, &+.catalog-more {
+    margin-top: -1px;
+  }
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  border-left: 1px solid #000;
+}
