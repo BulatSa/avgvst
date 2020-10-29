@@ -43,7 +43,6 @@ textarea {
   &.active {
     .input-text {
       border-color: #000;
-      background: $gray-light;
     }
     .input-placeholder {
       top: 6px;
@@ -327,7 +326,7 @@ textarea {
     &.selected {
       .select2-selection--single {
         .select2-selection__rendered {
-          background: $gray-light;
+          //background: $gray-light;
         }
       }
     }
@@ -649,6 +648,13 @@ textarea {
   font-size: 12px;
   user-select: none;
   &:hover {
+    input {
+      &:checked + span {
+        &:after {
+          opacity: 0.65;
+        }
+      }
+    }
     span {
       &:after {
         //border-right: 1px solid $gray-deep;

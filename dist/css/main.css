@@ -3806,53 +3806,52 @@ textarea {
 /* line 44, src/sass/base/_forms.scss */
 .input-label.active .input-text {
   border-color: #000;
-  background: #F2F2F2;
 }
 
-/* line 48, src/sass/base/_forms.scss */
+/* line 47, src/sass/base/_forms.scss */
 .input-label.active .input-placeholder {
   top: 6px;
   font-size: 10px;
   line-height: 1.2;
 }
 
-/* line 55, src/sass/base/_forms.scss */
+/* line 54, src/sass/base/_forms.scss */
 .input-label.error .input-text {
   color: #D93246;
   border-color: #D93246;
 }
 
-/* line 59, src/sass/base/_forms.scss */
+/* line 58, src/sass/base/_forms.scss */
 .input-label.error .input-error-info {
   opacity: 1;
 }
 
-/* line 62, src/sass/base/_forms.scss */
+/* line 61, src/sass/base/_forms.scss */
 .input-label.error .input-descr-info {
   opacity: 0;
 }
 
-/* line 66, src/sass/base/_forms.scss */
+/* line 65, src/sass/base/_forms.scss */
 .input-label.error .select2-selection--single .select2-selection__rendered {
   border-color: #D93246;
 }
 
-/* line 74, src/sass/base/_forms.scss */
+/* line 73, src/sass/base/_forms.scss */
 .input-label .select2-container--open .select2-selection--single .select2-selection__rendered span {
   color: #000;
 }
 
-/* line 82, src/sass/base/_forms.scss */
+/* line 81, src/sass/base/_forms.scss */
 .input-label .select2-selection--single .select2-selection__rendered span {
   color: #818181;
 }
 
-/* line 87, src/sass/base/_forms.scss */
+/* line 86, src/sass/base/_forms.scss */
 .input-label + .style-checkbox {
   padding-top: 16px;
 }
 
-/* line 92, src/sass/base/_forms.scss */
+/* line 91, src/sass/base/_forms.scss */
 .input-text,
 .input-textarea {
   display: inline-block;
@@ -3872,14 +3871,14 @@ textarea {
 }
 
 @media (max-width: 959px) {
-  /* line 92, src/sass/base/_forms.scss */
+  /* line 91, src/sass/base/_forms.scss */
   .input-text,
   .input-textarea {
     padding: 20px 16px 14px;
   }
 }
 
-/* line 111, src/sass/base/_forms.scss */
+/* line 110, src/sass/base/_forms.scss */
 .input-text::-webkit-input-placeholder, .input-textarea::-webkit-input-placeholder {
   color: #999999;
   opacity: 1;
@@ -3912,7 +3911,7 @@ textarea {
   transition: all 0.3s ease;
 }
 
-/* line 117, src/sass/base/_forms.scss */
+/* line 116, src/sass/base/_forms.scss */
 .input-text:focus,
 .input-textarea:focus {
   border-color: #000;
@@ -3920,28 +3919,28 @@ textarea {
   outline: none;
 }
 
-/* line 122, src/sass/base/_forms.scss */
+/* line 121, src/sass/base/_forms.scss */
 .input-text:hover,
 .input-textarea:hover {
   border-color: #000;
   background: #F2F2F2;
 }
 
-/* line 126, src/sass/base/_forms.scss */
+/* line 125, src/sass/base/_forms.scss */
 .input-text:active,
 .input-textarea:active {
   border-color: #000;
   background: #F2F2F2;
 }
 
-/* line 131, src/sass/base/_forms.scss */
+/* line 130, src/sass/base/_forms.scss */
 .input-text.error,
 .input-textarea.error {
   color: #D93246;
   border-color: #D93246;
 }
 
-/* line 135, src/sass/base/_forms.scss */
+/* line 134, src/sass/base/_forms.scss */
 .input-text[disabled],
 .input-textarea[disabled] {
   pointer-events: none;
@@ -3949,12 +3948,12 @@ textarea {
   background: #F2F2F2;
 }
 
-/* line 142, src/sass/base/_forms.scss */
+/* line 141, src/sass/base/_forms.scss */
 .input-textarea {
   min-height: 150px;
 }
 
-/* line 146, src/sass/base/_forms.scss */
+/* line 145, src/sass/base/_forms.scss */
 .input-placeholder {
   position: absolute;
   top: 21px;
@@ -3972,7 +3971,7 @@ textarea {
   transition: all 0.3s ease;
 }
 
-/* line 161, src/sass/base/_forms.scss */
+/* line 160, src/sass/base/_forms.scss */
 .input-error-info {
   position: absolute;
   left: 16px;
@@ -3986,7 +3985,7 @@ textarea {
   pointer-events: none;
 }
 
-/* line 175, src/sass/base/_forms.scss */
+/* line 174, src/sass/base/_forms.scss */
 .input-descr-info {
   color: #818181;
   font-size: 14px;
@@ -3996,31 +3995,31 @@ textarea {
   pointer-events: none;
 }
 
-/* line 181, src/sass/base/_forms.scss */
+/* line 180, src/sass/base/_forms.scss */
 .input-descr-info + .input-error-info {
   bottom: 0px;
 }
 
-/* line 186, src/sass/base/_forms.scss */
+/* line 185, src/sass/base/_forms.scss */
 .input-pers-info {
   text-align: center;
   font-size: 14px;
   line-height: 1.28571;
 }
 
-/* line 190, src/sass/base/_forms.scss */
+/* line 189, src/sass/base/_forms.scss */
 .input-pers-info a {
   border-bottom: 1px solid black;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-/* line 193, src/sass/base/_forms.scss */
+/* line 192, src/sass/base/_forms.scss */
 .input-pers-info a:hover {
   border-color: rgba(0, 0, 0, 0);
 }
 
-/* line 199, src/sass/base/_forms.scss */
+/* line 198, src/sass/base/_forms.scss */
 .select2-js {
   width: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -4028,12 +4027,12 @@ textarea {
   -webkit-appearance: none;
 }
 
-/* line 206, src/sass/base/_forms.scss */
+/* line 205, src/sass/base/_forms.scss */
 .select2-container {
   outline: none;
 }
 
-/* line 208, src/sass/base/_forms.scss */
+/* line 207, src/sass/base/_forms.scss */
 .select2-container * {
   outline: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -4041,7 +4040,7 @@ textarea {
   -webkit-appearance: none;
 }
 
-/* line 215, src/sass/base/_forms.scss */
+/* line 214, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-dropdown {
   border: none;
   border-radius: 0;
@@ -4049,56 +4048,56 @@ textarea {
   z-index: 99999;
 }
 
-/* line 220, src/sass/base/_forms.scss */
+/* line 219, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-dropdown.select2-dropdown--below {
   margin-top: -1px;
 }
 
-/* line 222, src/sass/base/_forms.scss */
+/* line 221, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-dropdown.select2-dropdown--below .select2-results__options {
   border-top: none;
 }
 
-/* line 226, src/sass/base/_forms.scss */
+/* line 225, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-dropdown.select2-dropdown--above {
   position: relative;
   bottom: -1px;
 }
 
-/* line 229, src/sass/base/_forms.scss */
+/* line 228, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-dropdown.select2-dropdown--above .select2-results__options {
   border-bottom: none;
 }
 
-/* line 234, src/sass/base/_forms.scss */
+/* line 233, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-results__options {
   overflow: auto;
   max-height: 341px;
   border: 1px solid #000;
 }
 
-/* line 238, src/sass/base/_forms.scss */
+/* line 237, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-results__options .select2-results__option {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-/* line 240, src/sass/base/_forms.scss */
+/* line 239, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-results__options .select2-results__option:hover {
   background: #F2F2F2;
 }
 
-/* line 243, src/sass/base/_forms.scss */
+/* line 242, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-results__options .select2-results__option[aria-selected="true"] {
   background: #FFD453;
 }
 
-/* line 248, src/sass/base/_forms.scss */
+/* line 247, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-selection--single {
   height: auto;
 }
 
-/* line 250, src/sass/base/_forms.scss */
+/* line 249, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-selection--single .select2-selection__rendered {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4114,25 +4113,25 @@ textarea {
 }
 
 @media (max-width: 959px) {
-  /* line 250, src/sass/base/_forms.scss */
+  /* line 249, src/sass/base/_forms.scss */
   .select2-container--avgvst-default .select2-selection--single .select2-selection__rendered {
     padding: 20px 8px;
   }
 }
 
-/* line 260, src/sass/base/_forms.scss */
+/* line 259, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-selection--single .select2-selection__rendered:hover {
   background: #F2F2F2;
 }
 
-/* line 263, src/sass/base/_forms.scss */
+/* line 262, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-selection--single .select2-selection__rendered img {
   display: block;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 
-/* line 267, src/sass/base/_forms.scss */
+/* line 266, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-selection--single .select2-selection__rendered span {
   font-size: 12px;
   line-height: 16px;
@@ -4140,7 +4139,7 @@ textarea {
   text-transform: uppercase;
 }
 
-/* line 274, src/sass/base/_forms.scss */
+/* line 273, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-selection--single .select2-selection__arrow {
   position: absolute;
   top: calc(50% - 4px);
@@ -4156,7 +4155,7 @@ textarea {
   transition: all 0.3s ease;
 }
 
-/* line 287, src/sass/base/_forms.scss */
+/* line 286, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-results__option,
 .select2-container--avgvst-default .select2-selection__rendered {
   display: -webkit-box;
@@ -4170,13 +4169,13 @@ textarea {
   background: #fff;
 }
 
-/* line 294, src/sass/base/_forms.scss */
+/* line 293, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-results__option:last-child,
 .select2-container--avgvst-default .select2-selection__rendered:last-child {
   border-bottom: none;
 }
 
-/* line 297, src/sass/base/_forms.scss */
+/* line 296, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-results__option span,
 .select2-container--avgvst-default .select2-selection__rendered span {
   font-size: 12px;
@@ -4185,30 +4184,30 @@ textarea {
   text-transform: uppercase;
 }
 
-/* line 302, src/sass/base/_forms.scss */
+/* line 301, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-results__option span.title,
 .select2-container--avgvst-default .select2-selection__rendered span.title {
   color: #000;
 }
 
-/* line 305, src/sass/base/_forms.scss */
+/* line 304, src/sass/base/_forms.scss */
 .select2-container--avgvst-default .select2-results__option span.descr,
 .select2-container--avgvst-default .select2-selection__rendered span.descr {
   padding-left: 4px;
   color: #818181;
 }
 
-/* line 312, src/sass/base/_forms.scss */
+/* line 311, src/sass/base/_forms.scss */
 .select2-container--avgvst-default.select2-container--open.select2-container--below {
   pointer-events: none;
 }
 
-/* line 316, src/sass/base/_forms.scss */
+/* line 315, src/sass/base/_forms.scss */
 .select2-container--avgvst-default.select2-container--open .select2-selection--single .select2-selection__rendered {
   background: #FFD453;
 }
 
-/* line 319, src/sass/base/_forms.scss */
+/* line 318, src/sass/base/_forms.scss */
 .select2-container--avgvst-default.select2-container--open .select2-selection--single .select2-selection__arrow {
   top: calc(50% + 4px);
   border: 1px solid black;
@@ -4216,46 +4215,41 @@ textarea {
   border-bottom-color: rgba(0, 0, 0, 0);
 }
 
-/* line 329, src/sass/base/_forms.scss */
-.select2-container--avgvst-default.selected .select2-selection--single .select2-selection__rendered {
-  background: #F2F2F2;
-}
-
-/* line 337, src/sass/base/_forms.scss */
+/* line 336, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-dropdown {
   border: none;
   background: rgba(0, 0, 0, 0);
 }
 
-/* line 341, src/sass/base/_forms.scss */
+/* line 340, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__options {
   width: calc(100% - 16px);
   margin: 0 8px;
   border: 1px solid #000;
 }
 
-/* line 345, src/sass/base/_forms.scss */
+/* line 344, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__options .select2-results__option {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-/* line 347, src/sass/base/_forms.scss */
+/* line 346, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__options .select2-results__option:hover {
   background: #F2F2F2;
 }
 
-/* line 350, src/sass/base/_forms.scss */
+/* line 349, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__options .select2-results__option[aria-selected="true"] {
   background: #FFD453;
 }
 
-/* line 355, src/sass/base/_forms.scss */
+/* line 354, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-selection--single {
   height: auto;
 }
 
-/* line 357, src/sass/base/_forms.scss */
+/* line 356, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-selection--single .select2-selection__rendered {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4269,20 +4263,20 @@ textarea {
 }
 
 @media (max-width: 959px) {
-  /* line 357, src/sass/base/_forms.scss */
+  /* line 356, src/sass/base/_forms.scss */
   .select2-container--avgvst-currency .select2-selection--single .select2-selection__rendered {
     padding: 8px 8px;
   }
 }
 
-/* line 366, src/sass/base/_forms.scss */
+/* line 365, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-selection--single .select2-selection__rendered img {
   display: block;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 
-/* line 370, src/sass/base/_forms.scss */
+/* line 369, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-selection--single .select2-selection__rendered span {
   font-size: 12px;
   line-height: 16px;
@@ -4290,7 +4284,7 @@ textarea {
   text-transform: uppercase;
 }
 
-/* line 378, src/sass/base/_forms.scss */
+/* line 377, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__option,
 .select2-container--avgvst-currency .select2-selection__rendered {
   display: -webkit-box;
@@ -4304,13 +4298,13 @@ textarea {
   background: #fff;
 }
 
-/* line 385, src/sass/base/_forms.scss */
+/* line 384, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__option:last-child,
 .select2-container--avgvst-currency .select2-selection__rendered:last-child {
   border-bottom: none;
 }
 
-/* line 389, src/sass/base/_forms.scss */
+/* line 388, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__option img,
 .select2-container--avgvst-currency .select2-selection__rendered img {
   display: block;
@@ -4319,7 +4313,7 @@ textarea {
   margin-right: 8px;
 }
 
-/* line 394, src/sass/base/_forms.scss */
+/* line 393, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__option span,
 .select2-container--avgvst-currency .select2-selection__rendered span {
   font-size: 12px;
@@ -4328,20 +4322,20 @@ textarea {
   text-transform: uppercase;
 }
 
-/* line 399, src/sass/base/_forms.scss */
+/* line 398, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__option span.title,
 .select2-container--avgvst-currency .select2-selection__rendered span.title {
   color: #000;
 }
 
-/* line 402, src/sass/base/_forms.scss */
+/* line 401, src/sass/base/_forms.scss */
 .select2-container--avgvst-currency .select2-results__option span.descr,
 .select2-container--avgvst-currency .select2-selection__rendered span.descr {
   padding-left: 4px;
   color: #818181;
 }
 
-/* line 412, src/sass/base/_forms.scss */
+/* line 411, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-dropdown {
   top: -56px;
   margin: -1px 0;
@@ -4351,35 +4345,35 @@ textarea {
   z-index: 99999;
 }
 
-/* line 420, src/sass/base/_forms.scss */
+/* line 419, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-results__options {
   overflow: auto;
   max-height: 341px;
   border: 1px solid #000;
 }
 
-/* line 424, src/sass/base/_forms.scss */
+/* line 423, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-results__options .select2-results__option {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-/* line 426, src/sass/base/_forms.scss */
+/* line 425, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-results__options .select2-results__option:hover {
   background: #F2F2F2;
 }
 
-/* line 429, src/sass/base/_forms.scss */
+/* line 428, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-results__options .select2-results__option[aria-selected="true"] {
   background: #FFD453;
 }
 
-/* line 434, src/sass/base/_forms.scss */
+/* line 433, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-selection--single {
   height: auto;
 }
 
-/* line 436, src/sass/base/_forms.scss */
+/* line 435, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-selection--single .select2-selection__rendered {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4395,25 +4389,25 @@ textarea {
 }
 
 @media (max-width: 959px) {
-  /* line 436, src/sass/base/_forms.scss */
+  /* line 435, src/sass/base/_forms.scss */
   .select2-container--avgvst-item-card .select2-selection--single .select2-selection__rendered {
     padding: 20px 8px;
   }
 }
 
-/* line 446, src/sass/base/_forms.scss */
+/* line 445, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-selection--single .select2-selection__rendered:hover {
   background: #F2F2F2;
 }
 
-/* line 449, src/sass/base/_forms.scss */
+/* line 448, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-selection--single .select2-selection__rendered img {
   display: block;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 
-/* line 453, src/sass/base/_forms.scss */
+/* line 452, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-selection--single .select2-selection__rendered span {
   font-size: 12px;
   line-height: 16px;
@@ -4421,7 +4415,7 @@ textarea {
   text-transform: uppercase;
 }
 
-/* line 461, src/sass/base/_forms.scss */
+/* line 460, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-results__option,
 .select2-container--avgvst-item-card .select2-selection__rendered {
   display: -webkit-box;
@@ -4435,13 +4429,13 @@ textarea {
   background: #fff;
 }
 
-/* line 468, src/sass/base/_forms.scss */
+/* line 467, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-results__option:last-child,
 .select2-container--avgvst-item-card .select2-selection__rendered:last-child {
   border-bottom: none;
 }
 
-/* line 471, src/sass/base/_forms.scss */
+/* line 470, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-results__option span,
 .select2-container--avgvst-item-card .select2-selection__rendered span {
   font-size: 12px;
@@ -4450,35 +4444,35 @@ textarea {
   text-transform: uppercase;
 }
 
-/* line 476, src/sass/base/_forms.scss */
+/* line 475, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-results__option span.title,
 .select2-container--avgvst-item-card .select2-selection__rendered span.title {
   color: #000;
 }
 
-/* line 479, src/sass/base/_forms.scss */
+/* line 478, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card .select2-results__option span.descr,
 .select2-container--avgvst-item-card .select2-selection__rendered span.descr {
   padding-left: 4px;
   color: #818181;
 }
 
-/* line 486, src/sass/base/_forms.scss */
+/* line 485, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card.select2-container--open.select2-container--below {
   pointer-events: none;
 }
 
-/* line 490, src/sass/base/_forms.scss */
+/* line 489, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card.select2-container--open .select2-selection--single .select2-selection__rendered {
   background: #FFD453;
 }
 
-/* line 497, src/sass/base/_forms.scss */
+/* line 496, src/sass/base/_forms.scss */
 .select2-container--avgvst-item-card.selected .select2-selection--single .select2-selection__rendered {
   background: #F2F2F2;
 }
 
-/* line 504, src/sass/base/_forms.scss */
+/* line 503, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter .select2-dropdown {
   width: 318px !important;
   border: none;
@@ -4487,35 +4481,35 @@ textarea {
   z-index: 99999;
 }
 
-/* line 511, src/sass/base/_forms.scss */
+/* line 510, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter .select2-results__options {
   overflow: auto;
   max-height: 341px;
   border: 1px solid #000;
 }
 
-/* line 515, src/sass/base/_forms.scss */
+/* line 514, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter .select2-results__options .select2-results__option {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-/* line 517, src/sass/base/_forms.scss */
+/* line 516, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter .select2-results__options .select2-results__option:hover {
   background: #F2F2F2;
 }
 
-/* line 520, src/sass/base/_forms.scss */
+/* line 519, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter .select2-results__options .select2-results__option[aria-selected="true"] {
   background: #FFD453;
 }
 
-/* line 525, src/sass/base/_forms.scss */
+/* line 524, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter .select2-selection--single {
   height: auto;
 }
 
-/* line 527, src/sass/base/_forms.scss */
+/* line 526, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter .select2-selection--single .select2-selection__rendered {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4532,40 +4526,40 @@ textarea {
 }
 
 @media (max-width: 959px) {
-  /* line 527, src/sass/base/_forms.scss */
+  /* line 526, src/sass/base/_forms.scss */
   .select2-container--avgvst-filter .select2-selection--single .select2-selection__rendered {
     padding: 18px 0px 10px;
     padding-right: 26px;
   }
 }
 
-/* line 540, src/sass/base/_forms.scss */
+/* line 539, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter .select2-selection--single .select2-selection__rendered:hover + .select2-selection__arrow {
   background: #000;
 }
 
-/* line 542, src/sass/base/_forms.scss */
+/* line 541, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter .select2-selection--single .select2-selection__rendered:hover + .select2-selection__arrow:before {
   border-right-color: #fff;
   border-bottom-color: #fff;
 }
 
 @media (max-width: 959px) {
-  /* line 542, src/sass/base/_forms.scss */
+  /* line 541, src/sass/base/_forms.scss */
   .select2-container--avgvst-filter .select2-selection--single .select2-selection__rendered:hover + .select2-selection__arrow:before {
     border-right-color: #000;
     border-bottom-color: #000;
   }
 }
 
-/* line 552, src/sass/base/_forms.scss */
+/* line 551, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter .select2-selection--single .select2-selection__rendered img {
   display: block;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 
-/* line 556, src/sass/base/_forms.scss */
+/* line 555, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter .select2-selection--single .select2-selection__rendered span {
   font-size: 12px;
   line-height: 16px;
@@ -4574,7 +4568,7 @@ textarea {
   text-transform: uppercase;
 }
 
-/* line 564, src/sass/base/_forms.scss */
+/* line 563, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter .select2-selection--single .select2-selection__arrow {
   position: absolute;
   top: calc(50% + 3px);
@@ -4590,7 +4584,7 @@ textarea {
   pointer-events: none;
 }
 
-/* line 575, src/sass/base/_forms.scss */
+/* line 574, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter .select2-selection--single .select2-selection__arrow:before {
   content: "";
   position: absolute;
@@ -4607,7 +4601,7 @@ textarea {
           transform: translate3d(-50%, -50%, 0) rotate(45deg);
 }
 
-/* line 590, src/sass/base/_forms.scss */
+/* line 589, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter .select2-results__option,
 .select2-container--avgvst-filter .select2-selection__rendered {
   display: -webkit-box;
@@ -4621,13 +4615,13 @@ textarea {
   background: #fff;
 }
 
-/* line 597, src/sass/base/_forms.scss */
+/* line 596, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter .select2-results__option:last-child,
 .select2-container--avgvst-filter .select2-selection__rendered:last-child {
   border-bottom: none;
 }
 
-/* line 600, src/sass/base/_forms.scss */
+/* line 599, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter .select2-results__option span,
 .select2-container--avgvst-filter .select2-selection__rendered span {
   font-size: 12px;
@@ -4636,30 +4630,30 @@ textarea {
   text-transform: uppercase;
 }
 
-/* line 605, src/sass/base/_forms.scss */
+/* line 604, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter .select2-results__option span.title,
 .select2-container--avgvst-filter .select2-selection__rendered span.title {
   color: #000;
 }
 
-/* line 608, src/sass/base/_forms.scss */
+/* line 607, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter .select2-results__option span.descr,
 .select2-container--avgvst-filter .select2-selection__rendered span.descr {
   padding-left: 4px;
   color: #818181;
 }
 
-/* line 615, src/sass/base/_forms.scss */
+/* line 614, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter.select2-container--open.select2-container--below {
   pointer-events: none;
 }
 
-/* line 622, src/sass/base/_forms.scss */
+/* line 621, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter.select2-container--open .select2-selection--single .select2-selection__arrow {
   background: #000;
 }
 
-/* line 624, src/sass/base/_forms.scss */
+/* line 623, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter.select2-container--open .select2-selection--single .select2-selection__arrow:before {
   top: calc(50% + 2px);
   border: 1px solid #fff;
@@ -4667,12 +4661,12 @@ textarea {
   border-bottom-color: rgba(0, 0, 0, 0);
 }
 
-/* line 635, src/sass/base/_forms.scss */
+/* line 634, src/sass/base/_forms.scss */
 .select2-container--avgvst-filter.selected .select2-selection--single .select2-selection__rendered {
   background: #F2F2F2;
 }
 
-/* line 644, src/sass/base/_forms.scss */
+/* line 643, src/sass/base/_forms.scss */
 .style-checkbox {
   display: block;
   position: relative;
@@ -4686,11 +4680,16 @@ textarea {
 }
 
 /* line 653, src/sass/base/_forms.scss */
+.style-checkbox:hover input:checked + span:after {
+  opacity: 0.65;
+}
+
+/* line 659, src/sass/base/_forms.scss */
 .style-checkbox:hover span:after {
   opacity: 0.65;
 }
 
-/* line 661, src/sass/base/_forms.scss */
+/* line 667, src/sass/base/_forms.scss */
 .style-checkbox input {
   position: absolute;
   left: 0;
@@ -4698,23 +4697,23 @@ textarea {
   opacity: 0;
 }
 
-/* line 668, src/sass/base/_forms.scss */
+/* line 674, src/sass/base/_forms.scss */
 .style-checkbox input:checked + span:before {
   border-color: #FFD453;
   background: #FFD453;
 }
 
-/* line 672, src/sass/base/_forms.scss */
+/* line 678, src/sass/base/_forms.scss */
 .style-checkbox input:checked + span:after {
   opacity: 1;
 }
 
-/* line 678, src/sass/base/_forms.scss */
+/* line 684, src/sass/base/_forms.scss */
 .style-checkbox input.error + span:before {
   border-color: #cc0000;
 }
 
-/* line 684, src/sass/base/_forms.scss */
+/* line 690, src/sass/base/_forms.scss */
 .style-checkbox span {
   position: relative;
   display: block;
@@ -4723,7 +4722,7 @@ textarea {
   padding-left: 24px;
 }
 
-/* line 690, src/sass/base/_forms.scss */
+/* line 696, src/sass/base/_forms.scss */
 .style-checkbox span:before {
   content: "";
   position: absolute;
@@ -4736,7 +4735,7 @@ textarea {
   transition: all 0.3s ease;
 }
 
-/* line 700, src/sass/base/_forms.scss */
+/* line 706, src/sass/base/_forms.scss */
 .style-checkbox span:after {
   content: "";
   position: absolute;
@@ -4754,12 +4753,12 @@ textarea {
   z-index: 2;
 }
 
-/* line 715, src/sass/base/_forms.scss */
+/* line 721, src/sass/base/_forms.scss */
 .style-checkbox span a {
   color: #353434;
 }
 
-/* line 720, src/sass/base/_forms.scss */
+/* line 726, src/sass/base/_forms.scss */
 .style-checkbox p {
   margin-bottom: 8px;
   font-size: 12px;
@@ -4768,7 +4767,7 @@ textarea {
   text-transform: uppercase;
 }
 
-/* line 728, src/sass/base/_forms.scss */
+/* line 734, src/sass/base/_forms.scss */
 .style-checkbox--cell {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4785,12 +4784,12 @@ textarea {
   border: 1px solid #E5E5E5;
 }
 
-/* line 738, src/sass/base/_forms.scss */
+/* line 744, src/sass/base/_forms.scss */
 .style-checkbox--cell:hover span:before {
   background: #F2F2F2;
 }
 
-/* line 743, src/sass/base/_forms.scss */
+/* line 749, src/sass/base/_forms.scss */
 .style-checkbox--cell span {
   position: static;
   padding: 0;
@@ -4798,7 +4797,7 @@ textarea {
   z-index: 1;
 }
 
-/* line 748, src/sass/base/_forms.scss */
+/* line 754, src/sass/base/_forms.scss */
 .style-checkbox--cell span:before {
   width: 100%;
   height: 100%;
@@ -4807,17 +4806,17 @@ textarea {
   z-index: -1;
 }
 
-/* line 755, src/sass/base/_forms.scss */
+/* line 761, src/sass/base/_forms.scss */
 .style-checkbox--cell span:after {
   content: none;
 }
 
-/* line 761, src/sass/base/_forms.scss */
+/* line 767, src/sass/base/_forms.scss */
 .style-checkbox--cell input:checked + span:before {
   background: #FFD453;
 }
 
-/* line 770, src/sass/base/_forms.scss */
+/* line 776, src/sass/base/_forms.scss */
 .subscr-mini {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4827,20 +4826,20 @@ textarea {
           align-items: flex-start;
 }
 
-/* line 773, src/sass/base/_forms.scss */
+/* line 779, src/sass/base/_forms.scss */
 .subscr-mini .input-label {
   width: 100%;
 }
 
 @media (max-width: 959px) {
-  /* line 776, src/sass/base/_forms.scss */
+  /* line 782, src/sass/base/_forms.scss */
   .subscr-mini .input-error-info {
     left: 0;
     font-size: 12px;
   }
 }
 
-/* line 782, src/sass/base/_forms.scss */
+/* line 788, src/sass/base/_forms.scss */
 .subscr-mini .btn {
   margin-left: 8px;
 }
@@ -7615,6 +7614,144 @@ body.scroll-down .header-page-wrap {
   /* line 513, src/sass/components/_catalog-filter.scss */
   .catalog-filter__positions .products {
     display: none;
+  }
+}
+
+/* line 1, src/sass/components/_catalog-more.scss */
+.catalog-more {
+  position: relative;
+  border-top: 1px solid #000;
+  text-align: center;
+}
+
+/* line 5, src/sass/components/_catalog-more.scss */
+.catalog-more a {
+  display: block;
+  padding: 36px 0;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: #fff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* line 14, src/sass/components/_catalog-more.scss */
+.catalog-more a:hover {
+  background: #F2F2F2;
+}
+
+@media (max-width: 959px) {
+  /* line 5, src/sass/components/_catalog-more.scss */
+  .catalog-more a {
+    padding: 28px 0;
+  }
+}
+
+/* line 1, src/sass/components/_catalog-pagination.scss */
+.catalog-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-top: 1px solid #000;
+}
+
+/* line 12, src/sass/components/_catalog-pagination.scss */
+.catalog-pagination__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* line 15, src/sass/components/_catalog-pagination.scss */
+.catalog-pagination__list a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  padding: 0px 8px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* line 22, src/sass/components/_catalog-pagination.scss */
+.catalog-pagination__list a:hover {
+  background: #F2F2F2;
+}
+
+@media (max-width: 959px) {
+  /* line 15, src/sass/components/_catalog-pagination.scss */
+  .catalog-pagination__list a {
+    padding: 0 6px;
+  }
+}
+
+/* line 28, src/sass/components/_catalog-pagination.scss */
+.catalog-pagination__list a.active {
+  pointer-events: none;
+}
+
+/* line 30, src/sass/components/_catalog-pagination.scss */
+.catalog-pagination__list a.active span {
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+
+/* line 35, src/sass/components/_catalog-pagination.scss */
+.catalog-pagination__list a span {
+  display: block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 50%;
+}
+
+@media (max-width: 959px) {
+  /* line 35, src/sass/components/_catalog-pagination.scss */
+  .catalog-pagination__list a span {
+    width: 24px;
+    height: 24px;
+    line-height: 22px;
+  }
+}
+
+/* line 51, src/sass/components/_catalog-pagination.scss */
+.catalog-pagination__more {
+  display: block;
+  padding: 36px 22px;
+  background: #fff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* line 56, src/sass/components/_catalog-pagination.scss */
+.catalog-pagination__more:hover {
+  background: #F2F2F2;
+}
+
+@media (max-width: 959px) {
+  /* line 51, src/sass/components/_catalog-pagination.scss */
+  .catalog-pagination__more {
+    padding: 28px 20px;
   }
 }
 

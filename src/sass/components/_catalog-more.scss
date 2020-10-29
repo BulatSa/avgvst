@@ -1,0 +1,21 @@
+.catalog-more {
+  position: relative;
+  border-top: 1px solid #000;
+  text-align: center;
+  a {
+    display: block;
+    padding: 36px 0;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: #fff;
+    transition: all 0.3s ease;
+    &:hover {
+      background: $gray-light;
+    }
+    @include res(m) {
+      padding: 28px 0;
+    }
+  }
+}
