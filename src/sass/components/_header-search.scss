@@ -50,6 +50,12 @@
   border-left: 1px solid #000;
   transition: all 0.3s ease;
   z-index: 1;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  @include res(m) {
+    width: 56px;
+  }
   &:hover {
     background: $gray;
   }
@@ -84,29 +90,32 @@
     padding-right: 154px;
     font-family: $font;
     font-size: 18px;
-    line-height: (24/18);
+    line-height: 20px;
     text-align: center;
     border: none;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
     color: #000;
     background: #fff;
     overflow: visible;
     transition: all 0.3s ease;
     -webkit-appearance: none;
     @include res(m) {
-      padding: 20px 16px 21px;
+      padding: 23px 16px 23px;
       padding-right: 64px;
-      padding-left: 0;
+      padding-left: 48px;
+      font-size: 14px;
+      line-height: 18px;
+      text-align: left;
     }
     &::placeholder {
       font-size: 18px;
-      line-height: (24/18);
-      text-transform: uppercase;
+      line-height: 20px;
       color: $gray-deep;
       opacity: 1;
-      letter-spacing: 0.08em;
       transition: all 0.3s ease;
+      @include res(m) {
+        font-size: 14px;
+        line-height: 18px;
+      }
     }
     &:focus {
       &::placeholder {
@@ -117,38 +126,59 @@
       @include res(m) {
         text-align: left;
       }
-      &+span {
+      & + span {
         opacity: 1;
         pointer-events: all;
       }
     }
   }
-  span {
+}
+
+.search-form__clear {
+  position: absolute;
+  top: 50%;
+  right: 64px;
+  height: 100%;
+  padding: 0 24px 0;
+  color: $gray-deep;
+  font-size: 12px;
+  line-height: 64px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+  transform: translate3d(0, -50%, 0);
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  @include res(m) {
+    right: 52px;
+    padding: 0;
+    padding-right: 12px;
+    font-size: 10px;
+  }
+  &:hover {
+    color: #000;
+  }
+}
+
+.search-form__btn-mobile {
+  display: none;
+  @include res(m) {
+    display: block;
     position: absolute;
-    top: 50%;
-    right: 64px;
+    left: 8px;
+    top: 0;
+    width: 32px;
     height: 100%;
-    padding: 0 24px 0;
-    color: $gray-deep;
-    font-size: 12px;
-    line-height: 64px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    transition: all 0.3s ease;
-    transform: translate3d(0, -50%, 0);
-    opacity: 0;
-    pointer-events: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    @include res(m) {
-      right: 52px;
-      padding: 0;
-      padding-right: 12px;
-      font-size: 10px;
-    }
-    &:hover {
-      color: #000;
-    }
+    border: none;
+    background: #fff;
+  }
+  img {
+    margin-top: 2px;
   }
 }
 
@@ -216,6 +246,10 @@
 .header-search__result-list {
   display: flex;
   flex-wrap: wrap;
+  @include res(m) {
+    margin-left: -$gutter-mobile;
+    margin-right: -$gutter-mobile;
+  }
   a {
     display: block;
     width: 25%;

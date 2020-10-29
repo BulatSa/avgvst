@@ -21,13 +21,19 @@
       margin-left: -$gutter-mobile;
     }
     &:before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 12.33%, rgba(0, 0, 0, 0) 83.27%, rgba(0, 0, 0, 0.3) 100%);
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0) 12.33%,
+        rgba(0, 0, 0, 0) 83.27%,
+        rgba(0, 0, 0, 0.3) 100%
+      );
       z-index: 0;
     }
     .catalog-header__back-link {
@@ -38,7 +44,6 @@
           }
         }
       }
-      
     }
     .i-back-link {
       border-color: #fff;
@@ -108,14 +113,18 @@
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  margin: 0 -24px;
+  margin: 0;
+  margin-right: -$gutter;
+  margin-left: -$gutter;
   padding-top: 24px;
   z-index: 1;
   @include res(m) {
     flex-wrap: nowrap;
     justify-content: flex-start;
+    margin-right: -$gutter-mobile;
+    margin-left: -$gutter-mobile;
     padding-top: 0;
-    overflow: auto;
+    overflow-x: auto;
   }
   a {
     position: relative;
