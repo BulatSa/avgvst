@@ -74,7 +74,7 @@
       .counter {
         display: none;
       }
-      .input-label {
+
         &.filtered {
           .catalog-filter__item-title {
             i {
@@ -86,7 +86,7 @@
             }
           }
         }
-      }
+      
       &.opened {
         .input-label {
           .catalog-filter__item-title {
@@ -214,6 +214,20 @@
   margin-right: 20px;
   text-transform: uppercase;
   user-select: none;
+  &.filtered {
+    .catalog-filter__item-title {
+      i {
+        border-color: $yellow;
+        background: $yellow;
+        &:before {
+          opacity: 0;
+        }
+        span {
+          opacity: 1;
+        }
+      }
+    }
+  }
   .input-label {
     display: inline-block;
     margin-bottom: 0;
@@ -246,20 +260,6 @@
             border: 1px solid #fff;
             border-right-color: rgba(0, 0, 0, 0);
             border-bottom-color: rgba(0, 0, 0, 0);
-          }
-        }
-      }
-    }
-    &.filtered {
-      .catalog-filter__item-title {
-        i {
-          border-color: $yellow;
-          background: $yellow;
-          &:before {
-            opacity: 0;
-          }
-          span {
-            opacity: 1;
           }
         }
       }

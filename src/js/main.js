@@ -289,7 +289,7 @@ $(function () {
       body.classList.add(scrollDown);
     } else if (
       currentScroll < 100 ||
-      (currentScroll < lastScroll - 10 && body.classList.contains(scrollDown))
+      (currentScroll < lastScroll - 5 && body.classList.contains(scrollDown))
     ) {
       // up
       body.classList.remove(scrollDown);
@@ -571,14 +571,14 @@ $(function () {
       return true;
     }
     return false;
-  }
+  };
 
   const isDesktop = () => {
     if (document.documentElement.clientWidth > 960) {
       return true;
     }
     return false;
-  }
+  };
 
   const checkboxLinkList = document.querySelectorAll(
     "[data-checkbox-list-link]"
@@ -642,9 +642,7 @@ $(function () {
     const itemTitleCounter = e.currentTarget
       .closest(".catalog-filter__item")
       .querySelector(".catalog-filter__item-title .counter");
-    const itemTitleWrap = e.currentTarget
-      .closest(".catalog-filter__item")
-      .querySelector(".input-label");
+    const catalogFilterItem = e.currentTarget.closest(".catalog-filter__item");
     const checkboxList = e.currentTarget.parentElement.querySelectorAll(
       "input[type=checkbox]"
     );
@@ -659,37 +657,55 @@ $(function () {
     itemTitleCounter.textContent = count;
 
     if (count > 0) {
-      itemTitleWrap.classList.add("filtered");
+      catalogFilterItem.classList.add("filtered");
       catalogFilter.classList.add("filtered");
     } else {
-      itemTitleWrap.classList.remove("filtered");
+      catalogFilterItem.classList.remove("filtered");
       catalogFilter.classList.remove("filtered");
     }
   };
 
   const recountMobileFilterLabel = (e) => {
     const catalogFilter = document.querySelector(".catalog-filter");
-    const itemTitleWrap = e.currentTarget
-      .closest(".catalog-filter__item")
-      .querySelector(".input-label");
+    const catalogFilterItem = e.currentTarget.closest(".catalog-filter__item");
     const checkboxList = e.currentTarget.parentElement.querySelectorAll(
       "input[type=checkbox]"
     );
+
+    const choice = e.currentTarget
+      .closest(".catalog-filter__item")
+      .querySelector(".choice");
+
     let count = 0;
+    let allDescr = "";
 
     checkboxList.forEach((checkbox) => {
+      const descr = checkbox.dataset.mobileDescr;
       if (checkbox.checked) {
         count++;
+        if (allDescr === "") {
+          allDescr += descr;
+        } else {
+          allDescr = allDescr + ", " + descr;
+        }
       }
-    }, 0);
+    });
 
     if (count > 0) {
-      itemTitleWrap.classList.add("filtered");
       catalogFilter.classList.add("filtered");
+      catalogFilterItem.classList.add("filtered");
     } else {
-      itemTitleWrap.classList.remove("filtered");
-      catalogFilter.classList.remove("filtered");
+      catalogFilterItem.classList.remove("filtered");
+      if (
+        !catalogFilter.querySelectorAll(".catalog-filter__item.filtered").length
+      ) {
+        catalogFilter.classList.remove("filtered");
+      }
+
+      choice.textContent = "";
     }
+
+    choice.textContent = allDescr;
   };
 
   if (isDesktop()) {
@@ -703,34 +719,40 @@ $(function () {
       filterCheckbox.addEventListener("change", recountMobileFilterLabel);
     });
   }
-  
 
   const checkAnyEnabledFilter = () => {
-    if (document.querySelectorAll(".input-label.filtered").length) {
+    if (document.querySelectorAll(".catalog-filter__item.filtered").length) {
       return true;
     }
   };
-  const onChangeFilterSingleCheckbox = (e) => {
+  const onChangeFilterSingleCheckboxLabel = (e) => {
     const catalogFilter = document.querySelector(".catalog-filter");
+    const catalogFilterItem = e.currentTarget.closest(".catalog-filter__item");
     const checkbox = e.currentTarget.querySelector("input[type=checkbox]");
     if (checkbox.checked) {
       catalogFilter.classList.add("filtered");
-    } else if (!checkAnyEnabledFilter()) {
-      catalogFilter.classList.remove("filtered");
+      catalogFilterItem.classList.add("filtered");
+    } else {
+      catalogFilterItem.classList.remove("filtered");
+      if (!checkAnyEnabledFilter()) {
+        catalogFilter.classList.remove("filtered");
+      }
     }
   };
-  const singleCheckBoxList = document.querySelectorAll(
+  const singleCheckBoxLabelList = document.querySelectorAll(
     ".catalog-filter__item > .style-checkbox"
   );
-  singleCheckBoxList.forEach((singleCheckBox) => {
-    singleCheckBox.addEventListener("change", onChangeFilterSingleCheckbox);
+  singleCheckBoxLabelList.forEach((singleCheckBoxLabel) => {
+    singleCheckBoxLabel.addEventListener("change", onChangeFilterSingleCheckboxLabel);
   });
 
   const resetAllFilterLabels = () => {
     const catalogFilter = document.querySelector(".catalog-filter");
-    const catalogFilterItemList = document.querySelectorAll(
+    const catalogFilterItemList = catalogFilter.querySelectorAll(
       ".catalog-filter__item"
     );
+    const catalogFilterChoiceList = catalogFilter.querySelectorAll(".choice");
+
     catalogFilterItemList.forEach((catalogFilterItem) => {
       const catalogFilterCheckboxList = catalogFilterItem.querySelector(
         ".catalog-filter__checkbox-list"
@@ -739,11 +761,14 @@ $(function () {
         const itemTitleCounter = catalogFilterItem.querySelector(
           ".catalog-filter__item-title .counter"
         );
-        const itemTitleWrap = catalogFilterItem.querySelector(".input-label");
         itemTitleCounter.textContent = 0;
-        itemTitleWrap.classList.remove("filtered");
+        catalogFilterItem.classList.remove("filtered");
         catalogFilter.classList.remove("filtered");
       }
+    });
+
+    catalogFilterChoiceList.forEach((catalogFilterChoice) => {
+      catalogFilterChoice.textContent = "";
     });
   };
 
@@ -765,7 +790,7 @@ $(function () {
   const fixedModalLinkList = document.querySelectorAll("[data-fixed-modal]");
   const openFixedModal = (e) => {
     e.preventDefault();
-    const body = document.querySelector('body');
+    const body = document.querySelector("body");
     const modalSelector = e.currentTarget.dataset.src;
     const modal = document.querySelector(`${modalSelector}`);
     body.classList.add("scroll-lock");
@@ -774,7 +799,7 @@ $(function () {
 
   const closeAllFixedModal = (e) => {
     e.preventDefault();
-    const body = document.querySelector('body');
+    const body = document.querySelector("body");
     const modalList = document.querySelectorAll(".modal-mobile");
     modalList.forEach((modal) => {
       modal.classList.remove("opened");
@@ -784,8 +809,8 @@ $(function () {
 
   const modalCloseList = document.querySelectorAll(".modal-close");
   modalCloseList.forEach((modalClose) => {
-    modalClose.addEventListener('click', closeAllFixedModal);
-  })
+    modalClose.addEventListener("click", closeAllFixedModal);
+  });
 
   fixedModalLinkList.forEach((fixedModalLink) => {
     fixedModalLink.addEventListener("click", openFixedModal);
