@@ -2,6 +2,11 @@
   &+.catalog-pagination, &+.catalog-more {
     margin-top: -1px;
   }
+  &--author {
+    .product-list {
+      border-top: 1px solid #000;
+    }
+  }
 }
 
 .product-list {

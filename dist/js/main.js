@@ -744,7 +744,10 @@ $(function () {
     ".catalog-filter__item > .style-checkbox"
   );
   singleCheckBoxLabelList.forEach((singleCheckBoxLabel) => {
-    singleCheckBoxLabel.addEventListener("change", onChangeFilterSingleCheckboxLabel);
+    singleCheckBoxLabel.addEventListener(
+      "change",
+      onChangeFilterSingleCheckboxLabel
+    );
   });
 
   const resetAllFilterLabels = () => {
@@ -778,7 +781,9 @@ $(function () {
     $(".catalog-filter__form .select2-js").val("").trigger("change");
     resetAllFilterLabels();
   };
-  catalogFilterForm.addEventListener("reset", resetFilterForm);
+  if (catalogFilterForm) {
+    catalogFilterForm.addEventListener("reset", resetFilterForm);
+  }
 });
 /***********************
  Filter END

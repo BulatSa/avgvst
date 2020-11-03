@@ -2,7 +2,7 @@
   padding: 16px 0;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
-  @include res(m) {
+  @include res(l) {
     padding: 8px 0 16px;
   }
 }
@@ -12,12 +12,12 @@
     .catalog-filter__reset {
       opacity: 1;
       pointer-events: all;
-      @include res(m) {
+      @include res(l) {
         display: block;
       }
     }
     .catalog-filter__positions {
-      @include res(m) {
+      @include res(l) {
         display: none;
       }
       .finded {
@@ -36,7 +36,7 @@
 
 .catalog-filter__popup {
   display: flex;
-  @include res(m) {
+  @include res(l) {
     position: fixed;
     top: 0;
     left: 0;
@@ -57,14 +57,14 @@
     pointer-events: all;
   }
   .input-label {
-    @include res(m) {
+    @include res(l) {
       width: 100%;
       padding: 17px 16px;
       border: none;
     }
   }
   .catalog-filter__item {
-    @include res(m) {
+    @include res(l) {
       margin-right: 0;
       margin-bottom: -1px;
       margin-left: -16px;
@@ -75,18 +75,18 @@
         display: none;
       }
 
-        &.filtered {
-          .catalog-filter__item-title {
-            i {
-              border-color: #000;
-              background: #fff;
-              &:before {
-                opacity: 1;
-              }
+      &.filtered {
+        .catalog-filter__item-title {
+          i {
+            border-color: #000;
+            background: #fff;
+            &:before {
+              opacity: 1;
             }
           }
         }
-      
+      }
+
       &.opened {
         .input-label {
           .catalog-filter__item-title {
@@ -110,7 +110,7 @@
     }
   }
   .catalog-filter__item-title {
-    @include res(m) {
+    @include res(l) {
       padding-left: 16px;
       padding-right: 35px;
       i {
@@ -145,7 +145,7 @@
     }
   }
   .catalog-filter__checkbox-list-wrap {
-    @include res(m) {
+    @include res(l) {
       position: relative;
       top: initial;
       left: initial;
@@ -163,16 +163,16 @@
       }
     }
     .btn-wrap {
-      @include res(m) {
+      @include res(l) {
         display: none;
       }
     }
   }
   .catalog-filter__checkbox-list {
-    margin-bottom: 0;
+    margin-bottom: 16px;
   }
   .btn-wrap {
-    @include res(m) {
+    @include res(l) {
       margin-top: auto;
       padding-top: 32px;
     }
@@ -182,7 +182,7 @@
 .catalog-filter__popup-title {
   display: none;
   text-align: center;
-  @include res(m) {
+  @include res(l) {
     display: block;
     margin-bottom: 30px;
   }
@@ -204,7 +204,7 @@
 
 .catalog-filter__popup-btn {
   display: none;
-  @include res(m) {
+  @include res(l) {
     display: block;
   }
 }
@@ -215,6 +215,19 @@
   text-transform: uppercase;
   user-select: none;
   &.filtered {
+    .input-label {
+      &:hover {
+        .catalog-filter__item-title {
+          i {
+            background: $yellow;
+            &:before {
+              border-right-color: #000;
+              border-bottom-color: #000;
+            }
+          }
+        }
+      }
+    }
     .catalog-filter__item-title {
       i {
         border-color: $yellow;
@@ -224,6 +237,59 @@
         }
         span {
           opacity: 1;
+        }
+      }
+    }
+    &.opened {
+      .input-label {
+        &:hover {
+          .catalog-filter__item-title {
+            i {
+              background: #000;
+              &:before {
+                border-right-color: #000;
+                border-bottom-color: #000;
+              }
+            }
+          }
+        }
+      }
+      .catalog-filter__item-title {
+        i {
+          border-color: #000;
+          background: #000;
+          &:before {
+            top: calc(50% + 2px);
+            opacity: 1;
+            border: 1px solid #fff;
+            border-right-color: rgba(0, 0, 0, 0);
+            border-bottom-color: rgba(0, 0, 0, 0);
+          }
+        }
+      }
+    }
+  }
+  &.opened {
+    .input-label {
+      &:hover {
+        .catalog-filter__item-title {
+          i {
+            &:before {
+              border-right-color: #000;
+              border-bottom-color: #000;
+            }
+          }
+        }
+      }
+    }
+    .catalog-filter__item-title {
+      i {
+        background: #000;
+        &:before {
+          top: calc(50% + 2px);
+          border: 1px solid #fff;
+          border-right-color: rgba(0, 0, 0, 0);
+          border-bottom-color: rgba(0, 0, 0, 0);
         }
       }
     }
@@ -240,26 +306,13 @@
             border-bottom-color: #fff;
           }
         }
-        @include res(m) {
+        @include res(l) {
           i {
             background: inherit;
             &:before {
               border-right-color: inherit;
               border-bottom-color: inherit;
             }
-          }
-        }
-      }
-    }
-    &.opened {
-      .catalog-filter__item-title {
-        i {
-          background: #000;
-          &:before {
-            top: calc(50% + 2px);
-            border: 1px solid #fff;
-            border-right-color: rgba(0, 0, 0, 0);
-            border-bottom-color: rgba(0, 0, 0, 0);
           }
         }
       }
@@ -272,7 +325,7 @@
     margin-left: 20px;
     margin-bottom: 0;
     padding: 16px 0;
-    @include res(m) {
+    @include res(l) {
       margin-left: 16px;
     }
     span {
@@ -287,13 +340,13 @@
     align-items: center;
     margin-left: auto;
     margin-right: 0;
-    @include res(m) {
+    @include res(l) {
       padding-top: 7px;
     }
   }
   &--mobile {
     display: none;
-    @include res(m) {
+    @include res(l) {
       display: block;
     }
     .input-label {
@@ -351,7 +404,7 @@
   }
   .choice {
     display: none;
-    @include res(m) {
+    @include res(l) {
       display: inline;
       color: $gray-deep;
     }
@@ -430,7 +483,7 @@
 }
 
 .catalog-filter__checkbox-list {
-  max-height: 202px;
+  max-height: 216px;
   margin-bottom: 14px;
   overflow: auto;
   .style-checkbox {
@@ -480,11 +533,11 @@
     color: #fff;
     background: #000;
   }
-  @include res(m) {
+  @include res(l) {
     display: none;
   }
   span {
-    @include res(m) {
+    @include res(l) {
       display: none;
     }
   }
@@ -503,7 +556,7 @@
   .finded {
     opacity: 0;
     transition: all 0.3s ease;
-    @include res(m) {
+    @include res(l) {
       opacity: 1;
     }
     &:after {
@@ -511,7 +564,7 @@
     }
   }
   .products {
-    @include res(m) {
+    @include res(l) {
       display: none;
     }
   }

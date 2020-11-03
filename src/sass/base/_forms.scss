@@ -529,12 +529,12 @@ textarea {
       .select2-selection__rendered {
         display: flex;
         align-items: center;
-        padding: 17px 8px 10px;
+        padding: 17px 0px 10px;
         padding-right: 26px;
         border: none;
         background: #fff;
         transition: all 0.3s ease;
-        @include res(m) {
+        @include res(l) {
           padding: 18px 0px 10px;
           padding-right: 26px;
         }
@@ -544,7 +544,7 @@ textarea {
             &:before {
               border-right-color: #fff;
               border-bottom-color: #fff;
-              @include res(m) {
+              @include res(l) {
                 border-right-color: #000;
                 border-bottom-color: #000;
               }

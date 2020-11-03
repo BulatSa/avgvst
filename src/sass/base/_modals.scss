@@ -1,6 +1,6 @@
 body {
   &.lock {
-    @include res(m) {
+    @include res(l) {
       //position: fixed;
       //left: 0;
       //right: 0;
@@ -19,7 +19,7 @@ body {
 }
 
 .modal-mobile {
-  @include res(m) {
+  @include res(l) {
     display: none;
     width: 100%;
     max-width: 480px;
@@ -72,18 +72,18 @@ body {
 
 .fancybox-slide--html {
   padding: 24px 20px;
-  @include res(m) {
+  @include res(l) {
     padding: 0;
   }
   .modal {
     padding: 64px 48px 16px;
-    @include res(m) {
+    @include res(l) {
       min-height: 100%;
       padding: 64px 16px 16px;
     }
   }
   .modal-mobile {
-    @include res(m) {
+    @include res(l) {
       min-height: 100%;
       padding: 64px 16px 16px;
     }

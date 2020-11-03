@@ -1,6 +1,5 @@
 .product-preview {
   position: relative;
-  width: 25%;
   &:before {
     content: '';
     position: absolute;
@@ -11,12 +10,6 @@
     border-right: 1px solid #000;
     border-bottom: 1px solid #000;
     pointer-events: none;
-  }
-  @include res(l) {
-    width: calc(100% / 3);
-  }
-  @include res(s) {
-    width: 100%;
   }
 }
 

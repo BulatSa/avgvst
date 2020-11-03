@@ -15,7 +15,7 @@
     margin-left: -$gutter;
     padding: 24px 0 0;
     color: #fff;
-    @include res(m) {
+    @include res(l) {
       min-height: 500px;
       margin-right: -$gutter-mobile;
       margin-left: -$gutter-mobile;
@@ -50,6 +50,7 @@
     }
     .catalog-header__title {
       margin-top: auto;
+      padding-bottom: 40px;
     }
   }
 }

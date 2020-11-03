@@ -1,0 +1,35 @@
+.author-message {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: 16px;
+  text-align: center;
+  background: #fff;
+  @include res(m) {
+    padding: 40px 16px;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    pointer-events: none;
+  }
+}
+
+.author-message__title {
+  padding-bottom: 24px;
+}
+
+.author-message__img {
+  flex-shrink: 0;
+  display: block;
+  margin-top: auto;
+  border-radius: 50%;
+}

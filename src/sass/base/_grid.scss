@@ -120,10 +120,12 @@ body {
   margin: 0 auto;
   padding-left: $gutter;
   padding-right: $gutter;
-  @include res(m) {
-    max-width: 768px;
+  @include res(l) {
     padding-left: $gutter-mobile;
     padding-right: $gutter-mobile;
+  }
+  @include res(m) {
+    max-width: 768px;
   }
 }
 
@@ -143,7 +145,7 @@ body {
   flex-wrap: wrap;
   margin-left: -$gutter;
   margin-right: -$gutter;
-  @include res(m) {
+  @include res(l) {
     margin-left: -$gutter-mobile;
     margin-right: -$gutter-mobile;
   }
@@ -151,17 +153,19 @@ body {
   [class*="grid"] {
     padding-left: $gutter;
     padding-right: $gutter;
-    @include res(m) {
+    @include res(l) {
       padding-left: $gutter-mobile;
       padding-right: $gutter-mobile;
     }
   }
 
   &--ng {
+    margin-left: 0;
+    margin-right: 0;
     [class*="grid"] {
       padding-left: 0;
       padding-right: 0;
-      @include res(m) {
+      @include res(l) {
         padding-left: 0;
         padding-right: 0;
       }
