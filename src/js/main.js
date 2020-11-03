@@ -665,6 +665,12 @@ $(function () {
     }
   };
 
+  const recountMobileFilterOpener = () => {
+    const countFilteredItems = document.querySelectorAll(".catalog-filter__item.filtered").length;
+    const mobileFilterOpener = document.querySelector('[data-mobile-filter-opener]');
+    mobileFilterOpener.querySelector('.catalog-filter__item-title span').textContent = countFilteredItems;
+  }
+
   const recountMobileFilterLabel = (e) => {
     const catalogFilter = document.querySelector(".catalog-filter");
     const catalogFilterItem = e.currentTarget.closest(".catalog-filter__item");
@@ -706,6 +712,7 @@ $(function () {
     }
 
     choice.textContent = allDescr;
+    recountMobileFilterOpener();
   };
 
   if (isDesktop()) {

@@ -59,4 +59,7 @@
   @include res(m) {
     padding: 28px 16px;
   }
+  @include res(xxs) {
+    padding: 28px 14px;
+  }
 }

@@ -27,6 +27,22 @@
     .catalog-filter__popup-reset {
       display: block;
     }
+    .catalog-filter__item {
+      &[data-mobile-filter-opener] {
+        .catalog-filter__item-title {
+          i {
+            border-color: $yellow;
+            background: $yellow;
+            &:before {
+              opacity: 0;
+            }
+            span {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -216,17 +232,20 @@
   user-select: none;
   &.filtered {
     .input-label {
-      &:hover {
-        .catalog-filter__item-title {
-          i {
-            background: $yellow;
-            &:before {
-              border-right-color: #000;
-              border-bottom-color: #000;
+      @media(hover: hover) and (pointer: fine) {
+        &:hover {
+          .catalog-filter__item-title {
+            i {
+              background: $yellow;
+              &:before {
+                border-right-color: #000;
+                border-bottom-color: #000;
+              }
             }
           }
         }
       }
+      
     }
     .catalog-filter__item-title {
       i {
@@ -242,17 +261,20 @@
     }
     &.opened {
       .input-label {
-        &:hover {
-          .catalog-filter__item-title {
-            i {
-              background: #000;
-              &:before {
-                border-right-color: #000;
-                border-bottom-color: #000;
+        @media(hover: hover) and (pointer: fine) {
+          &:hover {
+            .catalog-filter__item-title {
+              i {
+                background: #000;
+                &:before {
+                  border-right-color: #000;
+                  border-bottom-color: #000;
+                }
               }
             }
           }
         }
+        
       }
       .catalog-filter__item-title {
         i {
@@ -271,12 +293,14 @@
   }
   &.opened {
     .input-label {
-      &:hover {
-        .catalog-filter__item-title {
-          i {
-            &:before {
-              border-right-color: #000;
-              border-bottom-color: #000;
+      @media(hover: hover) and (pointer: fine) {
+        &:hover {
+          .catalog-filter__item-title {
+            i {
+              &:before {
+                border-right-color: #000;
+                border-bottom-color: #000;
+              }
             }
           }
         }
@@ -297,26 +321,29 @@
   .input-label {
     display: inline-block;
     margin-bottom: 0;
-    &:hover {
-      .catalog-filter__item-title {
-        i {
-          background: #000;
-          &:before {
-            border-right-color: #fff;
-            border-bottom-color: #fff;
-          }
-        }
-        @include res(l) {
+    @media(hover: hover) and (pointer: fine) {
+      &:hover {
+        .catalog-filter__item-title {
           i {
-            background: inherit;
+            background: #000;
             &:before {
-              border-right-color: inherit;
-              border-bottom-color: inherit;
+              border-right-color: #fff;
+              border-bottom-color: #fff;
+            }
+          }
+          @include res(l) {
+            i {
+              background: inherit;
+              &:before {
+                border-right-color: inherit;
+                border-bottom-color: inherit;
+              }
             }
           }
         }
       }
     }
+    
   }
   [data-checkbox-list-link] {
     padding: 17px 0;
@@ -344,7 +371,7 @@
       padding-top: 7px;
     }
   }
-  &--mobile {
+  &[data-mobile-filter-opener] {
     display: none;
     @include res(l) {
       display: block;
@@ -467,19 +494,22 @@
     pointer-events: none;
     margin-bottom: -1px;
   }
-  &:hover {
-    span {
-      border-color: rgba(0, 0, 0, 0);
-    }
-    .icon-info {
-      background: #000;
-      svg {
-        path {
-          fill: #fff;
+  @media(hover: hover) and (pointer: fine) {
+    &:hover {
+      span {
+        border-color: rgba(0, 0, 0, 0);
+      }
+      .icon-info {
+        background: #000;
+        svg {
+          path {
+            fill: #fff;
+          }
         }
       }
     }
   }
+  
 }
 
 .catalog-filter__checkbox-list {
@@ -529,10 +559,13 @@
   pointer-events: none;
   cursor: pointer;
   transition: all 0.3s ease;
-  &:hover {
-    color: #fff;
-    background: #000;
+  @media(hover: hover) and (pointer: fine) {
+    &:hover {
+      color: #fff;
+      background: #000;
+    }
   }
+  
   @include res(l) {
     display: none;
   }
