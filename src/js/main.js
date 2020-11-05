@@ -277,7 +277,7 @@ $(function () {
     ".header-page-sticky"
   ).offsetTop;
   const headerPageHeight = headerPage.offsetHeight;
-  
+
   //headerPage.style.height = `${headerPageHeight}px`;
   let lastScroll = 0;
 
@@ -289,6 +289,25 @@ $(function () {
     );
   };
   initHeaderHeight();
+
+  initScrollWidth = () => {
+    let div = document.createElement("div");
+
+    div.style.overflowY = "scroll";
+    div.style.width = "50px";
+    div.style.height = "50px";
+
+    // мы должны вставить элемент в документ, иначе размеры будут равны 0
+    document.body.append(div);
+    let scrollWidth = div.offsetWidth - div.clientWidth;
+
+    div.remove();
+
+    document.documentElement.style.setProperty(
+      "--body-scroll-width",
+      `${scrollWidth}px`
+    );
+  };
 
   const toggleBodyScroll = () => {
     const currentScroll = window.pageYOffset;

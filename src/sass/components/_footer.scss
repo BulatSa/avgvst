@@ -13,8 +13,12 @@
 .footer-page__middle {
   display: flex;
   padding-bottom: 72px;
-  @include res(m) {
+  @include res(l) {
+    justify-content: center;
     flex-wrap: wrap;
+    padding-bottom: 50px;
+  }
+  @include res(m) {
     padding-bottom: 20px;
   }
 }
@@ -26,9 +30,14 @@
   line-height: (16/12);
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  @include res(l) {
+    width: 50%;
+    text-align: center;
+  }
   @include res(m) {
     width: 50%;
     flex-wrap: wrap;
+    text-align: left;
   }
   a {
     display: block;
@@ -94,9 +103,15 @@
   line-height: (16/12);
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  @include res(l) {
+    justify-content: center;
+    padding-left: 0;
+  }
   @include res(m) {
+    justify-content: flex-start;
     padding-top: 8px;
     padding-bottom: 8px;
+    padding-left: 8px;
   }
   &:hover {
     span {
@@ -118,12 +133,22 @@
 
 .footer-page__currency {
   max-width: 200px;
+  @include res(l) {
+    max-width: 100%;
+  }
+  @include res(m) {
+    max-width: 200px;
+  }
   .select2-container--avgvst-currency {
     .select2-selection--single {
       .select2-selection__rendered {
         padding: 16px 8px;
+        @include res(l) {
+          justify-content: center;
+        }
         @include res(m) {
           padding: 8px;
+          justify-content: flex-start;
         }
       }
     }
@@ -134,20 +159,28 @@
   width: 40%;
   max-width: 450px;
   margin-left: auto;
-  @include res(m) {
+  @include res(l) {
     width: 100%;
-    padding-top: 10px;
+    max-width: 480px;
+    padding-top: 60px;
     margin: 0 auto;
+  }
+  @include res(m) {
+    padding-top: 10px;
   }
   & > p {
     padding-bottom: 8px;
     font-size: 16px;
     line-height: (20/16);
+    @include res(l) {
+      text-align: center;
+      text-transform: uppercase;
+    }
     @include res(m) {
       padding-bottom: 16px;
       font-size: 12px;
       line-height: (16/12);
-      text-transform: uppercase;
+      text-align: left;
       letter-spacing: 0.1em;
     }
   }
@@ -156,6 +189,9 @@
     padding-bottom: 16px;
     font-size: 14px;
     line-height: (18/14);
+    @include res(l) {
+      text-align: center;
+    }
     @include res(m) {
       display: none;
     }

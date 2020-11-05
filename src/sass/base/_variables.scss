@@ -8,6 +8,11 @@ $breakpoints: (
 	'xxs': (max-width: 359px),
 );
 
+:root {
+  --body-scroll-width: 17px;
+  --header-page-height: auto;
+}
+
 $font: 'Fugue', sans-serif;
 $font-header: 'Arno Pro', serif;
 

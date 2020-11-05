@@ -3,25 +3,20 @@
   max-width: 100%;
 }
 
-:root {
-  --body-scroll-width: 17px;
-  --header-page-height: auto;
-}
-
 body {
   background: #fff;
   //margin-right: calc(-1 * (100vw - 100%));
   //overflow-x: hidden;
   &.scroll-lock {
     //height: auto;
-    padding-right: var(--body-scroll-width);
+    padding-right: var(--body-scroll-width, 17px);
     overflow: hidden;
     @include res(l) {
       padding-right: 0;
     }
     &.fixed-menu {
       .header-page-sticky {
-        padding-right: var(--body-scroll-width);
+        padding-right: var(--body-scroll-width, 17px);
         @include res(l) {
           padding-right: 0;
         }
