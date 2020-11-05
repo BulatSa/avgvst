@@ -281,14 +281,14 @@ $(function () {
   //headerPage.style.height = `${headerPageHeight}px`;
   let lastScroll = 0;
 
-  const initHeaderheight = () => {
+  const initHeaderHeight = () => {
     const headerPageHeight = headerPage.clientHeight;
     document.documentElement.style.setProperty(
       "--header-page-height",
       `${headerPageHeight}px`
     );
   };
-  initHeaderheight();
+  initHeaderHeight();
 
   const toggleBodyScroll = () => {
     const currentScroll = window.pageYOffset;

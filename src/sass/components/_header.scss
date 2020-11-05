@@ -50,6 +50,9 @@ body {
   background: #fff;
   transform: translate3d(0, 0, 0);
   will-change: transform;
+  @include res(m) {
+    border-color: #000;
+  }
 }
 
 .header-page-top {
