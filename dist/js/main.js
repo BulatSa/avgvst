@@ -271,29 +271,56 @@ $(function () {
   const body = document.body;
   const scrollUp = "scroll-up";
   const scrollDown = "scroll-down";
+  const fixedMenu = "fixed-menu";
+  const initFixedMenu = "init-fixed-menu";
+  const headerPage = document.querySelector(".header-page-wrap");
+  const headerPageStyckyAdditionalPadding = document.querySelector(
+    ".header-page-sticky"
+  ).offsetTop;
+  const headerPageHeight = headerPage.offsetHeight;
+  
+  //headerPage.style.height = `${headerPageHeight}px`;
   let lastScroll = 0;
+
+  const initHeaderheight = () => {
+    const headerPageHeight = headerPage.clientHeight;
+    document.documentElement.style.setProperty(
+      "--header-page-height",
+      `${headerPageHeight}px`
+    );
+  };
+  initHeaderheight();
 
   const toggleBodyScroll = () => {
     const currentScroll = window.pageYOffset;
-    if (currentScroll <= 0) {
+    if (currentScroll <= headerPageStyckyAdditionalPadding) {
+      // top of page
       body.classList.remove(scrollUp);
+      body.classList.remove(scrollDown);
+      body.classList.remove(fixedMenu);
+      body.classList.remove(initFixedMenu);
       return;
     }
 
     if (
-      currentScroll > 100 &&
+      currentScroll > headerPageHeight &&
       currentScroll > lastScroll &&
-      !body.classList.contains(scrollDown)
+      !body.classList.contains(scrollUp)
     ) {
-      // down
+      // down from top
       body.classList.remove(scrollUp);
       body.classList.add(scrollDown);
-    } else if (
-      currentScroll < 100 ||
-      (currentScroll < lastScroll - 5 && body.classList.contains(scrollDown))
-    ) {
+    }
+    if (currentScroll > 5 * headerPageHeight && currentScroll > lastScroll) {
+      // down on middle
+      body.classList.remove(scrollUp);
+      body.classList.add(scrollDown);
+      body.classList.add(fixedMenu);
+    }
+    if (currentScroll < lastScroll - 5 && body.classList.contains(scrollDown)) {
       // up
       body.classList.remove(scrollDown);
+      body.classList.remove(initFixedMenu);
       body.classList.add(scrollUp);
     }
     lastScroll = currentScroll;
@@ -331,6 +358,7 @@ $(function () {
       headerMenuCatalogLink.classList.remove("open");
       headerMenuCatalog.classList.remove("open");
       removeOutsideClickListener();
+      toggleBodyScrollLock();
       window.addEventListener("scroll", toggleBodyScroll);
     }
   };
@@ -392,6 +420,7 @@ $(function () {
   if (headerMenuCatalogLink) {
     const toggleHeaderMenu = (e) => {
       e.preventDefault();
+      toggleBodyScrollLock();
       if (headerMenuCatalog.classList.contains("open")) {
         headerMenuCatalogLink.classList.remove("open");
         headerMenuCatalog.classList.remove("open");
@@ -667,10 +696,16 @@ $(function () {
   };
 
   const recountMobileFilterOpener = () => {
-    const countFilteredItems = document.querySelectorAll(".catalog-filter__item.filtered").length;
-    const mobileFilterOpener = document.querySelector('[data-mobile-filter-opener]');
-    mobileFilterOpener.querySelector('.catalog-filter__item-title span').textContent = countFilteredItems;
-  }
+    const countFilteredItems = document.querySelectorAll(
+      ".catalog-filter__item.filtered"
+    ).length;
+    const mobileFilterOpener = document.querySelector(
+      "[data-mobile-filter-opener]"
+    );
+    mobileFilterOpener.querySelector(
+      ".catalog-filter__item-title span"
+    ).textContent = countFilteredItems;
+  };
 
   const recountMobileFilterLabel = (e) => {
     const catalogFilter = document.querySelector(".catalog-filter");

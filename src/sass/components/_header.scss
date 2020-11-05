@@ -1,25 +1,58 @@
 body {
+  &.fixed-menu {
+    .header-page-sticky {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      border-color: #000;
+      transition: transform 0.3s ease-out;
+    }
+  }
   &.scroll-down {
-    .header-page-wrap {
+    .header-page-sticky {
       transform: translate3d(0, -100%, 0);
     }
   }
 }
 
 .header-page-wrap {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  height: var(--header-page-height, auto);
   border-bottom: 1px solid #000;
   background: #fff;
-  transition: transform 0.3s ease-out;
-  transform: translate3d(0, 0, 0);
-  will-change: transform;
   z-index: 10;
 }
 
-.header-page {
+.header-page-promo {
+  @include res(m) {
+    display: none;
+  }
+}
+
+.header-page-delivery {
+  font-size: 12px;
+  line-height: (16/12);
+  text-align: center;
+  color: #fff;
+  background: #000;
+  a {
+    display: block;
+    padding: 8px 16px;
+  }
+  .more {
+    margin-left: 5px;
+    border-bottom: 1px solid #fff;
+  }
+}
+
+.header-page-sticky {
+  border-bottom: 1px solid #fff;
+  background: #fff;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+.header-page-top {
   position: relative;
   display: flex;
   justify-content: center;
@@ -33,7 +66,7 @@ body {
 .header-page__logo {
   position: absolute;
   top: 0;
-  left: -$gutter;
+  left: 0;
   padding: 24px 24px 12px 24px;
   transition: all 0.3s ease;
   &:hover {
@@ -112,6 +145,7 @@ body {
   top: 50%;
   display: flex;
   align-items: center;
+  padding-right: $gutter;
   transform: translate3d(0, -50%, 0);
   img {
     display: block;
@@ -140,7 +174,6 @@ body {
 .header-page__helpers-icons {
   display: flex;
   align-items: center;
-  //margin-right: -12px;
   padding-left: 12px;
   a {
     display: flex;

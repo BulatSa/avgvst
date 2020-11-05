@@ -111,9 +111,9 @@
 
 .header-mobile-menu {
   position: fixed;
-  top: 96px;
+  top: var(--header-page-height, 65px);
   left: 0;
-  height: calc(100vh - 96px);
+  height: calc(100vh - var(--header-page-height, 65px));
   padding: 40px 16px;
   color: #000;
   opacity: 0;
