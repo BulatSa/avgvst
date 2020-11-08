@@ -885,3 +885,51 @@ $(function () {
 /***********************
  Fixed Modal END
  ***********************/
+
+/***********************
+ Product Preview BEGIN
+ ***********************/
+$(function () {
+  const productPreviewFavoriteList = document.querySelectorAll(
+    ".product-preview__favorite"
+  );
+
+  if (productPreviewFavoriteList.length) {
+    const toggleFavorite = (e) => {
+      e.preventDefault();
+      const productPreview = e.currentTarget.closest(".product-preview");
+      if (productPreview.classList.contains("favorited")) {
+        productPreview.classList.remove("favorited");
+      } else {
+        productPreview.classList.add("favorited");
+      }
+    };
+
+    productPreviewFavoriteList.forEach((productPreviewFavorite) => {
+      productPreviewFavorite.addEventListener("click", toggleFavorite);
+    });
+  }
+});
+/***********************
+ Product Preview END
+ ***********************/
+
+/***********************
+ Flickity BEGIN
+ ***********************/
+$(function () {
+  const productPreviewList = document.querySelector(
+    ".product-preview-list--slider"
+  );
+  const flkty = new Flickity(productPreviewList, {
+    // options
+    cellAlign: "left",
+    pageDots: false,
+    imagesLoaded: true,
+    contain: true,
+    arrowShape: "M62.1 89.6L23.5 50l39.6-39.6 3.4 3.4L30.2 50l36.3 36.2z",
+  });
+});
+/***********************
+ Flickity END
+ ***********************/

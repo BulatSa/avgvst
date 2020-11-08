@@ -1,0 +1,24 @@
+.offers-preview-list {
+  .h1 {
+    padding-bottom: 40px;
+    text-align: center;
+    @include res(m) {
+      padding-bottom: 24px;
+    }
+  }
+  &+.footer-page-wrap {
+    margin-top: -1px;
+  }
+  .product-preview-list {
+    @include res(m) {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+    }
+    .grid-12_m {
+      @include res(m) {
+        width: 250px;
+        flex-shrink: 0;
+      }
+    }
+  }
+}

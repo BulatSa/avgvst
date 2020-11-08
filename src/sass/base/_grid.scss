@@ -25,6 +25,16 @@ body {
   }
 }
 
+.def-sec {
+  margin-bottom: 96px;
+  @include res(xl) {
+    margin-bottom: 72px;
+  }
+  @include res(l) {
+    margin-bottom: 64px;
+  }
+}
+
 .hidden {
   display: none !important;
   &-xxl {

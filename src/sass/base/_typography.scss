@@ -19,6 +19,10 @@ h1,
   line-height: 1;
   letter-spacing: 0.07em;
   text-transform: uppercase;
+  @include res(m) {
+    font-size: 19px;
+    line-height: 24px;
+  }
 }
 
 h2,
