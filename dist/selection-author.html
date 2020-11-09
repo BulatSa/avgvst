@@ -338,53 +338,24 @@
   
 </header>
 
-
 <section class="catalog-header-sec">
   <div class="container">
-    <div class="catalog-header">
+    <div class="catalog-header catalog-header--selection" style="background-image: url('../images/bg-selection-2.jpg');">
       
+      <div class="catalog-header__back-link">
+        <a href="catalog.html">
+          <i class="i-back-link"></i>
+          <span>все коллекции</span>
+        </a>
+      </div>
+    
       <div class="catalog-header__title">
         
-        <p class="h1">Все товары</p>
+        <p class="h1">вторая кожа</p>
         
         
-        <p class="descr">Украшения для тех, кто не носит украшения</p>
+        <p class="descr">Украшения, в которых можно жить, не снимая.</p>
         
-      </div>
-      
-      <div class="catalog-header__main-categories">
-        <a href="sub-catalog.html">
-          <span class="h3">подвески</span>
-          <img src="images/catalog-header-cat-1.jpg" alt="">
-        </a>
-        <a href="sub-catalog.html">
-          <span class="h3">кольца</span>
-          <img src="images/catalog-header-cat-2.jpg" alt="">
-        </a>
-        <a href="sub-catalog.html">
-          <span class="h3">серьги</span>
-          <img src="images/catalog-header-cat-3.jpg" alt="">
-        </a>
-        <a href="sub-catalog.html">
-          <span class="h3">браслеты</span>
-          <img src="images/catalog-header-cat-4.jpg" alt="">
-        </a>
-        <a href="sub-catalog.html">
-          <span class="h3">пирсинг</span>
-          <img src="images/catalog-header-cat-5.jpg" alt="">
-        </a>
-        <a href="sub-catalog.html">
-          <span class="h3">часы</span>
-          <img src="images/catalog-header-cat-6.jpg" alt="">
-        </a>
-        <a href="sub-catalog.html" class="black">
-          <span class="h3">Объекты</span>
-          <img src="images/catalog-header-cat-7.jpg" alt="">
-        </a>
-        <a href="sub-catalog.html">
-          <span class="h3">Подарочные сертификат</span>
-          <img src="images/catalog-header-cat-8.jpg" alt="">
-        </a>
       </div>
       
       
@@ -392,353 +363,13 @@
   </div>
 </section>
 
-<section class="catalog-filter-sec">
-  <div class="container">
-    <div class="catalog-filter">
-      <form class="catalog-filter__form">
-        <div class="catalog-filter__item">
-          <select class="select2-js select2-js--filter" name="sorting" data-placeholder="сортировка">
-            <option></option>
-            <option value="Популярные" data-title="Популярные">
-              Популярные
-            </option>
-            <option value="Новинки" data-title="Новинки">
-              Новинки
-            </option>
-            <option value="По возрастанию цены" data-title="По возрастанию цены">
-              По возрастанию цены
-            </option>
-            <option value="По убыванию цены" data-title="По убыванию цены">
-              По убыванию цены
-            </option>
-          </select>
-        </div>
-        <div class="catalog-filter__item" data-mobile-filter-opener>
-          <label class="input-label" data-fixed-modal data-src="#modal-catalog-filter">
-            <span class="catalog-filter__item-title">фильтр<i><span>2</span></i></span>
-          </label>
-        </div>
-
-        <div class="catalog-filter__popup modal-mobile" id="modal-catalog-filter">
-          <a href="#" class="modal-close"></a>
-          <div class="catalog-filter__popup-title">
-            <p class="h2">фильтры</p>
-            <button class="catalog-filter__popup-reset" type="reset">сбросить все фильтры</button>
-          </div>
-          <div class="catalog-filter__item">
-            <label class="input-label" data-checkbox-list-link="catalog-filter__checkbox-list-wrap">
-              <span class="catalog-filter__item-title">
-                <span class="title">материал</span>
-                <span class="choice"></span>
-                <i><span class="counter">0</span></i>
-              </span>
-            </label>
-            <div class="catalog-filter__checkbox-list-wrap">
-              <div class="catalog-filter__checkbox-list" data-simplebar>
-                <label class="style-checkbox">
-                  <input type="checkbox" name="материал" value="серебро" data-mobile-descr='серебро'>
-                  <span>серебро</span>
-                </label>
-                <label class="style-checkbox">
-                  <input type="checkbox" name="материал" value="серебро с позолотой"
-                    data-mobile-descr='серебро с позолотой'>
-                  <span>серебро с позолотой</span>
-                </label>
-                <label class="style-checkbox">
-                  <input type="checkbox" name="материал" value="белое золото" data-mobile-descr='белое золото'>
-                  <span>белое золото</span>
-                </label>
-                <label class="style-checkbox">
-                  <input type="checkbox" name="материал" value="лимонное золото" data-mobile-descr='лимонное золото'>
-                  <span>лимонное золото</span>
-                </label>
-              </div>
-              <div class="btn-wrap btn-wrap--center">
-                <button class="btn">Показать 132 из 230</button>
-              </div>
-            </div>
-          </div>
-          <div class="catalog-filter__item">
-            <label class="input-label" data-checkbox-list-link="catalog-filter__checkbox-list-wrap">
-              <span class="catalog-filter__item-title">
-                <span class="title">вставка</span>
-                <span class="choice"></span>
-                <i><span class="counter">0</span></i>
-              </span>
-            </label>
-            <div class="catalog-filter__checkbox-list-wrap">
-              <div class="catalog-filter__checkbox-list" data-simplebar>
-                <label class="style-checkbox">
-                  <input type="checkbox" name="вставка" value="вставка 1" data-mobile-descr='вставка 1'>
-                  <span>вставка 1</span>
-                </label>
-                <label class="style-checkbox">
-                  <input type="checkbox" name="вставка" value="вставка 2" data-mobile-descr='вставка 2'>
-                  <span>вставка 2</span>
-                </label>
-                <label class="style-checkbox">
-                  <input type="checkbox" name="вставка" value="вставка 3" data-mobile-descr='вставка 3'>
-                  <span>вставка 3</span>
-                </label>
-              </div>
-              <div class="btn-wrap btn-wrap--center">
-                <button class="btn">Показать 132 из 230</button>
-              </div>
-            </div>
-          </div>
-          <div class="catalog-filter__item">
-            <label class="input-label" data-checkbox-list-link="catalog-filter__checkbox-list-wrap">
-              <span class="catalog-filter__item-title">
-                <span class="title">размер</span>
-                <span class="choice"></span>
-                <i><span class="counter">0</span></i></span>
-            </label>
-            <div class="catalog-filter__checkbox-list-wrap catalog-filter__checkbox-list-wrap--grid">
-              <a href="#" class="catalog-filter__checkbox-info" data-fancybox data-src="#modal-subscribe-mailchimp">
-                <span>Как подобрать размер</span>
-                <i class="icon-16 icon-info">
-                  <svg width="6" height="8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M.825 6.652l.106-.106h1.59V3.472H1.355l-.106-.106v-.742l.106-.106h2.12l.106.106v3.922h1.484l.106.106v.742l-.106.106H.931l-.106-.106v-.742zm1.59-5.088l.106.106h1.166l.106-.106V.292L3.687.186H2.521l-.106.106v1.272z" />
-                  </svg>
-                </i>
-              </a>
-              <div class="catalog-filter__checkbox-list">
-                <label class="style-checkbox style-checkbox--cell">
-                  <input type="checkbox" name="размер" value="13,5" data-mobile-descr='13,1'>
-                  <span>13,5</span>
-                </label>
-                <label class="style-checkbox style-checkbox--cell">
-                  <input type="checkbox" name="размер" value="14" data-mobile-descr='14'>
-                  <span>14</span>
-                </label>
-                <label class="style-checkbox style-checkbox--cell">
-                  <input type="checkbox" name="размер" value="14,5" data-mobile-descr='14,5'>
-                  <span>14,5</span>
-                </label>
-                <label class="style-checkbox style-checkbox--cell">
-                  <input type="checkbox" name="размер" value="15" data-mobile-descr='15'>
-                  <span>15</span>
-                </label>
-                <label class="style-checkbox style-checkbox--cell">
-                  <input type="checkbox" name="размер" value="15,5" data-mobile-descr='15,5'>
-                  <span>15,5</span>
-                </label>
-
-                <label class="style-checkbox style-checkbox--cell">
-                  <input type="checkbox" name="размер" value="16" data-mobile-descr='16'>
-                  <span>16</span>
-                </label>
-                <label class="style-checkbox style-checkbox--cell">
-                  <input type="checkbox" name="размер" value="16,5" data-mobile-descr='16,5'>
-                  <span>16,5</span>
-                </label>
-                <label class="style-checkbox style-checkbox--cell">
-                  <input type="checkbox" name="размер" value="17" data-mobile-descr='17'>
-                  <span>17</span>
-                </label>
-                <label class="style-checkbox style-checkbox--cell">
-                  <input type="checkbox" name="размер" value="17,5" data-mobile-descr='17,5'>
-                  <span>17,5</span>
-                </label>
-                <label class="style-checkbox style-checkbox--cell">
-                  <input type="checkbox" name="размер" value="18" data-mobile-descr='18'>
-                  <span>18</span>
-                </label>
-
-                <label class="style-checkbox style-checkbox--cell">
-                  <input type="checkbox" name="размер" value="18,5" data-mobile-descr='18,5'>
-                  <span>18,5</span>
-                </label>
-                <label class="style-checkbox style-checkbox--cell">
-                  <input type="checkbox" name="размер" value="19" data-mobile-descr='19'>
-                  <span>19</span>
-                </label>
-                <label class="style-checkbox style-checkbox--cell">
-                  <input type="checkbox" name="размер" value="19,5" data-mobile-descr='19,5'>
-                  <span>19,5</span>
-                </label>
-                <label class="style-checkbox style-checkbox--cell">
-                  <input type="checkbox" name="размер" value="20" data-mobile-descr='20'>
-                  <span>20</span>
-                </label>
-                <label class="style-checkbox style-checkbox--cell">
-                  <input type="checkbox" name="размер" value="20,5" data-mobile-descr='20,5'>
-                  <span>20,5</span>
-                </label>
-
-                <label class="style-checkbox style-checkbox--cell">
-                  <input type="checkbox" name="размер" value="21" data-mobile-descr='21'>
-                  <span>21</span>
-                </label>
-                <label class="style-checkbox style-checkbox--cell">
-                  <input type="checkbox" name="размер" value="21,5" data-mobile-descr='21,5'>
-                  <span>21,5</span>
-                </label>
-                <label class="style-checkbox style-checkbox--cell">
-                  <input type="checkbox" name="размер" value="22" data-mobile-descr='22'>
-                  <span>22</span>
-                </label>
-              </div>
-              <div class="btn-wrap btn-wrap--center">
-                <button class="btn">Показать 132 из 230</button>
-              </div>
-            </div>
-          </div>
-          <div class="catalog-filter__item">
-            <label class="input-label" data-checkbox-list-link="catalog-filter__checkbox-list-wrap">
-              <span class="catalog-filter__item-title">
-                <span class="title">коллекция</span>
-                <span class="choice"></span>
-                <i><span class="counter">0</span></i>
-              </span>
-            </label>
-            <div class="catalog-filter__checkbox-list-wrap">
-              <div class="catalog-filter__checkbox-list" data-simplebar>
-                <label class="style-checkbox">
-                  <input type="checkbox" name="коллекция" value="буквы" data-mobile-descr='буквы'>
-                  <span>буквы</span>
-                </label>
-                <label class="style-checkbox">
-                  <input type="checkbox" name="коллекция" value="Zodiak" data-mobile-descr='Zodiak'>
-                  <span>Zodiak</span>
-                </label>
-                <label class="style-checkbox">
-                  <input type="checkbox" name="коллекция" value="KORAL" data-mobile-descr='KORAL'>
-                  <span>KORAL</span>
-                </label>
-                <label class="style-checkbox">
-                  <input type="checkbox" name="коллекция" value="Avgvst x Ракета" data-mobile-descr='Avgvst x Ракета'>
-                  <span>Avgvst x Ракета</span>
-                </label>
-                <label class="style-checkbox">
-                  <input type="checkbox" name="коллекция" value="Дуплеты" data-mobile-descr='Дуплеты'>
-                  <span>Дуплеты</span>
-                </label>
-                <label class="style-checkbox">
-                  <input type="checkbox" name="коллекция" value="J2000.0" data-mobile-descr='J2000.0'>
-                  <span>J2000.0</span>
-                </label>
-                <label class="style-checkbox">
-                  <input type="checkbox" name="коллекция" value="буквы" data-mobile-descr='буквы'>
-                  <span>буквы</span>
-                </label>
-                <label class="style-checkbox">
-                  <input type="checkbox" name="коллекция" value="Zodiak" data-mobile-descr='Zodiak'>
-                  <span>Zodiak</span>
-                </label>
-                <label class="style-checkbox">
-                  <input type="checkbox" name="коллекция" value="KORAL" data-mobile-descr='KORAL'>
-                  <span>KORAL</span>
-                </label>
-              </div>
-              <div class="btn-wrap btn-wrap--center">
-                <button class="btn">Показать 132 из 230</button>
-              </div>
-            </div>
-          </div>
-          <div class="catalog-filter__item">
-            <label class="input-label" data-checkbox-list-link="catalog-filter__checkbox-list-wrap">
-              <span class="catalog-filter__item-title">
-                <span class="title">цена</span>
-                <span class="choice"></span>
-                <i><span class="counter">0</span></i>
-              </span>
-            </label>
-            <div class="catalog-filter__checkbox-list-wrap">
-              <div class="catalog-filter__checkbox-list" data-simplebar>
-                <label class="style-checkbox">
-                  <input type="checkbox" name="цена" value="до 5 000 р." data-mobile-descr='до 5 000 р.'>
-                  <span>до 5 000 р.</span>
-                </label>
-                <label class="style-checkbox">
-                  <input type="checkbox" name="цена" value="от 5 000 р. до 10 000 р."
-                    data-mobile-descr='от 5 000 р. до 10 000 р.'>
-                  <span>от 5 000 р. до 10 000 р.</span>
-                </label>
-                <label class="style-checkbox">
-                  <input type="checkbox" name="цена" value="от 10 000 р. до 20 000 р."
-                    data-mobile-descr='от 10 000 р. до 20 000 р.'>
-                  <span>от 10 000 р. до 20 000 р.</span>
-                </label>
-                <label class="style-checkbox">
-                  <input type="checkbox" name="цена" value="больше 20 000 р." data-mobile-descr='больше 20 000 р.'>
-                  <span>больше 20 000 р.</span>
-                </label>
-              </div>
-              <div class="btn-wrap btn-wrap--center">
-                <button class="btn">Показать 132 из 230</button>
-              </div>
-            </div>
-          </div>
-          <div class="catalog-filter__item catalog-filter__item--single">
-            <label class="style-checkbox">
-              <input type="checkbox" name="instock" value="true">
-              <span>только в наличии</span>
-            </label>
-          </div>
-          <div class="btn-wrap btn-wrap--center catalog-filter__popup-btn">
-            <button class="btn">Показать 132 из 230</button>
-          </div>
-        </div>
-
-        <div class="catalog-filter__item catalog-filter__item--last">
-          <button class="catalog-filter__reset" type="reset">сбросить<span> фильтры</span></button>
-          <div class="catalog-filter__positions">
-            <span class="finded">84</span><span class="all">240</span><span class="products"> товаров</span>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-</section>
-<section class="catalog-product-list">
+<section class="catalog-product-list catalog-product-list--author">
   <div class="container-ng">
-    <div class="row row--ng product-preview-list product-preview-list--no-bord-top">
-      <div class="grid-3 grid-4_l grid-12_m">
-        <div class="product-preview ">
-  <a href="#" class="product-preview__item">
-    
-    <span class="product-preview__title h3">Обнимающее обручальное кольцо замкнутое</span>
-    
-    
-    
-    <span class="product-preview__price">62 900 р.</span>
-    
-    <img class="product-preview__img" src="images/product-preview-1.jpg" alt="Обнимающее обручальное кольцо замкнутое">
-  </a>
-  
-  <a href="#" class="product-preview__favorite">
-    <svg width="20" height="18" fill="rgba(0,0,0,0)" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M1 5.912C1 3.2 3.149 1 5.8 1 7.607 1 9.181 2.022 10 3.532 10.819 2.022 12.393 1 14.2 1 16.851 1 19 3.2 19 5.912 19 12 10 17 10 17S1 12 1 5.912z"
-        stroke="#000" stroke-linecap="round" />
-    </svg>
-  </a>
-  
-</div>
-      </div>
-      <div class="grid-3 grid-4_l grid-12_m">
-        <div class="product-preview product-preview--white favorited">
-  <a href="#" class="product-preview__item">
-    
-    <span class="product-preview__title h3">Лабрет-точка с цепочкой из белого золота с черной эмалью</span>
-    
-    
-    
-    <span class="product-preview__price">9 500 р.</span>
-    
-    <img class="product-preview__img" src="images/product-preview-white.jpg" alt="Лабрет-точка с цепочкой из белого золота с черной эмалью">
-  </a>
-  
-  <a href="#" class="product-preview__favorite">
-    <svg width="20" height="18" fill="rgba(0,0,0,0)" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M1 5.912C1 3.2 3.149 1 5.8 1 7.607 1 9.181 2.022 10 3.532 10.819 2.022 12.393 1 14.2 1 16.851 1 19 3.2 19 5.912 19 12 10 17 10 17S1 12 1 5.912z"
-        stroke="#000" stroke-linecap="round" />
-    </svg>
-  </a>
-  
+    <div class="row row--ng product-list">
+      <div class="grid-6 grid-8_l grid-12_m">
+        <div class="author-message">
+  <p class="author-message__title h3">Личная коллекция основательницы и креативного директора Avgvst <i>Наташи Брянцевой</i>. Украшения, которые как вторая кожа — не отягощают, а сливаются с телом. Украшения, в которых можно жить, не снимая</p>
+  <img class="author-message__img" src="images/author-message-person.jpg" alt="">
 </div>
       </div>
       <div class="grid-3 grid-4_l grid-12_m">
@@ -766,30 +397,6 @@
       </div>
       <div class="grid-3 grid-4_l grid-12_m">
         <div class="product-preview ">
-  <a href="#" class="product-preview__item">
-    
-    <span class="product-preview__title h3">Обнимающее обручальное кольцо замкнутое</span>
-    
-    
-    
-    <span class="product-preview__price">62 900 р.</span>
-    
-    <img class="product-preview__img" src="images/product-preview-1.jpg" alt="Обнимающее обручальное кольцо замкнутое">
-  </a>
-  
-  <a href="#" class="product-preview__favorite">
-    <svg width="20" height="18" fill="rgba(0,0,0,0)" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M1 5.912C1 3.2 3.149 1 5.8 1 7.607 1 9.181 2.022 10 3.532 10.819 2.022 12.393 1 14.2 1 16.851 1 19 3.2 19 5.912 19 12 10 17 10 17S1 12 1 5.912z"
-        stroke="#000" stroke-linecap="round" />
-    </svg>
-  </a>
-  
-</div>
-      </div>
-
-      <div class="grid-3 grid-4_l grid-12_m">
-        <div class="product-preview favorited">
   <a href="#" class="product-preview__item">
     
     <span class="product-preview__title h3">Обнимающее обручальное кольцо замкнутое</span>
@@ -868,76 +475,6 @@
     <span class="product-preview__price">9 500 р.</span>
     
     <img class="product-preview__img" src="images/product-preview-white.jpg" alt="Лабрет-точка с цепочкой из белого золота с черной эмалью">
-  </a>
-  
-  <a href="#" class="product-preview__favorite">
-    <svg width="20" height="18" fill="rgba(0,0,0,0)" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M1 5.912C1 3.2 3.149 1 5.8 1 7.607 1 9.181 2.022 10 3.532 10.819 2.022 12.393 1 14.2 1 16.851 1 19 3.2 19 5.912 19 12 10 17 10 17S1 12 1 5.912z"
-        stroke="#000" stroke-linecap="round" />
-    </svg>
-  </a>
-  
-</div>
-      </div>
-
-      <div class="grid-3 grid-4_l grid-12_m">
-        <div class="product-preview product-preview--white">
-  <a href="#" class="product-preview__item">
-    
-    <span class="product-preview__title h3">Лабрет-точка с цепочкой из белого золота с черной эмалью</span>
-    
-    
-    
-    <span class="product-preview__price">9 500 р.</span>
-    
-    <img class="product-preview__img" src="images/product-preview-white.jpg" alt="Лабрет-точка с цепочкой из белого золота с черной эмалью">
-  </a>
-  
-  <a href="#" class="product-preview__favorite">
-    <svg width="20" height="18" fill="rgba(0,0,0,0)" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M1 5.912C1 3.2 3.149 1 5.8 1 7.607 1 9.181 2.022 10 3.532 10.819 2.022 12.393 1 14.2 1 16.851 1 19 3.2 19 5.912 19 12 10 17 10 17S1 12 1 5.912z"
-        stroke="#000" stroke-linecap="round" />
-    </svg>
-  </a>
-  
-</div>
-      </div>
-      <div class="grid-3 grid-4_l grid-12_m">
-        <div class="product-preview ">
-  <a href="#" class="product-preview__item">
-    
-    <span class="product-preview__title h3">Обнимающее обручальное кольцо замкнутое</span>
-    
-    
-    
-    <span class="product-preview__price">62 900 р.</span>
-    
-    <img class="product-preview__img" src="images/product-preview-1.jpg" alt="Обнимающее обручальное кольцо замкнутое">
-  </a>
-  
-  <a href="#" class="product-preview__favorite">
-    <svg width="20" height="18" fill="rgba(0,0,0,0)" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M1 5.912C1 3.2 3.149 1 5.8 1 7.607 1 9.181 2.022 10 3.532 10.819 2.022 12.393 1 14.2 1 16.851 1 19 3.2 19 5.912 19 12 10 17 10 17S1 12 1 5.912z"
-        stroke="#000" stroke-linecap="round" />
-    </svg>
-  </a>
-  
-</div>
-      </div>
-      <div class="grid-3 grid-4_l grid-12_m">
-        <div class="product-preview ">
-  <a href="#" class="product-preview__item">
-    
-    <span class="product-preview__title h3">Обнимающее обручальное кольцо замкнутое</span>
-    
-    
-    
-    <span class="product-preview__price">62 900 р.</span>
-    
-    <img class="product-preview__img" src="images/product-preview-1.jpg" alt="Обнимающее обручальное кольцо замкнутое">
   </a>
   
   <a href="#" class="product-preview__favorite">
@@ -976,12 +513,18 @@
     </div>
   </div>
 </section>
-<div class="catalog-more">
-  <a href="#">
-    <span>Показать ещё</span>
-  </a>
+<div class="catalog-pagination">
+  <ul class="catalog-pagination__list">
+    <li><a href="#" class="active"><span>1</span></a></li>
+    <li><a href="#"><span>2</span></a></li>
+    <li><a href="#"><span>3</span></a></li>
+    <li><a href="#"><span>4</span></a></li>
+    <li><a href="#"><span>5</span></a></li>
+    <li><a href="#"><span>6</span></a></li>
+    <li><a href="#"><span>7</span></a></li>
+  </ul>
+  <a href="#" class="catalog-pagination__more">Показать ещё</a>
 </div>
-
 
 <footer class="footer-page-wrap">
 	<div class="container page-sides-border">

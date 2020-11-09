@@ -84,6 +84,7 @@
   position: relative;
   width: 100%;
   height: auto;
+  max-height: 480px;
   &:before {
     content: "";
     position: absolute;
@@ -193,14 +194,15 @@
   justify-content: center;
   width: 58px;
   height: 58px;
-  transition: all 0.3s ease;
-  transform: translate3d(0, 0, 0) scale(1);
   z-index: 2;
   &:hover {
-    transform: translate3d(0, 0, 0) scale(1.25);
+    svg {
+      transform: translate3d(0, 0, 0) scale(1.25);
+    }
   }
   svg {
     flex-shrink: 0;
     transition: all 0.3s ease;
+    transform: translate3d(0, 0, 0) scale(1);
   }
 }

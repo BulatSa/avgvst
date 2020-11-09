@@ -1,13 +1,14 @@
 .footer-page-wrap {
+  
+  background: #fff;
+}
+.footer-page {
   padding-top: 95px;
   padding-bottom: 24px;
   border-top: 1px solid #000;
-  background: #fff;
   @include res(m) {
     padding-top: 55px;
   }
-}
-.footer-page {
 }
 
 .footer-page__middle {

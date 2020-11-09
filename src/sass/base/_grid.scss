@@ -33,6 +33,9 @@ body {
   @include res(l) {
     margin-bottom: 64px;
   }
+  @include res(m) {
+    margin-bottom: 48px;
+  }
 }
 
 .hidden {
@@ -72,37 +75,31 @@ body {
 .show {
   display: none;
   &-xxl {
-    display: none !important;
     @include res(xxl) {
       display: block !important;
     }
   }
   &-xl {
-    display: none !important;
     @include res(xl) {
       display: block !important;
     }
   }
   &-l {
-    display: none !important;
     @include res(l) {
       display: block !important;
     }
   }
   &-m {
-    display: none;
     @include res(m) {
-      display: block;
+      display: block !important;
     }
   }
   &-s {
-    display: none !important;
     @include res(s) {
       display: block !important;
     }
   }
   &-xs {
-    display: none !important;
     @include res(xs) {
       display: block !important;
     }

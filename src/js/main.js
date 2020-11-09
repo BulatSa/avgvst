@@ -1,3 +1,17 @@
+const isMobile = () => {
+  if (document.documentElement.clientWidth < 960) {
+    return true;
+  }
+  return false;
+};
+
+const isDesktop = () => {
+  if (document.documentElement.clientWidth > 960) {
+    return true;
+  }
+  return false;
+};
+
 /***********************
  Input mask BEGIN
  ***********************/
@@ -614,20 +628,6 @@ $(document).ready(function () {
  Filter BEGIN
  ***********************/
 $(function () {
-  const isMobile = () => {
-    if (document.documentElement.clientWidth < 960) {
-      return true;
-    }
-    return false;
-  };
-
-  const isDesktop = () => {
-    if (document.documentElement.clientWidth > 960) {
-      return true;
-    }
-    return false;
-  };
-
   const checkboxLinkList = document.querySelectorAll(
     "[data-checkbox-list-link]"
   );
@@ -921,14 +921,26 @@ $(function () {
   const productPreviewList = document.querySelector(
     ".product-preview-list--slider"
   );
-  const flkty = new Flickity(productPreviewList, {
-    // options
+  const productPreviewListFlkty = new Flickity(productPreviewList, {
     cellAlign: "left",
     pageDots: false,
     imagesLoaded: true,
     contain: true,
     arrowShape: "M62.1 89.6L23.5 50l39.6-39.6 3.4 3.4L30.2 50l36.3 36.2z",
   });
+
+  if (isMobile()) {
+    const productImagesList = document.querySelector(
+      ".product-images__list"
+    );
+    const productImagesListFlkty = new Flickity(productImagesList, {
+      imagesLoaded: true,
+      contain: true,
+      prevNextButtons: false
+    });
+  }
+
+  
 });
 /***********************
  Flickity END

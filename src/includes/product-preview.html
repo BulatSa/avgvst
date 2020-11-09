@@ -4,20 +4,20 @@
     <span class="product-preview__title h3">@@title.text</span>
     }
     @@if (descr.value) {
-      <span class="product-preview__descr">@@descr.value</span>
-      }
+    <span class="product-preview__descr">@@descr.value</span>
+    }
     @@if (price.value) {
     <span class="product-preview__price">@@price.value</span>
     }
     <img class="product-preview__img" src="@@img.src" alt="@@title.text">
   </a>
   @@if (title.text && price.value) {
-    <a href="#" class="product-preview__favorite">
-      <svg width="20" height="18" fill="rgba(0,0,0,0)" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M1 5.912C1 3.2 3.149 1 5.8 1 7.607 1 9.181 2.022 10 3.532 10.819 2.022 12.393 1 14.2 1 16.851 1 19 3.2 19 5.912 19 12 10 17 10 17S1 12 1 5.912z"
-          stroke="#000" stroke-linecap="round" />
-      </svg>
-    </a>
+  <a href="#" class="product-preview__favorite">
+    <svg width="20" height="18" fill="rgba(0,0,0,0)" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M1 5.912C1 3.2 3.149 1 5.8 1 7.607 1 9.181 2.022 10 3.532 10.819 2.022 12.393 1 14.2 1 16.851 1 19 3.2 19 5.912 19 12 10 17 10 17S1 12 1 5.912z"
+        stroke="#000" stroke-linecap="round" />
+    </svg>
+  </a>
   }
 </div>
