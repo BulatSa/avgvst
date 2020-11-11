@@ -7,6 +7,10 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  &+.footer-page-wrap {
+    margin-top: -1px;
+  }
 }
 
 .catalog-pagination__list {

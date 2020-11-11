@@ -1,3 +1,14 @@
-.product-info {}
+.product-info {
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #000;
+  }
+  
+}
 
 

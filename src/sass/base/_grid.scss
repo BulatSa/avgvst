@@ -196,18 +196,6 @@ body {
   }
 }
 
-.clearfix {
-  &:before {
-    content: " ";
-    display: table;
-  }
-  &:after {
-    content: " ";
-    display: table;
-    clear: both;
-  }
-}
-
 .img-responsive {
   width: 100%;
   height: auto;

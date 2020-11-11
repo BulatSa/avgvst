@@ -51,3 +51,44 @@
     }
   }
 }
+
+.icon-done {
+  &:hover {
+    background: inherit;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    width: 4px;
+    height: 8px;
+    border-bottom: 1px solid #000;
+    border-right: 1px solid #000;
+    transform: rotate(35deg) skew(0deg, 10deg);
+  }
+}
+
+.icon-open-popup {
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #000;
+  }
+  &:before {
+    top: 2px;
+    left: 4px;
+  }
+  &:after {
+    top: 4px;
+    left: 2px;
+    border-top: 1px solid rgba(0,0,0,0);
+    border-right: 1px solid rgba(0,0,0,0);
+  }
+}

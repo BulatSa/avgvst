@@ -1,7 +1,11 @@
 .catalog-more {
   position: relative;
   border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
   text-align: center;
+  &+.footer-page-wrap {
+    margin-top: -1px;
+  }
   a {
     display: block;
     padding: 36px 0;
