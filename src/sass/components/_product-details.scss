@@ -12,6 +12,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 24px;
   text-align: center;
   font-size: 18px;
   line-height: 20px;
@@ -52,6 +53,30 @@
       }
     }
   }
+}
+
+.product-details__options {
+  margin-bottom: 8px;
+  border-top: 1px solid #000;
+}
+
+.product-details__option {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #000;
+}
+
+.product-details__option-title {
+  width: 25%;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $gray-deep;
+}
+
+.product-details__option-choice {
+  width: 75%;
 }
 
 .product-details__buttons {
@@ -169,7 +194,7 @@
     .icon-16 {
       position: relative;
       top: 3px;
-    } 
+    }
   }
   .icon-16 {
     margin-left: 2px;

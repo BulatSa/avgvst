@@ -550,9 +550,12 @@ $(document).ready(function () {
     const element = select.element;
 
     const title = element.dataset.title;
+    const descr = element.dataset.descr;
     const $select = $(`
       <span class="title">${title}</span>
+      ${descr ? `<span class="descr">${descr}</span>` : ""}
     `);
+
     return $select;
   };
 
@@ -931,17 +934,13 @@ $(function () {
   });
 
   if (isMobile()) {
-    const productImagesList = document.querySelector(
-      ".product-images__list"
-    );
+    const productImagesList = document.querySelector(".product-images__list");
     const productImagesListFlkty = new Flickity(productImagesList, {
       imagesLoaded: true,
       contain: true,
-      prevNextButtons: false
+      prevNextButtons: false,
     });
   }
-
-  
 });
 /***********************
  Flickity END
