@@ -447,11 +447,13 @@ textarea {
     .select2-selection--single {
       height: auto;
       .select2-selection__rendered {
-        padding: 16px 8px;
+        padding: 19px 8px 17px;
         padding-right: 35px;
         border-left: 1px solid rgba(0, 0, 0, 0);
         border-right: 1px solid rgba(0, 0, 0, 0);
+        border-bottom: none;
         white-space: normal;
+        text-align: right;
         background: #fff;
         transition: all 0.3s ease;
         @include res(m) {
@@ -485,11 +487,12 @@ textarea {
         position: absolute;
         top: 50%;
         right: 8px;
-        width: 24px;
-        height: 24px;
+        width: 20px;
+        height: 20px;
         border: 1px solid #000;
         border-radius: 50%;
-        transition: background 0.3s ease, opacity 0.3s ease, border-color 0.3s ease;
+        transition: background 0.3s ease, opacity 0.3s ease,
+          border-color 0.3s ease;
         transform: translate3d(0, -50%, 0);
         &:before {
           content: "";
@@ -497,8 +500,8 @@ textarea {
           top: calc(50% - 2px);
           left: 50%;
           display: block;
-          width: 10px;
-          height: 10px;
+          width: 8px;
+          height: 8px;
           border: 1px solid rgba(0, 0, 0, 0);
           border-right: 1px solid rgba(0, 0, 0, 1);
           border-bottom: 1px solid rgba(0, 0, 0, 1);
@@ -512,7 +515,7 @@ textarea {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      padding: 16px 8px;
+      padding: 18px 8px;
       border-bottom: 1px solid $gray-light;
       background: #fff;
       @include res(m) {
@@ -553,9 +556,15 @@ textarea {
       }
       .select2-selection--single {
         .select2-selection__rendered {
+          text-align: left;
           border-left-color: #000;
           border-right-color: #000;
           background: $yellow;
+          span {
+            &.descr {
+              display: block;
+            }
+          }
         }
         .select2-selection__arrow {
           opacity: 0;
