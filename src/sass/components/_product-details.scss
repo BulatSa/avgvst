@@ -66,7 +66,7 @@
   padding: 20px 8px;
   border-bottom: 1px solid #000;
   @include res(m) {
-    padding: 16px 8px;
+    padding: 16px 0px;
   }
   & > .product-details__option-title {
     width: 25%;
@@ -81,6 +81,28 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: $gray-deep;
+  &--link {
+    display: inline-flex;
+    align-items: center;
+    span {
+      transition: all 0.3s ease;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        span {
+          color: #000;
+        }
+        .icon-info {
+          background: #000;
+          svg {
+            path {
+              fill: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 .product-details__option-popup {
@@ -100,7 +122,7 @@
     pointer-events: none;
     margin-bottom: -1px;
   }
-  @media(hover: hover) and (pointer: fine) {
+  @media (hover: hover) and (pointer: fine) {
     &:hover {
       span {
         border-color: rgba(0, 0, 0, 0);
