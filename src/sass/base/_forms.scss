@@ -448,8 +448,10 @@ textarea {
       height: auto;
       .select2-selection__rendered {
         padding: 16px 8px;
+        padding-right: 35px;
         border-left: 1px solid rgba(0, 0, 0, 0);
         border-right: 1px solid rgba(0, 0, 0, 0);
+        white-space: normal;
         background: #fff;
         transition: all 0.3s ease;
         @include res(m) {
@@ -457,6 +459,13 @@ textarea {
         }
         &:hover {
           background: $gray-light;
+          & + .select2-selection__arrow {
+            background: #000;
+            &:before {
+              border-right: 1px solid #fff;
+              border-bottom: 1px solid #fff;
+            }
+          }
         }
         img {
           display: block;
@@ -467,27 +476,48 @@ textarea {
           line-height: 16px;
           letter-spacing: 0.1em;
           text-transform: uppercase;
+          &.descr {
+            display: none;
+          }
         }
       }
       .select2-selection__arrow {
         position: absolute;
-        top: calc(50% - 4px);
-        right: 20px;
-        width: 10px;
-        height: 10px;
-        border: 1px solid rgba(0, 0, 0, 0);
-        border-right: 1px solid rgba(0, 0, 0, 1);
-        border-bottom: 1px solid rgba(0, 0, 0, 1);
-        transform: translate3d(0, -50%, 0) rotate(45deg);
-        transition: all 0.3s ease;
+        top: 50%;
+        right: 8px;
+        width: 24px;
+        height: 24px;
+        border: 1px solid #000;
+        border-radius: 50%;
+        transition: background 0.3s ease, opacity 0.3s ease, border-color 0.3s ease;
+        transform: translate3d(0, -50%, 0);
+        &:before {
+          content: "";
+          position: absolute;
+          top: calc(50% - 2px);
+          left: 50%;
+          display: block;
+          width: 10px;
+          height: 10px;
+          border: 1px solid rgba(0, 0, 0, 0);
+          border-right: 1px solid rgba(0, 0, 0, 1);
+          border-bottom: 1px solid rgba(0, 0, 0, 1);
+          transform: translate3d(-50%, -50%, 0) rotate(45deg);
+          transition: all 0.3s ease;
+        }
       }
     }
     .select2-results__option,
     .select2-selection__rendered {
-      display: block;
-      padding: 20px 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 16px 8px;
       border-bottom: 1px solid $gray-light;
       background: #fff;
+      @include res(m) {
+        padding: 16px 8px;
+      }
       &:last-child {
         border-bottom: none;
       }
@@ -505,6 +535,17 @@ textarea {
           color: $gray-deep;
         }
       }
+      &[aria-selected="true"] {
+        display: none;
+      }
+      &[aria-disabled="true"] {
+        pointer-events: none;
+        .title {
+          position: relative;
+          text-decoration: line-through;
+          text-decoration-color: #000;
+        }
+      }
     }
     &.select2-container--open {
       &.select2-container--below {
@@ -512,15 +553,20 @@ textarea {
       }
       .select2-selection--single {
         .select2-selection__rendered {
-          border-left-color:#000;
-          border-right-color:#000;
+          border-left-color: #000;
+          border-right-color: #000;
           background: $yellow;
         }
         .select2-selection__arrow {
-          top: calc(50% + 4px);
-          border: 1px solid rgba(0, 0, 0, 1);
-          border-right-color: rgba(0, 0, 0, 0);
-          border-bottom-color: rgba(0, 0, 0, 0);
+          opacity: 0;
+          background: $yellow;
+          border-color: $yellow;
+          &:before {
+            //top: calc(50% + 2px);
+            //border: 1px solid rgba(0, 0, 0, 1);
+            //border-right-color: rgba(0, 0, 0, 0);
+            //border-bottom-color: rgba(0, 0, 0, 0);
+          }
         }
       }
     }

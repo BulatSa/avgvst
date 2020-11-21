@@ -63,11 +63,13 @@
 .product-details__option {
   display: flex;
   align-items: center;
+  padding-left: 8px;
   border-bottom: 1px solid #000;
 }
 
 .product-details__option-title {
   width: 25%;
+  padding-right: 8px;
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.1em;
