@@ -447,7 +447,7 @@ textarea {
     .select2-selection--single {
       height: auto;
       .select2-selection__rendered {
-        padding: 19px 8px 17px;
+        padding: 20px 8px;
         padding-right: 35px;
         border-left: 1px solid rgba(0, 0, 0, 0);
         border-right: 1px solid rgba(0, 0, 0, 0);
@@ -458,6 +458,7 @@ textarea {
         transition: all 0.3s ease;
         @include res(m) {
           padding: 16px 8px;
+          padding-right: 32px;
         }
         &:hover {
           background: $gray-light;
@@ -539,7 +540,7 @@ textarea {
         }
       }
       &[aria-selected="true"] {
-        display: none;
+        //display: none;
       }
       &[aria-disabled="true"] {
         pointer-events: none;
@@ -556,13 +557,13 @@ textarea {
       }
       .select2-selection--single {
         .select2-selection__rendered {
-          text-align: left;
+          //text-align: left;
           border-left-color: #000;
           border-right-color: #000;
-          background: $yellow;
+          //background: $yellow;
           span {
             &.descr {
-              display: block;
+              //display: block;
             }
           }
         }
@@ -728,6 +729,12 @@ textarea {
 }
 
 //style-checkbox
+.style-checkbox-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 1px;
+}
+
 .style-checkbox {
   display: block;
   position: relative;

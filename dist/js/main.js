@@ -604,6 +604,19 @@ $(document).ready(function () {
     templateSelection: formatSelectDefault,
   });
 
+  // Custom Position on Product Card
+  let cardOptionHeight = 0;
+  $(".select2-js--card").on("select2:open", function (e) {
+    cardOptionHeight = e.target.parentElement.offsetHeight;
+    const $dropdownWrap = $(
+      ".select2-container--avgvst-card .select2-dropdown"
+    ).parent();
+    const topPos = parseInt($dropdownWrap.css("top")) - cardOptionHeight + 1;
+    setTimeout(() => {
+      $dropdownWrap.css("top", `${topPos}px`);
+    }, 0);
+  });
+
   $(".select2-js--horoscope").select2({
     width: "100%",
     scrollAfterSelect: true,
