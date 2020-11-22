@@ -2360,12 +2360,60 @@ select:-webkit-autofill:focus {
   background: #000;
 }
 
-/* line 38, src/sass/base/_icons.scss */
+/* line 35, src/sass/base/_icons.scss */
+.icon-plus {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+}
+
+/* line 43, src/sass/base/_icons.scss */
+.icon-plus:hover {
+  background: #000;
+}
+
+/* line 45, src/sass/base/_icons.scss */
+.icon-plus:hover:before, .icon-plus:hover:after {
+  background: #fff;
+}
+
+/* line 50, src/sass/base/_icons.scss */
+.icon-plus:before, .icon-plus:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  background: #000;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+}
+
+/* line 61, src/sass/base/_icons.scss */
+.icon-plus:before {
+  width: 9px;
+  height: 1px;
+}
+
+/* line 65, src/sass/base/_icons.scss */
+.icon-plus:after {
+  width: 1px;
+  height: 9px;
+}
+
+/* line 74, src/sass/base/_icons.scss */
 .icon-info:hover svg path {
   fill: #fff;
 }
 
-/* line 43, src/sass/base/_icons.scss */
+/* line 79, src/sass/base/_icons.scss */
 .icon-info svg {
   position: absolute;
   top: 50%;
@@ -2374,21 +2422,21 @@ select:-webkit-autofill:focus {
           transform: translate3d(-50%, -50%, 0);
 }
 
-/* line 48, src/sass/base/_icons.scss */
+/* line 84, src/sass/base/_icons.scss */
 .icon-info svg path {
   fill: #000;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-/* line 56, src/sass/base/_icons.scss */
+/* line 92, src/sass/base/_icons.scss */
 .icon-done:hover {
   background: inherit;
 }
 
-/* line 59, src/sass/base/_icons.scss */
+/* line 95, src/sass/base/_icons.scss */
 .icon-done:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 2px;
   left: 5px;
@@ -2400,7 +2448,7 @@ select:-webkit-autofill:focus {
           transform: rotate(35deg) skew(0deg, 10deg);
 }
 
-/* line 72, src/sass/base/_icons.scss */
+/* line 108, src/sass/base/_icons.scss */
 .icon-open-popup {
   position: relative;
   display: inline-block;
@@ -2408,22 +2456,22 @@ select:-webkit-autofill:focus {
   height: 16px;
 }
 
-/* line 77, src/sass/base/_icons.scss */
+/* line 113, src/sass/base/_icons.scss */
 .icon-open-popup:before, .icon-open-popup:after {
-  content: '';
+  content: "";
   position: absolute;
   width: 10px;
   height: 10px;
   border: 1px solid #000;
 }
 
-/* line 84, src/sass/base/_icons.scss */
+/* line 121, src/sass/base/_icons.scss */
 .icon-open-popup:before {
   top: 2px;
   left: 4px;
 }
 
-/* line 88, src/sass/base/_icons.scss */
+/* line 125, src/sass/base/_icons.scss */
 .icon-open-popup:after {
   top: 4px;
   left: 2px;
@@ -5741,27 +5789,108 @@ button::-moz-focus-inner {
 }
 
 /* line 285, src/sass/base/_modals.scss */
+.modal-accordion-list {
+  padding-top: 40px;
+}
+
+@media (max-width: 820px) {
+  /* line 285, src/sass/base/_modals.scss */
+  .modal-accordion-list {
+    margin: 0 -16px 16px;
+  }
+}
+
+/* line 292, src/sass/base/_modals.scss */
+.modal-accordion-list__item {
+  border-top: 1px solid #000;
+}
+
+/* line 294, src/sass/base/_modals.scss */
+.modal-accordion-list__item:last-child {
+  border-bottom: 1px solid #000;
+}
+
+/* line 299, src/sass/base/_modals.scss */
+.modal-accordion-list__item.open .icon-plus:after {
+  opacity: 0;
+}
+
+/* line 306, src/sass/base/_modals.scss */
+.modal-accordion-list__item-title {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 0;
+  cursor: pointer;
+}
+
+@media (max-width: 820px) {
+  /* line 306, src/sass/base/_modals.scss */
+  .modal-accordion-list__item-title {
+    padding: 20px 16px;
+  }
+}
+
+/* line 317, src/sass/base/_modals.scss */
+.modal-accordion-list__item-title:hover .icon-plus {
+  background: #000;
+}
+
+/* line 319, src/sass/base/_modals.scss */
+.modal-accordion-list__item-title:hover .icon-plus:before, .modal-accordion-list__item-title:hover .icon-plus:after {
+  background: #fff;
+}
+
+/* line 325, src/sass/base/_modals.scss */
+.modal-accordion-list__item-title span {
+  display: block;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 820px) {
+  /* line 334, src/sass/base/_modals.scss */
+  .modal-accordion-list__item-info {
+    padding: 0 16px;
+  }
+}
+
+/* line 339, src/sass/base/_modals.scss */
+.modal-accordion-list__item-info .modal-stnd-info:first-child {
+  padding-top: 4px;
+}
+
+/* line 348, src/sass/base/_modals.scss */
 .modal-available-store {
   padding-top: 40px;
   padding-bottom: 32px;
 }
 
-/* line 288, src/sass/base/_modals.scss */
+/* line 351, src/sass/base/_modals.scss */
 .modal-available-store ul {
   padding-bottom: 40px;
 }
 
-/* line 291, src/sass/base/_modals.scss */
+/* line 354, src/sass/base/_modals.scss */
 .modal-available-store li {
   border-bottom: 1px solid #000;
 }
 
-/* line 293, src/sass/base/_modals.scss */
+/* line 356, src/sass/base/_modals.scss */
 .modal-available-store li:first-child {
   border-top: 1px solid #000;
 }
 
-/* line 297, src/sass/base/_modals.scss */
+/* line 360, src/sass/base/_modals.scss */
 .modal-available-store .address {
   display: block;
   padding: 16px 8px;
@@ -5769,12 +5898,12 @@ button::-moz-focus-inner {
   transition: all 0.3s ease;
 }
 
-/* line 301, src/sass/base/_modals.scss */
+/* line 364, src/sass/base/_modals.scss */
 .modal-available-store .address:hover {
   background: #FFD453;
 }
 
-/* line 304, src/sass/base/_modals.scss */
+/* line 367, src/sass/base/_modals.scss */
 .modal-available-store .address span {
   display: block;
   padding-bottom: 2px;
@@ -5785,13 +5914,13 @@ button::-moz-focus-inner {
   text-transform: uppercase;
 }
 
-/* line 313, src/sass/base/_modals.scss */
+/* line 376, src/sass/base/_modals.scss */
 .modal-available-store .address p {
   font-size: 16px;
   line-height: 20px;
 }
 
-/* line 318, src/sass/base/_modals.scss */
+/* line 381, src/sass/base/_modals.scss */
 .modal-available-store .all {
   font-size: 16px;
   line-height: 20px;
@@ -5800,7 +5929,7 @@ button::-moz-focus-inner {
   transition: all 0.3s ease;
 }
 
-/* line 323, src/sass/base/_modals.scss */
+/* line 386, src/sass/base/_modals.scss */
 .modal-available-store .all:hover {
   border-color: rgba(0, 0, 0, 0);
 }

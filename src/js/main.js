@@ -931,6 +931,38 @@ $(function () {
  ***********************/
 
 /***********************
+ Modal Accordion List BEGIN
+ ***********************/
+$(function () {
+  if ($(".modal-accordion-list__item-title").length) {
+    const answerSelector = ".modal-accordion-list__item-info";
+    const questionItemSelector = ".modal-accordion-list__item";
+    const questionTitleSelector = ".modal-accordion-list__item-title";
+
+    $(`${answerSelector}`).slideUp();
+    $(`${questionItemSelector}.open`).find(`${answerSelector}`).slideToggle();
+
+    $(`${questionTitleSelector}`).on("click", function () {
+      const $this = $(this);
+      const $faqLists = $this.parents(`.modal-accordion-list`);
+      const $otherItems = $faqLists
+        .find(`${questionTitleSelector}`)
+        .not($this)
+        .closest(`${questionItemSelector}`);
+
+      $otherItems.removeClass("open");
+      $otherItems.find(`${answerSelector}`).slideUp();
+
+      $this.next(`${answerSelector}`).slideToggle();
+      $this.closest(`${questionItemSelector}`).toggleClass("open");
+    });
+  }
+});
+/***********************
+ Modal Accordion List END
+ ***********************/
+
+/***********************
  Flickity BEGIN
  ***********************/
 $(function () {

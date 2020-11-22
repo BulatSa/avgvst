@@ -32,6 +32,42 @@
   }
 }
 
+.icon-plus {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+  &:hover {
+    background: #000;
+    &:before,
+    &:after {
+      background: #fff;
+    }
+  }
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    background: #000;
+    transition: all 0.3s ease;
+    transform: translate3d(-50%, -50%, 0);
+  }
+  &:before {
+    width: 9px;
+    height: 1px;
+  }
+  &:after {
+    width: 1px;
+    height: 9px;
+  }
+}
+
 .icon-info {
   &:hover {
     svg {
@@ -57,7 +93,7 @@
     background: inherit;
   }
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     top: 2px;
     left: 5px;
@@ -74,8 +110,9 @@
   display: inline-block;
   width: 16px;
   height: 16px;
-  &:before, &:after {
-    content: '';
+  &:before,
+  &:after {
+    content: "";
     position: absolute;
     width: 10px;
     height: 10px;
@@ -88,7 +125,7 @@
   &:after {
     top: 4px;
     left: 2px;
-    border-top: 1px solid rgba(0,0,0,0);
-    border-right: 1px solid rgba(0,0,0,0);
+    border-top: 1px solid rgba(0, 0, 0, 0);
+    border-right: 1px solid rgba(0, 0, 0, 0);
   }
 }

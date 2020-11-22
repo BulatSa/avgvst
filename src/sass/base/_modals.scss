@@ -282,6 +282,69 @@ body {
   }
 }
 
+.modal-accordion-list {
+  padding-top: 40px;
+  @include res(m) {
+    margin: 0 -16px 16px;
+  }
+}
+
+.modal-accordion-list__item {
+  border-top: 1px solid #000;
+  &:last-child {
+    border-bottom: 1px solid #000;
+  }
+  &.open {
+    .icon-plus {
+      &:after {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.modal-accordion-list__item-title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  cursor: pointer;
+  @include res(m) {
+    padding: 20px 16px;
+  }
+  &:hover {
+    .icon-plus {
+      background: #000;
+      &:before,
+      &:after {
+        background: #fff;
+      }
+    }
+  }
+  span {
+    display: block;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+}
+
+.modal-accordion-list__item-info {
+  @include res(m) {
+    padding: 0 16px;
+  }
+  .modal-stnd-info {
+    &:first-child {
+      padding-top: 4px;
+    }
+    &:last-child {
+      //padding-bottom: 0;
+    }
+  }
+}
+
 .modal-available-store {
   padding-top: 40px;
   padding-bottom: 32px;
