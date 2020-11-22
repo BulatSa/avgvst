@@ -132,3 +132,35 @@ body {
     text-transform: uppercase;
   }
 }
+
+.modal-snap-type {
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 1px solid #000;
+  &:last-child {
+    margin-bottom: 26px;
+  }
+}
+
+.modal-snap-type__title {
+  padding-bottom: 24px;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.modal-snap-type__img {
+  padding-bottom: 16px;
+  img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.modal-snap-type__descr {
+  font-size: 14px;
+  line-height: 18px;
+}

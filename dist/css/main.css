@@ -5536,6 +5536,46 @@ button::-moz-focus-inner {
   text-transform: uppercase;
 }
 
+/* line 136, src/sass/base/_modals.scss */
+.modal-snap-type {
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 1px solid #000;
+}
+
+/* line 140, src/sass/base/_modals.scss */
+.modal-snap-type:last-child {
+  margin-bottom: 26px;
+}
+
+/* line 145, src/sass/base/_modals.scss */
+.modal-snap-type__title {
+  padding-bottom: 24px;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* line 153, src/sass/base/_modals.scss */
+.modal-snap-type__img {
+  padding-bottom: 16px;
+}
+
+/* line 155, src/sass/base/_modals.scss */
+.modal-snap-type__img img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 163, src/sass/base/_modals.scss */
+.modal-snap-type__descr {
+  font-size: 14px;
+  line-height: 18px;
+}
+
 /* line 3, src/sass/components/_header.scss */
 body.fixed-menu .header-page-sticky {
   position: fixed;
