@@ -5154,26 +5154,37 @@ button::-moz-focus-inner {
   /* line 68, src/sass/base/_buttons.scss */
   .btn--mini {
     font-size: 16px;
-    line-height: 1.25;
+    line-height: 20px;
   }
 }
 
-/* line 77, src/sass/base/_buttons.scss */
+@media (max-width: 820px) {
+  /* line 74, src/sass/base/_buttons.scss */
+  .btn--mini-m {
+    padding: 12px 16px 12px;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.1em;
+  }
+}
+
+/* line 86, src/sass/base/_buttons.scss */
 .btn-wrap .btn {
   margin-bottom: 8px;
 }
 
-/* line 80, src/sass/base/_buttons.scss */
+/* line 89, src/sass/base/_buttons.scss */
 .btn-wrap--center {
   text-align: center;
 }
 
-/* line 82, src/sass/base/_buttons.scss */
+/* line 91, src/sass/base/_buttons.scss */
 .btn-wrap--center .btn {
   width: 100%;
 }
 
-/* line 88, src/sass/base/_buttons.scss */
+/* line 97, src/sass/base/_buttons.scss */
 .soc-block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5183,24 +5194,24 @@ button::-moz-focus-inner {
   margin-bottom: 24px;
 }
 
-/* line 92, src/sass/base/_buttons.scss */
+/* line 101, src/sass/base/_buttons.scss */
 .soc-block a {
   padding: 8px;
   margin-right: 16px;
 }
 
-/* line 95, src/sass/base/_buttons.scss */
+/* line 104, src/sass/base/_buttons.scss */
 .soc-block a:last-child {
   margin-right: 0;
 }
 
-/* line 99, src/sass/base/_buttons.scss */
+/* line 108, src/sass/base/_buttons.scss */
 .soc-block a:hover img {
   -webkit-filter: brightness(1);
           filter: brightness(1);
 }
 
-/* line 104, src/sass/base/_buttons.scss */
+/* line 113, src/sass/base/_buttons.scss */
 .soc-block img {
   display: block;
   max-width: 24px;
@@ -5211,7 +5222,7 @@ button::-moz-focus-inner {
   transition: all 0.3s ease;
 }
 
-/* line 111, src/sass/base/_buttons.scss */
+/* line 120, src/sass/base/_buttons.scss */
 .soc-block--center {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -9212,38 +9223,43 @@ body.scroll-down .header-page-sticky {
   border-bottom: none;
 }
 
-/* line 323, src/sass/components/_product-details.scss */
+/* line 322, src/sass/components/_product-details.scss */
+.product-details__text .color-gray-deep:hover {
+  color: #000;
+}
+
+/* line 324, src/sass/components/_product-details.scss */
 .product-details__text .color-gray-deep:hover .icon-info {
   background: #000;
 }
 
-/* line 326, src/sass/components/_product-details.scss */
+/* line 327, src/sass/components/_product-details.scss */
 .product-details__text .color-gray-deep:hover .icon-info svg path {
   fill: #fff;
 }
 
-/* line 332, src/sass/components/_product-details.scss */
+/* line 333, src/sass/components/_product-details.scss */
 .product-details__text .color-gray-deep .icon-16 {
   position: relative;
   top: 3px;
 }
 
-/* line 337, src/sass/components/_product-details.scss */
+/* line 338, src/sass/components/_product-details.scss */
 .product-details__text .icon-16 {
   margin-left: 2px;
 }
 
-/* line 339, src/sass/components/_product-details.scss */
+/* line 340, src/sass/components/_product-details.scss */
 .product-details__text .icon-16:hover {
   background: inherit;
 }
 
-/* line 346, src/sass/components/_product-details.scss */
+/* line 347, src/sass/components/_product-details.scss */
 .product-details__text .icon-info:hover svg path {
   fill: #000;
 }
 
-/* line 354, src/sass/components/_product-details.scss */
+/* line 355, src/sass/components/_product-details.scss */
 .product-details__consultant {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9258,7 +9274,7 @@ body.scroll-down .header-page-sticky {
   text-transform: uppercase;
 }
 
-/* line 362, src/sass/components/_product-details.scss */
+/* line 363, src/sass/components/_product-details.scss */
 .product-details__consultant .soc-block {
   min-width: 90px;
   -webkit-box-pack: end;
@@ -9268,22 +9284,22 @@ body.scroll-down .header-page-sticky {
   margin-left: 10px;
 }
 
-/* line 367, src/sass/components/_product-details.scss */
+/* line 368, src/sass/components/_product-details.scss */
 .product-details__consultant .soc-block a {
   margin-right: 8px;
 }
 
-/* line 369, src/sass/components/_product-details.scss */
+/* line 370, src/sass/components/_product-details.scss */
 .product-details__consultant .soc-block a:last-child {
   margin-right: 0;
 }
 
-/* line 373, src/sass/components/_product-details.scss */
+/* line 374, src/sass/components/_product-details.scss */
 .product-details__consultant .soc-block img {
   max-width: 20px;
 }
 
-/* line 379, src/sass/components/_product-details.scss */
+/* line 380, src/sass/components/_product-details.scss */
 .product-details__other-products {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9295,7 +9311,7 @@ body.scroll-down .header-page-sticky {
   border-left: 1px solid #E5E5E5;
 }
 
-/* line 385, src/sass/components/_product-details.scss */
+/* line 386, src/sass/components/_product-details.scss */
 .product-details__other-products p {
   font-size: 12px;
   line-height: 16px;
@@ -9303,7 +9319,7 @@ body.scroll-down .header-page-sticky {
   text-transform: uppercase;
 }
 
-/* line 391, src/sass/components/_product-details.scss */
+/* line 392, src/sass/components/_product-details.scss */
 .product-details__other-products a {
   position: relative;
   display: block;
@@ -9314,18 +9330,18 @@ body.scroll-down .header-page-sticky {
 }
 
 @media (max-width: 820px) {
-  /* line 391, src/sass/components/_product-details.scss */
+  /* line 392, src/sass/components/_product-details.scss */
   .product-details__other-products a {
     min-height: 150px;
   }
 }
 
-/* line 402, src/sass/components/_product-details.scss */
+/* line 403, src/sass/components/_product-details.scss */
 .product-details__other-products a:hover:after {
   border-color: #000 !important;
 }
 
-/* line 406, src/sass/components/_product-details.scss */
+/* line 407, src/sass/components/_product-details.scss */
 .product-details__other-products a:after {
   content: "";
   position: absolute;
@@ -9341,12 +9357,12 @@ body.scroll-down .header-page-sticky {
   pointer-events: none;
 }
 
-/* line 420, src/sass/components/_product-details.scss */
+/* line 421, src/sass/components/_product-details.scss */
 .product-details__other-products a:nth-child(-n + 3):after {
   border-top: 1px solid #E5E5E5;
 }
 
-/* line 424, src/sass/components/_product-details.scss */
+/* line 425, src/sass/components/_product-details.scss */
 .product-details__other-products a img {
   display: block;
   max-width: 78px;
@@ -9356,7 +9372,7 @@ body.scroll-down .header-page-sticky {
   margin: 0 auto;
 }
 
-/* line 432, src/sass/components/_product-details.scss */
+/* line 433, src/sass/components/_product-details.scss */
 .product-details__other-products a span {
   display: block;
   margin-top: 2px;
@@ -9365,6 +9381,98 @@ body.scroll-down .header-page-sticky {
   line-height: 16px;
   text-align: center;
   text-transform: none;
+}
+
+/* line 445, src/sass/components/_product-details.scss */
+.product-details__gift {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 16px;
+}
+
+/* line 451, src/sass/components/_product-details.scss */
+.product-details__gift-info {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-right: 12px;
+}
+
+@media (max-width: 820px) {
+  /* line 451, src/sass/components/_product-details.scss */
+  .product-details__gift-info {
+    padding-right: 6px;
+  }
+}
+
+/* line 462, src/sass/components/_product-details.scss */
+.product-details__gift-text p {
+  padding-bottom: 16px;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+/* line 467, src/sass/components/_product-details.scss */
+.product-details__gift-text span {
+  display: block;
+  padding-bottom: 16px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+/* line 475, src/sass/components/_product-details.scss */
+.product-details__gift-price {
+  display: block;
+  margin-top: auto;
+  padding-bottom: 8px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+/* line 483, src/sass/components/_product-details.scss */
+.product-details__gift-img {
+  width: 50%;
+  padding-left: 12px;
+}
+
+@media (max-width: 820px) {
+  /* line 483, src/sass/components/_product-details.scss */
+  .product-details__gift-img {
+    padding-left: 6px;
+  }
+}
+
+/* line 489, src/sass/components/_product-details.scss */
+.product-details__gift-img a {
+  display: block;
+  overflow: hidden;
+}
+
+/* line 493, src/sass/components/_product-details.scss */
+.product-details__gift-img a:hover img {
+  -webkit-transform: translate3d(0, 0, 0) scale(1.05);
+          transform: translate3d(0, 0, 0) scale(1.05);
+}
+
+/* line 498, src/sass/components/_product-details.scss */
+.product-details__gift-img img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  -webkit-transition: all 2.2s cubic-bezier(0.3, 0.1, 0.7, 0.9);
+  transition: all 2.2s cubic-bezier(0.3, 0.1, 0.7, 0.9);
+  -webkit-transform: translate3d(0, 0, 0) scale(1);
+          transform: translate3d(0, 0, 0) scale(1);
 }
 
 /* line 4, src/sass/components/_footer.scss */
