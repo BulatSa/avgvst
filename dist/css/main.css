@@ -5260,8 +5260,8 @@ button::-moz-focus-inner {
 /* line 13, src/sass/base/_modals.scss */
 .modal {
   display: none;
-  width: 500px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 480px;
   will-change: transform, opacity;
   overflow: visible !important;
 }
@@ -5537,19 +5537,20 @@ button::-moz-focus-inner {
 }
 
 /* line 136, src/sass/base/_modals.scss */
-.modal-snap-type {
-  margin-top: 40px;
+.modal-stnd-info {
   padding-top: 40px;
-  border-top: 1px solid #000;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #000;
 }
 
 /* line 140, src/sass/base/_modals.scss */
-.modal-snap-type:last-child {
-  margin-bottom: 26px;
+.modal-stnd-info:last-child {
+  border-bottom: none;
 }
 
 /* line 145, src/sass/base/_modals.scss */
-.modal-snap-type__title {
+.modal-stnd-info__title {
+  display: block;
   padding-bottom: 24px;
   font-size: 12px;
   line-height: 16px;
@@ -5557,23 +5558,106 @@ button::-moz-focus-inner {
   text-transform: uppercase;
 }
 
-/* line 153, src/sass/base/_modals.scss */
-.modal-snap-type__img {
+/* line 154, src/sass/base/_modals.scss */
+.modal-stnd-info__img {
   padding-bottom: 16px;
 }
 
-/* line 155, src/sass/base/_modals.scss */
-.modal-snap-type__img img {
+/* line 156, src/sass/base/_modals.scss */
+.modal-stnd-info__img img {
   display: block;
   width: 100%;
   max-width: 100%;
   height: auto;
 }
 
-/* line 163, src/sass/base/_modals.scss */
-.modal-snap-type__descr {
+/* line 164, src/sass/base/_modals.scss */
+.modal-stnd-info__descr {
+  display: block;
+  padding-bottom: 16px;
   font-size: 14px;
   line-height: 18px;
+}
+
+/* line 171, src/sass/base/_modals.scss */
+.modal-stnd-info__link {
+  display: inline-block;
+  margin-bottom: 16px;
+  font-size: 14px;
+  line-height: 18px;
+  border-bottom: 1px solid #000;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* line 178, src/sass/base/_modals.scss */
+.modal-stnd-info__link:hover {
+  border-color: rgba(0, 0, 0, 0);
+}
+
+/* line 183, src/sass/base/_modals.scss */
+.modal-available-store {
+  padding-top: 40px;
+  padding-bottom: 32px;
+}
+
+/* line 186, src/sass/base/_modals.scss */
+.modal-available-store ul {
+  padding-bottom: 40px;
+}
+
+/* line 189, src/sass/base/_modals.scss */
+.modal-available-store li {
+  border-bottom: 1px solid #000;
+}
+
+/* line 191, src/sass/base/_modals.scss */
+.modal-available-store li:first-child {
+  border-top: 1px solid #000;
+}
+
+/* line 195, src/sass/base/_modals.scss */
+.modal-available-store .address {
+  display: block;
+  padding: 16px 8px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* line 199, src/sass/base/_modals.scss */
+.modal-available-store .address:hover {
+  background: #FFD453;
+}
+
+/* line 202, src/sass/base/_modals.scss */
+.modal-available-store .address span {
+  display: block;
+  padding-bottom: 2px;
+  color: #818181;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* line 211, src/sass/base/_modals.scss */
+.modal-available-store .address p {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+/* line 216, src/sass/base/_modals.scss */
+.modal-available-store .all {
+  font-size: 16px;
+  line-height: 20px;
+  border-bottom: 1px solid #000;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* line 221, src/sass/base/_modals.scss */
+.modal-available-store .all:hover {
+  border-color: rgba(0, 0, 0, 0);
 }
 
 /* line 3, src/sass/components/_header.scss */
