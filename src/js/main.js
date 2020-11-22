@@ -907,7 +907,7 @@ $(function () {
  ***********************/
 $(function () {
   const productPreviewFavoriteList = document.querySelectorAll(
-    ".product-preview__favorite"
+    ".product-preview .product-preview-favorite"
   );
 
   if (productPreviewFavoriteList.length) {

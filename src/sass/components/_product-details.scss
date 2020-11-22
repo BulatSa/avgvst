@@ -121,6 +121,7 @@
   .icon-info {
     pointer-events: none;
     margin-bottom: -1px;
+    margin-right: 0;
   }
   @media (hover: hover) and (pointer: fine) {
     &:hover {
@@ -188,7 +189,16 @@
       &--cell {
         width: calc(100% / 6);
         padding: 14px 5px;
-        margin-bottom: -1px;
+        &:nth-child(-n + 6) {
+          @media screen and (min-width: 820px) {
+            border-top: 1px solid $gray;
+          }
+        }
+        &:nth-child(-n + 5) {
+          @include res(m) {
+            border-top: 1px solid $gray;
+          }
+        }
         @include res(m) {
           width: calc(100% / 5);
         }
@@ -198,6 +208,43 @@
 }
 
 .product-details__option-size-head {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 8px;
+}
+
+.product-details__option-snap-wrap {
+  width: 100%;
+  margin-bottom: -4px;
+}
+
+.product-details__option-snap {
+  width: 100%;
+  padding-bottom: 16px;
+  &:last-child {
+    padding-bottom: 0;
+  }
+  .style-checkbox-list {
+    .style-checkbox {
+      &--cell {
+        width: 50%;
+        padding: 14px 5px;
+        border-top: 1px solid $gray;
+        .title {
+          font-size: 12px;
+          line-height: 16px;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+        }
+        .descr {
+          
+        }
+      }
+    }
+  }
+}
+
+.product-details__option-snap-head {
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 8px;
@@ -215,6 +262,9 @@
     padding: 20px;
     background: #000;
     transition: all 0.3s ease;
+    @include res(m) {
+      display: none;
+    }
     &:hover {
       background: $yellow;
       svg {
@@ -491,7 +541,7 @@
     overflow: hidden;
     &:hover {
       img {
-        transform: translate3d(0,0,0) scale(1.05);
+        transform: translate3d(0, 0, 0) scale(1.05);
       }
     }
   }
@@ -500,7 +550,7 @@
     max-width: 100%;
     width: 100%;
     height: auto;
-    transition: all 2.2s cubic-bezier(.3,.1,.7,.9);
-    transform: translate3d(0,0,0) scale(1);
+    transition: all 2.2s cubic-bezier(0.3, 0.1, 0.7, 0.9);
+    transform: translate3d(0, 0, 0) scale(1);
   }
 }

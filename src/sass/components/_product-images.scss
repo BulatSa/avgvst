@@ -98,3 +98,13 @@
     transition: all 0.3s ease;
   }
 }
+
+.product-images__fav {
+  display: none;
+  @include res(m) {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    display: block;
+  }
+}

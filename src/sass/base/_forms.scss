@@ -733,6 +733,7 @@ textarea {
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 1px;
+  border-left: 1px solid $gray;
 }
 
 .style-checkbox {
@@ -744,13 +745,13 @@ textarea {
   user-select: none;
   &:hover {
     input {
-      &:checked + span {
+      &:checked + .title {
         &:after {
           opacity: 0.65;
         }
       }
     }
-    span {
+    .title {
       &:after {
         //border-right: 1px solid $gray-deep;
         //border-bottom: 1px solid $gray-deep;
@@ -765,7 +766,7 @@ textarea {
     top: 0;
     opacity: 0;
 
-    &:checked + span {
+    &:checked + .title {
       &:before {
         border-color: $yellow;
         background: $yellow;
@@ -775,14 +776,14 @@ textarea {
       }
     }
 
-    &.error + span {
+    &.error + .title {
       &:before {
         border-color: #cc0000;
       }
     }
   }
 
-  span {
+  .title {
     position: relative;
     display: block;
     font-size: 14px;
@@ -830,18 +831,19 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: -1px;
-    margin-right: -1px;
+    flex-direction: column;
+    margin-bottom: 0;
     padding: 14px 5px;
-    border: 1px solid $gray;
+    border-right: 1px solid $gray;
+    border-bottom: 1px solid $gray;
     &:hover {
-      span {
+      .title {
         &:before {
           background: $gray-light;
         }
       }
     }
-    span {
+    .title {
       position: static;
       padding: 0;
       text-align: center;
@@ -857,10 +859,21 @@ textarea {
         content: none;
       }
     }
+    .descr {
+      display: block;
+      font-size: 14px;
+      line-height: 18px;
+      color: $gray-deep;
+      transition: all 0.3s ease;
+      z-index: 1;
+    }
     input {
-      &:checked + span {
+      &:checked + .title {
         &:before {
           background: $yellow;
+        }
+        &+.descr {
+          color: #000;
         }
       }
     }

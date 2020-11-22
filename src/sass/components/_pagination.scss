@@ -1,8 +1,5 @@
 .pagination {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-bottom: 24px;
   font-size: 12px;
   line-height: (16/12);
@@ -12,8 +9,6 @@
   z-index: 1;
   a {
     position: relative;
-    display: flex;
-    align-items: center;
     padding: 0 8px;
     &:hover {
       span {
@@ -21,15 +16,21 @@
       }
     }
     &:first-child {
+      padding-left: 13px;
       &:before {
         content: none;
+      }
+      .i-back-link {
+        position: absolute;
+        top: 4px;
+        left: 0;
       }
     }
     &:before {
       content: "∙";
-      position: relative;
+      position: absolute;
       top: -1px;
-      left: -8px;
+      left: -4px;
       font-family: $font;
       font-size: 18px;
       line-height: 16px;
