@@ -49,7 +49,7 @@ body {
 }
 
 .fancybox-bg {
-  background: #8c8e9a;
+  background: rgba(129, 129, 129, 0.8);
 }
 
 .fancybox-close-small,
@@ -137,6 +137,11 @@ body {
   padding-top: 40px;
   padding-bottom: 24px;
   border-bottom: 1px solid #000;
+  @include res(m) {
+    margin: 0 -16px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
   &:last-child {
     border-bottom: none;
   }
@@ -161,6 +166,19 @@ body {
       }
     }
   }
+  &--center {
+    text-align: center;
+  }
+  &--form {
+    .modal-stnd-info__title {
+      padding-bottom: 14px;
+    }
+    .input-label {
+      & + .modal-stnd-info__title {
+        padding-top: 16px;
+      }
+    }
+  }
 }
 
 .modal-stnd-info__title {
@@ -179,9 +197,12 @@ body {
   padding-bottom: 16px;
   img {
     display: block;
-    width: 100%;
     max-width: 100%;
     height: auto;
+    margin: 0 auto;
+  }
+  & + .modal-stnd-info__title {
+    padding-bottom: 8px;
   }
 }
 
@@ -204,6 +225,9 @@ body {
       border-radius: 50%;
       background: #000;
     }
+  }
+  & + .modal-stnd-info__soc {
+    margin-top: 24px;
   }
 }
 
@@ -253,6 +277,28 @@ body {
     .icon-open-popup {
       margin-left: 8px;
     }
+  }
+}
+
+.modal-stnd-info__soc {
+  position: relative;
+  padding: 24px 48px 0;
+  border-top: 1px solid #000;
+  text-align: center;
+  @include res(m) {
+    margin: 0 -16px;
+    padding: 24px 16px 0;
+  }
+  .soc-block {
+    margin-bottom: 0;
+  }
+  p {
+    padding-bottom: 16px;
+    font-size: 12px;
+    line-height: (16/12);
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
   }
 }
 
