@@ -150,6 +150,9 @@ body {
     padding-bottom: 0;
     &:last-child {
       padding-bottom: 24px;
+      .modal-stnd-info__descr {
+        padding-bottom: 16px;
+      }
     }
     .modal-stnd-info__descr {
       &:last-child {
@@ -238,8 +241,10 @@ body {
   line-height: 18px;
   border-bottom: 1px solid #000;
   transition: all 0.3s ease;
-  &:hover {
-    border-color: rgba(0, 0, 0, 0);
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      border-color: rgba(0, 0, 0, 0);
+    }
   }
 }
 
@@ -264,9 +269,11 @@ body {
     @include res(m) {
       padding: 20px 16px;
     }
-    &:hover {
-      span {
-        border-bottom-color: rgba(0, 0, 0, 1);
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        span {
+          border-bottom-color: rgba(0, 0, 0, 1);
+        }
       }
     }
     span {
@@ -359,12 +366,14 @@ body {
   @include res(m) {
     padding: 20px 16px;
   }
-  &:hover {
-    .icon-plus {
-      background: #000;
-      &:before,
-      &:after {
-        background: #fff;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      .icon-plus {
+        background: #000;
+        &:before,
+        &:after {
+          background: #fff;
+        }
       }
     }
   }
@@ -407,8 +416,10 @@ body {
     display: block;
     padding: 16px 8px;
     transition: all 0.3s ease;
-    &:hover {
-      background: $yellow;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        background: $yellow;
+      }
     }
     span {
       display: block;
@@ -429,8 +440,10 @@ body {
     line-height: 20px;
     border-bottom: 1px solid #000;
     transition: all 0.3s ease;
-    &:hover {
-      border-color: rgba(0, 0, 0, 0);
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        border-color: rgba(0, 0, 0, 0);
+      }
     }
   }
 }

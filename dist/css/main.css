@@ -5616,32 +5616,37 @@ button::-moz-focus-inner {
   padding-bottom: 24px;
 }
 
-/* line 155, src/sass/base/_modals.scss */
+/* line 153, src/sass/base/_modals.scss */
+.modal-stnd-info--no-bord:last-child .modal-stnd-info__descr {
+  padding-bottom: 16px;
+}
+
+/* line 158, src/sass/base/_modals.scss */
 .modal-stnd-info--no-bord .modal-stnd-info__descr:last-child {
   padding-bottom: 0;
 }
 
-/* line 161, src/sass/base/_modals.scss */
+/* line 164, src/sass/base/_modals.scss */
 .modal-stnd-info--no-bord .modal-stnd-info__descr ul:last-child li:last-child {
   padding-bottom: 0;
 }
 
-/* line 169, src/sass/base/_modals.scss */
+/* line 172, src/sass/base/_modals.scss */
 .modal-stnd-info--center {
   text-align: center;
 }
 
-/* line 173, src/sass/base/_modals.scss */
+/* line 176, src/sass/base/_modals.scss */
 .modal-stnd-info--form .modal-stnd-info__title {
   padding-bottom: 14px;
 }
 
-/* line 177, src/sass/base/_modals.scss */
+/* line 180, src/sass/base/_modals.scss */
 .modal-stnd-info--form .input-label + .modal-stnd-info__title {
   padding-top: 16px;
 }
 
-/* line 184, src/sass/base/_modals.scss */
+/* line 187, src/sass/base/_modals.scss */
 .modal-stnd-info__title {
   display: block;
   padding-bottom: 24px;
@@ -5651,17 +5656,17 @@ button::-moz-focus-inner {
   text-transform: uppercase;
 }
 
-/* line 191, src/sass/base/_modals.scss */
+/* line 194, src/sass/base/_modals.scss */
 .modal-stnd-info__title--center {
   text-align: center;
 }
 
-/* line 196, src/sass/base/_modals.scss */
+/* line 199, src/sass/base/_modals.scss */
 .modal-stnd-info__img {
   padding-bottom: 16px;
 }
 
-/* line 198, src/sass/base/_modals.scss */
+/* line 201, src/sass/base/_modals.scss */
 .modal-stnd-info__img img {
   display: block;
   max-width: 100%;
@@ -5669,12 +5674,12 @@ button::-moz-focus-inner {
   margin: 0 auto;
 }
 
-/* line 204, src/sass/base/_modals.scss */
+/* line 207, src/sass/base/_modals.scss */
 .modal-stnd-info__img + .modal-stnd-info__title {
   padding-bottom: 8px;
 }
 
-/* line 209, src/sass/base/_modals.scss */
+/* line 212, src/sass/base/_modals.scss */
 .modal-stnd-info__descr {
   display: block;
   padding-bottom: 16px;
@@ -5682,14 +5687,14 @@ button::-moz-focus-inner {
   line-height: 18px;
 }
 
-/* line 214, src/sass/base/_modals.scss */
+/* line 217, src/sass/base/_modals.scss */
 .modal-stnd-info__descr li {
   position: relative;
   padding-left: 18px;
   padding-bottom: 12px;
 }
 
-/* line 218, src/sass/base/_modals.scss */
+/* line 221, src/sass/base/_modals.scss */
 .modal-stnd-info__descr li:before {
   content: "";
   position: absolute;
@@ -5701,12 +5706,12 @@ button::-moz-focus-inner {
   background: #000;
 }
 
-/* line 229, src/sass/base/_modals.scss */
+/* line 232, src/sass/base/_modals.scss */
 .modal-stnd-info__descr + .modal-stnd-info__soc {
   margin-top: 24px;
 }
 
-/* line 234, src/sass/base/_modals.scss */
+/* line 237, src/sass/base/_modals.scss */
 .modal-stnd-info__link {
   display: inline-block;
   margin-bottom: 16px;
@@ -5717,30 +5722,32 @@ button::-moz-focus-inner {
   transition: all 0.3s ease;
 }
 
-/* line 241, src/sass/base/_modals.scss */
-.modal-stnd-info__link:hover {
-  border-color: rgba(0, 0, 0, 0);
+@media (hover: hover) and (pointer: fine) {
+  /* line 245, src/sass/base/_modals.scss */
+  .modal-stnd-info__link:hover {
+    border-color: rgba(0, 0, 0, 0);
+  }
 }
 
-/* line 246, src/sass/base/_modals.scss */
+/* line 251, src/sass/base/_modals.scss */
 .modal-stnd-info__other {
   margin-bottom: 16px;
   border-bottom: 1px solid #000;
 }
 
 @media (max-width: 820px) {
-  /* line 246, src/sass/base/_modals.scss */
+  /* line 251, src/sass/base/_modals.scss */
   .modal-stnd-info__other {
     margin: 0 -16px 16px;
   }
 }
 
-/* line 252, src/sass/base/_modals.scss */
+/* line 257, src/sass/base/_modals.scss */
 .modal-stnd-info__other--last {
   border-bottom: none;
 }
 
-/* line 255, src/sass/base/_modals.scss */
+/* line 260, src/sass/base/_modals.scss */
 .modal-stnd-info__other a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5757,18 +5764,20 @@ button::-moz-focus-inner {
 }
 
 @media (max-width: 820px) {
-  /* line 255, src/sass/base/_modals.scss */
+  /* line 260, src/sass/base/_modals.scss */
   .modal-stnd-info__other a {
     padding: 20px 16px;
   }
 }
 
-/* line 268, src/sass/base/_modals.scss */
-.modal-stnd-info__other a:hover span {
-  border-bottom-color: black;
+@media (hover: hover) and (pointer: fine) {
+  /* line 274, src/sass/base/_modals.scss */
+  .modal-stnd-info__other a:hover span {
+    border-bottom-color: black;
+  }
 }
 
-/* line 272, src/sass/base/_modals.scss */
+/* line 279, src/sass/base/_modals.scss */
 .modal-stnd-info__other a span {
   border-top: 1px solid rgba(0, 0, 0, 0);
   border-bottom: 1px solid rgba(0, 0, 0, 0);
@@ -5776,12 +5785,12 @@ button::-moz-focus-inner {
   transition: all 0.3s ease;
 }
 
-/* line 277, src/sass/base/_modals.scss */
+/* line 284, src/sass/base/_modals.scss */
 .modal-stnd-info__other a .icon-open-popup {
   margin-left: 8px;
 }
 
-/* line 283, src/sass/base/_modals.scss */
+/* line 290, src/sass/base/_modals.scss */
 .modal-stnd-info__soc {
   position: relative;
   padding: 24px 48px 0;
@@ -5790,19 +5799,19 @@ button::-moz-focus-inner {
 }
 
 @media (max-width: 820px) {
-  /* line 283, src/sass/base/_modals.scss */
+  /* line 290, src/sass/base/_modals.scss */
   .modal-stnd-info__soc {
     margin: 0 -16px;
     padding: 24px 16px 0;
   }
 }
 
-/* line 292, src/sass/base/_modals.scss */
+/* line 299, src/sass/base/_modals.scss */
 .modal-stnd-info__soc .soc-block {
   margin-bottom: 0;
 }
 
-/* line 295, src/sass/base/_modals.scss */
+/* line 302, src/sass/base/_modals.scss */
 .modal-stnd-info__soc p {
   padding-bottom: 16px;
   font-size: 12px;
@@ -5812,7 +5821,7 @@ button::-moz-focus-inner {
   text-transform: uppercase;
 }
 
-/* line 305, src/sass/base/_modals.scss */
+/* line 312, src/sass/base/_modals.scss */
 .modal-stnd-info__consultant {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5828,7 +5837,7 @@ button::-moz-focus-inner {
   text-transform: uppercase;
 }
 
-/* line 314, src/sass/base/_modals.scss */
+/* line 321, src/sass/base/_modals.scss */
 .modal-stnd-info__consultant .soc-block {
   min-width: 90px;
   -webkit-box-pack: end;
@@ -5838,49 +5847,49 @@ button::-moz-focus-inner {
   margin-left: 10px;
 }
 
-/* line 319, src/sass/base/_modals.scss */
+/* line 326, src/sass/base/_modals.scss */
 .modal-stnd-info__consultant .soc-block a {
   margin-right: 8px;
 }
 
-/* line 321, src/sass/base/_modals.scss */
+/* line 328, src/sass/base/_modals.scss */
 .modal-stnd-info__consultant .soc-block a:last-child {
   margin-right: 0;
 }
 
-/* line 325, src/sass/base/_modals.scss */
+/* line 332, src/sass/base/_modals.scss */
 .modal-stnd-info__consultant .soc-block img {
   max-width: 20px;
 }
 
-/* line 331, src/sass/base/_modals.scss */
+/* line 338, src/sass/base/_modals.scss */
 .modal-accordion-list {
   padding-top: 40px;
 }
 
 @media (max-width: 820px) {
-  /* line 331, src/sass/base/_modals.scss */
+  /* line 338, src/sass/base/_modals.scss */
   .modal-accordion-list {
     margin: 0 -16px 16px;
   }
 }
 
-/* line 338, src/sass/base/_modals.scss */
+/* line 345, src/sass/base/_modals.scss */
 .modal-accordion-list__item {
   border-top: 1px solid #000;
 }
 
-/* line 340, src/sass/base/_modals.scss */
+/* line 347, src/sass/base/_modals.scss */
 .modal-accordion-list__item:last-child {
   border-bottom: 1px solid #000;
 }
 
-/* line 345, src/sass/base/_modals.scss */
+/* line 352, src/sass/base/_modals.scss */
 .modal-accordion-list__item.open .icon-plus:after {
   opacity: 0;
 }
 
-/* line 352, src/sass/base/_modals.scss */
+/* line 359, src/sass/base/_modals.scss */
 .modal-accordion-list__item-title {
   position: relative;
   display: -webkit-box;
@@ -5897,23 +5906,24 @@ button::-moz-focus-inner {
 }
 
 @media (max-width: 820px) {
-  /* line 352, src/sass/base/_modals.scss */
+  /* line 359, src/sass/base/_modals.scss */
   .modal-accordion-list__item-title {
     padding: 20px 16px;
   }
 }
 
-/* line 363, src/sass/base/_modals.scss */
-.modal-accordion-list__item-title:hover .icon-plus {
-  background: #000;
+@media (hover: hover) and (pointer: fine) {
+  /* line 371, src/sass/base/_modals.scss */
+  .modal-accordion-list__item-title:hover .icon-plus {
+    background: #000;
+  }
+  /* line 373, src/sass/base/_modals.scss */
+  .modal-accordion-list__item-title:hover .icon-plus:before, .modal-accordion-list__item-title:hover .icon-plus:after {
+    background: #fff;
+  }
 }
 
-/* line 365, src/sass/base/_modals.scss */
-.modal-accordion-list__item-title:hover .icon-plus:before, .modal-accordion-list__item-title:hover .icon-plus:after {
-  background: #fff;
-}
-
-/* line 371, src/sass/base/_modals.scss */
+/* line 380, src/sass/base/_modals.scss */
 .modal-accordion-list__item-title span {
   display: block;
   font-size: 12px;
@@ -5923,39 +5933,39 @@ button::-moz-focus-inner {
 }
 
 @media (max-width: 820px) {
-  /* line 380, src/sass/base/_modals.scss */
+  /* line 389, src/sass/base/_modals.scss */
   .modal-accordion-list__item-info {
     padding: 0 16px;
   }
 }
 
-/* line 385, src/sass/base/_modals.scss */
+/* line 394, src/sass/base/_modals.scss */
 .modal-accordion-list__item-info .modal-stnd-info:first-child {
   padding-top: 4px;
 }
 
-/* line 394, src/sass/base/_modals.scss */
+/* line 403, src/sass/base/_modals.scss */
 .modal-available-store {
   padding-top: 40px;
   padding-bottom: 32px;
 }
 
-/* line 397, src/sass/base/_modals.scss */
+/* line 406, src/sass/base/_modals.scss */
 .modal-available-store ul {
   padding-bottom: 40px;
 }
 
-/* line 400, src/sass/base/_modals.scss */
+/* line 409, src/sass/base/_modals.scss */
 .modal-available-store li {
   border-bottom: 1px solid #000;
 }
 
-/* line 402, src/sass/base/_modals.scss */
+/* line 411, src/sass/base/_modals.scss */
 .modal-available-store li:first-child {
   border-top: 1px solid #000;
 }
 
-/* line 406, src/sass/base/_modals.scss */
+/* line 415, src/sass/base/_modals.scss */
 .modal-available-store .address {
   display: block;
   padding: 16px 8px;
@@ -5963,12 +5973,14 @@ button::-moz-focus-inner {
   transition: all 0.3s ease;
 }
 
-/* line 410, src/sass/base/_modals.scss */
-.modal-available-store .address:hover {
-  background: #FFD453;
+@media (hover: hover) and (pointer: fine) {
+  /* line 420, src/sass/base/_modals.scss */
+  .modal-available-store .address:hover {
+    background: #FFD453;
+  }
 }
 
-/* line 413, src/sass/base/_modals.scss */
+/* line 424, src/sass/base/_modals.scss */
 .modal-available-store .address span {
   display: block;
   padding-bottom: 2px;
@@ -5979,13 +5991,13 @@ button::-moz-focus-inner {
   text-transform: uppercase;
 }
 
-/* line 422, src/sass/base/_modals.scss */
+/* line 433, src/sass/base/_modals.scss */
 .modal-available-store .address p {
   font-size: 16px;
   line-height: 20px;
 }
 
-/* line 427, src/sass/base/_modals.scss */
+/* line 438, src/sass/base/_modals.scss */
 .modal-available-store .all {
   font-size: 16px;
   line-height: 20px;
@@ -5994,9 +6006,11 @@ button::-moz-focus-inner {
   transition: all 0.3s ease;
 }
 
-/* line 432, src/sass/base/_modals.scss */
-.modal-available-store .all:hover {
-  border-color: rgba(0, 0, 0, 0);
+@media (hover: hover) and (pointer: fine) {
+  /* line 444, src/sass/base/_modals.scss */
+  .modal-available-store .all:hover {
+    border-color: rgba(0, 0, 0, 0);
+  }
 }
 
 /* line 3, src/sass/components/_header.scss */
