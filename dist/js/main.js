@@ -964,6 +964,49 @@ $(function () {
  ***********************/
 
 /***********************
+ Modal Tabs BEGIN
+ ***********************/
+$(function () {
+  const modalTabs = document.querySelectorAll(".modal-tabs");
+  if (modalTabs.length) {
+    const changeTab = (e) => {
+      const thisElement = e.target;
+      const dataTabId = thisElement.dataset.tab;
+      const modalTabHeadLinks = thisElement.parentElement.querySelectorAll(
+        "[data-tab]"
+      );
+      modalTabHeadLinks.forEach((modalTabHeadLink) => {
+        modalTabHeadLink.classList.remove("active");
+      });
+
+      thisElement.classList.add('active');
+
+      const modalTabBodies = thisElement.closest('.modal-tabs').querySelectorAll('.modal-tabs__body-item');
+      modalTabBodies.forEach((modalTabBody) => {
+        modalTabBody.classList.remove('active');
+        if (modalTabBody.id === dataTabId) {
+          modalTabBody.classList.add('active');
+        }
+      });
+
+
+
+    };
+
+    modalTabs.forEach((modalTab) => {
+      const modalTabHead = modalTab.querySelector(".modal-tabs__head");
+      const modalTabHeadLinks = modalTabHead.querySelectorAll("[data-tab]");
+      modalTabHeadLinks.forEach((modalTabHeadLink) => {
+        modalTabHead.addEventListener("click", changeTab);
+      });
+    });
+  }
+});
+/***********************
+ Modal Tabs END
+ ***********************/
+
+/***********************
  Flickity BEGIN
  ***********************/
 $(function () {
