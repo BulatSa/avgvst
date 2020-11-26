@@ -53,8 +53,12 @@
           <a href="#" class="header-page__fav">
             <img src="images/icons/fav.svg" alt="Избранно">
           </a>
-          <a href="#" class="header-page__cart">
-            <img src="images/icons/cart.svg" alt="Корзина">
+          <a href="#" class="header-page__cart fill">
+            <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="bag" d="M0.5 5.5H17.5V19.5H0.5V5.5Z" stroke="black" />
+              <path d="M4.5 8V5C4.5 2.51472 6.51472 0.5 9 0.5V0.5C11.4853 0.5 13.5 2.51472 13.5 5V8" stroke="black" />
+            </svg>
+            <span class="counter">2</span>
           </a>
         </div>
       </div>
@@ -81,7 +85,7 @@
                 <a href="#" class="big"><span>Все товары</span></a>
               </div>
             </div>
-  
+
             <div class="header-page-catalog__col">
               <div class="header-page-catalog__block">
                 <a href="#" class="big"><span>украшения</span></a>
@@ -98,7 +102,7 @@
                 <a href="#" class="big"><span>объекты</span></a>
               </div>
             </div>
-  
+
             <div class="header-page-catalog__col">
               <div class="header-page-catalog__block">
                 <a href="#" class="big"><span>коллекции</span></a>
@@ -111,7 +115,7 @@
                 <a href="#" class="deep"><span>Все коллекции</span></a>
               </div>
             </div>
-  
+
             <div class="header-page-catalog__col">
               <div class="header-page-catalog__block">
                 <a href="#" class="big"><span>покупка в подарок</span></a>
@@ -157,7 +161,10 @@
           <img src="images/icons/fav.svg" alt="Избранное">
         </a>
         <a href="#" class="header-mobile__icon header-mobile__icon--cart">
-          <img src="images/icons/cart.svg" alt="Корзина">
+          <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="bag" d="M0.5 5.5H17.5V19.5H0.5V5.5Z" stroke="black" />
+            <path d="M4.5 8V5C4.5 2.51472 6.51472 0.5 9 0.5V0.5C11.4853 0.5 13.5 2.51472 13.5 5V8" stroke="black" />
+          </svg>
         </a>
       </div>
       <div class="header-mobile-menu">
@@ -274,6 +281,29 @@
         </div>
       </div>
     </div>
+    <div class="header-cart-preview-wrap container">
+      <div class="header-cart-preview show">
+        <a href="#" class="header-cart-preview__close"></a>
+        <div class="header-cart-preview__item">
+          <div class="header-cart-preview__item-img">
+            <img src="images/header-cart-preview.jpg" alt="">
+          </div>
+          <div class="header-cart-preview__item-info">
+            <div class="header-cart-preview__item-head">
+              <p>Лабрет-точка с цепочкой из белого золота с черной эмалью</p>
+              <span>9 700 p.</span>
+            </div>
+            <div class="header-cart-preview__item-body">
+              <p><span>Материал:</span> Серебро 925, покрыто родием</p>
+              <p><span>Буквы:</span> «М», «О»</p>
+              <p><span>Длина цепочки:</span> 38–46 см</p>
+              <p><span>Гравировка:</span> «Мария»</p>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="header-cart-preview__link">Посмотреть корзину</a>
+      </div>
+    </div>
   </div>
 
   <div class="header-search">
@@ -333,9 +363,9 @@
       </div>
     </div>
   </div>
-  
 
-  
+
+
 </header>
 <br><br>
 <section class="container">

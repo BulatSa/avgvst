@@ -442,20 +442,21 @@ body {
 
 .modal-tabs__body {
   position: relative;
-  background: #fff;
-  .modal-tabs__body-item {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s ease;
+  overflow: hidden;
+}
 
-    &.active {
-      position: relative;
-      opacity: 1;
-      pointer-events: all;
-    }
+.modal-tabs__body-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  background: #fff;
+  transition: all 0.3s ease;
+  &.active {
+    position: relative;
+    opacity: 1;
+    pointer-events: all;
   }
 }
 

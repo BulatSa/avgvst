@@ -190,7 +190,8 @@ body {
     &:hover {
       border-color: rgba(0, 0, 0, 1);
     }
-    img {
+    img,
+    svg {
       display: block;
       flex-shrink: 0;
     }
@@ -210,6 +211,30 @@ body {
 }
 
 .header-page__cart {
+  position: relative;
+  .counter {
+    position: absolute;
+    bottom: 9px;
+    left: 50%;
+    font-size: 11px;
+    line-height: 12px;
+    color: #fff;
+    opacity: 0;
+    transition: all 0.3s ease;
+    transform: translate3d(-50%, 0, 0);
+  }
+  &.fill {
+    .counter {
+      opacity: 1;
+    } 
+    svg {
+      path {
+        &.bag {
+          fill: #000;
+        }
+      }
+    }
+  }
 }
 
 .header-page-menu-wrap {
