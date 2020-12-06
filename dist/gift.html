@@ -405,7 +405,7 @@
     </a>
   </div>
   <div class="product-images__fav">
-    <a href="#" class="product-preview-favorite">
+    <a href="#" class="product-preview-favorite" data-card-add-fav>
       <svg width="20" height="18" fill="rgba(0,0,0,0)" xmlns="http://www.w3.org/2000/svg">
         <path d="M1 5.912C1 3.2 3.149 1 5.8 1 7.607 1 9.181 2.022 10 3.532 10.819 2.022 12.393 1 14.2 1 16.851 1 19 3.2 19 5.912 19 12 10 17 10 17S1 12 1 5.912z" stroke="#000" stroke-linecap="round"></path>
       </svg>
@@ -480,7 +480,7 @@
     </div>
     <div class="product-details__buttons">
       <button class="btn" data-card-add-btn>Добавить в корзину</button>
-      <a href="#" class="fav" title="В избранное">
+      <a href="#" class="fav" data-card-add-fav title="В избранное">
         <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M1 5.91223C1 3.19928 3.14903 1 5.8 1C7.60722 1 9.18116 2.0221 10 3.53225C10.8188 2.0221 12.3928 1 14.2 1C16.851 1 19 3.19928 19 5.91223C19 12 10 17 10 17C10 17 1 12 1 5.91223Z"
@@ -803,6 +803,73 @@
 			<div class="modal-stnd-info modal-stnd-info--center">
 				<div class="modal-stnd-info__img">
 					<img src="images/modal-get-gift.jpg" alt="">
+				</div>
+				<p class="modal-stnd-info__title">Хотите получить это изделие в подарок?</p>
+				<p class="modal-stnd-info__descr">Мы намекнем другу, о чем вы мечтаете.</p>
+				<div class="modal-stnd-info__soc">
+					<p>Подписаться в соц. сетях</p>
+					<div class="soc-block soc-block--center">
+						<a href="#">
+							<img src="images/icons/soc-what.svg" alt="Whatsup">
+						</a>
+						<a href="#">
+							<img src="images/icons/soc-tg.svg" alt="Telegram">
+						</a>
+						<a href="#">
+							<img src="images/icons/soc-fb.svg" alt="Facebook">
+						</a>
+						<a href="#">
+							<img src="images/icons/soc-vk.svg" alt="Vkontakte">
+						</a>
+						<a href="#">
+							<img src="images/icons/soc-insta.svg" alt="Instagram">
+						</a>
+					</div>
+				</div>
+			</div>
+			<form class="ajax-form">
+				<div class="modal-stnd-info modal-stnd-info--form">
+					<p class="modal-stnd-info__title">отправить лично на эл. почту</p>
+					<label class="input-label">
+						<span class="input-placeholder">Имя</span>
+						<input type="text" class="input-text" data-req='true' name="">
+						<span class="input-error-info" aria-live="polite">Заполните поле</span>
+					</label>
+					<label class="input-label">
+						<span class="input-placeholder">Эл. почта</span>
+						<input type="email" class="input-text" data-req='true' name="">
+						<span class="input-error-info" aria-live="polite">Введите эл. почту name@email.ru</span>
+					</label>
+
+					<p class="modal-stnd-info__title">Ваши данные для связи</p>
+					<label class="input-label">
+						<span class="input-placeholder">Имя</span>
+						<input type="text" class="input-text" data-req='true' name="">
+						<span class="input-error-info" aria-live="polite">Заполните поле</span>
+					</label>
+					<label class="input-label">
+						<span class="input-placeholder">Эл. почта</span>
+						<input type="email" class="input-text" data-req='true' name="">
+						<span class="input-error-info" aria-live="polite">Введите эл. почту name@email.ru</span>
+					</label>
+					<div class="btn-wrap btn-wrap--center">
+						<button class="btn">Отправить</button>
+						<p class="input-pers-info">
+							Нажимая на кнопку «Отправить», я соглашаюсь с <a href="#" target="_blank">условиями обработки персональных
+								данных</a>
+						</p>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div id="modal-make-gravi" class="modal">
+		<div class="modal-product-info">
+			<p class="h3">Добавить гравировку</p>
+			<div class="modal-stnd-info modal-stnd-info--center">
+				<div class="modal-stnd-info__img">
+					<img src="images/modal-gravi.jpg" alt="">
 				</div>
 				<p class="modal-stnd-info__title">Хотите получить это изделие в подарок?</p>
 				<p class="modal-stnd-info__descr">Мы намекнем другу, о чем вы мечтаете.</p>

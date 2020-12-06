@@ -983,26 +983,49 @@ $(function () {
  ***********************/
 
 /***********************
+ Product Card Favorite BEGIN
+ ***********************/
+$(function () {
+  const addToFavBtnList = document.querySelectorAll("[data-card-add-fav]");
+  if (addToFavBtnList) {
+    const addProductToFav = (e) => {
+      e.preventDefault();
+      addToFavBtnList.forEach((addToFavBtn) => {
+        addToFavBtn.classList.toggle("favorited");
+      });
+    };
+    addToFavBtnList.forEach((addToFavBtn) => {
+      addToFavBtn.addEventListener("click", addProductToFav);
+    });
+  }
+});
+/***********************
+ Product Card Favorite BEGIN
+ ***********************/
+
+/***********************
  Product Card More Info BEGIN
  ***********************/
 $(function () {
   const productTextMoreOpener = document.querySelector(
     ".product-details__text-more-opener"
   );
-  const toggleProductTextMore = (e) => {
-    e.preventDefault();
-    const parent = e.target.parentElement;
-    const el = parent.querySelector(".product-details__text-more");
+  if (productTextMoreOpener) {
+    const toggleProductTextMore = (e) => {
+      e.preventDefault();
+      const parent = e.target.parentElement;
+      const el = parent.querySelector(".product-details__text-more");
 
-    el.style.height = el.scrollHeight + "px";
-    //el.scrollHeight = el.scrollHeight;
+      el.style.height = el.scrollHeight + "px";
+      //el.scrollHeight = el.scrollHeight;
 
-    parent.classList.toggle("open");
-    el.style.height = parent.classList.contains("open")
-      ? el.scrollHeight + "px"
-      : 0;
-  };
-  productTextMoreOpener.addEventListener("click", toggleProductTextMore);
+      parent.classList.toggle("open");
+      el.style.height = parent.classList.contains("open")
+        ? el.scrollHeight + "px"
+        : 0;
+    };
+    productTextMoreOpener.addEventListener("click", toggleProductTextMore);
+  }
 });
 /***********************
  Product Card More Info END
