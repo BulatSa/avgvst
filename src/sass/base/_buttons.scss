@@ -36,10 +36,13 @@ button {
   @include res(m) {
     padding: 18px 16px 18px;
   }
-  &:hover {
-    background: $yellow;
-    color: #000;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background: $yellow;
+      color: #000;
+    }
   }
+
   &:focus {
     outline: none;
   }
@@ -56,9 +59,12 @@ button {
     color: #000;
     border: 1px solid #000;
     background: #fff;
-    &:hover {
-      border-color: $yellow;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        border-color: $yellow;
+      }
     }
+
     &.disabled {
       pointer-events: none;
       color: $gray-deep;
@@ -104,9 +110,11 @@ button {
     &:last-child {
       margin-right: 0;
     }
-    &:hover {
-      img {
-        filter: brightness(1);
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        img {
+          filter: brightness(1);
+        }
       }
     }
   }

@@ -965,6 +965,8 @@ $(function () {
       headerCartPreview.classList.add("show");
     });
     incHeaderPageCartCounter();
+    addToCartBtn.classList.add('added');
+    addToCartBtn.textContent = "Уже в корзине";
   };
 
   const closeCartPreview = (e) => {

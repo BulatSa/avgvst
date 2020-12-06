@@ -237,6 +237,11 @@
   margin-bottom: 24px;
   .btn {
     width: 100%;
+    &.added {
+      color: #000;
+      background: $yellow;
+      pointer-events: none;
+    }
   }
   .fav {
     position: relative;
