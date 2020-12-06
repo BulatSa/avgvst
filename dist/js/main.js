@@ -932,6 +932,58 @@ $(function () {
  ***********************/
 
 /***********************
+ Product Card Add BEGIN
+ ***********************/
+$(function () {
+  const addToCartBtn = document.querySelector("[data-card-add-btn]");
+  const headerCartPreviewList = document.querySelectorAll(
+    ".header-cart-preview"
+  );
+  const headerCartPreviewCloseList = document.querySelectorAll(
+    ".header-cart-preview__close"
+  );
+  const headerPageCartList = document.querySelectorAll(
+    "[data-header-page-cart]"
+  );
+  const headerPageCartCounterList = document.querySelectorAll(
+    "[data-header-page-cart] .counter"
+  );
+
+  const incHeaderPageCartCounter = () => {
+    headerPageCartCounterList.forEach((headerPageCartCounter) => {
+      const thisCount = +headerPageCartCounter.textContent;
+      headerPageCartCounter.textContent = thisCount + 1;
+    });
+    headerPageCartList.forEach((headerPageCart) => {
+      headerPageCart.classList.add("fill");
+    });
+  };
+
+  const addProductToCart = (e) => {
+    e.preventDefault();
+    headerCartPreviewList.forEach((headerCartPreview) => {
+      headerCartPreview.classList.add("show");
+    });
+    incHeaderPageCartCounter();
+  };
+
+  const closeCartPreview = (e) => {
+    e.preventDefault();
+    headerCartPreviewList.forEach((headerCartPreview) => {
+      headerCartPreview.classList.remove("show");
+    });
+  };
+
+  addToCartBtn.addEventListener("click", addProductToCart);
+  headerCartPreviewCloseList.forEach((headerCartPreviewClose) => {
+    headerCartPreviewClose.addEventListener("click", closeCartPreview);
+  });
+});
+/***********************
+ Product Card Add END
+ ***********************/
+
+/***********************
  Modal Accordion List BEGIN
  ***********************/
 $(function () {
@@ -979,18 +1031,17 @@ $(function () {
         modalTabHeadLink.classList.remove("active");
       });
 
-      thisElement.classList.add('active');
+      thisElement.classList.add("active");
 
-      const modalTabBodies = thisElement.closest('.modal-tabs').querySelectorAll('.modal-tabs__body-item');
+      const modalTabBodies = thisElement
+        .closest(".modal-tabs")
+        .querySelectorAll(".modal-tabs__body-item");
       modalTabBodies.forEach((modalTabBody) => {
-        modalTabBody.classList.remove('active');
+        modalTabBody.classList.remove("active");
         if (modalTabBody.id === dataTabId) {
-          modalTabBody.classList.add('active');
+          modalTabBody.classList.add("active");
         }
       });
-
-
-
     };
 
     modalTabs.forEach((modalTab) => {

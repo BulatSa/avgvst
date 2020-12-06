@@ -72,7 +72,7 @@ body {
   }
 }
 
-.show {
+.show-el {
   display: none;
   &-xxl {
     @include res(xxl) {
