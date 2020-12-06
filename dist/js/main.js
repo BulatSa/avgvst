@@ -984,6 +984,32 @@ $(function () {
  ***********************/
 
 /***********************
+ Product Card More Info BEGIN
+ ***********************/
+$(function () {
+  const productTextMoreOpener = document.querySelector(
+    ".product-details__text-more-opener"
+  );
+  const toggleProductTextMore = (e) => {
+    e.preventDefault();
+    const parent = e.target.parentElement;
+    const el = parent.querySelector(".product-details__text-more");
+
+    el.style.height = el.scrollHeight + "px";
+    //el.scrollHeight = el.scrollHeight;
+
+    parent.classList.toggle("open");
+    el.style.height = parent.classList.contains("open")
+      ? el.scrollHeight + "px"
+      : 0;
+  };
+  productTextMoreOpener.addEventListener("click", toggleProductTextMore);
+});
+/***********************
+ Product Card More Info END
+ ***********************/
+
+/***********************
  Modal Accordion List BEGIN
  ***********************/
 $(function () {

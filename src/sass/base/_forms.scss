@@ -734,6 +734,91 @@ textarea {
   flex-wrap: wrap;
   padding-bottom: 1px;
   border-left: 1px solid $gray;
+  &--1 {
+    .style-checkbox {
+      &--cell {
+        width: 100%;
+        padding: 14px 5px;
+        &:first-child {
+          border-top: 1px solid $gray;
+        }
+        .title {
+          font-size: 12px;
+          line-height: 16px;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  &--2 {
+    .style-checkbox {
+      &--cell {
+        width: 50%;
+        padding: 14px 5px;
+        &:nth-child(-n+2) {
+          border-top: 1px solid $gray;
+        }
+        .title {
+          font-size: 12px;
+          line-height: 16px;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  &--3 {
+    .style-checkbox {
+      &--cell {
+        width: calc(100% / 3);
+        padding: 14px 5px;
+        &:nth-child(-n+3) {
+          border-top: 1px solid $gray;
+        }
+        .title {
+          font-size: 12px;
+          line-height: 16px;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  &--4 {
+    .style-checkbox {
+      &--cell {
+        width: calc(100% / 4);
+        padding: 14px 5px;
+        &:nth-child(-n+4) {
+          border-top: 1px solid $gray;
+        }
+        .title {
+          font-size: 12px;
+          line-height: 16px;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  &--5 {
+    .style-checkbox {
+      &--cell {
+        width: calc(100% / 5);
+        padding: 14px 5px;
+        &:nth-child(-n+5) {
+          border-top: 1px solid $gray;
+        }
+        .title {
+          font-size: 12px;
+          line-height: 16px;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
 }
 
 .style-checkbox {
@@ -798,6 +883,7 @@ textarea {
       height: 16px;
       border: 1px solid #000;
       transition: all 0.3s ease;
+      pointer-events: none;
     }
     &:after {
       content: "";
@@ -812,6 +898,7 @@ textarea {
       transform: translate3d(0, 0, 0) rotate(45deg);
       transition: opacity 0.3s ease;
       z-index: 2;
+      pointer-events: none;
     }
 
     a {
@@ -853,6 +940,7 @@ textarea {
         height: 100%;
         border: none;
         background: #fff;
+        pointer-events: none;
         z-index: -1;
       }
       &:after {
@@ -872,7 +960,7 @@ textarea {
         &:before {
           background: $yellow;
         }
-        &+.descr {
+        & + .descr {
           color: #000;
         }
       }

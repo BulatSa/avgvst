@@ -1,6 +1,8 @@
 .product-images {
   position: relative;
   height: 100%;
+  background: $gray-light;
+  overflow: hidden;
   &:before {
     content: "";
     position: absolute;
@@ -13,6 +15,32 @@
     z-index: 1;
     @include res(m) {
       content: none;
+    }
+  }
+  &--single {
+    .product-images__list {
+      a {
+        position: relative;
+        &:before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 200%;
+          height: 1px;
+          background: #fff;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 100%;
+          width: 1px;
+          height: 200%;
+          border: none;
+          background: #fff;
+        }
+      }
     }
   }
 }
